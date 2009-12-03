@@ -26,6 +26,16 @@ class EsValidationTestCase extends CakeTestCase {
  */
 	function testPhone() {
 		$this->assertTrue(EsValidation::phone('924227227'));
+		$this->assertTrue(EsValidation::phone('924.227.227'));
+		$this->assertTrue(EsValidation::phone('924-227-227'));
+		$this->assertTrue(EsValidation::phone('924-22-72-27'));
+		$this->assertTrue(EsValidation::phone('924 22 72 27'));
+		$this->assertTrue(EsValidation::phone('924227227'));
+		$this->assertTrue(EsValidation::phone('624227227'));
+		$this->assertTrue(EsValidation::phone('924-227227'));
+		$this->assertTrue(EsValidation::phone('827-227227'));
+		$this->assertTrue(EsValidation::phone('91-2227227'));
+		$this->assertFalse(EsValidation::phone('127227227'));
 		$this->assertFalse(EsValidation::phone('813 4567'));
 	}
 }
