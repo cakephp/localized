@@ -41,3 +41,5 @@ class ItValidation {
 		return preg_match($pattern, $check);
 	}
 }
+
+?>

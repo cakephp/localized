@@ -29,3 +29,5 @@ class BeValidation {
 		return preg_match($pattern, $check);
 	}
 }
+
+?>

@@ -53,3 +53,5 @@ class NlValidation {
 		return preg_match($pattern, $check);
 	}
 }
+
+?>

@@ -39,3 +39,5 @@ class ItValidationTestCase extends CakeTestCase {
 		$this->assertFalse(ItValidation::postal('1046'));
 	}
 }
+
+?>

@@ -29,3 +29,5 @@ class CzValidationTestCase extends CakeTestCase {
 		$this->assertFalse(CzValidation::postal('95616'));
 	}
 }
+
+?>
