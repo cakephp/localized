@@ -29,3 +29,5 @@ class FrValidationTestCase extends CakeTestCase {
 		$this->assertFalse(FrValidation::phone('04 76 96 12 3'));
 	}
 }
+
+?>

@@ -29,3 +29,5 @@ class CaValidation {
 		return preg_match($pattern, $check);
 	}
 }
+
+?>

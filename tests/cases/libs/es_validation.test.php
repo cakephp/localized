@@ -39,3 +39,5 @@ class EsValidationTestCase extends CakeTestCase {
 		$this->assertFalse(EsValidation::phone('813 4567'));
 	}
 }
+
+?>

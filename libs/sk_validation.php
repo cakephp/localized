@@ -29,3 +29,5 @@ class SkValidation {
 		return preg_match($pattern, $check);
 	}
 }
+
+?>

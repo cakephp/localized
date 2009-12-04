@@ -29,3 +29,5 @@ class AuValidationTestCase extends CakeTestCase {
 		$this->assertFalse(AuValidation::postal('02300'));
 	}
 }
+
+?>

@@ -29,3 +29,5 @@ class JpValidationTestCase extends CakeTestCase {
 		$this->assertFalse(JpValidation::postal('0205-504'));
 	}
 }
+
+?>
