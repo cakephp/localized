@@ -1,7 +1,7 @@
 <?php
 /**
  * Australian Localized Validation class. Handles localized validation for Australia
- * *
+ *
  * PHP versions 4 and 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)

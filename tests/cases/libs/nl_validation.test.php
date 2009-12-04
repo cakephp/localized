@@ -1,7 +1,7 @@
 <?php
 /**
  * Dutch Localized Validation class test case
- * *
+ *
  * PHP versions 4 and 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
