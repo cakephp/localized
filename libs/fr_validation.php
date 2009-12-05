@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class FrValidation {
+
 /**
  * Checks phone numbers for France
  *
@@ -29,5 +30,4 @@ class FrValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

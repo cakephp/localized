@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.DeValidation');
 
 class DeValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of DeValidation
  *
@@ -29,5 +30,4 @@ class DeValidationTestCase extends CakeTestCase {
 		$this->assertFalse(DeValidation::postal('051109'));
 	}
 }
-
 ?>

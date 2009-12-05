@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class UkValidation {
+
 /**
  * Checks zipcodes for The United Kingdom
  *
@@ -29,5 +30,4 @@ class UkValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

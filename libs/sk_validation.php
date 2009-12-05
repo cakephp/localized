@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class SkValidation {
+
 /**
  * Checks zipcodes for Slovakia
  *
@@ -29,5 +30,4 @@ class SkValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

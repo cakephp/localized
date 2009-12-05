@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.AuValidation');
 
 class AuValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of AuValidation
  *
@@ -29,5 +30,4 @@ class AuValidationTestCase extends CakeTestCase {
 		$this->assertFalse(AuValidation::postal('02300'));
 	}
 }
-
 ?>

@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.NlValidation');
 
 class NlValidationTestCase extends CakeTestCase {
+
 /**
  * test the phone method of NlValidation
  *
@@ -62,5 +63,4 @@ class NlValidationTestCase extends CakeTestCase {
 		$this->assertFalse(NlValidation::ssn('50222FZ'));
 	}
 }
-
 ?>

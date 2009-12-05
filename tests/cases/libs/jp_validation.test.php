@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.JpValidation');
 
 class JpValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of JpValidation
  *
@@ -29,5 +30,4 @@ class JpValidationTestCase extends CakeTestCase {
 		$this->assertFalse(JpValidation::postal('0205-504'));
 	}
 }
-
 ?>

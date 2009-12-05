@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class EsValidation {
+
 /**
  * Checks phone numbers for Spain
  *
@@ -29,5 +30,4 @@ class EsValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.CaValidation');
 
 class CaValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of CaValidation
  *
@@ -29,5 +30,4 @@ class CaValidationTestCase extends CakeTestCase {
 		$this->assertFalse(CaValidation::postal('LI4 SOC'));
 	}
 }
-
 ?>

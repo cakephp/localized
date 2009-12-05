@@ -1,6 +1,6 @@
 <?php
 /**
- * Czeck Localized Validation class. Handles localized validation for Czech Republic
+ * Czech Localized Validation class. Handles localized validation for Czech Republic
  *
  * PHP versions 4 and 5
  *
@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class CzValidation {
+
 /**
  * Checks zipcodes for Czech Republic
  *
@@ -29,5 +30,4 @@ class CzValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

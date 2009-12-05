@@ -1,6 +1,6 @@
 <?php
 /**
- * Australian Localized Validation class. Handles localized validation for Australia
+ * Australian Localised Validation class. Handles localised validation for Australia
  *
  * PHP versions 4 and 5
  *
@@ -17,8 +17,9 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class AuValidation {
+
 /**
- * Checks zipcodes for Australia
+ * Checks Postal Codes for Australia
  *
  * @param string $check The value to check.
  * @access public
@@ -29,5 +30,4 @@ class AuValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

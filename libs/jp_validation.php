@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class JpValidation {
+
 /**
  * Checks zipcodes for Japan
  *
@@ -29,5 +30,4 @@ class JpValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

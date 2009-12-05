@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.UkValidation');
 
 class UkValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of UkValidation
  *
@@ -29,5 +30,4 @@ class UkValidationTestCase extends CakeTestCase {
 		$this->assertFalse(UkValidation::postal('DT4-8PP'));
 	}
 }
-
 ?>

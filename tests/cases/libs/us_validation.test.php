@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.UsValidation');
 
 class UsValidationTestCase extends CakeTestCase {
+
 /**
  * test the phone method of UsValidation
  *
@@ -81,5 +82,4 @@ class UsValidationTestCase extends CakeTestCase {
 		$this->assertTrue(UsValidation::ssn('111-33-4333'));
 	}
 }
-
 ?>

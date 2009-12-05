@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class ItValidation {
+
 /**
  * Checks phone numbers for Italy
  *
@@ -41,5 +42,4 @@ class ItValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

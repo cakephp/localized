@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.EsValidation');
 
 class EsValidationTestCase extends CakeTestCase {
+
 /**
  * test the phone method of EsValidation
  *
@@ -39,5 +40,4 @@ class EsValidationTestCase extends CakeTestCase {
 		$this->assertFalse(EsValidation::phone('813 4567'));
 	}
 }
-
 ?>

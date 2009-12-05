@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class DkValidation {
+
 /**
  * Checks social security numbers for Denmark
  *
@@ -29,5 +30,4 @@ class DkValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

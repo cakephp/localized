@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.ItValidation');
 
 class ItValidationTestCase extends CakeTestCase {
+
 /**
  * test the phone method of ItValidation
  *
@@ -39,5 +40,4 @@ class ItValidationTestCase extends CakeTestCase {
 		$this->assertFalse(ItValidation::postal('1046'));
 	}
 }
-
 ?>

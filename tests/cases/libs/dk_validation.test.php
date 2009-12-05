@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.DkValidation');
 
 class DkValidationTestCase extends CakeTestCase {
+
 /**
  * test the ssn method of DkValidation
  *
@@ -29,5 +30,4 @@ class DkValidationTestCase extends CakeTestCase {
 		$this->assertFalse(DkValidation::ssn('111111-333'));
 	}
 }
-
 ?>

@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class NlValidation {
+
 /**
  * Checks phone numbers for The Netherlands
  *
@@ -53,5 +54,4 @@ class NlValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

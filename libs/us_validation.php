@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class UsValidation {
+
 /**
  * Checks phone numbers for The United States
  *
@@ -53,5 +54,4 @@ class UsValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.CzValidation');
 
 class CzValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of CzValidation
  *
@@ -29,5 +30,4 @@ class CzValidationTestCase extends CakeTestCase {
 		$this->assertFalse(CzValidation::postal('95616'));
 	}
 }
-
 ?>

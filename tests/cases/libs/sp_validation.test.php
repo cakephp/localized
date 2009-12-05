@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.SpValidation');
 
 class SpValidationTestCase extends CakeTestCase {
+
 /**
  * test the phone method of SpValidation
  *
@@ -37,5 +38,4 @@ class SpValidationTestCase extends CakeTestCase {
 		$this->assertFalse(SpValidation::phone('127227227'));
 	}
 }
-
 ?>

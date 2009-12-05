@@ -19,6 +19,7 @@
 App::import('Lib', 'Localized.BeValidation');
 
 class BeValidationTestCase extends CakeTestCase {
+
 /**
  * test the postal method of BeValidation
  *
@@ -29,5 +30,4 @@ class BeValidationTestCase extends CakeTestCase {
 		$this->assertFalse(BeValidation::postal('01804'));
 	}
 }
-
 ?>

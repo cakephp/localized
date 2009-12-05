@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class BeValidation {
+
 /**
  * Checks zipcodes for Belgium
  *
@@ -29,5 +30,4 @@ class BeValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>

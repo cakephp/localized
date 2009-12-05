@@ -17,6 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class DeValidation {
+
 /**
  * Checks zipcodes for Germany
  *
@@ -29,5 +30,4 @@ class DeValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
 ?>
