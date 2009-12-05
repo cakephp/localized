@@ -17,35 +17,36 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 class BrValidation {
-	/**
-	 * Checks phone numbers for Brazil
-	 *
-	 * @param string $check The value to check.
-	 * @access public
-	 * @return boolean
-	 */
+
+/**
+ * Checks phone numbers for Brazil
+ *
+ * @param string $check The value to check.
+ * @access public
+ * @return boolean
+ */
 	function phone($check) {
 		return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?\d{4}[-. ]?\d{4}$/', $check);
 	}
 
-	/**
-	 * Checks zipcodes (CEP) for Brazil
-	 *
-	 * @param string $check The value to check.
-	 * @access public
-	 * @return boolean
-	 */
+/**
+ * Checks zipcodes (CEP) for Brazil
+ *
+ * @param string $check The value to check.
+ * @access public
+ * @return boolean
+ */
 	function postal($check) {
 		return (bool)preg_match('/^[0-9]{5}-?[0-9]{3}$/', $check);
 	}
 
-	/**
-	 * Checks cadastro de pessoa física (CPF) for Brazil
-	 *
-	 * @param string $check The value to check.
-	 * @access public
-	 * @return boolean
-	 */
+/**
+ * Checks cadastro de pessoa fÃ­sica (CPF) for Brazil
+ *
+ * @param string $check The value to check.
+ * @access public
+ * @return boolean
+ */
 	function ssn($check) {
 		$check = str_replace(array(' ', '-', '.'), '', $check);
 		if (strlen($check) !== 11 || !ctype_digit($check)) {
@@ -68,7 +69,5 @@ class BrValidation {
 		$dvRight = $check{9} * 10 + $check{10};
 		return $dvRight == $dv;
 	}
-
 }
-
 ?>
