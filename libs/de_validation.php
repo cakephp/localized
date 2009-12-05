@@ -29,5 +29,3 @@ class DeValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

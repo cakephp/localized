@@ -29,5 +29,3 @@ class CaValidationTestCase extends CakeTestCase {
 		$this->assertFalse(CaValidation::postal('LI4 SOC'));
 	}
 }
-
-?>

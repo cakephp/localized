@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Brazillian Localized Validation class test case
  *
@@ -20,11 +20,11 @@ App::import('Lib', 'Localized.BrValidation');
 
 class BrValidationTest extends CakeTestCase {
 
-/**
- * test the phone method of BrValidation
- *
- * @return void
- */
+	/**
+	 * test the phone method of BrValidation
+	 *
+	 * @return void
+	 */
 	function testPhone() {
 		$this->assertFalse(BrValidation::phone('teststring'));
 		$this->assertFalse(BrValidation::phone('1-(33)-(333)-(4444)'));
@@ -46,11 +46,11 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertTrue(BrValidation::phone('23456789'));
 	}
 
-/**
- * test the postal method of BrValidation
- *
- * @return void
- */
+	/**
+	 * test the postal method of BrValidation
+	 *
+	 * @return void
+	 */
 	function testPostal() {
 		$this->assertFalse(BrValidation::postal('111'));
 		$this->assertFalse(BrValidation::postal('1111'));
@@ -62,11 +62,11 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertTrue(BrValidation::postal('01234123'));
 	}
 
-/**
- * test the ssn method of BrValidation
- *
- * @return void
- */
+	/**
+	 * test the ssn method of BrValidation
+	 *
+	 * @return void
+	 */
 	function testSsn() {
 		$this->assertFalse(BrValidation::ssn('22692173811'));
 		$this->assertFalse(BrValidation::ssn('50549727322'));
@@ -78,5 +78,7 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertTrue(BrValidation::ssn('869.283.422-00'));
 		$this->assertTrue(BrValidation::ssn('843.701.734-34'));
 	}
+
 }
+
 ?>

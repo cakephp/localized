@@ -37,5 +37,3 @@ class SpValidationTestCase extends CakeTestCase {
 		$this->assertFalse(SpValidation::phone('127227227'));
 	}
 }
-
-?>

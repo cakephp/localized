@@ -29,5 +29,3 @@ class CzValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

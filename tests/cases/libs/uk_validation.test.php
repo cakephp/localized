@@ -29,5 +29,3 @@ class UkValidationTestCase extends CakeTestCase {
 		$this->assertFalse(UkValidation::postal('DT4-8PP'));
 	}
 }
-
-?>

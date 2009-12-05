@@ -29,5 +29,3 @@ class SkValidationTestCase extends CakeTestCase {
 		$this->assertFalse(SkValidation::postal('0989'));
 	}
 }
-
-?>

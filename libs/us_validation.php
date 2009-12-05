@@ -53,5 +53,3 @@ class UsValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

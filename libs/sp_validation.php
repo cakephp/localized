@@ -29,5 +29,3 @@ class SpValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

@@ -29,5 +29,3 @@ class BeValidationTestCase extends CakeTestCase {
 		$this->assertFalse(BeValidation::postal('01804'));
 	}
 }
-
-?>

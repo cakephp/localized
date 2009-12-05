@@ -29,5 +29,3 @@ class FrValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

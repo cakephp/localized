@@ -62,5 +62,3 @@ class NlValidationTestCase extends CakeTestCase {
 		$this->assertFalse(NlValidation::ssn('50222FZ'));
 	}
 }
-
-?>

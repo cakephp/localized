@@ -29,5 +29,3 @@ class DkValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>

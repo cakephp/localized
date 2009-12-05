@@ -29,5 +29,3 @@ class JpValidation {
 		return preg_match($pattern, $check);
 	}
 }
-
-?>
