@@ -51,28 +51,30 @@ class TwValidation {
  */
 	function nicn($check) {
 		$check = strtoupper($check);
-		if(strlen($check) != 10) {
-            return false;
-        }
-        if(!preg_match('/^\\A\\b[A-Z][1-2][0-9]{8}\\b\\z/', $check)) {
-            return false;
-        }
-        $keyTable = array('A' => 10, 'B' => 11, 'C' => 12, 'D' => 13, 'E' => 14, 'F' => 15,
-        'G' => 16, 'H' => 17, 'I' => 34, 'J' => 18, 'K' => 19, 'L' => 20, 'M' => 21, 'N' => 22,
-        'O' => 35, 'P' => 23, 'Q' => 24, 'R' => 25, 'S' => 26, 'T' => 27, 'U' => 28, 'V' => 29,
-        'W' => 32, 'X' => 30, 'Y' => 31, 'Z' => 33
-        );
-        $checksum = 0;
-        $n1 = $keyTable[$check{0}];
-        $checksum += intval($n1 / 10);
-        $checksum += ($n1 % 10) * 9;
-        for($i = 1; $i < 9; $i++) {
-            $checksum += $check{$i} * (9 - $i);
-        }
-        if(substr(10 - ($checksum % 10), -1, 1) == $check{9}) {
-            return true;
-        } else {
-            return false;
-        }
+		if (strlen($check) != 10) {
+			return false;
+		}
+		if (!preg_match('/^\\A\\b[A-Z][1-2][0-9]{8}\\b\\z/', $check)) {
+			return false;
+		}
+		$keyTable = array(
+			'A' => 10, 'B' => 11, 'C' => 12, 'D' => 13, 'E' => 14, 'F' => 15, 'G' => 16, 'H' => 17,
+			'I' => 34, 'J' => 18, 'K' => 19, 'L' => 20, 'M' => 21, 'N' => 22, 'O' => 35, 'P' => 23,
+			'Q' => 24, 'R' => 25, 'S' => 26, 'T' => 27, 'U' => 28, 'V' => 29, 'W' => 32, 'X' => 30,
+			'Y' => 31, 'Z' => 33
+		);
+		$checksum = 0;
+		$n1 = $keyTable[$check{0}];
+		$checksum += intval($n1 / 10);
+		$checksum += ($n1 % 10) * 9;
+
+		for($i = 1; $i < 9; $i++) {
+			$checksum += $check{$i} * (9 - $i);
+		}
+		if (substr(10 - ($checksum % 10), -1, 1) == $check{9}) {
+			return true;
+		}
+		return false;
 	}
 }
+?>

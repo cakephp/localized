@@ -64,3 +64,4 @@ class TwValidationTestCase extends CakeTestCase {
 		$this->assertTrue(TwValidation::nicn('Q175232776'));
 	}
 }
+?>
