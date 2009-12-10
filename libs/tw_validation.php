@@ -51,7 +51,7 @@ class TwValidation {
  */
 	function nicn($check) {
 		$check = strtoupper($check);
-		if (!preg_match('/^[A-Z][1-2][0-9]{8}/', $check)) {
+		if (!preg_match('/^[A-Z][1-2][0-9]{8}$/', $check)) {
 			return false;
 		}
 		$keyTable = array(
