@@ -54,7 +54,7 @@ class TwValidation {
 		if (strlen($check) != 10) {
 			return false;
 		}
-		if (!preg_match('/^\\A\\b[A-Z][1-2][0-9]{8}\\b\\z/', $check)) {
+		if (!preg_match('/^[A-Z][1-2][0-9]{8}/', $check)) {
 			return false;
 		}
 		$keyTable = array(

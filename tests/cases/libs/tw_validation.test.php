@@ -33,9 +33,9 @@ class TwValidationTestCase extends CakeTestCase {
 		$this->assertTrue(TwValidation::phone('049-289-5371'));
 		$this->assertTrue(TwValidation::phone('+886.49.289-5371'));
 		$this->assertTrue(TwValidation::phone('+886-826-66056'));
-		$this->assertTrue(TwValidation::phone('0800-080090');
-		$this->assertTrue(TwValidation::phone('0936-000-777');
-		$this->assertTrue(TwValidation::phone('0968-080785');
+		$this->assertTrue(TwValidation::phone('0800-080090'));
+		$this->assertTrue(TwValidation::phone('0936-000-777'));
+		$this->assertTrue(TwValidation::phone('0968-080785'));
 	}
 
 /**
