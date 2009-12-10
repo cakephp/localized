@@ -29,5 +29,17 @@ class FrValidation {
 		$pattern = '/^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$/';
 		return preg_match($pattern, $check);
 	}
+
+/**
+ * Checks zipcodes for France
+ *
+ * @param string $check The value to check.
+ * @access public
+ * @return boolean
+ */
+	function postal($check) {
+		$pattern = '/^\d{5}$/';
+		return preg_match($pattern, $check);
+	}
 }
 ?>

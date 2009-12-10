@@ -29,5 +29,19 @@ class FrValidationTestCase extends CakeTestCase {
 		$this->assertTrue(FrValidation::phone('04 76 96 12 32'));
 		$this->assertFalse(FrValidation::phone('04 76 96 12 3'));
 	}
+
+/**
+ * test the postal method of FrValidation
+ *
+ * @return void
+ */
+	function testPostal() {
+		$this->assertTrue(FrValidation::postal('14000'));
+		$this->assertTrue(FrValidation::postal('75001'));
+		$this->assertTrue(FrValidation::postal('13200'));
+		$this->assertTrue(FrValidation::postal('97500'));
+		$this->assertFalse(FrValidation::postal('1400'));
+		$this->assertFalse(FrValidation::postal('14 000'));
+	}
 }
 ?>
