@@ -65,16 +65,16 @@ class BrValidation {
 			$sum = 0;
 			$position = $pos + 1;
 			for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-				$sum += $check{$i} * $position;
+				$sum += $check[$i] * $position;
 			}
 			$div = $sum % 11;
 			if ($div < 2) {
-				$check{$pos} = 0;
+				$check[$pos] = 0;
 			} else {
-				$check{$pos} = 11 - $div;
+				$check[$pos] = 11 - $div;
 			}
 		}
-		$dvRight = $check{9} * 10 + $check{10};
+		$dvRight = $check[9] * 10 + $check[10];
 		return $dvRight == $dv;
 	}
 }
