@@ -1,0 +1,41 @@
+## CakePHP localized plugin
+
+This plugin contains various localized validation classes for specific countries. And is intended for use with CakePHP 1.3
+
+### Using the localized plugin
+
+First download the repository and place it in `app/plugins/localized` or on one of your plugin paths. You can then import and use the validators in your App classes.
+
+### Model validation
+
+Localized validation classes can be used for validating model fields.
+
+	App::import('Lib', 'Localized.MxValidation');
+	
+	class Post extends AppModel {
+	
+		var $validate = array(
+			'postal' => array(
+				'valid' => array(
+					'rule' => array('postal', null, 'mx'),
+					'message' => 'Must be valid mexico postal code'
+				)
+			)
+		);
+	}
+
+### Using localized validations with Validation
+
+You can also access the localized validators any time you would call `Validation` methods. After importing the validation class.
+
+	if (Validation::phone($value, null, 'cz')) {
+		//do something with valid phone number
+	}
+
+## Contributing to localized
+
+If you find that your country is not part of the localized plugin, please fork the project on github.  Once you have forked the project you can commit your validator class (and any test cases).  Once you have pushed your changes back to github send a pull request, and your changes will be reviewed and merged in or feedback will be given.
+
+## Issues with localized
+
+If you have issues with localized, you can report them at http://cakephp.lighthouseapp.com/projects/42658-localized/overview
