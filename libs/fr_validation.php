@@ -42,8 +42,8 @@ class FrValidation {
  * Checks zipcodes for France
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function postal($check) {
 		$pattern = '/^\d{5}$/';
@@ -54,8 +54,8 @@ class FrValidation {
  * Checks social security numbers numbers for France
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function ssn($check) {
 		$pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])(\d{6}|\d{8})$/';

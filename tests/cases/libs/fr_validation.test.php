@@ -42,6 +42,7 @@ class FrValidationTestCase extends CakeTestCase {
  * test the postal method of FrValidation
  *
  * @return void
+ * @access public
  */
 	function testPostal() {
 		$this->assertTrue(FrValidation::postal('14000'));
@@ -56,6 +57,7 @@ class FrValidationTestCase extends CakeTestCase {
  * test the postal method of FrValidation
  *
  * @return void
+ * @access public
  */
 	function testSsn() {
 		$this->assertTrue(FrValidation::ssn('1510246102043'));
