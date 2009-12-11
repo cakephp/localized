@@ -56,8 +56,8 @@ class MxValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(ItValidation::postal('98000'));
-		$this->assertFalse(ItValidation::postal('1046'));
+		$this->assertTrue(MxValidation::postal('98000'));
+		$this->assertFalse(MxValidation::postal('1046'));
 	}
 }
 ?>
