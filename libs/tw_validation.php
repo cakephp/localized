@@ -13,8 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * TwValidation
+ *
+ * @package       localized
+ * @subpackage    localized.tests.cases.libs
  */
 class TwValidation {
 
@@ -22,8 +30,8 @@ class TwValidation {
  * Checks phone numbers for Taiwan
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function phone($check) {
 		$pattern = '/^\\(?(0|\\+886)[-. ]?[2-9][\\)-. ]?([0-9][\\)-. ]?){2}([0-9][-. ]?){3}[0-9]{2}[0-9]?$/';
@@ -34,8 +42,8 @@ class TwValidation {
  * Checks zipcodes for Taiwan
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function postal($check) {
 		$pattern = '/^[1-9][0-9]{2}([0-9]{2})?$/';
@@ -46,8 +54,8 @@ class TwValidation {
  * Checks national identify card number for Taiwan
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function nicn($check) {
 		$check = strtoupper($check);

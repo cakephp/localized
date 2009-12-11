@@ -13,9 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @subpackage    localized.libs
+ * @subpackage    localized.tests.cases.libs
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * MxValidation
+ *
+ * @package       localized
+ * @subpackage    localized.tests.cases.libs
  */
 class MxValidation {
 

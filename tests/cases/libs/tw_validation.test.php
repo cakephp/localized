@@ -13,17 +13,25 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 App::import('Lib', 'Localized.TwValidation');
 
+/**
+ * TwValidationTestCase
+ *
+ * @package       localization
+ * @subpackage    localized.tests.cases.libs
+ */
 class TwValidationTestCase extends CakeTestCase {
 
 /**
  * test the phone method of TwValidation
  *
  * @return void
+ * @access public
  */
 	function testPhone() {
 		$this->assertTrue(TwValidation::phone('+886277388066'));
@@ -42,6 +50,7 @@ class TwValidationTestCase extends CakeTestCase {
  * test the postal method of TwValidation
  *
  * @return void
+ * @access public
  */
 	function testPostal() {
 		$this->assertTrue(TwValidation::postal('235'));
@@ -55,6 +64,7 @@ class TwValidationTestCase extends CakeTestCase {
  * test the ssn method of TwValidation
  *
  * @return void
+ * @access public
  */
 	function testNicn() {
 		$this->assertTrue(TwValidation::nicn('Y100000001'));

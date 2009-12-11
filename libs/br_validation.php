@@ -13,8 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * BrValidation
+ *
+ * @package       localized
+ * @subpackage    localized.tests.cases.libs
  */
 class BrValidation {
 
@@ -22,8 +30,8 @@ class BrValidation {
  * Checks phone numbers for Brazil
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function phone($check) {
 		return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?\d{4}[-. ]?\d{4}$/', $check);
@@ -33,8 +41,8 @@ class BrValidation {
  * Checks zipcodes (CEP) for Brazil
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function postal($check) {
 		return (bool)preg_match('/^[0-9]{5}-?[0-9]{3}$/', $check);
@@ -44,8 +52,8 @@ class BrValidation {
  * Checks cadastro de pessoa física (CPF) for Brazil
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function ssn($check) {
 		$check = str_replace(array(' ', '-', '.'), '', $check);

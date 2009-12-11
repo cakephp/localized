@@ -13,8 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * SkValidation
+ *
+ * @package       localized
+ * @subpackage    localized.tests.cases.libs
  */
 class SkValidation {
 
@@ -22,8 +30,8 @@ class SkValidation {
  * Checks zipcodes for Slovakia
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function postal($check) {
 		$pattern = '/^[0,8,9]\d{2} ?\d{2}$/i';

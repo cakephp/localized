@@ -13,8 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * ItValidation
+ *
+ * @package       localized
+ * @subpackage    localized.tests.cases.libs
  */
 class ItValidation {
 
@@ -22,8 +30,8 @@ class ItValidation {
  * Checks phone numbers for Italy
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function phone($check) {
 		$pattern = '/^([0-9]*\-?\ ?\/?[0-9]*)$/';
@@ -34,8 +42,8 @@ class ItValidation {
  * Checks zipcodes for Italy
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
+ * @access public
  */
 	function postal($check) {
 		$pattern = '/^[0-9]{5}$/i';

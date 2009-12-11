@@ -22,8 +22,8 @@ App::import('Lib', 'Localized.MxValidation');
 /**
  * Mexican Validation Test Case
  *
- * @package localized
- * @subpackage localized.tests.cases.libs
+ * @package       localization
+ * @subpackage    localized.tests.cases.libs
  */
 class MxValidationTestCase extends CakeTestCase {
 

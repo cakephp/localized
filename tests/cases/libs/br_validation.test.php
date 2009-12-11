@@ -13,17 +13,25 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
- * @since         localized 0.1
+ * @subpackage    localized.tests.cases.libs
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 App::import('Lib', 'Localized.BrValidation');
 
+/**
+ * BrValidationTestCase
+ *
+ * @package       localization
+ * @subpackage    localized.tests.cases.libs
+ */
 class BrValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of BrValidation
  *
  * @return void
+ * @access public
  */
 	function testPhone() {
 		$this->assertFalse(BrValidation::phone('teststring'));
@@ -50,6 +58,7 @@ class BrValidationTest extends CakeTestCase {
  * test the postal method of BrValidation
  *
  * @return void
+ * @access public
  */
 	function testPostal() {
 		$this->assertFalse(BrValidation::postal('111'));
@@ -66,6 +75,7 @@ class BrValidationTest extends CakeTestCase {
  * test the ssn method of BrValidation
  *
  * @return void
+ * @access public
  */
 	function testSsn() {
 		$this->assertFalse(BrValidation::ssn('22692173811'));
