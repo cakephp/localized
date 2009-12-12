@@ -33,10 +33,10 @@ class JpValidation {
  * @return boolean
  * @access public
  */
-  function phone($check) {
-    $pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
-    return preg_match($pattern, $check);
-  }
+	function phone($check) {
+		$pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
+		return preg_match($pattern, $check);
+	}
 
 /**
  * Checks zipcodes for Japan
