@@ -90,7 +90,7 @@ class TwValidation {
 		if (!preg_match('/^[0-9]{8}$/', $check)) {
 			return false;
 		}
-		$tbNum = array(1,2,1,2,1,2,4,1);
+		$tbNum = array(1, 2, 1, 2, 1, 2, 4, 1);
 		$intSum = 0;
 		for ($i = 0; $i < 8; $i++) {
 			$intMultiply = $check[$i] * $tbNum[$i];
