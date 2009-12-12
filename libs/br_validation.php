@@ -49,33 +49,51 @@ class BrValidation {
 	}
 
 /**
- * Checks cadastro de pessoa física (CPF) for Brazil
+ * Checks SSN for Brazil
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
  */
 	function ssn($check) {
-		$check = str_replace(array(' ', '-', '.'), '', $check);
-		if (strlen($check) !== 11 || !ctype_digit($check)) {
-			return false;
-		}
-		$dv = substr($check, -2);
-		for ($pos = 9; $pos <= 10; $pos++) {
-			$sum = 0;
-			$position = $pos + 1;
-			for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-				$sum += $check[$i] * $position;
+		$CPF_LENGTH = 11;
+		$CNPJ_LENGTH = 14;
+		$return = false;
+		$check = preg_replace("/[^0-9]/", "", $check);
+		if (strlen($check) === $CPF_LENGTH) {
+			$dv = substr($check, -2);
+			for ($pos = 9; $pos <= 10; $pos++) {
+				$sum = 0;
+				$position = $pos + 1;
+				for ($i = 0; $i <= $pos - 1; $i++, $position--) {
+					$sum += $check[$i] * $position;
+				}
+				$div = $sum % 11;
+				if ($div < 2) {
+					$check[$pos] = 0;
+				} else {
+					$check[$pos] = 11 - $div;
+				}
 			}
-			$div = $sum % 11;
-			if ($div < 2) {
-				$check[$pos] = 0;
-			} else {
-				$check[$pos] = 11 - $div;
-			}
+			$dvRight = $check[9] * 10 + $check[10];
+			$return = ($dvRight == $dv);
+		} else if(strlen($check) === $CNPJ_LENGTH) {
+			$first_sum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
+				($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
+				($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
+
+			$first_verification_digit = ($first_sum % 11) < 2 ? 0 : 11 - ($first_sum % 11);
+
+			$second_sum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4)+($check[3] * 3) +
+				($check[4] * 2) + ($check[5] * 9) + ($check[6] * 8) + ($check[7] * 7) +
+				($check[8] * 6) + ($check[9] * 5) + ($check[10] * 4) + ($check[11] * 3) +
+				($check[12] * 2);
+
+			$second_verification_digit = ($second_sum % 11) < 2 ? 0 : 11 - ($second_sum % 11);
+
+			$return = ($check[12] == $first_verification_digit) && ($check[13] == $second_verification_digit);
 		}
-		$dvRight = $check[9] * 10 + $check[10];
-		return $dvRight == $dv;
+		return $return;
 	}
 }
 ?>
