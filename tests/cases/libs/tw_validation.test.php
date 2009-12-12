@@ -61,7 +61,7 @@ class TwValidationTestCase extends CakeTestCase {
 	}
 
 /**
- * test the ssn method of TwValidation
+ * test the nicn method of TwValidation
  *
  * @return void
  * @access public
