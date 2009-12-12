@@ -68,18 +68,13 @@ class TwValidation {
 			'Q' => 24, 'R' => 25, 'S' => 26, 'T' => 27, 'U' => 28, 'V' => 29, 'W' => 32, 'X' => 30,
 			'Y' => 31, 'Z' => 33
 		);
-		$checksum = 0;
-		$n1 = $keyTable[$check{0}];
-		$checksum += intval($n1 / 10);
-		$checksum += ($n1 % 10) * 9;
+		$n1 = $keyTable[$check[0]];
+		$checksum = intval($n1 / 10) + ($n1 % 10) * 9;
 
-		for($i = 1; $i < 9; $i++) {
-			$checksum += $check{$i} * (9 - $i);
+		for ($i = 1; $i < 9; $i++) {
+			$checksum += $check[$i] * (9 - $i);
 		}
-		if (substr(10 - ($checksum % 10), -1, 1) == $check{9}) {
-			return true;
-		}
-		return false;
+		return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
 	}
 }
 ?>
