@@ -28,6 +28,34 @@ App::import('Lib', 'Localized.JpValidation');
 class JpValidationTestCase extends CakeTestCase {
 
 /**
+ * test the phone method of JpValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testPhone() {
+
+		$this->assertTrue(JpValidation::phone('03-1111-2222'));
+		$this->assertTrue(JpValidation::phone('090-1111-2222'));
+		$this->assertTrue(JpValidation::phone('0111-11-2222'));
+		$this->assertTrue(JpValidation::phone('02222-1-1111'));
+		$this->assertTrue(JpValidation::phone('0311112222'));
+		$this->assertTrue(JpValidation::phone('09011112222'));
+		$this->assertTrue(JpValidation::phone('03 1111 2222'));
+		$this->assertTrue(JpValidation::phone('090 1111 2222'));
+		$this->assertTrue(JpValidation::phone('+81 90 1111 2222'));
+		$this->assertTrue(JpValidation::phone('+81-90-1111-2222'));
+		$this->assertTrue(JpValidation::phone('+819011112222'));
+	
+		$this->assertFalse(JpValidation::phone('051238-1-111'));
+		$this->assertFalse(JpValidation::phone('90-1111-2222'));
+		$this->assertFalse(JpValidation::phone('+8190111122221199'));
+		$this->assertFalse(JpValidation::phone('+8111-90-1111-2222'));
+ 		$this->assertFalse(JpValidation::phone('056'));
+	}
+
+
+/**
  * test the postal method of JpValidation
  *
  * @return void
