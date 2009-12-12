@@ -73,5 +73,32 @@ class TwValidationTestCase extends CakeTestCase {
 		$this->assertTrue(TwValidation::nicn('O257854301'));
 		$this->assertTrue(TwValidation::nicn('Q175232776'));
 	}
+	
+/**
+ * test the ubn method of TwValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testUbn() {
+		$this->assertTrue(TwValidation::ubn('30185757'));
+		$this->assertTrue(TwValidation::ubn('28816624'));
+		$this->assertTrue(TwValidation::ubn('29030783'));
+		$this->assertTrue(TwValidation::ubn('70385540'));
+		$this->assertTrue(TwValidation::ubn('70402724'));
+		$this->assertTrue(TwValidation::ubn('70417228'));
+		$this->assertTrue(TwValidation::ubn('70425493'));
+		$this->assertTrue(TwValidation::ubn('70428512'));
+		$this->assertTrue(TwValidation::ubn('80284937'));
+		$this->assertTrue(TwValidation::ubn('80288005'));
+		$this->assertTrue(TwValidation::ubn('80309347'));
+		$this->assertTrue(TwValidation::ubn('84824416'));
+		$this->assertTrue(TwValidation::ubn('84877118'));
+		$this->assertTrue(TwValidation::ubn('29048329'));
+		$this->assertTrue(TwValidation::ubn('29059535'));
+		$this->assertTrue(TwValidation::ubn('70433803'));
+		$this->assertTrue(TwValidation::ubn('70445786'));
+		$this->assertTrue(TwValidation::ubn('70460815'));
+	}
 }
 ?>

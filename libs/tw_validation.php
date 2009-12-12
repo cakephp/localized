@@ -76,5 +76,28 @@ class TwValidation {
 		}
 		return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
 	}
+	
+
+/**
+ * Checks unified business number for Taiwan
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ * @access public
+ * @link http://herolin.mine.nu/entry/is-valid-TW-company-ID
+ */
+	function ubn($check) {
+		if (!preg_match('/^[0-9]{8}$/', $check)) {
+			return false;
+		}
+		$tbNum = array(1,2,1,2,1,2,4,1);
+		$intSum = 0;
+		for ($i = 0; $i < 8; $i++) {
+			$intMultiply = $check[$i] * $tbNum[$i];
+			$intAddition = (floor($intMultiply / 10) + ($intMultiply % 10));
+			$intSum += $intAddition;
+		}
+		return ($intSum % 10 == 0) || ($intSum % 10 == 9 && $check[6] == 7);
+	}
 }
 ?>
