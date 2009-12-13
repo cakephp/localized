@@ -56,7 +56,10 @@ class BrValidation {
  * @access public
  */
 	function ssn($check) {
-		$check = preg_replace('/[^0-9]/', '', $check);
+		$check = str_replace(array(' ', '-', '.', '/'), '', $check);
+		if (!ctype_digit($check)) {
+			return false;
+		}
 		return BrValidation::cpf($check) || BrValidation::cnjp($check);
 	}
 

@@ -107,6 +107,8 @@ class BrValidationTest extends CakeTestCase {
 		// Testing invalid input
 		$this->assertFalse(BrValidation::ssn('3712093712890371289073901287390812'));
 		$this->assertFalse(BrValidation::ssn('33aaaa86000129'));
+		$this->assertFalse(BrValidation::ssn('22692173813xxx'));
+		$this->assertFalse(BrValidation::ssn('226921xxx73813'));
 	}
 }
 ?>
