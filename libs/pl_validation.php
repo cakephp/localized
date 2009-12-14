@@ -37,5 +37,65 @@ class PlValidation {
 		$pattern = '/^[0-9]{2}-[0-9]{3}$/D';
 		return preg_match($pattern, $check);
 	}
+
+/**
+ * Check PESEL
+ * Universal Electronic System for Registration of the Population in Poland
+ *
+ * @param string $check Value to check
+ * @return boolean
+ * @access public
+ */
+	function pesel($check) {
+		$pattern = '/^[0-9]{11}$/';
+		if (preg_match($pattern, $check)) {
+			$sum = 0;
+			$weights = array(1, 3, 7, 9, 1, 3, 7, 9, 1, 3);
+
+			for ($i=0; $i<10; $i++) {
+				$sum += $check[$i] * $weights[$i];
+			}
+			$control = 10 - $sum % 10;
+
+			if ($control == 10) {
+				$control = 0;
+			}
+
+			if ($check[10] == $control) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+/**
+ * Check REGON
+ * National Business Registry Number in Poland
+ *
+ * @param string $check Value to check
+ * @return boolean
+ * @access public
+ */
+	function regon($check) {
+		$pattern = '/^[0-9]{9}$/';
+		if (preg_match($pattern, $check)) {
+			$sum = 0;
+			$weights = array(8, 9, 2, 3, 4, 5, 6, 7);
+
+			for ($i=0; $i<8; $i++) {
+				$sum += $check[$i] * $weights[$i];
+			}
+			$control = $sum % 11;
+
+			if ($control == 10) {
+				$control = 0;
+			}
+
+			if ($check[8] == $control) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
 ?>

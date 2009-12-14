@@ -38,5 +38,29 @@ class PlValidationTestCase extends CakeTestCase {
 		$this->assertFalse(PlValidation::postal('63400'));
 		$this->assertFalse(PlValidation::postal('634-00'));
 	}
+
+/**
+ * Test the pesel method of PlValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testPesel() {
+		$this->assertTrue(PlValidation::pesel('49040501580'));
+		$this->assertFalse(PlValidation::pesel('49040501680'));
+		$this->assertFalse(PlValidation::pesel('49040501581'));
+	}
+
+/**
+ * Test the pesel method of PlValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testRegon() {
+		$this->assertTrue(PlValidation::regon('590096454'));
+		$this->assertFalse(PlValidation::regon('590096453'));
+		$this->assertFalse(PlValidation::regon('591096454'));
+	}
 }
 ?>
