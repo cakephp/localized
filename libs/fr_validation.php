@@ -82,8 +82,7 @@ class FrValidation {
 			$numberWithoutKey -= 2000000;
 		}
 
-		// bcmod works with large numbers where % doesn't
-		$expectedKey = 97 - bcmod($numberWithoutKey, 97);
+		$expectedKey = (97-($numberWithoutKey-(floor($numberWithoutKey/97)*97)));
 
 		return ($expectedKey == $key);
 	}
