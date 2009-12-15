@@ -68,7 +68,6 @@ class PlValidation {
 		if ($check[9] == $control) {
 			return true;
 		}
-
 		return false;
 	}
 
