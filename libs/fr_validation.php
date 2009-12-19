@@ -82,7 +82,7 @@ class FrValidation {
 			$numberWithoutKey -= 2000000;
 		}
 
-		$expectedKey = (97-($numberWithoutKey-(floor($numberWithoutKey/97)*97)));
+		$expectedKey = (97 - ($numberWithoutKey - (floor($numberWithoutKey / 97) * 97)));
 
 		return ($expectedKey == $key);
 	}
