@@ -13,8 +13,16 @@
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       localized
+ * @subpackage    localized.libs
  * @since         localized 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+/**
+ * LtValidation
+ *
+ * @package       localized
+ * @subpackage    localized.libs
  */
 class LtValidation {
 
