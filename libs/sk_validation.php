@@ -34,7 +34,7 @@ class SkValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[0,8,9]\d{2} ?\d{2}$/i';
+		$pattern = '/^[0,8,9]\d{2} ?\d{2}$/';
 		return preg_match($pattern, $check);
 	}
 }

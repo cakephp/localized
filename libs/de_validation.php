@@ -34,7 +34,7 @@ class DeValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[0-9]{5}$/i';
+		$pattern = '/^[0-9]{5}$/';
 		return preg_match($pattern, $check);
 	}
 }

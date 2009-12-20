@@ -34,7 +34,7 @@ class BeValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[1-9]{1}[0-9]{3}$/i';
+		$pattern = '/^[1-9]{1}[0-9]{3}$/';
 		return preg_match($pattern, $check);
 	}
 }

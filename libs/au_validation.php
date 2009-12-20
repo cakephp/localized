@@ -34,7 +34,7 @@ class AuValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[0-9]{4}$/i';
+		$pattern = '/^[0-9]{4}$/';
 		return preg_match($pattern, $check);
 	}
 }

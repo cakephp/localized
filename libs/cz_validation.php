@@ -34,7 +34,7 @@ class CzValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[1-7]\d{2} ?\d{2}$/i';
+		$pattern = '/^[1-7]\d{2} ?\d{2}$/';
 		return preg_match($pattern, $check);
 	}
 }
