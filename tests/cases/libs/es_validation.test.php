@@ -28,6 +28,18 @@ App::import('Lib', 'Localized.EsValidation');
 class EsValidationTestCase extends CakeTestCase {
 
 /**
+ * test the postal method of EsValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testPostal() {
+		$this->assertTrue(EsValidation::postal('02300'));
+		$this->assertFalse(EsValidation::postal('2300'));
+		$this->assertFalse(EsValidation::postal('230000'));
+	}
+
+/**
  * test the phone method of EsValidation
  *
  * @return void

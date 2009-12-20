@@ -27,6 +27,18 @@
 class EsValidation {
 
 /**
+ * Checks Postal Codes for Spain
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ * @access public
+ */
+	function postal($check) {
+		$pattern = '/^[0-9]{5}$/i';
+		return preg_match($pattern, $check);
+	}
+
+/**
  * Checks phone numbers for Spain
  *
  * @param string $check The value to check.
