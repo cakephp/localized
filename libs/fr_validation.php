@@ -58,14 +58,9 @@ class FrValidation {
  * @access public
  */
 	function ssn($check) {
-		$pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])(\d{6}|\d{8})$/';
+		$pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])\d{8}$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
-		}
-
-		// No key to check
-		if (strlen($check) == 13) {
-			return true;
 		}
 
 		$numberWithoutKey = substr($check, 0, -2);

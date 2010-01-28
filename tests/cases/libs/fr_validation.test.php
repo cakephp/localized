@@ -60,10 +60,10 @@ class FrValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testSsn() {
-		$this->assertTrue(FrValidation::ssn('1510246102043'));
 		$this->assertTrue(FrValidation::ssn('151024610204325'));
 		$this->assertTrue(FrValidation::ssn('151022A00400150'));
 		$this->assertTrue(FrValidation::ssn('151022B03300180'));
+		$this->assertFalse(FrValidation::ssn('1510246102043'));
 		$this->assertFalse(FrValidation::ssn('151024610204326'));
 		$this->assertFalse(FrValidation::ssn('151022A10204326'));
 		$this->assertFalse(FrValidation::ssn('151022B10204326'));
