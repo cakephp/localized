@@ -38,14 +38,14 @@ class DeValidation {
 		return preg_match($pattern, $check);
 	}
 /**
- * Checks address line for Germany (Straße und Hausnummer)
+ * Checks phone number for Germany
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
  */
-        function addressline($check) {
-                $pattern = '/[a-zA-ZäöüÄÖÜ \.]+ [0-9]+[a-zA-Z]?/';
+        function phone($check) {
+                $pattern = '/[0-9\/. \-]*/';
 		return preg_match($pattern, $check);
         }
 }
