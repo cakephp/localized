@@ -40,6 +40,20 @@ class DeValidation {
   }
 
   /**
+   * Checks an adress (street and number) for Germany.
+   * That is what is called "Straße und Hausnummer",
+   * the first line of a german formal address block.
+   *
+   * @param string $check The value to check.
+   * @return boolean
+   * @access public
+   */
+  function address1($check) {
+    $pattern = '/[a-zA-ZäöüÄÖÜß \.]+ [0-9]+[a-zA-Z]?/';
+    return preg_match($pattern, $check);
+  }
+
+  /**
    * Checks phone number for Germany
    *
    * @param string $check The value to check.
