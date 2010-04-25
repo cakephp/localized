@@ -34,7 +34,7 @@ class EsValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[0-9]{5}$/';
+		$pattern = '/^(5[0-2]|[0-4][0-9])[0-9]{3}$/';
 		return preg_match($pattern, $check);
 	}
 
