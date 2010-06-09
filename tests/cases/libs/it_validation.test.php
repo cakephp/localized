@@ -48,5 +48,16 @@ class ItValidationTestCase extends CakeTestCase {
 		$this->assertTrue(ItValidation::postal('10096'));
 		$this->assertFalse(ItValidation::postal('1046'));
 	}
+
+/**
+ * test the Codice Fiscale for Italy
+ *
+ * @return void
+ * @access public
+ */
+	function testCf() {
+		$this->assertTrue(ItValidation::cf('JLTRSS68A41Z114A'));
+		$this->assertFalse(ItValidation::cf('Fail'));
+	}
 }
 ?>
