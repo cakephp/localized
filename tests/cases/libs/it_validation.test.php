@@ -57,6 +57,13 @@ class ItValidationTestCase extends CakeTestCase {
  */
 	function testCf() {
 		$this->assertTrue(ItValidation::cf('JLTRSS68A41Z114A'));
+		$this->assertTrue(ItValidation::cf('RSSMRA50A01F205R'));
+		$this->assertTrue(ItValidation::cf('TRVMRA30T31L736B'));
+		$this->assertTrue(ItValidation::cf('spsNTN55a01F839q'));
+		
+		$this->assertFalse(ItValidation::cf('MSSRNL30T31L736B'));
+		$this->assertFalse(ItValidation::cf('spsNTN55a01F839r'));
+		$this->assertFalse(ItValidation::cf('JLTRSSG8A41Z114A'));
 		$this->assertFalse(ItValidation::cf('Fail'));
 	}
 }
