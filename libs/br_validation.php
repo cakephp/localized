@@ -56,11 +56,7 @@ class BrValidation {
  * @access public
  */
 	function ssn($check) {
-		$check = str_replace(array(' ', '-', '.', '/'), '', $check);
-		if (!ctype_digit($check)) {
-			return false;
-		}
-		return BrValidation::cpf($check) || BrValidation::cnjp($check);
+		return BrValidation::cpf($check) || BrValidation::cnpj($check);
 	}
 
 /**
@@ -71,6 +67,20 @@ class BrValidation {
  * @access public
  */
 	function cpf($check) {
+    $check = trim($check);
+
+    // sometimes the user submits a masked CNPJ
+    if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
+      $check = str_replace(array('-', '.', '/'), '', $check);
+    }
+    else if (!ctype_digit($check)) {
+			return false;
+		}
+
+    if (!ctype_digit($check)) {
+			return false;
+		}
+    
 		if (strlen($check) != 11) {
 			return false;
 		}
@@ -89,17 +99,27 @@ class BrValidation {
 			}
 		}
 		$dvRight = $check[9] * 10 + $check[10];
+
 		return ($dvRight == $dv);
 	}
 
 /**
- * Checks CNJP for Brazil
+ * Checks CNPJ for Brazil
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
  */
-	function cnjp($check) {
+	function cnpj($check) {
+    $check = trim($check);
+    // sometimes the user submits a masked CNPJ
+    if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
+      $check = str_replace(array('-', '.', '/'), '', $check);
+    }
+    else if (!ctype_digit($check)) {
+			return false;
+		}
+
 		if (strlen($check) != 14) {
 			return false;
 		}
@@ -115,6 +135,7 @@ class BrValidation {
 			($check[12] * 2);
 
 		$second_verification_digit = ($second_sum % 11) < 2 ? 0 : 11 - ($second_sum % 11);
+
 		return ($check[12] == $first_verification_digit) && ($check[13] == $second_verification_digit);
 	}
 }

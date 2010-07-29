@@ -79,17 +79,35 @@ class BrValidationTest extends CakeTestCase {
  */
 	function testSsn() {
 		// Testing CPF
-		$this->assertFalse(BrValidation::ssn('22692173811'));
-		$this->assertFalse(BrValidation::ssn('50549727322'));
-		$this->assertFalse(BrValidation::ssn('869.283.422-11'));
-		$this->assertFalse(BrValidation::ssn('843.701.734-22'));
+		$this->assertFalse(BrValidation::cpf('22692173811'));
+		$this->assertFalse(BrValidation::cpf('50549727322'));
+		$this->assertFalse(BrValidation::cpf('869.283.422-11'));
+		$this->assertFalse(BrValidation::cpf('843.701.734-22'));
 
-		$this->assertTrue(BrValidation::ssn('22692173813'));
-		$this->assertTrue(BrValidation::ssn('50549727302'));
-		$this->assertTrue(BrValidation::ssn('869.283.422-00'));
-		$this->assertTrue(BrValidation::ssn('843.701.734-34'));
+		$this->assertTrue(BrValidation::cpf('22692173813'));
+		$this->assertTrue(BrValidation::cpf('50549727302'));
+		$this->assertTrue(BrValidation::cpf('869.283.422-00'));
+		$this->assertTrue(BrValidation::cpf('843.701.734-34'));
 
 		// Testing CNPJ
+    $this->assertFalse(BrValidation::cnpj('04295165000133'));
+		$this->assertFalse(BrValidation::cnpj('33530485000129'));
+		$this->assertFalse(BrValidation::cnpj('04295166000101'));
+		$this->assertFalse(BrValidation::cnpj('33530486000130'));
+		$this->assertFalse(BrValidation::cnpj('04.295.165/0001-33'));
+		$this->assertFalse(BrValidation::cnpj('33.530.485/0001-29'));
+		$this->assertFalse(BrValidation::cnpj('04.295.166/0001-01'));
+		$this->assertFalse(BrValidation::cnpj('33.530.486/0001-30'));
+    $this->assertFalse(BrValidation::cnpj('33.530.48.6/0001-30'));
+    $this->assertFalse(BrValidation::cnpj('    33.530.48.6/0001-30 '));
+    $this->assertFalse(BrValidation::cnpj('33.530.48.6/000-130'));
+
+		$this->assertTrue(BrValidation::cnpj('04295166000133'));
+		$this->assertTrue(BrValidation::cnpj('33530486000129'));
+		$this->assertTrue(BrValidation::ssn('04.295.166/0001-33'));
+		$this->assertTrue(BrValidation::ssn('33.530.486/0001-29'));
+
+    // Testing ssn
 		$this->assertFalse(BrValidation::ssn('04295165000133'));
 		$this->assertFalse(BrValidation::ssn('33530485000129'));
 		$this->assertFalse(BrValidation::ssn('04295166000101'));
@@ -98,7 +116,6 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::ssn('33.530.485/0001-29'));
 		$this->assertFalse(BrValidation::ssn('04.295.166/0001-01'));
 		$this->assertFalse(BrValidation::ssn('33.530.486/0001-30'));
-
 		$this->assertTrue(BrValidation::ssn('04295166000133'));
 		$this->assertTrue(BrValidation::ssn('33530486000129'));
 		$this->assertTrue(BrValidation::ssn('04.295.166/0001-33'));
