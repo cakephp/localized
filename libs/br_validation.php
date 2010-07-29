@@ -10,19 +10,19 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.libs
- * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @copyright	 Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link		  http://cakephp.org
+ * @package	   localized
+ * @subpackage	localized.libs
+ * @since		 Localized Plugin v 0.1
+ * @license	   MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 /**
  * BrValidation
  *
- * @package       localized
- * @subpackage    localized.libs
+ * @package	   localized
+ * @subpackage	localized.libs
  */
 class BrValidation {
 
@@ -67,20 +67,19 @@ class BrValidation {
  * @access public
  */
 	function cpf($check) {
-    $check = trim($check);
+		$check = trim($check);
 
-    // sometimes the user submits a masked CNPJ
-    if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
-      $check = str_replace(array('-', '.', '/'), '', $check);
-    }
-    else if (!ctype_digit($check)) {
+		// sometimes the user submits a masked CNPJ
+		if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
+			$check = str_replace(array('-', '.', '/'), '', $check);
+		} else if (!ctype_digit($check)) {
 			return false;
 		}
 
-    if (!ctype_digit($check)) {
+		if (!ctype_digit($check)) {
 			return false;
 		}
-    
+
 		if (strlen($check) != 11) {
 			return false;
 		}
@@ -111,12 +110,11 @@ class BrValidation {
  * @access public
  */
 	function cnpj($check) {
-    $check = trim($check);
-    // sometimes the user submits a masked CNPJ
-    if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
-      $check = str_replace(array('-', '.', '/'), '', $check);
-    }
-    else if (!ctype_digit($check)) {
+		$check = trim($check);
+		// sometimes the user submits a masked CNPJ
+		if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
+		  $check = str_replace(array('-', '.', '/'), '', $check);
+		} else if (!ctype_digit($check)) {
 			return false;
 		}
 
@@ -139,4 +137,3 @@ class BrValidation {
 		return ($check[12] == $first_verification_digit) && ($check[13] == $second_verification_digit);
 	}
 }
-?>

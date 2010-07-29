@@ -10,20 +10,20 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
- * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @copyright	 Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link		  http://cakephp.org
+ * @package	   localized
+ * @subpackage	localized.tests.cases.libs
+ * @since		 Localized Plugin v 0.1
+ * @license	   MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 App::import('Lib', 'Localized.BrValidation');
 
 /**
  * BrValidationTestCase
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package	   localization
+ * @subpackage	localized.tests.cases.libs
  */
 class BrValidationTest extends CakeTestCase {
 
@@ -90,7 +90,7 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertTrue(BrValidation::cpf('843.701.734-34'));
 
 		// Testing CNPJ
-    $this->assertFalse(BrValidation::cnpj('04295165000133'));
+		$this->assertFalse(BrValidation::cnpj('04295165000133'));
 		$this->assertFalse(BrValidation::cnpj('33530485000129'));
 		$this->assertFalse(BrValidation::cnpj('04295166000101'));
 		$this->assertFalse(BrValidation::cnpj('33530486000130'));
@@ -98,16 +98,16 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::cnpj('33.530.485/0001-29'));
 		$this->assertFalse(BrValidation::cnpj('04.295.166/0001-01'));
 		$this->assertFalse(BrValidation::cnpj('33.530.486/0001-30'));
-    $this->assertFalse(BrValidation::cnpj('33.530.48.6/0001-30'));
-    $this->assertFalse(BrValidation::cnpj('    33.530.48.6/0001-30 '));
-    $this->assertFalse(BrValidation::cnpj('33.530.48.6/000-130'));
+		$this->assertFalse(BrValidation::cnpj('33.530.48.6/0001-30'));
+		$this->assertFalse(BrValidation::cnpj('	33.530.48.6/0001-30 '));
+		$this->assertFalse(BrValidation::cnpj('33.530.48.6/000-130'));
 
 		$this->assertTrue(BrValidation::cnpj('04295166000133'));
 		$this->assertTrue(BrValidation::cnpj('33530486000129'));
 		$this->assertTrue(BrValidation::ssn('04.295.166/0001-33'));
 		$this->assertTrue(BrValidation::ssn('33.530.486/0001-29'));
 
-    // Testing ssn
+		// Testing ssn
 		$this->assertFalse(BrValidation::ssn('04295165000133'));
 		$this->assertFalse(BrValidation::ssn('33530485000129'));
 		$this->assertFalse(BrValidation::ssn('04295166000101'));
