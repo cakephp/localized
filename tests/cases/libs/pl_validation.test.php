@@ -78,4 +78,3 @@ class PlValidationTestCase extends CakeTestCase {
 		$this->assertFalse(PlValidation::regon('591096454'));
 	}
 }
-?>

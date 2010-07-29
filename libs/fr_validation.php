@@ -79,4 +79,3 @@ class FrValidation {
 		return $key == (97 - ($numberWithoutKey - (floor($numberWithoutKey / 97) * 97)));
 	}
 }
-?>

@@ -60,4 +60,3 @@ class MxValidationTestCase extends CakeTestCase {
 		$this->assertFalse(MxValidation::postal('1046'));
 	}
 }
-?>

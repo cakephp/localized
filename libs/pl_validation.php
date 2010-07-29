@@ -133,4 +133,3 @@ class PlValidation {
 		return false;
 	}
 }
-?>

@@ -128,4 +128,3 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::ssn('226921xxx73813'));
 	}
 }
-?>

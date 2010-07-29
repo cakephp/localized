@@ -85,4 +85,3 @@ class DeValidation {
 		return checkdate((int) $check[1], (int) $check[0], (int) $check[2]);
 	}
 }
-?>

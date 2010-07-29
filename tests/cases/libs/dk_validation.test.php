@@ -38,4 +38,3 @@ class DkValidationTestCase extends CakeTestCase {
 		$this->assertFalse(DkValidation::ssn('111111-333'));
 	}
 }
-?>

@@ -40,4 +40,3 @@ class BdValidationTestCase extends CakeTestCase {
 		$this->assertFalse(BdValidation::postal('11123'));
 	}
 }
-?>

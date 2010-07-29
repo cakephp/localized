@@ -50,4 +50,3 @@ class EsValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

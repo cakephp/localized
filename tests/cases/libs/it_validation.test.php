@@ -67,4 +67,3 @@ class ItValidationTestCase extends CakeTestCase {
 		$this->assertFalse(ItValidation::cf('Fail'));
 	}
 }
-?>

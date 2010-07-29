@@ -92,4 +92,3 @@ class UsValidationTestCase extends CakeTestCase {
 		$this->assertTrue(UsValidation::ssn('111-33-4333'));
 	}
 }
-?>

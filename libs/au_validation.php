@@ -38,4 +38,3 @@ class AuValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

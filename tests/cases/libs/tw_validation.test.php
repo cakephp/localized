@@ -101,4 +101,3 @@ class TwValidationTestCase extends CakeTestCase {
 		$this->assertTrue(TwValidation::ubn('70460815'));
 	}
 }
-?>

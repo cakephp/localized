@@ -38,4 +38,3 @@ class BdValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

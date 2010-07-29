@@ -62,4 +62,3 @@ class LtValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

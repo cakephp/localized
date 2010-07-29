@@ -39,4 +39,3 @@ class TrValidationTestCase extends CakeTestCase {
 		$this->assertFalse(TrValidation::postal('230000'));
 	}
 }
-?>

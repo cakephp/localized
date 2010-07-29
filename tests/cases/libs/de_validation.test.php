@@ -38,4 +38,3 @@ class DeValidationTestCase extends CakeTestCase {
 		$this->assertFalse(DeValidation::postal('051109'));
 	}
 }
-?>

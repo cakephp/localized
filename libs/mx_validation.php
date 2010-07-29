@@ -50,4 +50,3 @@ class MxValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

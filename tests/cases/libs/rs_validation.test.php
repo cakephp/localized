@@ -64,4 +64,3 @@ class RsValidationTestCase extends CakeTestCase {
 		$this->assertFalse(RsValidation::address_code('A11090'));
 	}
 }
-?>

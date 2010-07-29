@@ -83,4 +83,3 @@ class ItValidation {
 		return (chr($sum % 26 + ord('A')) == $check[15]);
 	}
 }
-?>

@@ -44,4 +44,3 @@ class PtValidationTestCase extends CakeTestCase {
 		$this->assertTrue(PtValidation::postal('1389-333'));
 	}
 }
-?>

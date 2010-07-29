@@ -72,4 +72,3 @@ class FrValidationTestCase extends CakeTestCase {
 		$this->assertFalse(FrValidation::ssn('151022C10204326'));
 	}
 }
-?>

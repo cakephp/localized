@@ -100,4 +100,3 @@ class TwValidation {
 		return ($intSum % 10 == 0) || ($intSum % 10 == 9 && $check[6] == 7);
 	}
 }
-?>

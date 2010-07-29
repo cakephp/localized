@@ -38,4 +38,3 @@ class TrValidation {
 		return preg_match($pattern, $check);
 	}
 }
-?>

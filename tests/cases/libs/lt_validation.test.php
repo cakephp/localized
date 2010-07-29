@@ -91,4 +91,3 @@ class LtValidationTestCase extends CakeTestCase {
 		$this->assertFalse(LtValidation::ssn('11-1421455'));
 	}
 }
-?>

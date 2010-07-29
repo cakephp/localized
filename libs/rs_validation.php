@@ -68,4 +68,3 @@ class RsValidation {
 		return ($checksum == $m);
 	}
 }
-?>
