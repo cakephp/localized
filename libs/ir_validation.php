@@ -34,7 +34,7 @@ class IrValidation {
  * @access public
  */
 	function phone($check) {
-                $pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}[1-9]{1}[0-9]{1,}[- .\(\)]*[0-9]{3,8}[- .\(\)]?$/';
+		$pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}[1-9]{1}[0-9]{1,}[- .\(\)]*[0-9]{3,8}[- .\(\)]?$/';
 		return preg_match($pattern, $check);
 	}
 
@@ -59,21 +59,24 @@ class IrValidation {
  */
 	function ssn($check) {
 		$pattern = '/^\d{10}$/';
-                if (!preg_match($pattern, $check)) {
-                        return false;
-                }
-                $sum = 0;
-                $equivalent = 0;
-                for ($i = 0; $i < 9; $i++) {
-                      $sum+=$check{$i} * (10 - $i);
-                      if($check{1}==$check{$i}) $equivalent++;
-                }
-                if($equivalent==10) return false;
-                $remaining = $sum % 11;
-                if ($remaining <= 1) {
-                    return ($remaining==$check{9})?true:false;
-                }else{
-                    return ((11-$remaining)==$check{9})?true:false;
-                }
+		if (!preg_match($pattern, $check)) {
+			return false;
+		}
+		$sum = 0;
+		$equivalent = 0;
+		for ($i = 0; $i < 9; $i++) {
+			$sum += $check{$i} * (10 - $i);
+			if ($check{1} == $check{$i}) {
+				$equivalent++;
+			}
+		}
+		if ($equivalent == 10) {
+			return false;
+		}
+		$remaining = $sum % 11;
+		if ($remaining <= 1) {
+			return $remaining == $check{9};
+		}
+		return (11 - $remaining) == $check{9};
 	}
 }
