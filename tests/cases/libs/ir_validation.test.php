@@ -48,7 +48,7 @@ class IrValidationTestCase extends CakeTestCase {
 		$this->assertTrue(IrValidation::phone('0411 3334444'));
 		$this->assertTrue(IrValidation::phone('(0411) (3334444)'));
 
-                $this->assertFalse(IrValidation::phone('teststring'));
+		$this->assertFalse(IrValidation::phone('teststring'));
 		$this->assertFalse(IrValidation::phone('992133334444'));
 		$this->assertFalse(IrValidation::phone('+992133334444'));
 		$this->assertFalse(IrValidation::phone('00992133334444'));
@@ -84,9 +84,9 @@ class IrValidationTestCase extends CakeTestCase {
 		$this->assertTrue(IrValidation::ssn('1234567891'));
 		$this->assertTrue(IrValidation::ssn('0324354657'));
 
-                $this->assertFalse(IrValidation::ssn('1234567890'));
-                $this->assertFalse(IrValidation::ssn('3333333333'));
-                $this->assertFalse(IrValidation::ssn('0324354654'));
-                $this->assertFalse(IrValidation::ssn('12345'));
+		$this->assertFalse(IrValidation::ssn('1234567890'));
+		$this->assertFalse(IrValidation::ssn('3333333333'));
+		$this->assertFalse(IrValidation::ssn('0324354654'));
+		$this->assertFalse(IrValidation::ssn('12345'));
 	}
 }
