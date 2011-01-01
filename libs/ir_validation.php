@@ -1,6 +1,6 @@
 <?php
 /**
- * Serbian Localized Validation class. Handles localized validation for Serbia
+ * Iranian Localized Validation class. Handles localized validation for Iran
  *
  * PHP versions 4 and 5
  *
@@ -19,52 +19,64 @@
  */
 
 /**
- * RsValidation
+ * IrValidation
  *
  * @package       localized
  * @subpackage    localized.libs
  */
-class RsValidation {
+class IrValidation {
 
 /**
- * Checks Postal Numbers (Poštanski broj) for Serbia
+ * Checks phone numbers for Iran
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
  */
-	function postal_number($check) {
-		$pattern = '/^[0-9]{5}$/';
+	function phone($check) {
+		$pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}[1-9]{1}[0-9]{1,}[- .\(\)]*[0-9]{3,8}[- .\(\)]?$/';
 		return preg_match($pattern, $check);
 	}
 
 /**
- * Checks Address Codes (Adresni kod) for Serbia
+ * Checks zipcodes for Iran
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
  */
-	function address_code($check) {
-		$pattern = '/^[0-9]{6}$/';
+	function postal($check) {
+		$pattern = '/^\d{10}$/';
 		return preg_match($pattern, $check);
 	}
 
 /**
- * Checks Unique Master Citizen Numbers (JMBG) for Serbia
+ * Checks social security numbers for Iran
  *
  * @param string $check The value to check.
  * @return boolean
  * @access public
- * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
- */	
-	function jmbg($check) {
-		if (!preg_match('/^[0-9]{13}$/', $check)) {
+ */
+	function ssn($check) {
+		$pattern = '/^\d{10}$/';
+		if (!preg_match($pattern, $check)) {
 			return false;
 		}
-
-		list($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m) = str_split($check);		
-		$checksum = 11 - ( 7 * ($a + $g) + 6 * ($b + $h) + 5 * ($c + $i) + 4 * ($d + $j) + 3 * ($e + $k) + 2 * ($f + $l) ) % 11;
-		return ($checksum == $m);
+		$sum = 0;
+		$equivalent = 0;
+		for ($i = 0; $i < 9; $i++) {
+			$sum += $check{$i} * (10 - $i);
+			if ($check{1} == $check{$i}) {
+				$equivalent++;
+			}
+		}
+		if ($equivalent == 10) {
+			return false;
+		}
+		$remaining = $sum % 11;
+		if ($remaining <= 1) {
+			return $remaining == $check{9};
+		}
+		return (11 - $remaining) == $check{9};
 	}
 }
