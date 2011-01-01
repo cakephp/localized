@@ -20,7 +20,7 @@
 App::import('Lib', 'Localized.IrValidation');
 
 /**
- * UsValidationTestCase
+ * IrValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
@@ -28,64 +28,65 @@ App::import('Lib', 'Localized.IrValidation');
 class IrValidationTestCase extends CakeTestCase {
 
 /**
- * test the phone method of UsValidation
+ * test the phone method of IrValidation
  *
  * @return void
  * @access public
  */
 	function testPhone() {
-		$this->assertTrue(UsValidation::phone('982133334444'));
-		$this->assertTrue(UsValidation::phone('00982133334444'));
-		$this->assertTrue(UsValidation::phone('+982133334444'));
-		$this->assertTrue(UsValidation::phone('+98 2133334444'));
-		$this->assertTrue(UsValidation::phone('+98 21 33334444'));
-		$this->assertTrue(UsValidation::phone('+98-21-33334444'));
-		$this->assertTrue(UsValidation::phone('(+98) (21) (33334444)'));
-		$this->assertTrue(UsValidation::phone('02133334444'));
-		$this->assertTrue(UsValidation::phone('021 33334444'));
-		$this->assertTrue(UsValidation::phone('021 33334444'));
-		$this->assertTrue(UsValidation::phone('(021) (118)'));
-		$this->assertTrue(UsValidation::phone('0411 3334444'));
-		$this->assertTrue(UsValidation::phone('(0411) (3334444)'));
+		$this->assertTrue(IrValidation::phone('982133334444'));
+		$this->assertTrue(IrValidation::phone('00982133334444'));
+		$this->assertTrue(IrValidation::phone('+982133334444'));
+		$this->assertTrue(IrValidation::phone('+98 2133334444'));
+		$this->assertTrue(IrValidation::phone('+98 21 33334444'));
+		$this->assertTrue(IrValidation::phone('+98-21-33334444'));
+		$this->assertTrue(IrValidation::phone('(+98) (21) (33334444)'));
+		$this->assertTrue(IrValidation::phone('02133334444'));
+		$this->assertTrue(IrValidation::phone('021 33334444'));
+		$this->assertTrue(IrValidation::phone('021 33334444'));
+		$this->assertTrue(IrValidation::phone('(021) (118)'));
+		$this->assertTrue(IrValidation::phone('0411 3334444'));
+		$this->assertTrue(IrValidation::phone('(0411) (3334444)'));
 
-                $this->assertFalse(UsValidation::phone('teststring'));
-		$this->assertFalse(UsValidation::phone('992133334444'));
-		$this->assertFalse(UsValidation::phone('+992133334444'));
-		$this->assertFalse(UsValidation::phone('00992133334444'));
-		$this->assertFalse(UsValidation::phone('000982133334444'));
-		$this->assertFalse(UsValidation::phone('+00982133334444'));
-		$this->assertFalse(UsValidation::phone('+0982133334444'));
-		$this->assertFalse(UsValidation::phone('+98/21/33334444'));
-		$this->assertFalse(UsValidation::phone('+02133334444'));
-		$this->assertFalse(UsValidation::phone('021 22'));
+                $this->assertFalse(IrValidation::phone('teststring'));
+		$this->assertFalse(IrValidation::phone('992133334444'));
+		$this->assertFalse(IrValidation::phone('+992133334444'));
+		$this->assertFalse(IrValidation::phone('00992133334444'));
+		$this->assertFalse(IrValidation::phone('000982133334444'));
+		$this->assertFalse(IrValidation::phone('+00982133334444'));
+		$this->assertFalse(IrValidation::phone('+0982133334444'));
+		$this->assertFalse(IrValidation::phone('+98/21/33334444'));
+		$this->assertFalse(IrValidation::phone('+02133334444'));
+		$this->assertFalse(IrValidation::phone('021 22'));
 	}
 
 /**
- * test the postal method of UsValidation
+ * test the postal method of IrValidation
  *
  * @return void
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(UsValidation::postal('1234567890'));
+		$this->assertTrue(IrValidation::postal('1234567890'));
                 
-		$this->assertFalse(UsValidation::postal('teststring'));
-		$this->assertFalse(UsValidation::postal('123456789'));
+		$this->assertFalse(IrValidation::postal('teststring'));
+		$this->assertFalse(IrValidation::postal('123456789'));
 	}
 
 /**
- * test the ssn method of UsValidation
+ * test the ssn method of IrValidation
  *
  * @return void
  * @access public
  */
 	function testSsn() {
-		$this->assertTrue(UsValidation::ssn('111-33-4333'));
-		$this->assertTrue(UsValidation::ssn('111-33-4333'));
-		$this->assertTrue(UsValidation::ssn('111-33-4333'));
+		$this->assertTrue(IrValidation::ssn('9876543210'));
+		$this->assertTrue(IrValidation::ssn('1234567891'));
+		$this->assertTrue(IrValidation::ssn('0324354657'));
 
-                $this->assertFalse(UsValidation::ssn('111-33-333'));
-                $this->assertFalse(UsValidation::ssn('111-33-333'));
-                $this->assertFalse(UsValidation::ssn('111-33-333'));
+                $this->assertFalse(IrValidation::ssn('1234567890'));
+                $this->assertFalse(IrValidation::ssn('3333333333'));
+                $this->assertFalse(IrValidation::ssn('0324354654'));
+                $this->assertFalse(IrValidation::ssn('12345'));
 	}
 }
