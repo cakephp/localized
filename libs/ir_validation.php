@@ -117,7 +117,7 @@ class IrValidation {
                       $sum+=$check{$i} * (10 - $i);
                       if($check{1}==$check{$i}) $equivalent++;
                 }
-                if($equivalent==10) return false;
+                if($equivalent==9) return false;
                 $remaining = $sum % 11;
                 if ($remaining <= 1) {
                     return ($remaining==$check{9})?true:false;
