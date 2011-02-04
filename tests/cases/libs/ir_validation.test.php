@@ -35,14 +35,14 @@ class IrValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testAlphaNumeric() {
-		$this->assertTrue(IrValidation::phone('آزمایش ۱۲۳۴۵۶۷۸۹۰'));
-		$this->assertTrue(IrValidation::phone('آزمایش 1234567890'));
-		$this->assertTrue(IrValidation::phone('هِمّت بُلَند دار کِه مَردانِ روزگار  اَز همّتِ بُلَند به جایی رسیده‌اَند'));
-		$this->assertTrue(IrValidation::phone('﷼'));
+		$this->assertTrue(IrValidation::alphaNumeric('آزمایش ۱۲۳۴۵۶۷۸۹۰'));
+		$this->assertTrue(IrValidation::alphaNumeric('آزمایش 1234567890'));
+		$this->assertTrue(IrValidation::alphaNumeric('هِمّت بُلَند دار کِه مَردانِ روزگار  اَز همّتِ بُلَند به جایی رسیده‌اَند'));
+		$this->assertTrue(IrValidation::alphaNumeric('﷼'));
 		
-		$this->assertFalse(IrValidation::phone('teststring'));
-		$this->assertFalse(IrValidation::phone('test1234567890'));
-		$this->assertFalse(IrValidation::phone('test آزمایش'));
+		$this->assertFalse(IrValidation::alphaNumeric('teststring'));
+		$this->assertFalse(IrValidation::alphaNumeric('test1234567890'));
+		$this->assertFalse(IrValidation::alphaNumeric('test آزمایش'));
 	}
 
 /**
@@ -52,11 +52,11 @@ class IrValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testNumeric() {
-		$this->assertTrue(IrValidation::phone('۱۲۳۴۵۶۷۸۹۰'));
+		$this->assertTrue(IrValidation::numeric('۱۲۳۴۵۶۷۸۹۰'));
 
-		$this->assertFalse(IrValidation::phone('teststring'));
-		$this->assertFalse(IrValidation::phone('1234567890'));
-		$this->assertFalse(IrValidation::phone('١٢٣٤٥٦٧٨٩٠'));
+		$this->assertFalse(IrValidation::numeric('teststring'));
+		$this->assertFalse(IrValidation::numeric('1234567890'));
+		$this->assertFalse(IrValidation::numeric('١٢٣٤٥٦٧٨٩٠'));
 		
 	}
 
@@ -67,13 +67,13 @@ class IrValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testCc() {
-		$this->assertTrue(IrValidation::phone('1111222233334444'));
-		$this->assertTrue(IrValidation::phone('1111-2222-3333-4444'));
-		$this->assertTrue(IrValidation::phone('1111 2222 3333 4444'));
+		$this->assertTrue(IrValidation::cc('1111222233334444'));
+		$this->assertTrue(IrValidation::cc('1111-2222-3333-4444'));
+		$this->assertTrue(IrValidation::cc('1111 2222 3333 4444'));
 
-		$this->assertFalse(IrValidation::phone('teststring'));
-		$this->assertFalse(IrValidation::phone('1111'));
-		$this->assertFalse(IrValidation::phone('111-122-223-333-444-4'));
+		$this->assertFalse(IrValidation::cc('teststring'));
+		$this->assertFalse(IrValidation::cc('1111'));
+		$this->assertFalse(IrValidation::cc('111-122-223-333-444-4'));
 		
 	}
 
@@ -117,20 +117,20 @@ class IrValidationTestCase extends CakeTestCase {
  * @access public
  */
 	function testMobile() {
-		$this->assertTrue(IrValidation::phone('989123334444'));
-		$this->assertTrue(IrValidation::phone('00989353334444'));
-		$this->assertTrue(IrValidation::phone('+989363334444'));
-		$this->assertTrue(IrValidation::phone('+98 9373334444'));
-		$this->assertTrue(IrValidation::phone('(+98) 9383334444'));
-		$this->assertTrue(IrValidation::phone('+98-9323334444'));
+		$this->assertTrue(IrValidation::mobile('989123334444'));
+		$this->assertTrue(IrValidation::mobile('00989353334444'));
+		$this->assertTrue(IrValidation::mobile('+989363334444'));
+		$this->assertTrue(IrValidation::mobile('+98 9373334444'));
+		$this->assertTrue(IrValidation::mobile('(+98) 9383334444'));
+		$this->assertTrue(IrValidation::mobile('+98-9323334444'));
 
-		$this->assertFalse(IrValidation::phone('teststring'));
-		$this->assertFalse(IrValidation::phone('999123334444'));
-		$this->assertFalse(IrValidation::phone('+999353334444'));
-		$this->assertFalse(IrValidation::phone('00999363334444'));
-		$this->assertFalse(IrValidation::phone('000989373334444'));
-		$this->assertFalse(IrValidation::phone('+00989383334444'));
-		$this->assertFalse(IrValidation::phone('+0989323334444'));
+		$this->assertFalse(IrValidation::mobile('teststring'));
+		$this->assertFalse(IrValidation::mobile('999123334444'));
+		$this->assertFalse(IrValidation::mobile('+999353334444'));
+		$this->assertFalse(IrValidation::mobile('00999363334444'));
+		$this->assertFalse(IrValidation::mobile('000989373334444'));
+		$this->assertFalse(IrValidation::mobile('+00989383334444'));
+		$this->assertFalse(IrValidation::mobile('+0989323334444'));
 	}
 
 /**
