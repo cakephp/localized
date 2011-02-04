@@ -69,10 +69,10 @@ class IrValidationTestCase extends CakeTestCase {
 	function testCc() {
 		$this->assertTrue(IrValidation::cc('1111222233334444'));
 		$this->assertTrue(IrValidation::cc('1111-2222-3333-4444'));
-		$this->assertTrue(IrValidation::cc('1111 2222 3333 4444'));
 
 		$this->assertFalse(IrValidation::cc('teststring'));
 		$this->assertFalse(IrValidation::cc('1111'));
+		$this->assertFalse(IrValidation::cc('1111 2222 3333 4444'));
 		$this->assertFalse(IrValidation::cc('111-122-223-333-444-4'));
 		
 	}
