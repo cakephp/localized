@@ -37,4 +37,17 @@ class AuValidation {
 		$pattern = '/^[0-9]{4}$/';
 		return preg_match($pattern, $check);
 	}
+
+/**
+ * Basic Check for Valid Mobile Mumbers for Australia
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ * @access public
+ */
+	function mobile($check) {
+		$pattern = '/(^0|^61|\+61)(4[0-9]{8})$/';
+		return preg_match($pattern, $check);
+	}
+
 }
