@@ -36,5 +36,30 @@ class BeValidationTestCase extends CakeTestCase {
 	function testPostal() {
 		$this->assertTrue(BeValidation::postal('1804'));
 		$this->assertFalse(BeValidation::postal('01804'));
+		$this->assertTrue(BeValidation::postal('0612'));
+	}
+
+/**
+ * test the ssn method of BeValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testSsn() {
+		$this->assertTrue(BeValidation::ssn('72.02.02-900.81'));
+		$this->assertTrue(BeValidation::ssn('93.05.18-223.61'));
+		$this->assertTrue(BeValidation::ssn('00.01.25-567.77'));
+
+		$this->assertTrue(BeValidation::ssn('72020290081', false));
+		$this->assertTrue(BeValidation::ssn('93-05-18-223-61', false));
+		$this->assertTrue(BeValidation::ssn('00 01 25 567 77', false));
+
+		$this->assertFalse(BeValidation::ssn('72020290081'));
+		$this->assertFalse(BeValidation::ssn('93.05.18-223.60'));
+		$this->assertFalse(BeValidation::ssn('00.01.25-567.75'));
+
+		$this->assertFalse(BeValidation::ssn('72020290080', false));
+		$this->assertFalse(BeValidation::ssn('93-05-18-223-65', false));
+		$this->assertFalse(BeValidation::ssn('00 01 25 567 78', false));
 	}
 }

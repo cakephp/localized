@@ -34,7 +34,38 @@ class BeValidation {
  * @access public
  */
 	function postal($check) {
-		$pattern = '/^[1-9]{1}[0-9]{3}$/';
+		$pattern = '/^[1-9]{1}[0-9]{3}|0612$/';
 		return preg_match($pattern, $check);
+	}
+
+/**
+ * Checks social security numbers (rijksregisternummer) for Belgium
+ * 
+ * Strict format is: ##.##.##-###.##
+ *
+ * @param string $check The value to check.
+ * @param bool $strictFormat Boolean to toggle strict format checking
+ * @return boolean
+ * @access public
+ */
+	function ssn($check, $strictFormat = true) {
+		if ($strictFormat && !preg_match('/[\d]{2}\.[\d]{2}\.[\d]{2}-[\d]{3}\.[\d]{2}/', $check)) {
+			return false;
+		}
+
+        $ssn = preg_replace('/\D/','',$check);
+        $controlDigits = substr($ssn, -2);
+        $principal = substr($ssn, 0, -2);
+
+		if (97 - ($principal % 97) == $controlDigits) {
+			return true;
+		}
+
+		$principal = '2' . $principal;
+		if (97 - ($principal % 97) == $controlDigits) {
+			return true;
+		}
+
+		return false;
 	}
 }
