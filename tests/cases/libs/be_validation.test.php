@@ -22,7 +22,7 @@ App::import('Lib', 'Localized.BeValidation');
 /**
  * BeValidationTestCase
  *
- * @package       localization
+ * @package       localized
  * @subpackage    localized.tests.cases.libs
  */
 class BeValidationTestCase extends CakeTestCase {

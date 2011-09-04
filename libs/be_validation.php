@@ -53,9 +53,9 @@ class BeValidation {
 			return false;
 		}
 
-        $ssn = preg_replace('/\D/','',$check);
-        $controlDigits = substr($ssn, -2);
-        $principal = substr($ssn, 0, -2);
+		$ssn = preg_replace('/\D/','',$check);
+		$controlDigits = substr($ssn, -2);
+		$principal = substr($ssn, 0, -2);
 
 		if (97 - ($principal % 97) == $controlDigits) {
 			return true;
