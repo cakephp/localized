@@ -119,7 +119,7 @@ class IrValidation {
 				$equivalent++;
 			}
 		}
-		if ($equivalent == 10) {
+		if ($equivalent == 9) {
 			return false;
 		}
 		$remaining = $sum % 11;
