@@ -1,6 +1,6 @@
 <?php
 /**
- * UK Localized Validation class test case
+ * Turkey Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,24 +17,25 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.UkValidation');
+App::import('Lib', 'Localized.TrValidation');
 
 /**
- * UkValidationTestCase
+ * TrValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class UkValidationTestCase extends CakeTestCase {
+class TrValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of UkValidation
+ * test the postal method of TrValidation
  *
  * @return void
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(UkValidation::postal('DT4 8PP'));
-		$this->assertFalse(UkValidation::postal('DT4-8PP'));
+		$this->assertTrue(TrValidation::postal('02300'));
+		$this->assertFalse(TrValidation::postal('2300'));
+		$this->assertFalse(TrValidation::postal('230000'));
 	}
 }

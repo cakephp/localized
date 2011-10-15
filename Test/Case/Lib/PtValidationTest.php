@@ -1,6 +1,6 @@
 <?php
 /**
- * Danish Localized Validation class test case
+ * Portuguese Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,24 +17,30 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.DkValidation');
+App::import('Lib', 'Localized.PtValidation');
 
 /**
- * DkValidationTestCase
+ * PtValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class DkValidationTestCase extends CakeTestCase {
+class PtValidationTest extends CakeTestCase {
 
 /**
- * test the ssn method of DkValidation
+ * test the postal method of PtValidation
  *
  * @return void
  * @access public
  */
-	function testSsn() {
-		$this->assertTrue(DkValidation::ssn('111111-3334'));
-		$this->assertFalse(DkValidation::ssn('111111-333'));
+	function testPostal() {
+		$this->assertFalse(PtValidation::postal('111'));
+		$this->assertFalse(PtValidation::postal('1111'));
+		$this->assertFalse(PtValidation::postal('130896'));
+		$this->assertFalse(PtValidation::postal('13089-33333'));
+		$this->assertFalse(PtValidation::postal('1000 333'));
+		$this->assertFalse(PtValidation::postal('0000 333'));
+		$this->assertFalse(PtValidation::postal('13A89-4333'));
+		$this->assertTrue(PtValidation::postal('1389-333'));
 	}
 }

@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.BrValidation');
  * @package	   localization
  * @subpackage	localized.tests.cases.libs
  */
-class BrValidationTestCase extends CakeTestCase {
+class BrValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of BrValidation

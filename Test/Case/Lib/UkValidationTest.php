@@ -1,6 +1,6 @@
 <?php
 /**
- * Slovak Localized Validation class test case
+ * UK Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,24 +17,24 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.SkValidation');
+App::import('Lib', 'Localized.UkValidation');
 
 /**
- * SkValidationTestCase
+ * UkValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class SkValidationTestCase extends CakeTestCase {
+class UkValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of SkValidation
+ * test the postal method of UkValidation
  *
  * @return void
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(SkValidation::postal('95616'));
-		$this->assertFalse(SkValidation::postal('0989'));
+		$this->assertTrue(UkValidation::postal('DT4 8PP'));
+		$this->assertFalse(UkValidation::postal('DT4-8PP'));
 	}
 }

@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.JpValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class JpValidationTestCase extends CakeTestCase {
+class JpValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of JpValidation

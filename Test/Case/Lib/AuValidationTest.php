@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.AuValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class AuValidationTestCase extends CakeTestCase {
+class AuValidationTest extends CakeTestCase {
 
 /**
  * test the postal method of AuValidation

@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.RsValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class RsValidationTestCase extends CakeTestCase {
+class RsValidationTest extends CakeTestCase {
 
 /**
  * test the jmbg method of RsValidation

@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.MxValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class MxValidationTestCase extends CakeTestCase {
+class MxValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of MxValidation

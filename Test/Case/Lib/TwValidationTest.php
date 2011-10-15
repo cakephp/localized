@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.TwValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class TwValidationTestCase extends CakeTestCase {
+class TwValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of TwValidation

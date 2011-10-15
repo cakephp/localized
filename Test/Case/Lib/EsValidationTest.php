@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.EsValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class EsValidationTestCase extends CakeTestCase {
+class EsValidationTest extends CakeTestCase {
 
 /**
  * test the postal method of EsValidation

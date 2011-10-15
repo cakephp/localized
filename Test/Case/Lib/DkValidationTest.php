@@ -1,6 +1,6 @@
 <?php
 /**
- * Turkey Localized Validation class test case
+ * Danish Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,25 +17,24 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.TrValidation');
+App::import('Lib', 'Localized.DkValidation');
 
 /**
- * TrValidationTestCase
+ * DkValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class TrValidationTestCase extends CakeTestCase {
+class DkValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of TrValidation
+ * test the ssn method of DkValidation
  *
  * @return void
  * @access public
  */
-	function testPostal() {
-		$this->assertTrue(TrValidation::postal('02300'));
-		$this->assertFalse(TrValidation::postal('2300'));
-		$this->assertFalse(TrValidation::postal('230000'));
+	function testSsn() {
+		$this->assertTrue(DkValidation::ssn('111111-3334'));
+		$this->assertFalse(DkValidation::ssn('111111-333'));
 	}
 }

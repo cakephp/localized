@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.FrValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class FrValidationTestCase extends CakeTestCase {
+class FrValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of FrValidation

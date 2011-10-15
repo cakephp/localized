@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.BeValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class BeValidationTestCase extends CakeTestCase {
+class BeValidationTest extends CakeTestCase {
 
 /**
  * test the postal method of BeValidation

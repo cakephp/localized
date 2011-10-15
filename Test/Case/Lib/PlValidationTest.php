@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.PlValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class PlValidationTestCase extends CakeTestCase {
+class PlValidationTest extends CakeTestCase {
 
 /**
  * test the postal method of PlValidation

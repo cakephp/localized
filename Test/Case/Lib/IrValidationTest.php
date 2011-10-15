@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.IrValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class IrValidationTestCase extends CakeTestCase {
+class IrValidationTest extends CakeTestCase {
 
 
 /**

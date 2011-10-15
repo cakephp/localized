@@ -18,7 +18,7 @@
  */
 App::import('Lib', 'Localized.LtValidation');
 
-class LtValidationTestCase extends CakeTestCase {
+class LtValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of LtValidation

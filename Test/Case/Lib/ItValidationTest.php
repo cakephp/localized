@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.ItValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class ItValidationTestCase extends CakeTestCase {
+class ItValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of ItValidation

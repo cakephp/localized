@@ -25,7 +25,7 @@ App::import('Lib', 'Localized.NlValidation');
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class NlValidationTestCase extends CakeTestCase {
+class NlValidationTest extends CakeTestCase {
 
 /**
  * test the phone method of NlValidation

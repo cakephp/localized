@@ -1,6 +1,6 @@
 <?php
 /**
- * German Localized Validation class test case
+ * Canadian Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,24 +17,24 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.DeValidation');
+App::import('Lib', 'Localized.CaValidation');
 
 /**
- * DeValidationTestCase
+ * CaValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class DeValidationTestCase extends CakeTestCase {
+class CaValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of DeValidation
+ * test the postal method of CaValidation
  *
  * @return void
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(DeValidation::postal('51109'));
-		$this->assertFalse(DeValidation::postal('051109'));
+		$this->assertTrue(CaValidation::postal('L4W 1S2'));
+		$this->assertFalse(CaValidation::postal('LI4 SOC'));
 	}
 }

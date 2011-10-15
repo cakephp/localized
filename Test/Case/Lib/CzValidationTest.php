@@ -1,6 +1,6 @@
 <?php
 /**
- * Canadian Localized Validation class test case
+ * Czech Localized Validation class test case
  *
  * PHP versions 4 and 5
  *
@@ -17,24 +17,24 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.CaValidation');
+App::import('Lib', 'Localized.CzValidation');
 
 /**
- * CaValidationTestCase
+ * CzValidationTestCase
  *
  * @package       localization
  * @subpackage    localized.tests.cases.libs
  */
-class CaValidationTestCase extends CakeTestCase {
+class CzValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of CaValidation
+ * test the postal method of CzValidation
  *
  * @return void
  * @access public
  */
 	function testPostal() {
-		$this->assertTrue(CaValidation::postal('L4W 1S2'));
-		$this->assertFalse(CaValidation::postal('LI4 SOC'));
+		$this->assertTrue(CzValidation::postal('123 45'));
+		$this->assertFalse(CzValidation::postal('95616'));
 	}
 }
