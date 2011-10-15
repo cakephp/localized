@@ -31,11 +31,10 @@ class FrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,11 +42,10 @@ class FrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^\d{5}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -55,9 +53,8 @@ class FrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		$pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])\d{8}$/';
 		if (!preg_match($pattern, $check)) {
 			return false;

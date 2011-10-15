@@ -31,11 +31,10 @@ class JpValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,10 +42,9 @@ class JpValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[0-9]{3}-[0-9]{4}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

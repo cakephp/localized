@@ -31,11 +31,10 @@ class RsValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal_number($check) {
+	public static function postal_number($check) {
 		$pattern = '/^[0-9]{5}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,11 +42,10 @@ class RsValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function address_code($check) {
+	public static function address_code($check) {
 		$pattern = '/^[0-9]{6}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -55,10 +53,9 @@ class RsValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
  */	
-	function jmbg($check) {
+	public static function jmbg($check) {
 		if (!preg_match('/^[0-9]{13}$/', $check)) {
 			return false;
 		}

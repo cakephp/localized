@@ -31,10 +31,9 @@ class CaValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/\\A\\b[ABCEGHJKLMNPRSTVXY][0-9][A-Z] [0-9][A-Z][0-9]\\b\\z/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

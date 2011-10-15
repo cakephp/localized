@@ -31,11 +31,10 @@ class EsValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^(5[0-2]|[0-4][0-9])[0-9]{3}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,10 +42,9 @@ class EsValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^\\+?(34[-. ]?)?\\(?(([689]{1})(([0-9]{2})\\)?[-. ]?|([0-9]{1})\\)?[-. ]?([0-9]{1}))|70\\)?[-. ]?([0-9]{1}))([0-9]{2})[-. ]?([0-9]{1})[-. ]?([0-9]{1})[-. ]?([0-9]{2})$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

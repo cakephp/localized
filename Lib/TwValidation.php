@@ -31,11 +31,10 @@ class TwValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^\\(?(0|\\+886)[-. ]?[2-9][\\)-. ]?([0-9][\\)-. ]?){2}([0-9][-. ]?){3}[0-9]{2}[0-9]?$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,11 +42,10 @@ class TwValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[1-9][0-9]{2}([0-9]{2})?$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -55,9 +53,8 @@ class TwValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function nicn($check) {
+	public static function nicn($check) {
 		$check = strtoupper($check);
 		if (!preg_match('/^[A-Z][1-2][0-9]{8}$/', $check)) {
 			return false;
@@ -75,8 +72,7 @@ class TwValidation {
 			$checksum += $check[$i] * (9 - $i);
 		}
 		return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
-	}
-	
+	}	
 
 /**
  * Checks unified business number for Taiwan
@@ -86,7 +82,7 @@ class TwValidation {
  * @access public
  * @link http://herolin.mine.nu/entry/is-valid-TW-company-ID
  */
-	function ubn($check) {
+	public static function ubn($check) {
 		if (!preg_match('/^[0-9]{8}$/', $check)) {
 			return false;
 		}

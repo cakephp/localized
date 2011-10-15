@@ -31,11 +31,10 @@ class PlValidation {
  *
  * @param string $check Value to check
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[0-9]{2}-[0-9]{3}$/D';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,10 +42,9 @@ class PlValidation {
  *
  * @param string $check Value to check
  * @return boolean
- * @access public
  * @link http://pl.wikipedia.org/wiki/NIP
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		$pattern = '/^([0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})|([0-9]{10})$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -77,10 +75,9 @@ class PlValidation {
  *
  * @param string $check Value to check
  * @return boolean
- * @access public
  * @link http://pl.wikipedia.org/wiki/PESEL
  */
-	function pesel($check) {
+	public static function pesel($check) {
 		$pattern = '/^[0-9]{11}$/';
 		if (preg_match($pattern, $check)) {
 			$sum = 0;
@@ -108,10 +105,9 @@ class PlValidation {
  *
  * @param string $check Value to check
  * @return boolean
- * @access public
  * @link http://pl.wikipedia.org/wiki/REGON
  */
-	function regon($check) {
+	public static function regon($check) {
 		$pattern = '/^[0-9]{9}$/';
 		if (preg_match($pattern, $check)) {
 			$sum = 0;

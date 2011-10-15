@@ -31,10 +31,9 @@ class DkValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		$pattern = '/\\A\\b[0-9]{6}-[0-9]{4}\\b\\z/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

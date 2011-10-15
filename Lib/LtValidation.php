@@ -30,35 +30,32 @@ class LtValidation {
  * Checks phone numbers for the Lithuania
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = "/^(([\+]?370)|(8))[\s-]?\(?[0-9]{2,3}\)?[\s-]?([0-9]{2}[\s-]?){2}?[0-9]{1,2}$/";
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
  * Checks zipcodes for the Lithuania
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^(lt)?[\s-]?[\d]{5}$/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
  * Checks social security numbers for the Lithuania
  *
  * @param string $check The value to check.
- * @access public
  * @return boolean
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		$pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

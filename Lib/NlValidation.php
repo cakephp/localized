@@ -31,11 +31,10 @@ class NlValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^0(6[\s-]?[1-9]\d{7}|[1-9]\d[\s-]?[1-9]\d{6}|[1-9]\d{2}[\s-]?[1-9]\d{5})$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,11 +42,10 @@ class NlValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[1-9][0-9]{3}\s?[A-Z]{2}$/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -55,10 +53,9 @@ class NlValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		$pattern = '/\\A\\b[0-9]{9}\\b\\z/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

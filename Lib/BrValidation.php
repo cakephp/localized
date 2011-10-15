@@ -31,9 +31,8 @@ class BrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?\d{4}[-. ]?\d{4}$/', $check);
 	}
 
@@ -42,9 +41,8 @@ class BrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		return (bool)preg_match('/^[0-9]{5}-?[0-9]{3}$/', $check);
 	}
 
@@ -53,9 +51,8 @@ class BrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function ssn($check) {
+	public static function ssn($check) {
 		return BrValidation::cpf($check) || BrValidation::cnpj($check);
 	}
 
@@ -64,9 +61,8 @@ class BrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function cpf($check) {
+	public static function cpf($check) {
 		$check = trim($check);
 
 		// sometimes the user submits a masked CNPJ
@@ -107,9 +103,8 @@ class BrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function cnpj($check) {
+	public static function cnpj($check) {
 		$check = trim($check);
 		// sometimes the user submits a masked CNPJ
 		if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {

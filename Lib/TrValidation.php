@@ -31,15 +31,20 @@ class TrValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[0-9]{5}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
-	
-	function trIdentityNumber($check) {
+
+/**
+ * Checks Identity Number for Turkey
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function trIdentityNumber($check) {
 		$pattern = '/^[0-9]{11}$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 }

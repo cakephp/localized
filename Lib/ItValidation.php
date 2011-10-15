@@ -31,11 +31,10 @@ class ItValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/^([0-9]*\-?\ ?\/?[0-9]*)$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -43,11 +42,10 @@ class ItValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/^[0-9]{5}$/i';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 	
 /**
@@ -55,9 +53,8 @@ class ItValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function cf($check) {
+	public static function cf($check) {
 		$check = strtoupper($check);
 		if (strlen($check) != 16 || !preg_match('/[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/', $check)) {
 			return false;
