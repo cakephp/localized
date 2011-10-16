@@ -2,7 +2,7 @@
 /**
  * US Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.UsValidation');
+App::uses('UsValidation', 'Localized.Lib');
 
 /**
- * UsValidationTestCase
+ * UsValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class UsValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class UsValidationTest extends CakeTestCase {
  * test the phone method of UsValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(UsValidation::phone('+1 702 425 5085'));
 		$this->assertFalse(UsValidation::phone('teststring'));
 		$this->assertFalse(UsValidation::phone('1-(33)-(333)-(4444)'));
@@ -65,9 +62,8 @@ class UsValidationTest extends CakeTestCase {
  * test the postal method of UsValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(UsValidation::postal('89104'));
 		$this->assertFalse(UsValidation::postal('111'));
 		$this->assertFalse(UsValidation::postal('1111'));
@@ -83,9 +79,8 @@ class UsValidationTest extends CakeTestCase {
  * test the ssn method of UsValidation
  *
  * @return void
- * @access public
  */
-	function testSsn() {
+	public function testSsn() {
 		$this->assertFalse(UsValidation::ssn('11-33-4333'));
 		$this->assertFalse(UsValidation::ssn('113-3-4333'));
 		$this->assertFalse(UsValidation::ssn('111-33-333'));

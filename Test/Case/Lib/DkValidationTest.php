@@ -2,7 +2,7 @@
 /**
  * Danish Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.DkValidation');
+App::uses('DkValidation', 'Localized.Lib');
 
 /**
- * DkValidationTestCase
+ * DkValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class DkValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class DkValidationTest extends CakeTestCase {
  * test the ssn method of DkValidation
  *
  * @return void
- * @access public
  */
-	function testSsn() {
+	public function testSsn() {
 		$this->assertTrue(DkValidation::ssn('111111-3334'));
 		$this->assertFalse(DkValidation::ssn('111111-333'));
 	}

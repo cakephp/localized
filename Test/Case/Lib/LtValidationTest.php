@@ -2,7 +2,7 @@
 /**
  * LT Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,12 +12,17 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @since         localized 0.1
+ * @package       Localized.Test.Case.Lib
+ * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.LtValidation');
+App::uses('LtValidation', 'Localized.Lib');
 
+/**
+ * LtValidationTest
+ *
+ * @package       Localized.Test.Case.Lib
+ */
 class LtValidationTest extends CakeTestCase {
 
 /**
@@ -25,7 +30,7 @@ class LtValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(LtValidation::phone('+370 671 51221'));
 		$this->assertTrue(LtValidation::phone('370 814 52222'));
 		$this->assertTrue(LtValidation::phone('+370 (37) 85 85 96'));
@@ -61,7 +66,7 @@ class LtValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(LtValidation::postal('89104'));
 		$this->assertTrue(LtValidation::postal('LT-13089'));
 		$this->assertTrue(LtValidation::postal('lt-13022'));
@@ -80,7 +85,7 @@ class LtValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	function testSsn() {
+	public function testSsn() {
 		$this->assertTrue(LtValidation::ssn('SK 4321425'));
 		$this->assertTrue(LtValidation::ssn('SP 4321475'));
 		$this->assertTrue(LtValidation::ssn('NS-4321425'));

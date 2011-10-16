@@ -2,7 +2,7 @@
 /**
  * German Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.DeValidation');
+App::uses('DeValidation', 'Localized.Lib');
 
 /**
- * DeValidationTestCase
+ * DeValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class DeValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class DeValidationTest extends CakeTestCase {
  * test the postal method of DeValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(DeValidation::postal('51109'));
 		$this->assertFalse(DeValidation::postal('051109'));
 	}

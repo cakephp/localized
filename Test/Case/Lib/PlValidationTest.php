@@ -2,7 +2,7 @@
 /**
  * Polish Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.PlValidation');
+App::uses('PlValidation', 'Localized.Lib');
 
 /**
- * PlValidationTestCase
+ * PlValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class PlValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class PlValidationTest extends CakeTestCase {
  * test the postal method of PlValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(PlValidation::postal('63-400'));
 		$this->assertFalse(PlValidation::postal('63400'));
 		$this->assertFalse(PlValidation::postal('634-00'));
@@ -43,9 +40,8 @@ class PlValidationTest extends CakeTestCase {
  * test the ssn method of PlValidation
  *
  * @return void
- * @access public
  */
-	function testSsn() {
+	public function testSsn() {
 		$this->assertTrue(PlValidation::ssn('768-000-24-66'));
 		$this->assertTrue(PlValidation::ssn('768-00-02-466'));
 		$this->assertTrue(PlValidation::ssn('7680002466'));
@@ -58,9 +54,8 @@ class PlValidationTest extends CakeTestCase {
  * Test the pesel method of PlValidation
  *
  * @return void
- * @access public
  */
-	function testPesel() {
+	public function testPesel() {
 		$this->assertTrue(PlValidation::pesel('49040501580'));
 		$this->assertFalse(PlValidation::pesel('49040501680'));
 		$this->assertFalse(PlValidation::pesel('49040501581'));
@@ -70,9 +65,8 @@ class PlValidationTest extends CakeTestCase {
  * Test the regon method of PlValidation
  *
  * @return void
- * @access public
  */
-	function testRegon() {
+	public function testRegon() {
 		$this->assertTrue(PlValidation::regon('590096454'));
 		$this->assertFalse(PlValidation::regon('590096453'));
 		$this->assertFalse(PlValidation::regon('591096454'));

@@ -2,7 +2,7 @@
 /**
  * Spanish Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.EsValidation');
+App::uses('EsValidation', 'Localized.Lib');
 
 /**
- * EsValidationTestCase
+ * EsValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class EsValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class EsValidationTest extends CakeTestCase {
  * test the postal method of EsValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(EsValidation::postal('02300'));
 		$this->assertFalse(EsValidation::postal('2300'));
 		$this->assertFalse(EsValidation::postal('230000'));
@@ -43,9 +40,8 @@ class EsValidationTest extends CakeTestCase {
  * test the phone method of EsValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(EsValidation::phone('924227227'));
 		$this->assertTrue(EsValidation::phone('924.227.227'));
 		$this->assertTrue(EsValidation::phone('924-227-227'));

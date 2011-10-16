@@ -2,7 +2,7 @@
 /**
  * Mexican Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.MxValidation');
+App::uses('MxValidation', 'Localized.Lib');
 
 /**
  * Mexican Validation Test Case
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class MxValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class MxValidationTest extends CakeTestCase {
  * test the phone method of MxValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(MxValidation::phone('1122334455'));
 		$this->assertTrue(MxValidation::phone('11 22 33 44 55'));
 		$this->assertTrue(MxValidation::phone('11-22-33-44-55'));
@@ -53,9 +50,8 @@ class MxValidationTest extends CakeTestCase {
  * test the postal method of MxValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(MxValidation::postal('98000'));
 		$this->assertFalse(MxValidation::postal('1046'));
 	}

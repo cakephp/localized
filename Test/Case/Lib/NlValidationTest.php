@@ -2,7 +2,7 @@
 /**
  * Dutch Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.NlValidation');
+App::uses('NlValidation', 'Localized.Lib');
 
 /**
- * NlValidationTestCase
+ * NlValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class NlValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class NlValidationTest extends CakeTestCase {
  * test the phone method of NlValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(NlValidation::phone('020-5045100'));
 		$this->assertTrue(NlValidation::phone('0572-212121'));
 		$this->assertTrue(NlValidation::phone('0205045100'));
@@ -47,9 +44,8 @@ class NlValidationTest extends CakeTestCase {
  * test the postal method of NlValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(NlValidation::postal('1620AB'));
 		$this->assertTrue(NlValidation::postal('1620 AB'));
 		$this->assertTrue(NlValidation::postal('5020FZ'));
@@ -64,9 +60,8 @@ class NlValidationTest extends CakeTestCase {
  * test the ssn method of NlValidation
  *
  * @return void
- * @access public
  */
-	function testSsn() {
+	public function testSsn() {
 		$this->assertTrue(NlValidation::ssn('187821321'));
 		$this->assertTrue(NlValidation::ssn('502222314'));
 		$this->assertFalse(NlValidation::ssn('18782132'));

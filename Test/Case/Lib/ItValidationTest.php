@@ -2,7 +2,7 @@
 /**
  * Italian Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.ItValidation');
+App::uses('ItValidation', 'Localized.Lib');
 
 /**
- * ItValidationTestCase
+ * ItValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class ItValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class ItValidationTest extends CakeTestCase {
  * test the phone method of ItValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(ItValidation::phone('347/1233456'));
 		$this->assertFalse(ItValidation::phone('02+343536'));
 	}
@@ -42,9 +39,8 @@ class ItValidationTest extends CakeTestCase {
  * test the postal method of ItValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(ItValidation::postal('10096'));
 		$this->assertFalse(ItValidation::postal('1046'));
 	}
@@ -53,9 +49,8 @@ class ItValidationTest extends CakeTestCase {
  * test the Codice Fiscale for Italy
  *
  * @return void
- * @access public
  */
-	function testCf() {
+	public function testCf() {
 		$this->assertTrue(ItValidation::cf('JLTRSS68A41Z114A'));
 		$this->assertTrue(ItValidation::cf('RSSMRA50A01F205R'));
 		$this->assertTrue(ItValidation::cf('TRVMRA30T31L736B'));

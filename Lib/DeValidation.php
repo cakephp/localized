@@ -2,7 +2,7 @@
 /**
  * German Localized Validation class. Handles localized validation for Germany
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,8 +12,7 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.libs
+ * @package       Localized.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -21,10 +20,8 @@
 /**
  * DeValidation
  *
- * @package       localized
- * @subpackage    localized.libs
+ * @package       Localized.Lib
  */
-
 class DeValidation {
 
 /**
@@ -45,11 +42,10 @@ class DeValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function address1($check) {
+	public static function address1($check) {
 		$pattern = '/[a-zA-ZäöüÄÖÜß \.]+ [0-9]+[a-zA-Z]?/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -57,11 +53,10 @@ class DeValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function phone($check) {
+	public static function phone($check) {
 		$pattern = '/[0-9\/. \-]*/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -70,9 +65,8 @@ class DeValidation {
  *
  * @param string $check the date of birth.
  * @return boolean
- * @access public
  */
-	function dob($check) {
+	public static function dob($check) {
 		$pattern = '/^\d{2}\.\d{2}\.(\d{2}|\d{4})$/';
 		$return = preg_match($pattern, $check);
 		if ($return) {

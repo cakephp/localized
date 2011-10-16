@@ -2,7 +2,7 @@
 /**
  * Taiwan Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -12,18 +12,16 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.TwValidation');
+App::uses('TwValidation', 'Localized.Lib');
 
 /**
- * TwValidationTestCase
+ * TwValidationTest
  *
- * @package       localization
- * @subpackage    localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class TwValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class TwValidationTest extends CakeTestCase {
  * test the phone method of TwValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertTrue(TwValidation::phone('+886277388066'));
 		$this->assertTrue(TwValidation::phone('02-7738-8066'));
 		$this->assertTrue(TwValidation::phone('02 7738 8066'));
@@ -50,9 +47,8 @@ class TwValidationTest extends CakeTestCase {
  * test the postal method of TwValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(TwValidation::postal('235'));
 		$this->assertTrue(TwValidation::postal('615'));
 		$this->assertTrue(TwValidation::postal('10075'));
@@ -64,9 +60,8 @@ class TwValidationTest extends CakeTestCase {
  * test the nicn method of TwValidation
  *
  * @return void
- * @access public
  */
-	function testNicn() {
+	public function testNicn() {
 		$this->assertTrue(TwValidation::nicn('Y100000001'));
 		$this->assertTrue(TwValidation::nicn('K164729166'));
 		$this->assertTrue(TwValidation::nicn('U267825932'));
@@ -78,9 +73,8 @@ class TwValidationTest extends CakeTestCase {
  * test the ubn method of TwValidation
  *
  * @return void
- * @access public
  */
-	function testUbn() {
+	public function testUbn() {
 		$this->assertTrue(TwValidation::ubn('30185757'));
 		$this->assertTrue(TwValidation::ubn('28816624'));
 		$this->assertTrue(TwValidation::ubn('29030783'));

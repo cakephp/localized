@@ -1,8 +1,8 @@
 <?php
 /**
- * Brazillian Localized Validation class test case
+ * Brazilian Localized Validation class test case
  *
- * PHP versions 4 and 5
+ * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -10,20 +10,18 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright	 Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link		  http://cakephp.org
- * @package	   localized
- * @subpackage	localized.tests.cases.libs
- * @since		 Localized Plugin v 0.1
- * @license	   MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org
+ * @package       Localized.Test.Case.Lib
+ * @since         Localized Plugin v 0.1
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::import('Lib', 'Localized.BrValidation');
+App::uses('BrValidation', 'Localized.Lib');
 
 /**
- * BrValidationTestCase
+ * BrValidationTest
  *
- * @package	   localization
- * @subpackage	localized.tests.cases.libs
+ * @package       Localized.Test.Case.Lib
  */
 class BrValidationTest extends CakeTestCase {
 
@@ -31,9 +29,8 @@ class BrValidationTest extends CakeTestCase {
  * test the phone method of BrValidation
  *
  * @return void
- * @access public
  */
-	function testPhone() {
+	public function testPhone() {
 		$this->assertFalse(BrValidation::phone('teststring'));
 		$this->assertFalse(BrValidation::phone('1-(33)-(333)-(4444)'));
 		$this->assertFalse(BrValidation::phone('1-(33)-3333-4444'));
@@ -58,9 +55,8 @@ class BrValidationTest extends CakeTestCase {
  * test the postal method of BrValidation
  *
  * @return void
- * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertFalse(BrValidation::postal('111'));
 		$this->assertFalse(BrValidation::postal('1111'));
 		$this->assertFalse(BrValidation::postal('1234-123'));
@@ -75,9 +71,8 @@ class BrValidationTest extends CakeTestCase {
  * test the ssn method of BrValidation
  *
  * @return void
- * @access public
  */
-	function testSsn() {
+	public function testSsn() {
 		// Testing CPF
 		$this->assertFalse(BrValidation::cpf('22692173811'));
 		$this->assertFalse(BrValidation::cpf('50549727322'));
