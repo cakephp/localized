@@ -70,13 +70,17 @@ class BrValidation {
 			return false;
 		}
 
-		if (!ctype_digit($check)) {
-			return false;
-		}
-
 		if (strlen($check) != 11) {
 			return false;
 		}
+		
+		// repeated values are invalid, but algorithms fails to check it
+		for($i = 0; $i < 10; $i++) {
+			if(str_repeat($i, 11) === $check) {
+				return false;
+			}
+		}
+		
 		$dv = substr($check, -2);
 		for ($pos = 9; $pos <= 10; $pos++) {
 			$sum = 0;

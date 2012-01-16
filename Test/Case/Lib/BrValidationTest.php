@@ -78,6 +78,7 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::cpf('50549727322'));
 		$this->assertFalse(BrValidation::cpf('869.283.422-11'));
 		$this->assertFalse(BrValidation::cpf('843.701.734-22'));
+		$this->assertFalse(BrValidation::cpf('999.999.999-99'));
 
 		$this->assertTrue(BrValidation::cpf('22692173813'));
 		$this->assertTrue(BrValidation::cpf('50549727302'));
@@ -121,5 +122,7 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::ssn('33aaaa86000129'));
 		$this->assertFalse(BrValidation::ssn('22692173813xxx'));
 		$this->assertFalse(BrValidation::ssn('226921xxx73813'));
+		$this->assertFalse(BrValidation::ssn('11111111111'));
+		$this->assertFalse(BrValidation::cpf('abcdefghi'));
 	}
 }
