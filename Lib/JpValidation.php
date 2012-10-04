@@ -45,4 +45,53 @@ class JpValidation {
 		$pattern = '/^[0-9]{3}-[0-9]{4}$/';
 		return (bool)preg_match($pattern, $check);
 	}
+
+/**
+ * Checks hiragana
+ * ぁ-ゖー
+ *
+ * @param string $check The value to check.
+ * @param boolean $allowSpace Allow double-byte space.
+ * @return boolean
+ */
+	public static function hiragana($check, $allowSpace = true) {
+		if ($allowSpace) {
+			$pattern = '/^(\xe3(\x80\x80|\x81[\x81-\xbf]|\x82[\x80-\x96]|\x83\xbc))*$/';
+		} else {
+			$pattern = '/^(\xe3(\x81[\x81-\xbf]|\x82[\x80-\x96]|\x83\xbc))*$/';
+		}
+		return (bool)preg_match($pattern, $check);
+	}
+
+/**
+ * Checks katakana
+ * ァ-ヶー
+ *
+ * @param string $check The value to check.
+ * @param boolean $allowSpace Allow double-byte space.
+ * @return boolean
+ */
+	public static function katakana($check, $allowSpace = true) {
+		if ($allowSpace) {
+			$pattern = '/^(\xe3(\x80\x80|\x82[\xa1-\xbf]|\x83[\x80-\xb6]|\x83\xbc))*$/';
+		} else {
+			$pattern = '/^(\xe3(\x82[\xa1-\xbf]|\x83[\x80-\xb6]|\x83\xbc))*$/';
+		}
+		return (bool)preg_match($pattern, $check);
+	}
+
+/**
+ * Checks zenkaku(double-byte characters)
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function zenkaku($check) {
+		for ($i = 0; $i < mb_strlen($check); $i++) {
+			if (mb_strlen($check[$i]) === mb_strwidth($check[$i])) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

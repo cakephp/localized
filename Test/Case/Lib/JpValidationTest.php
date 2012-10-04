@@ -61,4 +61,50 @@ class JpValidationTest extends CakeTestCase {
 		$this->assertTrue(JpValidation::postal('020-5045'));
 		$this->assertFalse(JpValidation::postal('0205-504'));
 	}
+
+/**
+ * test the hiragana method of JpValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testHiragana() {
+		$this->assertTrue(JpValidation::hiragana('ぁい　ゔえおー'));
+
+		$this->assertFalse(JpValidation::hiragana('-'));
+		$this->assertFalse(JpValidation::hiragana('０'));
+		$this->assertFalse(JpValidation::hiragana('ア'));
+		$this->assertFalse(JpValidation::hiragana('亜'));
+		$this->assertFalse(JpValidation::hiragana('ぁい　ゔえおー', false));
+	}
+
+/**
+ * test the katakana method of JpValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testKatakana() {
+		$this->assertTrue(JpValidation::katakana('ァイ　ヴエオヶー'));
+
+		$this->assertFalse(JpValidation::katakana('-'));
+		$this->assertFalse(JpValidation::katakana('０'));
+		$this->assertFalse(JpValidation::katakana('あ'));
+		$this->assertFalse(JpValidation::katakana('亜'));
+		$this->assertFalse(JpValidation::katakana('ァイ　ヴエオヶー', false));
+	}
+
+/**
+ * test the zenkaku method of JpValidation
+ *
+ * @return void
+ * @access public
+ */
+	function testZenkaku() {
+		$this->assertTrue(JpValidation::zenkaku('０１２３ァイヴエオヶ　ぁいゔえおー：？！＄＃＠＋｜＿'));
+
+		$this->assertFalse(JpValidation::zenkaku(' '));
+		$this->assertFalse(JpValidation::zenkaku('0'));
+		$this->assertFalse(JpValidation::zenkaku('a'));
+	}
 }
