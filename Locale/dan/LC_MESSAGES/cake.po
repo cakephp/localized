@@ -14,6 +14,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "Language: Danish\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-10-22 10:52+0200\n"
+"PO-Revision-Date: 2012-10-22 11:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: Danish\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: Controller/Scaffold.php:128
 msgid "Scaffold :: "
@@ -21,141 +37,133 @@ msgstr ""
 
 #: Controller/Scaffold.php:167;234;305
 msgid "Invalid %s"
-msgstr ""
+msgstr "Ugyldigt %s"
 
 #: Controller/Scaffold.php:222
 msgid "updated"
-msgstr ""
+msgstr "opdateret"
 
 #: Controller/Scaffold.php:225
 msgid "saved"
-msgstr ""
+msgstr "gemt"
 
 #: Controller/Scaffold.php:245
 msgid "The %1$s has been %2$s"
-msgstr ""
+msgstr "%1$s er blevet %2$s"
 
 #: Controller/Scaffold.php:256
 msgid "Please correct errors below."
-msgstr ""
+msgstr "Venligst ret fejlene forneden."
 
 #: Controller/Scaffold.php:308
 msgid "The %1$s with id: %2$s has been deleted."
-msgstr ""
+msgstr "%1$s med id: %2$s er blevet slettet."
 
 #: Controller/Scaffold.php:311
 msgid "There was an error deleting the %1$s with id: %2$s"
-msgstr ""
+msgstr "Der opstod en fejl i forbindelse med sletning af %1$s med id: %2$s"
 
 #: Controller/Component/AuthComponent.php:366
 msgid "You are not authorized to access that location."
-msgstr ""
-
-#: Core/Configure.php:322
-msgid "There is no \"%s\" adapter."
-msgstr ""
-
-#: Core/Configure.php:325
-msgid "The \"%s\" adapter, does not have a dump() method."
-msgstr ""
+msgstr "Du har ikke tilladelse til at se den side."
 
 #: Error/ExceptionRenderer.php:205
 msgid "Not Found"
-msgstr ""
+msgstr "Ikke fundet"
 
 #: Error/ExceptionRenderer.php:227
 msgid "An Internal Error Has Occurred."
-msgstr ""
+msgstr "Der er sket en intern fejl."
 
 #: Model/Validator/CakeValidationSet.php:283
 msgid "This field cannot be left blank"
-msgstr ""
+msgstr "Dette felt må ikke være tomt."
 
 #: Network/CakeResponse.php:1217
 msgid "The requested file was not found"
-msgstr ""
+msgstr "Den efterspurgte fil findes ikke"
 
 #: Utility/CakeNumber.php:94
 msgid "%d KB"
-msgstr ""
+msgstr "%d KB"
 
 #: Utility/CakeNumber.php:96
 msgid "%.2f MB"
-msgstr ""
+msgstr "%.2f MB"
 
 #: Utility/CakeNumber.php:98
 msgid "%.2f GB"
-msgstr ""
+msgstr "%.2f GB"
 
 #: Utility/CakeNumber.php:100
 msgid "%.2f TB"
-msgstr ""
+msgstr "%.2f TB"
 
 #: Utility/CakeNumber.php:92
 msgid "%d Byte"
 msgid_plural "%d Bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d byte"
+msgstr[1] "%d bytes"
 
 #: Utility/CakeTime.php:383
 msgid "Today, %s"
-msgstr ""
+msgstr "I dag, %s"
 
 #: Utility/CakeTime.php:386
 msgid "Yesterday, %s"
-msgstr ""
+msgstr "I går, %s"
 
 #: Utility/CakeTime.php:389
 msgid "Tomorrow, %s"
-msgstr ""
+msgstr "I morgen, %s"
 
 #: Utility/CakeTime.php:394
 msgid "Sunday"
-msgstr ""
+msgstr "Søndag"
 
 #: Utility/CakeTime.php:395
 msgid "Monday"
-msgstr ""
+msgstr "Mandag"
 
 #: Utility/CakeTime.php:396
 msgid "Tuesday"
-msgstr ""
+msgstr "Tirsdag"
 
 #: Utility/CakeTime.php:397
 msgid "Wednesday"
-msgstr ""
+msgstr "Onsdag"
 
 #: Utility/CakeTime.php:398
 msgid "Thursday"
-msgstr ""
+msgstr "Torsdag"
 
 #: Utility/CakeTime.php:399
 msgid "Friday"
-msgstr ""
+msgstr "Fredag"
 
 #: Utility/CakeTime.php:400
 msgid "Saturday"
-msgstr ""
+msgstr "Lørdag"
 
 #: Utility/CakeTime.php:406
 msgid "On %s %s"
-msgstr ""
+msgstr "Den %s %s"
 
 #: Utility/CakeTime.php:799
 msgid "just now"
-msgstr ""
+msgstr "lige nu"
 
 #: Utility/CakeTime.php:803
 msgid "on %s"
-msgstr ""
+msgstr "på %s"
 
 #: Utility/CakeTime.php:847
 msgid "%s ago"
-msgstr ""
+msgstr "%s siden"
 
 #: Utility/CakeTime.php:866;888
 msgid "days"
-msgstr ""
+msgstr "dage"
 
 #: Utility/CakeTime.php:148
 msgid "abday"
@@ -163,7 +171,7 @@ msgstr ""
 
 #: Utility/CakeTime.php:154
 msgid "day"
-msgstr ""
+msgstr "dag"
 
 #: Utility/CakeTime.php:160
 msgid "d_t_fmt"
@@ -175,7 +183,7 @@ msgstr ""
 
 #: Utility/CakeTime.php:188
 msgid "mon"
-msgstr ""
+msgstr "man"
 
 #: Utility/CakeTime.php:199
 msgid "am_pm"
@@ -196,148 +204,148 @@ msgstr ""
 #: Utility/CakeTime.php:825
 msgid "%d year"
 msgid_plural "%d years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d år"
+msgstr[1] "%d år"
 
 #: Utility/CakeTime.php:828
 msgid "%d month"
 msgid_plural "%d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d måned"
+msgstr[1] "%d måneder"
 
 #: Utility/CakeTime.php:831
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d uge"
+msgstr[1] "%d uger"
 
 #: Utility/CakeTime.php:834
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d dag"
+msgstr[1] "%d dage"
 
 #: Utility/CakeTime.php:837
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d time"
+msgstr[1] "%d timer"
 
 #: Utility/CakeTime.php:840
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d minut"
+msgstr[1] "%d minutter"
 
 #: Utility/CakeTime.php:843
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
 #: View/Helper/FormHelper.php:677
 msgid "Error in field %s"
-msgstr ""
+msgstr "Fejl i felt %s"
 
 #: View/Helper/FormHelper.php:856 View/Scaffolds/form.ctp:44
 #: View/Scaffolds/index.ctp:80;87 View/Scaffolds/view.ctp:51;58;142
 msgid "New %s"
-msgstr ""
+msgstr "Ny %s"
 
 #: View/Helper/FormHelper.php:862 View/Scaffolds/view.ctp:48;85
 msgid "Edit %s"
-msgstr ""
+msgstr "Rediger %s"
 
 #: View/Helper/FormHelper.php:1683 View/Scaffolds/form.ctp:23
 msgid "Submit"
-msgstr ""
+msgstr "Udfør"
 
 #: View/Helper/FormHelper.php:2573
 msgid "January"
-msgstr ""
+msgstr "Januar"
 
 #: View/Helper/FormHelper.php:2574
 msgid "February"
-msgstr ""
+msgstr "Februar"
 
 #: View/Helper/FormHelper.php:2575
 msgid "March"
-msgstr ""
+msgstr "Marts"
 
 #: View/Helper/FormHelper.php:2576
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: View/Helper/FormHelper.php:2577
 msgid "May"
-msgstr ""
+msgstr "Maj"
 
 #: View/Helper/FormHelper.php:2578
 msgid "June"
-msgstr ""
+msgstr "Juni"
 
 #: View/Helper/FormHelper.php:2579
 msgid "July"
-msgstr ""
+msgstr "Juli"
 
 #: View/Helper/FormHelper.php:2580
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: View/Helper/FormHelper.php:2581
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: View/Helper/FormHelper.php:2582
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 #: View/Helper/FormHelper.php:2583
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: View/Helper/FormHelper.php:2584
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: View/Helper/PaginatorHelper.php:581
 msgid " of "
-msgstr ""
+msgstr " af "
 
 #: View/Scaffolds/form.ctp:27 View/Scaffolds/index.ctp:26;78
 #: View/Scaffolds/view.ctp:45
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: View/Scaffolds/form.ctp:31 View/Scaffolds/index.ctp:52
 #: View/Scaffolds/view.ctp:133
 msgid "Delete"
-msgstr ""
+msgstr "Slet"
 
 #: View/Scaffolds/form.ctp:34
 msgid "Are you sure you want to delete # %s?"
-msgstr ""
+msgstr "Er du sikker på du vil slette # %s?"
 
 #: View/Scaffolds/form.ctp:37
 msgid "List"
-msgstr ""
+msgstr "Liste"
 
 #: View/Scaffolds/form.ctp:43 View/Scaffolds/index.ctp:86
 #: View/Scaffolds/view.ctp:50;57
 msgid "List %s"
-msgstr ""
+msgstr "Liste %s"
 
 #: View/Scaffolds/index.ctp:49 View/Scaffolds/view.ctp:131
 msgid "View"
-msgstr ""
+msgstr "Se"
 
 #: View/Scaffolds/index.ctp:50 View/Scaffolds/view.ctp:132
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: View/Scaffolds/index.ctp:55 View/Scaffolds/view.ctp:49;133
 msgid "Are you sure you want to delete"
-msgstr ""
+msgstr "Er du sikker på du vil slette"
 
 #: View/Scaffolds/index.ctp:66
 msgid ""
@@ -347,20 +355,20 @@ msgstr ""
 
 #: View/Scaffolds/index.ctp:71
 msgid "previous"
-msgstr ""
+msgstr "forrige"
 
 #: View/Scaffolds/index.ctp:73
 msgid "next"
-msgstr ""
+msgstr "næste"
 
 #: View/Scaffolds/view.ctp:20
 msgid "View %s"
-msgstr ""
+msgstr "Se %s"
 
 #: View/Scaffolds/view.ctp:49
 msgid "Delete %s"
-msgstr ""
+msgstr "Slet %s"
 
 #: View/Scaffolds/view.ctp:70;105
 msgid "Related %s"
-msgstr ""
+msgstr "Relaterede %s"
