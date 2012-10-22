@@ -11,9 +11,9 @@ First download the repository and place it in `app/Plugin/Localized` or on one o
 Localized validation classes can be used for validating model fields.
 
 	App::uses('MxValidation', 'Localized.Lib');
-	
+
 	class Post extends AppModel {
-	
+
 		public $validate = array(
 			'postal' => array(
 				'valid' => array(
@@ -31,6 +31,11 @@ You can also access the localized validators any time you would call `Validation
 	if (Validation::phone($value, null, 'cz')) {
 		//do something with valid phone number
 	}
+
+### Po files
+
+This plugin also houses translations for the client-facing translated strings in the core (the cake domain). to use these files link or copy them
+into their expected location: `APP/locale/<locale>/LC_MESSAGES/cake.po`
 
 ## Contributing to localized
 
