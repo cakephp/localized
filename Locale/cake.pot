@@ -50,14 +50,6 @@ msgstr ""
 msgid "You are not authorized to access that location."
 msgstr ""
 
-#: Core/Configure.php:322
-msgid "There is no \"%s\" adapter."
-msgstr ""
-
-#: Core/Configure.php:325
-msgid "The \"%s\" adapter, does not have a dump() method."
-msgstr ""
-
 #: Error/ExceptionRenderer.php:205
 msgid "Not Found"
 msgstr ""
