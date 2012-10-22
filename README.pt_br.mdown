@@ -1,20 +1,20 @@
 ## Plugin de internacionalização do CakePHP (localized)
 
-Este plugin contém várias classes de validações para diversos países. Deve ser utilizado com CakePHP 1.3
+Este plugin contém várias classes de validações para diversos países. Deve ser utilizado com CakePHP 2.0
 
 ### Usando o plugin
 
-Primeiro faça o download do repositório e coloque-o em `app/plugins/localized` ou em um dos seus diretórios de plugin. Você pode então importar e usar as validações nas classes da sua aplicação.
+Primeiro faça o download do repositório e coloque-o em `app/Plugin/Localized` ou em um dos seus diretórios de plugin. Você pode então importar e usar as validações nas classes da sua aplicação.
 
 ### Validação no model
 
 As classes de validação podem ser usadas para validar os campos no model.
 
-	App::import('Lib', 'Localized.BrValidation');
+	App::uses('BrValidation', 'Localized.Lib');
 	
 	class Post extends AppModel {
 	
-		var $validate = array(
+		public $validate = array(
 			'cep' => array(
 				'valid' => array(
 					'rule' => array('postal', null, 'br'),
