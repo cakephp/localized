@@ -42,7 +42,7 @@ class NoValidation {
  * @return boolean
  */
 	public static function ssn($check) {
-		$pattern = '/[0-9]{11}/';
+		$pattern = '/^([0-9]{11})|([0-9]{6} [0-9]{5})$/';
 		return (bool)preg_match($pattern, $check);
 	}
 }
