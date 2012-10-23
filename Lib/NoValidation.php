@@ -31,7 +31,7 @@ class NoValidation {
  * @return boolean
  */
 	public static function phone($check) {
-		return (bool)preg_match('/^(([0-9]{8})|([0-9]{3} [0-9]{2} [0-9]{3})|([0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}))$/', $check);
+		return (bool)preg_match('/^((\d{8})|(\d{3} \d{2} \d{3})|(\d{2} \d{2} \d{2} \d{2}))$/', $check);
 	}
 
 /**
@@ -41,7 +41,7 @@ class NoValidation {
  * @return boolean
  */
 	public static function postal($check) {
-		$pattern = '/^[0-9]{4}$/';
+		$pattern = '/^\d{4}$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
@@ -52,7 +52,7 @@ class NoValidation {
  * @return boolean
  */
 	public static function ssn($check) {
-		$pattern = '/^([0-9]{11})|([0-9]{6} [0-9]{5})$/';
+		$pattern = '/^(\d{11})|(\d{6} \d{5})$/';
 		return (bool)preg_match($pattern, $check);
 	}
 }
