@@ -32,6 +32,6 @@ class NoValidationTest extends CakeTestCase {
  */
 	public function testSsn() {
 		$this->assertTrue(NoValidation::ssn('12345678901'));
-		$this->assertFalse(NoValidation::ss('123456 12345'));
+		$this->assertFalse(NoValidation::ssn('123456 12345'));
 	}
 }
