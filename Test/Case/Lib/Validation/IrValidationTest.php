@@ -16,7 +16,7 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::uses('IrValidation', 'Localized.Lib');
+App::uses('IrValidation', 'Localized.Validation');
 
 /**
  * IrValidationTest

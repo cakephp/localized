@@ -12,7 +12,7 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Lib
+ * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -20,7 +20,7 @@
 /**
  * DkValidation
  *
- * @package       Localized.Lib
+ * @package       Localized.Validation
  */
 class DkValidation {
 

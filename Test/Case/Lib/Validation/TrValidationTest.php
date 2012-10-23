@@ -16,7 +16,7 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::uses('TrValidation', 'Localized.Lib');
+App::uses('TrValidation', 'Localized.Validation');
 
 /**
  * TrValidationTest
