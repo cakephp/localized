@@ -1,6 +1,6 @@
 ## CakePHP localized plugin
 
-This plugin contains various localized validation classes for specific countries. And is intended for use with CakePHP 2.0
+This plugin contains various localized validation classes for specific countries and is intended for use with CakePHP 2.0
 
 ### Using the localized plugin
 
@@ -24,6 +24,8 @@ Localized validation classes can be used for validating model fields.
 		);
 	}
 
+For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/2.0/en/models/data-validation.html)
+
 ### Using localized validations with Validation
 
 You can also access the localized validators any time you would call `Validation` methods. After importing the validation class.
@@ -36,6 +38,15 @@ You can also access the localized validators any time you would call `Validation
 
 This plugin also houses translations for the client-facing translated strings in the core (the cake domain). to use these files link or copy them
 into their expected location: `APP/locale/<locale>/LC_MESSAGES/cake.po`
+
+## Migration Guide
+
+### Localized.Validation
+The lib path for validation files changed. You need to adjust your App::uses() statements in your code accordingly:
+
+`App::uses('MxValidation', 'Localized.Lib');`
+is now
+`App::uses('MxValidation', 'Localized.Validation');`
 
 ## Contributing to localized
 
