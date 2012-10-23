@@ -25,6 +25,17 @@
 class NoValidation {
 
 /**
+ * Checks Postal Codes for Norway
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function postal($check) {
+		$pattern = '/^[0-9]{4}$/';
+		return (bool)preg_match($pattern, $check);
+	}
+
+/**
  * Checks social security numbers for Norway
  *
  * @param string $check The value to check.
