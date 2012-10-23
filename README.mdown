@@ -42,11 +42,11 @@ into their expected location: `APP/locale/<locale>/LC_MESSAGES/cake.po`
 ## Migration Guide
 
 ### Localized.Validation
-The lib path for validation files changed. You need to adjust your App::uses() statements in your code accordingly:
+The lib path for validation files changed. They should now be either in `APP/Validation/` or in `APP/PluginName/Validation/`.
 
-`App::uses('MxValidation', 'Localized.Lib');`
-is now
-`App::uses('MxValidation', 'Localized.Validation');`
+You also need to adjust your App::uses() statements in your code accordingly:
+
+`App::uses('MxValidation', 'Localized.Lib');` is now `App::uses('MxValidation', 'Localized.Validation');`
 
 ## Contributing to localized
 
