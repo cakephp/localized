@@ -26,6 +26,25 @@ App::uses('NoValidation', 'Localized.Lib');
 class NoValidationTest extends CakeTestCase {
 
 /**
+ * test the dob method of NoValidation
+ *
+ * @return void
+ */
+	public function testDob() {
+		// Examples from https://no.wikipedia.org/wiki/Dato
+		$this->assertTrue(NoValidation::dob('10.8.1962'));
+		$this->assertTrue(NoValidation::dob('10.08.1962'));
+		$this->assertTrue(NoValidation::dob('10.8.62'));
+		$this->assertTrue(NoValidation::dob('10.08.62'));
+		$this->assertTrue(NoValidation::dob('02.08.1965'));
+		$this->assertTrue(NoValidation::dob('2.8.1965'));
+		$this->assertTrue(NoValidation::dob('02.08.65'));
+		$this->assertTrue(NoValidation::dob('2.8.65'));
+		$this->assertFalse(NoValidation::dob('10/8/1962'));
+		$this->assertFalse(NoValidation::dob('10.24.1962'));
+	}
+
+/**
  * test the phone method of NoValidation
  *
  * @return void

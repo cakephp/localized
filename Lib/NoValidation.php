@@ -25,6 +25,25 @@
 class NoValidation {
 
 /**
+ * Checks date of birth formal format for Norway (dd.mm.yyyy),
+ * afterwards checks it is a valid gregorian calendar date.
+ *
+ * @param string $check the date of birth.
+ * @return boolean
+ */
+	public static function dob($check) {
+		$pattern = '/^\d{1,2}\.\d{1,2}\.(\d{2}|\d{4})$/';
+		$return = preg_match($pattern, $check);
+		if ($return) {
+			$check = str_replace('.', ',', $check);
+		} else {
+			return false;
+		}
+		$check = explode(',', $check, 3);
+		return checkdate((int) $check[1], (int) $check[0], (int) $check[2]);
+	}
+
+/**
  * Checks phone numbers for Norway
  *
  * @param string $check The value to check.
