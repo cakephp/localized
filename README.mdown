@@ -24,7 +24,7 @@ Localized validation classes can be used for validating model fields.
 		);
 	}
 
-Fur further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/2.0/en/models/data-validation.html)
+For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/2.0/en/models/data-validation.html)
 
 ### Using localized validations with Validation
 
