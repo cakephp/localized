@@ -25,6 +25,16 @@
 class NoValidation {
 
 /**
+ * Checks phone numbers for Norway
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function phone($check) {
+		return (bool)preg_match('/^(([0-9]{8})|([0-9]{3} [0-9]{2} [0-9]{3})|([0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}))$/', $check);
+	}
+
+/**
  * Checks Postal Codes for Norway
  *
  * @param string $check The value to check.

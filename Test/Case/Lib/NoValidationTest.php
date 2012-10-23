@@ -26,6 +26,19 @@ App::uses('NoValidation', 'Localized.Lib');
 class NoValidationTest extends CakeTestCase {
 
 /**
+ * test the phone method of NoValidation
+ *
+ * @return void
+ */
+	public function testPhone() {
+		$this->assertTrue(NoValidation::phone('12345678'));
+		$this->assertTrue(NoValidation::phone('12 34 56 78'));
+		$this->assertTrue(NoValidation::phone('123 45 678'));
+		$this->assertFalse(NoValidation::phone('1234567'));
+		$this->assertFalse(NoValidation::phone('1234567489'));
+	}
+
+/**
  * test the postal method of NoValidation
  *
  * @return void
