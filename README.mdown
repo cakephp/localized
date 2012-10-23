@@ -10,7 +10,7 @@ First download the repository and place it in `app/Plugin/Localized` or on one o
 
 Localized validation classes can be used for validating model fields.
 
-	App::uses('MxValidation', 'Localized.Lib');
+	App::uses('MxValidation', 'Localized.Validation');
 
 	class Post extends AppModel {
 
