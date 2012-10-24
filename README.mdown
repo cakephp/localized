@@ -1,6 +1,11 @@
 ## CakePHP localized plugin
 
-This plugin contains various localized validation classes for specific countries and is intended for use with CakePHP 2.0
+This plugin contains various localized validation classes for specific countries and is intended for use with CakePHP 2.x
+
+### Requirements
+
+* PHP 5.2.8
+* CakePHP 2.1+
 
 ### Using the localized plugin
 
