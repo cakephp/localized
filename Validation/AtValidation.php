@@ -1,6 +1,6 @@
 <?php
 /**
- * BD Localized Validation class test case
+ * Austrian Localized Validation class. Handles localized validation for Austria
  *
  * PHP 5
  *
@@ -12,28 +12,27 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Test.Case.Validation
+ * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::uses('BdValidation', 'Localized.Validation');
 
 /**
- * BdValidationTest
+ * AtValidation
  *
- * @package       Localized.Test.Case.Validation
+ * @package       Localized.Validation
  */
-class BdValidationTest extends CakeTestCase {
+class AtValidation {
 
 /**
- * test the postal method of BdValidation
+ * Checks zipcodes for Austria
  *
- * @return void
+ * @param string $check The value to check.
+ * @return boolean
  */
-	public function testPostal() {
-		$this->assertTrue(BdValidation::postal('1200'));
-		$this->assertTrue(BdValidation::postal('3100'));
-		$this->assertFalse(BdValidation::postal('111'));
-		$this->assertFalse(BdValidation::postal('11123'));
+	public static function postal($check) {
+		$pattern = '/^[0-9]{4}$/';
+		return (bool)preg_match($pattern, $check);
 	}
+
 }

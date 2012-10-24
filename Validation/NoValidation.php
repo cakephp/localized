@@ -40,7 +40,7 @@ class NoValidation {
 			return false;
 		}
 		$check = explode(',', $check, 3);
-		return checkdate((int) $check[1], (int) $check[0], (int) $check[2]);
+		return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
 	}
 
 /**

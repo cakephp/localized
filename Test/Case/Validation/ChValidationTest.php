@@ -1,6 +1,6 @@
 <?php
 /**
- * BD Localized Validation class test case
+ * Swiss Localized Validation class test case
  *
  * PHP 5
  *
@@ -16,24 +16,23 @@
  * @since         Localized Plugin v 0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-App::uses('BdValidation', 'Localized.Validation');
+App::uses('ChValidation', 'Localized.Validation');
 
 /**
- * BdValidationTest
+ * ChValidationTest
  *
  * @package       Localized.Test.Case.Validation
  */
-class BdValidationTest extends CakeTestCase {
+class ChValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of BdValidation
+ * test the postal method of ChValidation
  *
  * @return void
  */
 	public function testPostal() {
-		$this->assertTrue(BdValidation::postal('1200'));
-		$this->assertTrue(BdValidation::postal('3100'));
-		$this->assertFalse(BdValidation::postal('111'));
-		$this->assertFalse(BdValidation::postal('11123'));
+		$this->assertTrue(ChValidation::postal('5112'));
+		$this->assertFalse(ChValidation::postal('05112'));
 	}
+
 }
