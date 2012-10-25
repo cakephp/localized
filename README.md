@@ -1,4 +1,4 @@
-## CakePHP Localized plugin
+## CakePHP Localized plugin [![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
 
 This plugin contains various localized validation classes for specific countries and is intended for use with CakePHP 2.x
 

@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+
+env:
+  - CAKE_VERSION=2.1.0
+  - CAKE_VERSION=master
+  - CAKE_VERSION=2.3
+
+before_script:
+  - git clone --depth 1 git://github.com/cakephp/cakephp ../cakephp && cd ../cakephp && git checkout $CAKE_VERSION
+  - cp -R ../localized plugins/Localized
+
+script:
+  - ./lib/Cake/Console/cake test Localized AllTests
+
+notifications:
+  email: false
