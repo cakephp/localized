@@ -25,6 +25,17 @@
 class UkValidation {
 
 /**
+ * Checks phone numbers for The United Kingdom
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function phone($check) {
+		$pattern = "/^(\+44|0)\d{9,10}$/";
+		return (bool)preg_match($pattern, $check);
+	}
+
+/**
  * Checks zipcodes for The United Kingdom
  *
  * @param string $check The value to check.
