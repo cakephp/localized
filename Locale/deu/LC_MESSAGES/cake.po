@@ -11,7 +11,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2;plural=n!=1;\n"
 "Language: German\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -131,7 +131,7 @@ msgstr "Samstag"
 
 #: Utility/CakeTime.php:412
 msgid "On %s %s"
-msgstr ""
+msgstr "Am %s %s"
 
 #: Utility/CakeTime.php:805
 msgid "just now"
@@ -188,8 +188,8 @@ msgstr ""
 #: Utility/CakeTime.php:831
 msgid "%d year"
 msgid_plural "%d years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d Jahr"
+msgstr[1] "%d Jahre"
 
 #: Utility/CakeTime.php:834
 msgid "%d month"
@@ -278,7 +278,7 @@ msgstr "Juni"
 
 #: View/Helper/FormHelper.php:2710
 msgid "July"
-msgstr "July"
+msgstr "Juli"
 
 #: View/Helper/FormHelper.php:2711
 msgid "August"
@@ -299,7 +299,6 @@ msgstr "November"
 #: View/Helper/FormHelper.php:2715
 msgid "December"
 msgstr "Dezember"
-msgstr ""
 
 #: View/Helper/HtmlHelper.php:747
 msgid "Home"
@@ -323,7 +322,7 @@ msgstr "Löschen"
 
 #: View/Scaffolds/form.ctp:34
 msgid "Are you sure you want to delete # %s?"
-msgstr "Löschen von # %s bestätigen"
+msgstr "Sicher, dass # %s gelöscht werden soll?"
 
 #: View/Scaffolds/form.ctp:37
 msgid "List"
