@@ -241,7 +241,7 @@ msgstr "%s hinzufügen"
 #: View/Helper/FormHelper.php:874
 #: View/Scaffolds/view.ctp:54;113
 msgid "Edit %s"
-msgstr "%s ändern"
+msgstr "%s bearbeiten"
 
 #: View/Helper/FormHelper.php:1436
 msgid "empty"
@@ -343,7 +343,7 @@ msgstr "Anzeigen"
 #: View/Scaffolds/index.ctp:49
 #: View/Scaffolds/view.ctp:171
 msgid "Edit"
-msgstr "Ändern"
+msgstr "Bearbeiten"
 
 #: View/Scaffolds/index.ctp:54
 #: View/Scaffolds/view.ctp:58;180
@@ -352,7 +352,7 @@ msgstr "Löschen bestätigen"
 
 #: View/Scaffolds/index.ctp:65
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr "Seite {:page} von {:pages}, {:current} von {:count} Einträge ingesamt zeigend, beginnend mit {:start}, endent mit {:end}"
+msgstr "Seite {:page} von {:pages}, zeige {:current} von insgesamt {:count} Einträgen, beginnend bei {:start}, endend mit {:end}"
 
 #: View/Scaffolds/index.ctp:70
 msgid "previous"
