@@ -70,7 +70,7 @@ class TwValidation {
 			$checksum += $check[$i] * (9 - $i);
 		}
 		return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
-	}	
+	}
 
 /**
  * Checks unified business number for Taiwan

@@ -50,14 +50,13 @@ class JpValidationTest extends CakeTestCase {
 		$this->assertFalse(JpValidation::phone('056'));
 	}
 
-
 /**
  * test the postal method of JpValidation
  *
  * @return void
  * @access public
  */
-	function testPostal() {
+	public function testPostal() {
 		$this->assertTrue(JpValidation::postal('020-5045'));
 		$this->assertFalse(JpValidation::postal('0205-504'));
 	}
@@ -68,7 +67,7 @@ class JpValidationTest extends CakeTestCase {
  * @return void
  * @access public
  */
-	function testHiragana() {
+	public function testHiragana() {
 		$this->assertTrue(JpValidation::hiragana('ぁい　ゔえおー'));
 
 		$this->assertFalse(JpValidation::hiragana('-'));
@@ -84,7 +83,7 @@ class JpValidationTest extends CakeTestCase {
  * @return void
  * @access public
  */
-	function testKatakana() {
+	public function testKatakana() {
 		$this->assertTrue(JpValidation::katakana('ァイ　ヴエオヶー'));
 
 		$this->assertFalse(JpValidation::katakana('-'));
@@ -100,7 +99,7 @@ class JpValidationTest extends CakeTestCase {
  * @return void
  * @access public
  */
-	function testZenkaku() {
+	public function testZenkaku() {
 		$this->assertTrue(JpValidation::zenkaku('０１２３ァイヴエオヶ　ぁいゔえおー：？！＄＃＠＋｜＿'));
 
 		$this->assertFalse(JpValidation::zenkaku(' '));

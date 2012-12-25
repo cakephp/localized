@@ -52,13 +52,13 @@ class RsValidation {
  * @param string $check The value to check.
  * @return boolean
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
- */	
+ */
 	public static function jmbg($check) {
 		if (!preg_match('/^[0-9]{13}$/', $check)) {
 			return false;
 		}
 
-		list($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m) = str_split($check);		
+		list($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m) = str_split($check);
 		$checksum = 11 - ( 7 * ($a + $g) + 6 * ($b + $h) + 5 * ($c + $i) + 4 * ($d + $j) + 3 * ($e + $k) + 2 * ($f + $l) ) % 11;
 		return ($checksum == $m);
 	}

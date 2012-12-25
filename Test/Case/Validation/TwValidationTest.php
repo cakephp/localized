@@ -68,7 +68,7 @@ class TwValidationTest extends CakeTestCase {
 		$this->assertTrue(TwValidation::nicn('O257854301'));
 		$this->assertTrue(TwValidation::nicn('Q175232776'));
 	}
-	
+
 /**
  * test the ubn method of TwValidation
  *

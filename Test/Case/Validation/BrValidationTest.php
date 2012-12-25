@@ -39,7 +39,7 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::phone('1-(33)-3-444'));
 		$this->assertFalse(BrValidation::phone('1-(33)-3-44'));
 		$this->assertFalse(BrValidation::phone('2345678'));
-	
+
 		$this->assertTrue(BrValidation::phone('55 (48) 2345 6789'));
 		$this->assertTrue(BrValidation::phone('+55 (48) 2345 6789'));
 		$this->assertTrue(BrValidation::phone('+55 (048) 2345 6789'));

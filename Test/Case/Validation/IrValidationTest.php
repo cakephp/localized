@@ -35,7 +35,7 @@ class IrValidationTest extends CakeTestCase {
 		$this->assertTrue(IrValidation::alphaNumeric('آزمایش 1234567890'));
 		$this->assertTrue(IrValidation::alphaNumeric('هِمّت بُلَند دار کِه مَردانِ روزگار  اَز همّتِ بُلَند به جایی رسیده‌اَند'));
 		$this->assertTrue(IrValidation::alphaNumeric('﷼'));
-		
+
 		$this->assertFalse(IrValidation::alphaNumeric('teststring'));
 		$this->assertFalse(IrValidation::alphaNumeric('test1234567890'));
 		$this->assertFalse(IrValidation::alphaNumeric('test آزمایش'));
@@ -52,7 +52,6 @@ class IrValidationTest extends CakeTestCase {
 		$this->assertFalse(IrValidation::numeric('teststring'));
 		$this->assertFalse(IrValidation::numeric('1234567890'));
 		$this->assertFalse(IrValidation::numeric('١٢٣٤٥٦٧٨٩٠'));
-		
 	}
 
 /**
@@ -68,7 +67,6 @@ class IrValidationTest extends CakeTestCase {
 		$this->assertFalse(IrValidation::cc('1111'));
 		$this->assertFalse(IrValidation::cc('1111 2222 3333 4444'));
 		$this->assertFalse(IrValidation::cc('111-122-223-333-444-4'));
-		
 	}
 
 /**
@@ -132,7 +130,7 @@ class IrValidationTest extends CakeTestCase {
  */
 	public function testPostal() {
 		$this->assertTrue(IrValidation::postal('1234567890'));
-                
+
 		$this->assertFalse(IrValidation::postal('teststring'));
 		$this->assertFalse(IrValidation::postal('123456789'));
 	}
