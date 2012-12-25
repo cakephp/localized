@@ -31,9 +31,8 @@ class IdValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function postal($check) {
+	public static function postal($check) {
 		$pattern = '/[1-9][0-9]{4}/';
 		return preg_match($pattern, $check);
 	}
@@ -43,9 +42,8 @@ class IdValidation {
  *
  * @param string $check The value to check.
  * @return boolean
- * @access public
  */
-	function mobile($check) {
+	public static function mobile($check) {
 		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
 		return preg_match($pattern, $check);
 	}

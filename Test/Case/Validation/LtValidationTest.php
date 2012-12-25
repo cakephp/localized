@@ -39,7 +39,7 @@ class LtValidationTest extends CakeTestCase {
 		$this->assertTrue(LtValidation::phone('+37067151221'));
 		$this->assertTrue(LtValidation::phone('+370-671-51221'));
 		$this->assertTrue(LtValidation::phone('+370-881 51220'));
-		
+
 		$this->assertFalse(LtValidation::phone('+37069k62145'));
 		$this->assertFalse(LtValidation::phone('+360 671 52222'));
 		$this->assertFalse(LtValidation::phone('+370 8415 235555'));
@@ -53,7 +53,7 @@ class LtValidationTest extends CakeTestCase {
 		$this->assertTrue(LtValidation::phone('867252128'));
 		$this->assertTrue(LtValidation::phone('8-716-76145'));
 		$this->assertTrue(LtValidation::phone('8-(37)-74-66-99'));
-		
+
 		$this->assertFalse(LtValidation::phone('+8 25 25 25 14'));
 		$this->assertFalse(LtValidation::phone('5 671 86523'));
 		$this->assertFalse(LtValidation::phone('8-962-5555'));
