@@ -87,7 +87,8 @@ class JpValidation {
  * @return boolean
  */
 	public static function zenkaku($check) {
-		for ($i = 0; $i < mb_strlen($check); $i++) {
+		$length = mb_strlen($check);
+		for ($i = 0; $i < $length; $i++) {
 			$char = mb_substr($check, $i, 1);
 			if (mb_strlen($char) === mb_strwidth($char)) {
 				return false;

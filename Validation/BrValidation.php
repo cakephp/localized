@@ -73,14 +73,14 @@ class BrValidation {
 		if (strlen($check) != 11) {
 			return false;
 		}
-		
+
 		// repeated values are invalid, but algorithms fails to check it
-		for($i = 0; $i < 10; $i++) {
-			if(str_repeat($i, 11) === $check) {
+		for ($i = 0; $i < 10; $i++) {
+			if (str_repeat($i, 11) === $check) {
 				return false;
 			}
 		}
-		
+
 		$dv = substr($check, -2);
 		for ($pos = 9; $pos <= 10; $pos++) {
 			$sum = 0;
@@ -110,27 +110,27 @@ class BrValidation {
 		$check = trim($check);
 		// sometimes the user submits a masked CNPJ
 		if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
-		  $check = str_replace(array('-', '.', '/'), '', $check);
-		} else if (!ctype_digit($check)) {
+			$check = str_replace(array('-', '.', '/'), '', $check);
+		} elseif (!ctype_digit($check)) {
 			return false;
 		}
 
 		if (strlen($check) != 14) {
 			return false;
 		}
-		$first_sum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
+		$firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
 			($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
 			($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
 
-		$first_verification_digit = ($first_sum % 11) < 2 ? 0 : 11 - ($first_sum % 11);
+		$firstVerificationDigit = ($firstSum % 11) < 2 ? 0 : 11 - ($firstSum % 11);
 
-		$second_sum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4)+($check[3] * 3) +
+		$secondSum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4) + ($check[3] * 3) +
 			($check[4] * 2) + ($check[5] * 9) + ($check[6] * 8) + ($check[7] * 7) +
 			($check[8] * 6) + ($check[9] * 5) + ($check[10] * 4) + ($check[11] * 3) +
 			($check[12] * 2);
 
-		$second_verification_digit = ($second_sum % 11) < 2 ? 0 : 11 - ($second_sum % 11);
+		$secondVerificationDigit = ($secondSum % 11) < 2 ? 0 : 11 - ($secondSum % 11);
 
-		return ($check[12] == $first_verification_digit) && ($check[13] == $second_verification_digit);
+		return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
 	}
 }
