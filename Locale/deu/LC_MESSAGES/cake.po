@@ -212,8 +212,8 @@ msgstr[1] "%d Tage"
 #: Utility/CakeTime.php:843
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "$d Stunde"
-msgstr[1] "$d Stunden"
+msgstr[0] "%d Stunde"
+msgstr[1] "%d Stunden"
 
 #: Utility/CakeTime.php:846
 msgid "%d minute"
