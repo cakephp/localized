@@ -31,7 +31,7 @@ class BrValidation {
  * @return boolean
  */
 	public static function phone($check) {
-		return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?\d{4}[-. ]?\d{4}$/', $check);
+		return (bool)preg_match('/^(\+?\d{1,3}? )?(\(0?\d{2}\) ?)?9?\d{4}[-. ]?\d{4}$/', $check);
 	}
 
 /**
