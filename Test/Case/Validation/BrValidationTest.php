@@ -40,6 +40,14 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertFalse(BrValidation::phone('1-(33)-3-44'));
 		$this->assertFalse(BrValidation::phone('2345678'));
 
+		// with the wrong extra digit
+		$this->assertFalse(BrValidation::phone('55 (48) 12345 6789'));
+		$this->assertFalse(BrValidation::phone('+55 (48) 22345 6789'));
+		$this->assertFalse(BrValidation::phone('+55 (048) 32345 6789'));
+		$this->assertFalse(BrValidation::phone('+55 (48) 42345-6789'));
+		$this->assertFalse(BrValidation::phone('+55 (48) 52345.6789'));
+		$this->assertFalse(BrValidation::phone('(48) 12345 6789'));
+
 		$this->assertTrue(BrValidation::phone('55 (48) 2345 6789'));
 		$this->assertTrue(BrValidation::phone('+55 (48) 2345 6789'));
 		$this->assertTrue(BrValidation::phone('+55 (048) 2345 6789'));
@@ -49,6 +57,17 @@ class BrValidationTest extends CakeTestCase {
 		$this->assertTrue(BrValidation::phone('2345-6789'));
 		$this->assertTrue(BrValidation::phone('2345.6789'));
 		$this->assertTrue(BrValidation::phone('23456789'));
+
+		// // with the extra digit
+		$this->assertTrue(BrValidation::phone('55 (48) 92345 6789'));
+		$this->assertTrue(BrValidation::phone('+55 (48) 92345 6789'));
+		$this->assertTrue(BrValidation::phone('+55 (048) 92345 6789'));
+		$this->assertTrue(BrValidation::phone('+55 (48) 92345-6789'));
+		$this->assertTrue(BrValidation::phone('+55 (48) 92345.6789'));
+		$this->assertTrue(BrValidation::phone('(48) 92345 6789'));
+		$this->assertTrue(BrValidation::phone('92345-6789'));
+		$this->assertTrue(BrValidation::phone('92345.6789'));
+		$this->assertTrue(BrValidation::phone('923456789'));
 	}
 
 /**
