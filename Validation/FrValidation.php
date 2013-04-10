@@ -75,13 +75,13 @@ class FrValidation {
 	}
 
 /**
- * Checks date of birth formal format for French (dd/mm/yyyy),
+ * Checks date format for French (dd/mm/yyyy),
  * afterwards checks it is a valid gregorian calendar date.
  *
- * @param string $check the date of birth.
+ * @param string $check the french date format.
  * @return boolean
  */
-	public static function dob($check) {
+	public static function dateFormat($check) {
 		$pattern = '/^\d{1,2}\/\d{1,2}\/(\d{2}|\d{4})$/';
 		$return = preg_match($pattern, $check);
 		if ($return) {

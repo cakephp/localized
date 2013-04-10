@@ -68,20 +68,20 @@ class FrValidationTest extends CakeTestCase {
 	}
 
 /**
- * test the dob method of FrValidation
+ * test the dateFormat method of FrValidation
  *
  * @return void
  */
-	public function testDob() {
-		$this->assertTrue(FrValidation::dob('28/02/2000'));
-		$this->assertTrue(FrValidation::dob('31/01/2012'));
-		$this->assertTrue(FrValidation::dob('31/12/2012'));
-		$this->assertFalse(FrValidation::dob('01/13/2000'));
-		$this->assertFalse(FrValidation::dob('31/02/2000'));
-		$this->assertFalse(FrValidation::dob('30/01/10 000'));
-		$this->assertFalse(FrValidation::dob('30.01.2000'));
-		$this->assertFalse(FrValidation::dob('2012-12-02'));
-		$this->assertFalse(FrValidation::dob('2012/01/12'));
-		$this->assertFalse(FrValidation::dob('01-12-2012'));
+	public function testDateFormat() {
+		$this->assertTrue(FrValidation::dateFormat('28/02/2000'));
+		$this->assertTrue(FrValidation::dateFormat('31/01/2012'));
+		$this->assertTrue(FrValidation::dateFormat('31/12/2012'));
+		$this->assertFalse(FrValidation::dateFormat('01/13/2000'));
+		$this->assertFalse(FrValidation::dateFormat('31/02/2000'));
+		$this->assertFalse(FrValidation::dateFormat('30/01/10 000'));
+		$this->assertFalse(FrValidation::dateFormat('30.01.2000'));
+		$this->assertFalse(FrValidation::dateFormat('2012-12-02'));
+		$this->assertFalse(FrValidation::dateFormat('2012/01/12'));
+		$this->assertFalse(FrValidation::dateFormat('01-12-2012'));
 	}
 }
