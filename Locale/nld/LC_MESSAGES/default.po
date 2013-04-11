@@ -325,7 +325,7 @@ msgstr "Lijst"
 #: View/Scaffolds/form.ctp:44 View/Scaffolds/index.ctp:87
 #: View/Scaffolds/view.ctp:62;75
 msgid "List %s"
-msgstr "%s Oplijsten"
+msgstr "%s Weergeven"
 
 #: View/Scaffolds/index.ctp:48 View/Scaffolds/view.ctp:165
 msgid "View"
