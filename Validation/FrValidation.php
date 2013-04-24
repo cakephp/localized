@@ -84,11 +84,10 @@ class FrValidation {
 	public static function dateFormat($check) {
 		$pattern = '/^\d{1,2}\/\d{1,2}\/(\d{2}|\d{4})$/';
 		$return = preg_match($pattern, $check);
-		if ($return) {
-			$check = str_replace('/', ',', $check);
-		} else {
+		if (!$return) {
 			return false;
 		}
+		$check = str_replace('/', ',', $check);
 		$check = explode(',', $check, 3);
 		return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
 	}
