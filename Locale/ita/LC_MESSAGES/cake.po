@@ -1,7 +1,3 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright 2013 Nicola Inchingolo <nickinckin@gmail.com>
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP\n"
