@@ -1,7 +1,3 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright 2013 Rik van der Heijden <mail@rikvanderheijden.com>
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Dutch Translation\n"
