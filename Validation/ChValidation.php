@@ -25,13 +25,15 @@
 class ChValidation {
 
 /**
- * Checks zipcodes for Switzerland
+ * Checks zip codes for Switzerland & Liechtenstein
  *
  * @param string $check The value to check.
  * @return boolean
+ *
+ * @link http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein
  */
 	public static function postal($check) {
-		$pattern = '/^[0-9]{4}$/';
+		$pattern = '/^[1-9][0-9]{3}$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
