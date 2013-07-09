@@ -43,8 +43,28 @@ class UsValidationTest extends CakeTestCase {
 		$this->assertFalse(UsValidation::phone('(055) 999-9999'));
 		$this->assertFalse(UsValidation::phone('(155) 999-9999'));
 		$this->assertFalse(UsValidation::phone('(595) 999-9999'));
-		$this->assertFalse(UsValidation::phone('(555) 099-9999'));
-		$this->assertFalse(UsValidation::phone('(555) 199-9999'));
+		$this->assertFalse(UsValidation::phone('(213) 099-9999'));
+		$this->assertFalse(UsValidation::phone('(213) 199-9999'));
+
+		// invalid area-codes
+		$this->assertFalse(Validation::phone('1-(511)-999-9999'));
+		$this->assertFalse(Validation::phone('1-(379)-999-9999'));
+		$this->assertFalse(Validation::phone('1-(962)-999-9999'));
+		$this->assertFalse(Validation::phone('1-(295)-999-9999'));
+		$this->assertFalse(Validation::phone('1-(555)-999-9999'));
+
+		// invalid exhange
+		$this->assertFalse(Validation::phone('1-(222)-511-9999'));
+
+		// invalid phone number
+		$this->assertFalse(Validation::phone('1-(222)-555-0199'));
+		$this->assertFalse(Validation::phone('1-(222)-555-0122'));
+
+		// valid phone numbers
+		$this->assertTrue(Validation::phone('1-(369)-333-4444'));
+		$this->assertTrue(Validation::phone('1-(973)-333-4444'));
+		$this->assertTrue(Validation::phone('1-(313)-555-9999'));
+		$this->assertTrue(Validation::phone('1-(222)-555-0299'));
 
 		$this->assertTrue(UsValidation::phone('1 (222) 333 4444'));
 		$this->assertTrue(UsValidation::phone('+1 (222) 333 4444'));
