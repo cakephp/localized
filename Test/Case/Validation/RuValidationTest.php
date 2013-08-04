@@ -98,7 +98,7 @@ class RuValidationTest extends CakeTestCase {
 	}
 
 /**
- * test passport method of RuValidation
+ * test snils method of RuValidation
  *
  * @return void
  */
