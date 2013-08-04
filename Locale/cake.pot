@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-12-19 18:18+0000\n"
+"POT-Creation-Date: 2013-08-02 23:13+0400\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,27 +14,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/Scaffold.php:128
+#: View/Errors/error400.ctp:22
+#: View/Errors/error500.ctp:22
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:24
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:23
+#: Error/ExceptionRenderer.php:234
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: Controller/Scaffold.php:130
 msgid "Scaffold :: "
 msgstr ""
 
-#: Controller/Scaffold.php:167;234;305
+#: Controller/Scaffold.php:169;236;305
 msgid "Invalid %s"
 msgstr ""
 
-#: Controller/Scaffold.php:222
+#: Controller/Scaffold.php:224
 msgid "updated"
 msgstr ""
 
-#: Controller/Scaffold.php:225
+#: Controller/Scaffold.php:227
 msgid "saved"
 msgstr ""
 
-#: Controller/Scaffold.php:245
+#: Controller/Scaffold.php:247
 msgid "The %1$s has been %2$s"
 msgstr ""
 
-#: Controller/Scaffold.php:256
+#: Controller/Scaffold.php:257
 msgid "Please correct errors below."
 msgstr ""
 
@@ -46,105 +60,101 @@ msgstr ""
 msgid "There was an error deleting the %1$s with id: %2$s"
 msgstr ""
 
-#: Controller/Component/AuthComponent.php:369
+#: Controller/Component/AuthComponent.php:377
 msgid "You are not authorized to access that location."
 msgstr ""
 
-#: Error/ExceptionRenderer.php:209
+#: Error/ExceptionRenderer.php:212
 msgid "Not Found"
 msgstr ""
 
-#: Error/ExceptionRenderer.php:231
-msgid "An Internal Error Has Occurred."
-msgstr ""
-
-#: Model/Validator/CakeValidationSet.php:287
+#: Model/Validator/CakeValidationSet.php:288
 msgid "This field cannot be left blank"
 msgstr ""
 
-#: Network/CakeResponse.php:1222
+#: Network/CakeResponse.php:1246
 msgid "The requested file was not found"
 msgstr ""
 
-#: Utility/CakeNumber.php:101
+#: Utility/CakeNumber.php:102
 msgid "%d KB"
 msgstr ""
 
-#: Utility/CakeNumber.php:103
+#: Utility/CakeNumber.php:104
 msgid "%.2f MB"
 msgstr ""
 
-#: Utility/CakeNumber.php:105
+#: Utility/CakeNumber.php:106
 msgid "%.2f GB"
 msgstr ""
 
-#: Utility/CakeNumber.php:107
+#: Utility/CakeNumber.php:108
 msgid "%.2f TB"
 msgstr ""
 
-#: Utility/CakeNumber.php:99
+#: Utility/CakeNumber.php:100
 msgid "%d Byte"
 msgid_plural "%d Bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:389
+#: Utility/CakeTime.php:394
 msgid "Today, %s"
 msgstr ""
 
-#: Utility/CakeTime.php:392
+#: Utility/CakeTime.php:397
 msgid "Yesterday, %s"
 msgstr ""
 
-#: Utility/CakeTime.php:395
+#: Utility/CakeTime.php:400
 msgid "Tomorrow, %s"
 msgstr ""
 
-#: Utility/CakeTime.php:400
+#: Utility/CakeTime.php:405
 msgid "Sunday"
 msgstr ""
 
-#: Utility/CakeTime.php:401
+#: Utility/CakeTime.php:406
 msgid "Monday"
 msgstr ""
 
-#: Utility/CakeTime.php:402
+#: Utility/CakeTime.php:407
 msgid "Tuesday"
 msgstr ""
 
-#: Utility/CakeTime.php:403
+#: Utility/CakeTime.php:408
 msgid "Wednesday"
 msgstr ""
 
-#: Utility/CakeTime.php:404
+#: Utility/CakeTime.php:409
 msgid "Thursday"
 msgstr ""
 
-#: Utility/CakeTime.php:405
+#: Utility/CakeTime.php:410
 msgid "Friday"
 msgstr ""
 
-#: Utility/CakeTime.php:406
+#: Utility/CakeTime.php:411
 msgid "Saturday"
 msgstr ""
 
-#: Utility/CakeTime.php:412
+#: Utility/CakeTime.php:417
 msgid "On %s %s"
 msgstr ""
 
-#: Utility/CakeTime.php:805
+#: Utility/CakeTime.php:816
 msgid "just now"
 msgstr ""
 
-#: Utility/CakeTime.php:809
+#: Utility/CakeTime.php:820
 msgid "on %s"
 msgstr ""
 
-#: Utility/CakeTime.php:853
+#: Utility/CakeTime.php:864
 msgid "%s ago"
 msgstr ""
 
-#: Utility/CakeTime.php:872;894
+#: Utility/CakeTime.php:883;906
 msgid "days"
 msgstr ""
 
@@ -184,191 +194,188 @@ msgstr ""
 msgid "t_fmt"
 msgstr ""
 
-#: Utility/CakeTime.php:831
+#: Utility/CakeTime.php:842
 msgid "%d year"
 msgid_plural "%d years"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:834
+#: Utility/CakeTime.php:845
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:837
+#: Utility/CakeTime.php:848
 msgid "%d week"
 msgid_plural "%d weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:840
+#: Utility/CakeTime.php:851
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:843
+#: Utility/CakeTime.php:854
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:846
+#: Utility/CakeTime.php:857
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:849
+#: Utility/CakeTime.php:860
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: View/Helper/FormHelper.php:681
+#: View/Helper/FormHelper.php:695
 msgid "Error in field %s"
 msgstr ""
 
-#: View/Helper/FormHelper.php:868
-#: View/Scaffolds/form.ctp:48
-#: View/Scaffolds/index.ctp:79;94
-#: View/Scaffolds/view.ctp:66;81;192
+#: View/Helper/FormHelper.php:884
+#: View/Scaffolds/form.ctp:49
+#: View/Scaffolds/index.ctp:80;95
+#: View/Scaffolds/view.ctp:67;82;193
 msgid "New %s"
 msgstr ""
 
-#: View/Helper/FormHelper.php:874
-#: View/Scaffolds/view.ctp:54;113
+#: View/Helper/FormHelper.php:890
+#: View/Scaffolds/view.ctp:55;114
 msgid "Edit %s"
 msgstr ""
 
-#: View/Helper/FormHelper.php:1436
+#: View/Helper/FormHelper.php:1458
 msgid "empty"
 msgstr ""
 
-#: View/Helper/FormHelper.php:1796
-#: View/Scaffolds/form.ctp:23
+#: View/Helper/FormHelper.php:1830
+#: View/Scaffolds/form.ctp:24
 msgid "Submit"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2704
+#: View/Helper/FormHelper.php:2747
 msgid "January"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2705
+#: View/Helper/FormHelper.php:2748
 msgid "February"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2706
+#: View/Helper/FormHelper.php:2749
 msgid "March"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2707
+#: View/Helper/FormHelper.php:2750
 msgid "April"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2708
+#: View/Helper/FormHelper.php:2751
 msgid "May"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2709
+#: View/Helper/FormHelper.php:2752
 msgid "June"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2710
+#: View/Helper/FormHelper.php:2753
 msgid "July"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2711
+#: View/Helper/FormHelper.php:2754
 msgid "August"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2712
+#: View/Helper/FormHelper.php:2755
 msgid "September"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2713
+#: View/Helper/FormHelper.php:2756
 msgid "October"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2714
+#: View/Helper/FormHelper.php:2757
 msgid "November"
 msgstr ""
 
-#: View/Helper/FormHelper.php:2715
+#: View/Helper/FormHelper.php:2758
 msgid "December"
 msgstr ""
 
-#: View/Helper/HtmlHelper.php:747
+#: View/Helper/HtmlHelper.php:748
 msgid "Home"
 msgstr ""
 
-#: View/Helper/PaginatorHelper.php:580
+#: View/Helper/PaginatorHelper.php:606
 msgid " of "
 msgstr ""
 
-#: View/Scaffolds/form.ctp:27
-#: View/Scaffolds/index.ctp:26;77
-#: View/Scaffolds/view.ctp:50
+#: View/Scaffolds/form.ctp:28
+#: View/Scaffolds/index.ctp:27;78
+#: View/Scaffolds/view.ctp:51
 msgid "Actions"
 msgstr ""
 
-#: View/Scaffolds/form.ctp:31
-#: View/Scaffolds/index.ctp:51
-#: View/Scaffolds/view.ctp:177
+#: View/Scaffolds/form.ctp:32
+#: View/Scaffolds/index.ctp:52
+#: View/Scaffolds/view.ctp:178
 msgid "Delete"
 msgstr ""
 
-#: View/Scaffolds/form.ctp:34
+#: View/Scaffolds/form.ctp:35
+#: View/Scaffolds/index.ctp:55
+#: View/Scaffolds/view.ctp:59;181
 msgid "Are you sure you want to delete # %s?"
 msgstr ""
 
-#: View/Scaffolds/form.ctp:37
+#: View/Scaffolds/form.ctp:38
 msgid "List"
 msgstr ""
 
-#: View/Scaffolds/form.ctp:44
-#: View/Scaffolds/index.ctp:87
-#: View/Scaffolds/view.ctp:62;75
+#: View/Scaffolds/form.ctp:45
+#: View/Scaffolds/index.ctp:88
+#: View/Scaffolds/view.ctp:63;76
 msgid "List %s"
 msgstr ""
 
-#: View/Scaffolds/index.ctp:48
-#: View/Scaffolds/view.ctp:165
+#: View/Scaffolds/index.ctp:49
+#: View/Scaffolds/view.ctp:166
 msgid "View"
 msgstr ""
 
-#: View/Scaffolds/index.ctp:49
-#: View/Scaffolds/view.ctp:171
+#: View/Scaffolds/index.ctp:50
+#: View/Scaffolds/view.ctp:172
 msgid "Edit"
 msgstr ""
 
-#: View/Scaffolds/index.ctp:54
-#: View/Scaffolds/view.ctp:58;180
-msgid "Are you sure you want to delete"
-msgstr ""
-
-#: View/Scaffolds/index.ctp:65
+#: View/Scaffolds/index.ctp:66
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
 msgstr ""
 
-#: View/Scaffolds/index.ctp:70
+#: View/Scaffolds/index.ctp:71
 msgid "previous"
 msgstr ""
 
-#: View/Scaffolds/index.ctp:72
+#: View/Scaffolds/index.ctp:73
 msgid "next"
 msgstr ""
 
-#: View/Scaffolds/view.ctp:20
+#: View/Scaffolds/view.ctp:21
 msgid "View %s"
 msgstr ""
 
-#: View/Scaffolds/view.ctp:58
+#: View/Scaffolds/view.ctp:59
 msgid "Delete %s"
 msgstr ""
 
-#: View/Scaffolds/view.ctp:96;137
+#: View/Scaffolds/view.ctp:97;138
 msgid "Related %s"
 msgstr ""
 
