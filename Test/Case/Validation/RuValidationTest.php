@@ -92,6 +92,8 @@ class RuValidationTest extends CakeTestCase {
 		$this->assertTrue(RuValidation::vatin('7710140679'));
 		$this->assertTrue(RuValidation::vatin('772807592828'));
 
+		$this->assertFalse(RuValidation::vatin('12345'));
+
 		// invalid checksums
 		$this->assertFalse(RuValidation::vatin('7710140670'));
 		$this->assertFalse(RuValidation::vatin('772807592837'));
@@ -108,6 +110,8 @@ class RuValidationTest extends CakeTestCase {
 	public function testSnils() {
 		$this->assertTrue(RuValidation::snils('112-233-445 95'));
 		$this->assertTrue(RuValidation::snils('032-032-952 00'));
+
+		$this->assertFalse(RuValidation::snils('03203295200'));
 
 		// invalid checksum
 		$this->assertFalse(RuValidation::snils('112-233-445 96'));
