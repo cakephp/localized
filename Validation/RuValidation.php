@@ -134,6 +134,17 @@ class RuValidation {
 	}
 
 /**
+ * Snils wrapper
+ *
+ * @see RuValidation::snils()
+ * @param string $check
+ * @return boolean
+ */
+	public static function ssn($check) {
+		return self::snils($check);
+	}
+
+/**
  * Check SNILS (СНИЛС)
  *
  * @param string $check

@@ -101,6 +101,9 @@ class RuValidationTest extends CakeTestCase {
  * test snils method of RuValidation
  *
  * @return void
+ *
+ * @covers RuValidation::ssn
+ * @covers RuValidation::snils
  */
 	public function testSnils() {
 		$this->assertTrue(RuValidation::snils('112-233-445 95'));
