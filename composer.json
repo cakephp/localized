@@ -1,0 +1,24 @@
+{
+    "name": "cakephp/localized",
+    "description": "I18n and L10n related CakePHP code",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "i18n", "l10n"],
+    "homepage": "https://github.com/cakephp/localized",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CakePHP Community",
+            "homepage": "https://github.com/cakephp/localized/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "http://cakephp.lighthouseapp.com/projects/42658-localized/overview",
+        "forum": "http://ask.cakephp.org",
+        "irc": "irc://irc.freenode.org/cakephp",
+        "source": "https://github.com/cakephp/localized"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "composer/installers": "*"
+    }
+}
