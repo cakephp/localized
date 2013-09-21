@@ -1,0 +1,30 @@
+{
+    "name": "cakephp/localized",
+    "description": "CakePHP Localized Plugin",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "localized", "i18n", "l10n"],
+    "homepage": "https://github.com/cakephp/localized",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CakePHP Community",
+            "homepage": "https://github.com/cakephp/localized/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "http://cakephp.lighthouseapp.com/projects/42658-localized/overview",
+        "forum": "http://stackoverflow.com/tags/cakephp",
+        "irc": "irc://irc.freenode.org/cakephp",
+        "source": "https://github.com/cakephp/localized"
+    },
+    "require": {
+        "php": ">=5.2.8",
+        "composer/installers": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.1.x-dev"
+        },
+        "installer-name": "Localized"
+    }
+}
