@@ -21,7 +21,7 @@ Ensure `require` is present in `composer.json`. This will install the plugin int
 ```
 {
     "require": {
-        "cakephp/localized": "2.1.*"
+        "cakephp/localized": "2.1.x-dev"
     }
 }
 ```
