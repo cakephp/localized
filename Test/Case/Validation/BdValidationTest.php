@@ -36,4 +36,17 @@ class BdValidationTest extends CakeTestCase {
 		$this->assertFalse(BdValidation::postal('111'));
 		$this->assertFalse(BdValidation::postal('11123'));
 	}
+/**
+ * test the postal method of BdValidation
+ *
+ * @return void
+ */
+	public function testPostal() {
+		$this->assertTrue(BdValidation::mobile('+8801617738438'));
+		$this->assertTrue(BdValidation::mobile('008801617738438'));
+		$this->assertTrue(BdValidation::mobile('8801617738438'));
+		$this->assertTrue(BdValidation::mobile('01617738438'));
+		$this->assertTrue(BdValidation::mobile('1617738438'));
+		$this->assertFalse(BdValidation::mobile('1217738438'));
+	}
 }
