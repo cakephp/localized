@@ -40,9 +40,9 @@ class BdValidation {
  * @param string $check The value to check.
  * @return boolean
  */
-    public static function mobile($check){
-        $pattern = '/^((00|\+)([8]{2})([0]{1})([1])([156789]){1}[0-9]{8})|((([0]{1})|())([1])([156789]){1}[0-9]{8})/';
-        return (bool) preg_match($pattern, $check);
-    }
-}
+    	public static function mobile($check){
+        	$pattern = '/^((00|\+)([8]{2})([0]{1})([1])([156789]){1}[0-9]{8})|((([0]{1})|())([1])([156789]){1}[0-9]{8})/';
+        	return (bool) preg_match($pattern, $check);
+    	}
+
 }
