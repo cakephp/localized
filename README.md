@@ -86,4 +86,4 @@ If you find that your country is not part of the Localized plugin, please fork t
 
 ## Issues with Localized
 
-If you have issues with Localized, you can report them at http://cakephp.lighthouseapp.com/projects/42658-localized/overview
+If you have issues with Localized, you can report them at https://github.com/cakephp/localized/issues
