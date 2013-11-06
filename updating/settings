@@ -1,4 +1,4 @@
-## File updating/settings -*- shell-script[sh] -*-
+## File updating/settings -*- shell-script -*-
 #
 # This file lets you provide your own settings to
 # the tools in this directory.
@@ -13,4 +13,4 @@ CAKEPHP_WORKTREE=/usr/local/src/cakephp/cakephp
 CAKE=/usr/local/bin/cake # I'm using the shell from cakephp 2.4.1 in all cases
 
 # Restrict the scope to your language, or set this to "???"
-MY_LANG="fra"
+MY_LANG="test"
