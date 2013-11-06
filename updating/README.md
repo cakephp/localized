@@ -49,6 +49,8 @@ Note: there is no `--overwrite` option, so the program will ask.  a
       solution would be to use the "yes" tool or similar, but it might
       be dangerous for little benefit.
 
+**TODO** handle validation messages, separately or not
+
 [i18n-sh]: http://book.cakephp.org/2.0/en/console-and-shells/i18n-shell.html  "I18N shell in cakephp2 cookbook"
 
 ### Maintaining Project-Id-Version in .POT and .PO headers
@@ -68,6 +70,9 @@ We merge all .PO files in the directory and keep only the translated messages.
 ``` sh
  msgcat --use-first -F *.po | msgattrib --translated -o compendium.po
 ```
+
+**TODO** test thoroughly compendium maintenance and usage
+
 [gt_compendium]: http://www.gnu.org/software/gettext/manual/html_node/Compendium.html "Gettext manual: Using Translation Compendia"
 
 ### New .PO files
@@ -77,8 +82,10 @@ msgmerge --compendium compendium.po -o $po /dev/null $pot
 ```
 A new value for `PO-Revision-Date` is injected in the newly created file.
 
+**TODO** test that old messages, moved to compendium, are re-injected properly
+
 ### Producing stats
-**TODO** Producing stats
+**TODO** Producing progression and quality stats
 
 ### Updating .PO files
 The .PO files are then maintained by translators.
