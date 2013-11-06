@@ -1,21 +1,20 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright YEAR NAME <EMAIL@ADDRESS>
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: CakePHP v2.4.1 commit 085636ea1bb2a57b084456e776bfada01dee71df\n"
+"Project-Id-Version: CakePHP v2.4.1 commit "
+"085636ea1bb2a57b084456e776bfada01dee71df\n"
 "POT-Creation-Date: 2013-11-06 12:01+0100\n"
-"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-11-06 12:29:11\n"
+"Last-Translator: Pierre Martin <pierre@occi-tech.com>\n"
+"Language-Team: Cakephp-fr.org <contact@cakephp-fr.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"Plural-Forms: nplurals=2; plural=(n==1? 0 : 1);\n"
 
-#: View/Layouts/default.ctp:20
-#: View/Layouts/error.ctp:20
+#: View/Layouts/default.ctp:20 View/Layouts/error.ctp:20
 msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
@@ -36,7 +35,8 @@ msgid "Your version of PHP is 5.2.8 or higher."
 msgstr ""
 
 #: View/Pages/home.ctp:47
-msgid "Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
+msgid ""
+"Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
 msgstr ""
 
 #: View/Pages/home.ctp:56
@@ -48,11 +48,14 @@ msgid "Your tmp directory is NOT writable."
 msgstr ""
 
 #: View/Pages/home.ctp:70
-msgid "The %s is being used for core caching. To change the config edit APP/Config/core.php "
+msgid ""
+"The %s is being used for core caching. To change the config edit APP/Config/"
+"core.php "
 msgstr ""
 
 #: View/Pages/home.ctp:74
-msgid "Your cache is NOT working. Please check the settings in APP/Config/core.php"
+msgid ""
+"Your cache is NOT working. Please check the settings in APP/Config/core.php"
 msgstr ""
 
 #: View/Pages/home.ctp:84
@@ -80,7 +83,9 @@ msgid "PCRE has not been compiled with Unicode support."
 msgstr ""
 
 #: View/Pages/home.ctp:134
-msgid "Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring"
+msgid ""
+"Recompile PCRE with Unicode support by adding <code>--enable-unicode-"
+"properties</code> when configuring"
 msgstr ""
 
 #: View/Pages/home.ctp:143
@@ -88,7 +93,9 @@ msgid "DebugKit plugin is present"
 msgstr ""
 
 #: View/Pages/home.ctp:147
-msgid "DebugKit is not installed. It will help you inspect and debug different aspects of your application."
+msgid ""
+"DebugKit is not installed. It will help you inspect and debug different "
+"aspects of your application."
 msgstr ""
 
 #: View/Pages/home.ctp:149
@@ -100,7 +107,10 @@ msgid "Editing this Page"
 msgstr ""
 
 #: View/Pages/home.ctp:158
-msgid "To change the content of this page, edit: APP/View/Pages/home.ctp.<br />\nTo change its layout, edit: APP/View/Layouts/default.ctp.<br />\nYou can also add some CSS styles for your pages at: APP/webroot/css."
+msgid ""
+"To change the content of this page, edit: APP/View/Pages/home.ctp.<br />\n"
+"To change its layout, edit: APP/View/Layouts/default.ctp.<br />\n"
+"You can also add some CSS styles for your pages at: APP/webroot/css."
 msgstr ""
 
 #: View/Pages/home.ctp:164
@@ -108,8 +118,9 @@ msgid "Getting Started"
 msgstr ""
 
 #: View/Pages/home.ctp:168
+#, fuzzy
 msgid "New"
-msgstr ""
+msgstr "Nouveau %s"
 
 #: View/Pages/home.ctp:168
 msgid "CakePHP 2.0 Docs"
@@ -124,11 +135,15 @@ msgid "Official Plugins"
 msgstr ""
 
 #: View/Pages/home.ctp:189
-msgid "provides a debugging toolbar and enhanced debugging tools for CakePHP applications."
+msgid ""
+"provides a debugging toolbar and enhanced debugging tools for CakePHP "
+"applications."
 msgstr ""
 
 #: View/Pages/home.ctp:193
-msgid "contains various localized validation classes and translations for specific countries"
+msgid ""
+"contains various localized validation classes and translations for specific "
+"countries"
 msgstr ""
 
 #: View/Pages/home.ctp:198
@@ -136,11 +151,17 @@ msgid "More about Cake"
 msgstr ""
 
 #: View/Pages/home.ctp:200
-msgid "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
+msgid ""
+"CakePHP is a rapid development framework for PHP which uses commonly known "
+"design patterns like Active Record, Association Data Mapping, Front "
+"Controller and MVC."
 msgstr ""
 
 #: View/Pages/home.ctp:203
-msgid "Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility."
+msgid ""
+"Our primary goal is to provide a structured framework that enables PHP users "
+"at all levels to rapidly develop robust web applications, without any loss "
+"to flexibility."
 msgstr ""
 
 #: View/Pages/home.ctp:207
@@ -240,8 +261,9 @@ msgid "%s cache was unable to write '%s' to %s cache"
 msgstr ""
 
 #: Cache/Cache.php:542
+#, fuzzy
 msgid "Invalid cache group %s"
-msgstr ""
+msgstr "%s invalide"
 
 #: Cache/Engine/FileEngine.php:314
 msgid "Files cannot be atomically decremented."
@@ -263,13 +285,11 @@ msgstr ""
 msgid "Method %s not implemented for compressed cache in %s"
 msgstr ""
 
-#: Configure/IniReader.php:103
-#: Configure/PhpReader.php:64
+#: Configure/IniReader.php:103 Configure/PhpReader.php:64
 msgid "Cannot load configuration files with ../ in them."
 msgstr ""
 
-#: Configure/IniReader.php:108
-#: Configure/PhpReader.php:69
+#: Configure/IniReader.php:108 Configure/PhpReader.php:69
 msgid "Could not load configuration file: %s"
 msgstr ""
 
@@ -286,8 +306,9 @@ msgid "Test case %s cannot be run via this shell"
 msgstr ""
 
 #: Console/Command/TestShell.php:385;402
+#, fuzzy
 msgid "Test case %s not found"
-msgstr ""
+msgstr "Le fichier demandé est introuvable"
 
 #: Console/Command/Task/PluginTask.php:182
 msgid "%s modified"
@@ -370,15 +391,21 @@ msgid "$controller does not implement an %s method."
 msgstr ""
 
 #: Controller/Component/Auth/CrudAuthorize.php:85
-msgid "CrudAuthorize::authorize() - Attempted access of un-mapped action \"%1$s\" in controller \"%2$s\""
+msgid ""
+"CrudAuthorize::authorize() - Attempted access of un-mapped action \"%1$s\" "
+"in controller \"%2$s\""
 msgstr ""
 
 #: Core/Configure.php:73
-msgid "Can't find application core file. Please create %s, and make sure it is readable by PHP."
+msgid ""
+"Can't find application core file. Please create %s, and make sure it is "
+"readable by PHP."
 msgstr ""
 
 #: Core/Configure.php:93
-msgid "Can't find application bootstrap file. Please create %s, and make sure it is readable by PHP."
+msgid ""
+"Can't find application bootstrap file. Please create %s, and make sure it is "
+"readable by PHP."
 msgstr ""
 
 #: Core/Configure.php:340
@@ -398,12 +425,15 @@ msgid "You cannot use \"\" as a domain."
 msgstr ""
 
 #: I18n/I18n.php:206
-msgid "Missing plural form translation for \"%s\" in \"%s\" domain, \"%s\" locale.  Check your po file for correct plurals and valid Plural-Forms header."
+msgid ""
+"Missing plural form translation for \"%s\" in \"%s\" domain, \"%s\" locale.  "
+"Check your po file for correct plurals and valid Plural-Forms header."
 msgstr ""
 
 #: Log/CakeLog.php:192
+#, fuzzy
 msgid "Invalid key name"
-msgstr ""
+msgstr "%s invalide"
 
 #: Log/CakeLog.php:195
 msgid "Missing logger classname"
@@ -434,23 +464,35 @@ msgid "%s - Method %s not found in any attached behavior"
 msgstr ""
 
 #: Model/CakeSchema.php:617
-msgid "Schema generation error: invalid column type %s for %s.%s does not exist in DBO"
+msgid ""
+"Schema generation error: invalid column type %s for %s.%s does not exist in "
+"DBO"
 msgstr ""
 
 #: Model/Model.php:1341
-msgid "(Model::getColumnTypes) Unable to build model field data. If you are using a model without a database table, try implementing schema()"
+msgid ""
+"(Model::getColumnTypes) Unable to build model field data. If you are using a "
+"model without a database table, try implementing schema()"
 msgstr ""
 
 #: Model/Model.php:3386
-msgid "Invalid join model settings in %s. The association parameter has the wrong type, expecting a string or array, but was passed type: %s"
+msgid ""
+"Invalid join model settings in %s. The association parameter has the wrong "
+"type, expecting a string or array, but was passed type: %s"
 msgstr ""
 
 #: Model/Permission.php:87
-msgid "%s - Failed ARO/ACO node lookup in permissions check. Node references:\nAro: %s\nAco: %s"
+msgid ""
+"%s - Failed ARO/ACO node lookup in permissions check. Node references:\n"
+"Aro: %s\n"
+"Aco: %s"
 msgstr ""
 
 #: Model/Permission.php:98
-msgid "%s - Failed ACO node lookup in permissions check. Node references:\nAro: %s\nAco: %s"
+msgid ""
+"%s - Failed ACO node lookup in permissions check. Node references:\n"
+"Aro: %s\n"
+"Aco: %s"
 msgstr ""
 
 #: Model/Permission.php:109
@@ -470,7 +512,9 @@ msgid "Callback %s not defined in %s"
 msgstr ""
 
 #: Model/Behavior/AclBehavior.php:85
-msgid "AclBehavior is setup with more then one type, please specify type parameter for node()"
+msgid ""
+"AclBehavior is setup with more then one type, please specify type parameter "
+"for node()"
 msgstr ""
 
 #: Model/Behavior/ContainableBehavior.php:344
@@ -498,7 +542,9 @@ msgid "Could not load %s to handle the session."
 msgstr ""
 
 #: Model/Datasource/CakeSession.php:529
-msgid "Chosen SessionHandler does not implement CakeSessionHandlerInterface it cannot be used with an engine key."
+msgid ""
+"Chosen SessionHandler does not implement CakeSessionHandlerInterface it "
+"cannot be used with an engine key."
 msgstr ""
 
 #: Model/Datasource/DboSource.php:257
@@ -506,8 +552,9 @@ msgid "Selected driver is not enabled"
 msgstr ""
 
 #: Model/Datasource/DboSource.php:1189
+#, fuzzy
 msgid "Error in Model %s"
-msgstr ""
+msgstr "Erreur dans le champ %s"
 
 #: Model/Datasource/DboSource.php:2965
 msgid "Invalid schema object"
@@ -541,12 +588,14 @@ msgid "Unknown status code"
 msgstr ""
 
 #: Network/CakeResponse.php:668
+#, fuzzy
 msgid "Invalid status code"
-msgstr ""
+msgstr "%s invalide"
 
 #: Network/CakeResponse.php:1268
+#, fuzzy
 msgid "The requested file %s was not found or not readable"
-msgstr ""
+msgstr "Le fichier demandé est introuvable"
 
 #: Network/CakeSocket.php:306
 msgid "Connection timed out"
@@ -581,8 +630,9 @@ msgid "Return-Path requires only 1 email address."
 msgstr ""
 
 #: Network/Email/CakeEmail.php:558;572;612;626
+#, fuzzy
 msgid "Invalid email: \"%s\""
-msgstr ""
+msgstr "%s invalide"
 
 #: Network/Email/CakeEmail.php:657;672
 msgid "$headers should be an array."
@@ -601,7 +651,9 @@ msgid "The \"%s\" does not have a %s method."
 msgstr ""
 
 #: Network/Email/CakeEmail.php:935
-msgid "Invalid format for Message-ID. The text should be something like \"<uuid@server.com>\""
+msgid ""
+"Invalid format for Message-ID. The text should be something like "
+"\"<uuid@server.com>\""
 msgstr ""
 
 #: Network/Email/CakeEmail.php:1014
@@ -625,8 +677,9 @@ msgid "You need to specify at least one destination for to, cc or bcc."
 msgstr ""
 
 #: Network/Email/CakeEmail.php:1184
+#, fuzzy
 msgid "%s not found."
-msgstr ""
+msgstr "Introuvable"
 
 #: Network/Email/CakeEmail.php:1188
 msgid "Unknown email configuration \"%s\"."
@@ -641,7 +694,9 @@ msgid "Unable to connect to SMTP server."
 msgstr ""
 
 #: Network/Email/SmtpTransport.php:123
-msgid "SMTP server did not accept the connection or trying to connect to non TLS SMTP server using TLS."
+msgid ""
+"SMTP server did not accept the connection or trying to connect to non TLS "
+"SMTP server using TLS."
 msgstr ""
 
 #: Network/Email/SmtpTransport.php:128
@@ -657,7 +712,8 @@ msgid "SMTP server did not accept the password."
 msgstr ""
 
 #: Network/Email/SmtpTransport.php:150
-msgid "SMTP authentication method not allowed, check if SMTP server requires TLS"
+msgid ""
+"SMTP authentication method not allowed, check if SMTP server requires TLS"
 msgstr ""
 
 #: Network/Email/SmtpTransport.php:152
@@ -673,12 +729,15 @@ msgid "SMTP Error: %s"
 msgstr ""
 
 #: Network/Http/HttpResponse.php:23
-msgid "HttpResponse is deprecated due to naming conflicts. Use HttpSocketResponse instead."
+msgid ""
+"HttpResponse is deprecated due to naming conflicts. Use HttpSocketResponse "
+"instead."
 msgstr ""
 
 #: Network/Http/HttpSocket.php:246
+#, fuzzy
 msgid "Invalid resource."
-msgstr ""
+msgstr "%s invalide"
 
 #: Network/Http/HttpSocket.php:406
 msgid "Class %s not found."
@@ -701,16 +760,22 @@ msgid "The %s does not support proxy authentication."
 msgstr ""
 
 #: Network/Http/HttpSocket.php:888
-msgid "HttpSocket::_buildRequestLine - Passed an invalid request line string. Activate quirks mode to do this."
+msgid ""
+"HttpSocket::_buildRequestLine - Passed an invalid request line string. "
+"Activate quirks mode to do this."
 msgstr ""
 
 #: Network/Http/HttpSocket.php:906
-msgid "HttpSocket::_buildRequestLine - The \"*\" asterisk character is only allowed for the following methods: %s. Activate quirks mode to work outside of HTTP/1.1 specs."
+msgid ""
+"HttpSocket::_buildRequestLine - The \"*\" asterisk character is only allowed "
+"for the following methods: %s. Activate quirks mode to work outside of "
+"HTTP/1.1 specs."
 msgstr ""
 
 #: Network/Http/HttpSocketResponse.php:153
+#, fuzzy
 msgid "Invalid response."
-msgstr ""
+msgstr "%s invalide"
 
 #: Network/Http/HttpSocketResponse.php:157
 msgid "Invalid HTTP response."
@@ -729,7 +794,9 @@ msgid "No unit type."
 msgstr ""
 
 #: Utility/ClassRegistry.php:116
-msgid "(ClassRegistry::init() Attempted to create instance of a class with a numeric name"
+msgid ""
+"(ClassRegistry::init() Attempted to create instance of a class with a "
+"numeric name"
 msgstr ""
 
 #: Utility/ClassRegistry.php:148
@@ -745,11 +812,15 @@ msgid "Invalid Debugger output format."
 msgstr ""
 
 #: Utility/Debugger.php:849
-msgid "Please change the value of %s in %s to a salt value specific to your application."
+msgid ""
+"Please change the value of %s in %s to a salt value specific to your "
+"application."
 msgstr ""
 
 #: Utility/Debugger.php:853
-msgid "Please change the value of %s in %s to a numeric (digits only) seed value specific to your application."
+msgid ""
+"Please change the value of %s in %s to a numeric (digits only) seed value "
+"specific to your application."
 msgstr ""
 
 #: Utility/Folder.php:385;408
@@ -781,8 +852,9 @@ msgid "%s NOT removed"
 msgstr ""
 
 #: Utility/Folder.php:653
+#, fuzzy
 msgid "%s not found"
-msgstr ""
+msgstr "Introuvable"
 
 #: Utility/Folder.php:662
 msgid "%s not writable"
@@ -813,7 +885,9 @@ msgid "You cannot use an empty key for %s"
 msgstr ""
 
 #: Utility/Security.php:224
-msgid "You must specify the operation for Security::rijndael(), either encrypt or decrypt"
+msgid ""
+"You must specify the operation for Security::rijndael(), either encrypt or "
+"decrypt"
 msgstr ""
 
 #: Utility/Security.php:228
@@ -821,7 +895,9 @@ msgid "You must use a key larger than 32 bytes for Security::rijndael()"
 msgstr ""
 
 #: Utility/Security.php:282
-msgid "Invalid salt: %s for %s Please visit http://www.php.net/crypt and read the appropriate section for building %s salts."
+msgid ""
+"Invalid salt: %s for %s Please visit http://www.php.net/crypt and read the "
+"appropriate section for building %s salts."
 msgstr ""
 
 #: Utility/Validation.php:257
@@ -849,8 +925,9 @@ msgid "XML cannot be read."
 msgstr ""
 
 #: Utility/Xml.php:117;196
+#, fuzzy
 msgid "Invalid input."
-msgstr ""
+msgstr "%s invalide"
 
 #: Utility/Xml.php:151
 msgid "Xml cannot be read."
@@ -861,8 +938,9 @@ msgid "The key of input must be alphanumeric"
 msgstr ""
 
 #: Utility/Xml.php:277;290
+#, fuzzy
 msgid "Invalid array"
-msgstr ""
+msgstr "%s invalide"
 
 #: Utility/Xml.php:341
 msgid "The input is not instance of SimpleXMLElement, DOMDocument or DOMNode."
@@ -873,8 +951,9 @@ msgid "Method %1$s::%2$s does not exist"
 msgstr ""
 
 #: View/View.php:415
+#, fuzzy
 msgid "Element Not Found: %s"
-msgstr ""
+msgstr "Introuvable"
 
 #: View/View.php:710
 msgid "You cannot extend an element which does not exist (%s)."
@@ -900,8 +979,7 @@ msgstr ""
 msgid "Fatal Error"
 msgstr ""
 
-#: View/Errors/fatal_error.ctp:23
-#: View/Errors/missing_action.ctp:22;26
+#: View/Errors/fatal_error.ctp:23 View/Errors/missing_action.ctp:22;26
 #: View/Errors/missing_behavior.ctp:24;28
 #: View/Errors/missing_component.ctp:24;28
 #: View/Errors/missing_connection.ctp:22;33
@@ -909,14 +987,10 @@ msgstr ""
 #: View/Errors/missing_database.ctp:22;26
 #: View/Errors/missing_datasource.ctp:24
 #: View/Errors/missing_datasource_config.ctp:22
-#: View/Errors/missing_helper.ctp:24;28
-#: View/Errors/missing_layout.ctp:22;26
-#: View/Errors/missing_plugin.ctp:22;26
-#: View/Errors/missing_table.ctp:22
-#: View/Errors/missing_view.ctp:22;26
-#: View/Errors/pdo_error.ctp:22
-#: View/Errors/private_action.ctp:22
-#: View/Errors/scaffold_error.ctp:22
+#: View/Errors/missing_helper.ctp:24;28 View/Errors/missing_layout.ctp:22;26
+#: View/Errors/missing_plugin.ctp:22;26 View/Errors/missing_table.ctp:22
+#: View/Errors/missing_view.ctp:22;26 View/Errors/pdo_error.ctp:22
+#: View/Errors/private_action.ctp:22 View/Errors/scaffold_error.ctp:22
 msgid "Error"
 msgstr ""
 
@@ -928,43 +1002,27 @@ msgstr ""
 msgid "Line"
 msgstr ""
 
-#: View/Errors/fatal_error.ctp:35
-#: View/Errors/missing_action.ctp:41
-#: View/Errors/missing_behavior.ctp:38
-#: View/Errors/missing_component.ctp:38
-#: View/Errors/missing_connection.ctp:38
-#: View/Errors/missing_controller.ctp:38
-#: View/Errors/missing_database.ctp:30
-#: View/Errors/missing_datasource.ctp:31
+#: View/Errors/fatal_error.ctp:35 View/Errors/missing_action.ctp:41
+#: View/Errors/missing_behavior.ctp:38 View/Errors/missing_component.ctp:38
+#: View/Errors/missing_connection.ctp:38 View/Errors/missing_controller.ctp:38
+#: View/Errors/missing_database.ctp:30 View/Errors/missing_datasource.ctp:31
 #: View/Errors/missing_datasource_config.ctp:26
-#: View/Errors/missing_helper.ctp:38
-#: View/Errors/missing_layout.ctp:30
-#: View/Errors/missing_plugin.ctp:42
-#: View/Errors/missing_table.ctp:26
-#: View/Errors/missing_view.ctp:30
-#: View/Errors/pdo_error.ctp:36
-#: View/Errors/private_action.ctp:26
-#: View/Errors/scaffold_error.ctp:26
+#: View/Errors/missing_helper.ctp:38 View/Errors/missing_layout.ctp:30
+#: View/Errors/missing_plugin.ctp:42 View/Errors/missing_table.ctp:26
+#: View/Errors/missing_view.ctp:30 View/Errors/pdo_error.ctp:36
+#: View/Errors/private_action.ctp:26 View/Errors/scaffold_error.ctp:26
 msgid "Notice"
 msgstr ""
 
-#: View/Errors/fatal_error.ctp:36
-#: View/Errors/missing_action.ctp:42
-#: View/Errors/missing_behavior.ctp:39
-#: View/Errors/missing_component.ctp:39
-#: View/Errors/missing_connection.ctp:39
-#: View/Errors/missing_controller.ctp:39
-#: View/Errors/missing_database.ctp:31
-#: View/Errors/missing_datasource.ctp:32
+#: View/Errors/fatal_error.ctp:36 View/Errors/missing_action.ctp:42
+#: View/Errors/missing_behavior.ctp:39 View/Errors/missing_component.ctp:39
+#: View/Errors/missing_connection.ctp:39 View/Errors/missing_controller.ctp:39
+#: View/Errors/missing_database.ctp:31 View/Errors/missing_datasource.ctp:32
 #: View/Errors/missing_datasource_config.ctp:27
-#: View/Errors/missing_helper.ctp:39
-#: View/Errors/missing_layout.ctp:31
-#: View/Errors/missing_plugin.ctp:43
-#: View/Errors/missing_table.ctp:27
-#: View/Errors/missing_view.ctp:31
-#: View/Errors/pdo_error.ctp:37
-#: View/Errors/private_action.ctp:27
-#: View/Errors/scaffold_error.ctp:27
+#: View/Errors/missing_helper.ctp:39 View/Errors/missing_layout.ctp:31
+#: View/Errors/missing_plugin.ctp:43 View/Errors/missing_table.ctp:27
+#: View/Errors/missing_view.ctp:31 View/Errors/pdo_error.ctp:37
+#: View/Errors/private_action.ctp:27 View/Errors/scaffold_error.ctp:27
 msgid "If you want to customize this error message, create %s"
 msgstr ""
 
@@ -984,17 +1042,13 @@ msgstr ""
 msgid "Missing Behavior"
 msgstr ""
 
-#: View/Errors/missing_behavior.ctp:25
-#: View/Errors/missing_component.ctp:25
-#: View/Errors/missing_controller.ctp:25
-#: View/Errors/missing_helper.ctp:25
+#: View/Errors/missing_behavior.ctp:25 View/Errors/missing_component.ctp:25
+#: View/Errors/missing_controller.ctp:25 View/Errors/missing_helper.ctp:25
 msgid "%s could not be found."
 msgstr ""
 
-#: View/Errors/missing_behavior.ctp:29
-#: View/Errors/missing_component.ctp:29
-#: View/Errors/missing_controller.ctp:29
-#: View/Errors/missing_helper.ctp:29
+#: View/Errors/missing_behavior.ctp:29 View/Errors/missing_component.ctp:29
+#: View/Errors/missing_controller.ctp:29 View/Errors/missing_helper.ctp:29
 msgid "Create the class %s below in file: %s"
 msgstr ""
 
@@ -1002,8 +1056,7 @@ msgstr ""
 msgid "Missing Component"
 msgstr ""
 
-#: View/Errors/missing_connection.ctp:20
-#: View/Errors/missing_database.ctp:20
+#: View/Errors/missing_connection.ctp:20 View/Errors/missing_database.ctp:20
 msgid "Missing Database Connection"
 msgstr ""
 
@@ -1027,8 +1080,7 @@ msgstr ""
 msgid "Scaffold requires a database connection"
 msgstr ""
 
-#: View/Errors/missing_database.ctp:27
-#: View/Errors/missing_layout.ctp:27
+#: View/Errors/missing_database.ctp:27 View/Errors/missing_layout.ctp:27
 #: View/Errors/missing_view.ctp:27
 msgid "Confirm you have created the file: %s"
 msgstr ""
@@ -1078,7 +1130,9 @@ msgid "Loading all plugins"
 msgstr ""
 
 #: View/Errors/missing_plugin.ctp:36
-msgid "If you wish to load all plugins at once, use the following line in your %s file"
+msgid ""
+"If you wish to load all plugins at once, use the following line in your %s "
+"file"
 msgstr ""
 
 #: View/Errors/missing_table.ctp:20
@@ -1094,8 +1148,9 @@ msgid "Missing View"
 msgstr ""
 
 #: View/Errors/missing_view.ctp:23
+#, fuzzy
 msgid "The view for %1$s%2$s was not found."
-msgstr ""
+msgstr "Le fichier demandé est introuvable"
 
 #: View/Errors/pdo_error.ctp:20
 msgid "Database Error"
@@ -1118,8 +1173,9 @@ msgid "%s%s cannot be accessed directly."
 msgstr ""
 
 #: View/Errors/scaffold_error.ctp:20
+#, fuzzy
 msgid "Scaffold Error"
-msgstr ""
+msgstr "Scaffold :: "
 
 #: View/Errors/scaffold_error.ctp:23
 msgid "Method _scaffoldError in was not found in the controller"
@@ -1149,8 +1205,7 @@ msgstr ""
 msgid "%s requires a \"drag\" option to properly function"
 msgstr ""
 
-#: View/Helper/NumberHelper.php:65
-#: View/Helper/TextHelper.php:80
+#: View/Helper/NumberHelper.php:65 View/Helper/TextHelper.php:80
 #: View/Helper/TimeHelper.php:63
 msgid "%s could not be found"
 msgstr ""
@@ -1158,4 +1213,3 @@ msgstr ""
 #: View/Helper/PaginatorHelper.php:99
 msgid "%s does not implement a %s method, it is incompatible with %s"
 msgstr ""
-
