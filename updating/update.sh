@@ -60,7 +60,7 @@ sed -i "/Project-Id-Version:/ s/PROJECT VERSION/$PROJECT_VERSION/" *.pot
 cd $LOCALIZED_WORKTREE/Locale
 for lang in $MY_LANG ; do
     cd $lang
-    for dir in LC_* ; do
+    for dir in LC_MESSAGES ; do
         update_translation $dir
     done
     cd ..
