@@ -1,0 +1,52 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP 2.4.1\n"
+"POT-Creation-Date: 2013-11-02 15:28+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Utility/CakeTime.php:154
+msgid "abday"
+msgstr ""
+
+#: Utility/CakeTime.php:160
+msgid "day"
+msgstr ""
+
+#: Utility/CakeTime.php:166
+msgid "d_t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:188
+msgid "abmon"
+msgstr ""
+
+#: Utility/CakeTime.php:194
+msgid "mon"
+msgstr ""
+
+#: Utility/CakeTime.php:205
+msgid "am_pm"
+msgstr ""
+
+#: Utility/CakeTime.php:212
+msgid "t_fmt_ampm"
+msgstr ""
+
+#: Utility/CakeTime.php:226
+msgid "d_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:232
+msgid "t_fmt"
+msgstr ""
+
