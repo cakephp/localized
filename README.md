@@ -6,7 +6,7 @@ This plugin contains various localized strings and validation classes for specif
 
 The master branch has the following requirements:
 
-* CakePHP 2.1.x.
+* CakePHP 2.1.0 or greater
 * PHP 5.2.8 or greater.
 
 ## Installation
