@@ -1,0 +1,16 @@
+## File updating/settings -*- shell-script -*-
+#
+# This file lets you provide your own settings to
+# the tools in this directory.
+# Adjust contents to your needs:
+#
+# @since 2013-11-04
+# @author Michelle Baert <rocky dot road at rocky-shore dot net>
+
+#=========================================== Your Settings
+LOCALIZED_WORKTREE=/usr/local/src/cakephp/localized
+CAKEPHP_WORKTREE=/usr/local/src/cakephp/cakephp
+CAKE=/usr/local/bin/cake # I'm using the shell from cakephp 2.4.1 in all cases
+
+# Restrict the scope to your language, or set this to "???"
+MY_LANG="test"
