@@ -35,3 +35,23 @@ class AuValidationTest extends CakeTestCase {
 		$this->assertFalse(AuValidation::postal('02300'));
 	}
 }
+
+/**
+ * test the phone method of AuValidation
+ *
+ * @return void
+ */
+	public function testPhone() {
+		$this->assertTrue(AuValidation::phone('02 5551 5678'));
+		$this->assertTrue(AuValidation::phone('+61 2 5551 5678'));
+		$this->assertTrue(AuValidation::phone('1300 555 567'));
+		$this->assertTrue(AuValidation::phone('0412 515 678'));
+		$this->assertTrue(AuValidation::phone('0412515678'));
+		$this->assertTrue(AuValidation::phone('+61 412 515 678'));
+		$this->assertTrue(AuValidation::phone('13 12 51'));
+		$this->assertTrue(AuValidation::phone('1902 345 678'));
+		$this->assertFalse(AuValidation::phone('(02) 5551 5678'));
+		$this->assertFalse(AuValidation::phone('1300 TSTCAS'));
+		$this->assertFalse(AuValidation::phone('+61 4 12 515 678'));
+	}
+}
