@@ -34,4 +34,14 @@ class AuValidation {
 		$pattern = '/^[0-9]{4}$/';
 		return (bool)preg_match($pattern, $check);
 	}
+/**
+ * Checks Phone Numbers for Australia
+ *
+ * @param string $check The value to check.
+ * @return boolean
+ */
+	public static function phone($check) {
+		$pattern = '/^(((0|\+61\s?)[2378])(\s|-)?\d{4}(\s|-)?\d{4}|((0|\+61\s?)4\d{2}|130?0?|1800|190[02])(\s|-)?\d{3}(\s|-)?\d{3})$/';
+		return (bool)preg_match($pattern, $check);
+	}
 }
