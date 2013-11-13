@@ -34,7 +34,7 @@ class AuValidationTest extends CakeTestCase {
 		$this->assertTrue(AuValidation::postal('2300'));
 		$this->assertFalse(AuValidation::postal('02300'));
 	}
-}
+
 
 /**
  * test the phone method of AuValidation
