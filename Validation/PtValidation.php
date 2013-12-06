@@ -1,6 +1,6 @@
 <?php
 /**
- * Portuguese Localized Validation class. Handles localized validation for Spain
+ * Portuguese Localized Validation class. Handles localized validation for Portugal
  *
  * PHP 5
  *
