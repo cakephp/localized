@@ -305,7 +305,7 @@ msgstr "borrar"
 
 #: View/Scaffolds/form.ctp:34
 msgid "Are you sure you want to delete # %s?"
-msgstr "¿Está seguro que quiere eliminar # %s?"
+msgstr "¿Estás seguro que quieres eliminar # %s?"
 
 #: View/Scaffolds/form.ctp:37
 msgid "List"
@@ -326,7 +326,7 @@ msgstr "editar"
 
 #: View/Scaffolds/index.ctp:55 View/Scaffolds/view.ctp:49;133
 msgid "Are you sure you want to delete"
-msgstr "Está seguro que quiere eliminar"
+msgstr "Estás seguro que quieres eliminar"
 
 #: View/Scaffolds/index.ctp:66
 msgid ""
