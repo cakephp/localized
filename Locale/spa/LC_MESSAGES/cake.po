@@ -18,7 +18,7 @@ msgstr ""
 
 #: Controller/Scaffold.php:167;234;305
 msgid "Invalid %s"
-msgstr "%s inválido"
+msgstr "Registro no válido"
 
 #: Controller/Scaffold.php:222
 msgid "updated"
@@ -233,12 +233,12 @@ msgstr "Error en el campo %s"
 #: View/Scaffolds/index.ctp:80;87
 #: View/Scaffolds/view.ctp:51;58;142
 msgid "New %s"
-msgstr "Nuevo %"
+msgstr "Nuevo registro"
 
 #: View/Helper/FormHelper.php:862
 #: View/Scaffolds/view.ctp:48;85
 msgid "Edit %s"
-msgstr "Editar %"
+msgstr "Editar registro"
 
 #: View/Helper/FormHelper.php:1683
 #: View/Scaffolds/form.ctp:23
@@ -321,7 +321,7 @@ msgstr "Listado"
 #: View/Scaffolds/index.ctp:86
 #: View/Scaffolds/view.ctp:50;57
 msgid "List %s"
-msgstr "Lista de %"
+msgstr "lista de "
 
 #: View/Scaffolds/index.ctp:49
 #: View/Scaffolds/view.ctp:131
