@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2012-10-22 10:52+0200\n"
-"PO-Revision-Date: 2014-01-13 10:31-0300\n"
+"PO-Revision-Date: 2014-01-13 13:35-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "guardado"
 
 #: Controller/Scaffold.php:245
 msgid "The %1$s has been %2$s"
-msgstr "El %1$s ha sido %2$s"
+msgstr "El registro ha sido %2$s"
 
 #: Controller/Scaffold.php:255
 msgid "Please correct errors below."
@@ -46,7 +46,7 @@ msgstr "Se encontró un error al borrar el registro con id: %2$s"
 
 #: Controller/Component/AuthComponent.php:427
 msgid "You are not authorized to access that location."
-msgstr "No tiene permisos para acceder a dicha ubicación."
+msgstr "No tienes permisos para acceder a dicha ubicación."
 
 #: Error/ExceptionRenderer.php:209
 msgid "Not Found"
@@ -328,7 +328,7 @@ msgstr "Borrar"
 #: View/Scaffolds/index.ctp:54
 #: View/Scaffolds/view.ctp:57;178
 msgid "Are you sure you want to delete # %s?"
-msgstr "¿Está seguro que desea borrar # %s?"
+msgstr "¿Estás seguro que quieres borrar # %s?"
 
 #: View/Scaffolds/form.ctp:37
 msgid "List"
@@ -338,7 +338,7 @@ msgstr "Listado"
 #: View/Scaffolds/index.ctp:87
 #: View/Scaffolds/view.ctp:61;74
 msgid "List %s"
-msgstr "Lista de "
+msgstr "Lista de registros"
 
 #: View/Scaffolds/index.ctp:48
 #: View/Scaffolds/view.ctp:163
@@ -372,4 +372,4 @@ msgstr "Borrar %s"
 
 #: View/Scaffolds/view.ctp:95;135
 msgid "Related %s"
-msgstr "Registros relacionados"
+msgstr "%s relacionado/as"
