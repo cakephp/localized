@@ -50,7 +50,7 @@ class FrValidationTest extends CakeTestCase {
 	}
 
 /**
- * test the postal method of FrValidation
+ * test the ssn method of FrValidation
  *
  * @return void
  */
@@ -65,5 +65,23 @@ class FrValidationTest extends CakeTestCase {
 		$this->assertFalse(FrValidation::ssn('15102461020432'));
 		$this->assertFalse(FrValidation::ssn('151024610204'));
 		$this->assertFalse(FrValidation::ssn('151022C10204326'));
+	}
+
+/**
+ * test the dateFormat method of FrValidation
+ *
+ * @return void
+ */
+	public function testDateFormat() {
+		$this->assertTrue(FrValidation::dateFormat('28/02/2000'));
+		$this->assertTrue(FrValidation::dateFormat('31/01/2012'));
+		$this->assertTrue(FrValidation::dateFormat('31/12/2012'));
+		$this->assertFalse(FrValidation::dateFormat('01/13/2000'));
+		$this->assertFalse(FrValidation::dateFormat('31/02/2000'));
+		$this->assertFalse(FrValidation::dateFormat('30/01/10 000'));
+		$this->assertFalse(FrValidation::dateFormat('30.01.2000'));
+		$this->assertFalse(FrValidation::dateFormat('2012-12-02'));
+		$this->assertFalse(FrValidation::dateFormat('2012/01/12'));
+		$this->assertFalse(FrValidation::dateFormat('01-12-2012'));
 	}
 }
