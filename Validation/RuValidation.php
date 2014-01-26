@@ -59,23 +59,6 @@ class RuValidation {
 	}
 
 /**
- * Checks date of birth formal format for Russia (dd.mm.yyyy),
- * afterwards checks it is a valid gregorian calendar date.
- *
- * @param string $check the date of birth.
- * @return boolean
- */
-	public static function dob($check) {
-		$pattern = '/^\d{1,2}\.\d{1,2}\.\d{4}$/';
-		if (!preg_match($pattern, $check)) {
-			return false;
-		}
-		$check = str_replace('.', ',', $check);
-		$check = explode(',', $check, 3);
-		return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
-	}
-
-/**
  * Checks passport number
  *
  * @param string $check
