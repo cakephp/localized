@@ -1,12 +1,12 @@
 # CakePHP Localized plugin [![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
 
-This plugin contains various localized validation classes for specific countries.
+This plugin contains various localized strings and validation classes for specific countries.
 
 ## Requirements
 
 The master branch has the following requirements:
 
-* CakePHP 2.1.0 or greater.
+* CakePHP 2.1.0 or greater
 * PHP 5.2.8 or greater.
 
 ## Installation
