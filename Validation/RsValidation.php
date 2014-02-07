@@ -24,6 +24,7 @@
  */
 class RsValidation {
 
+// @codingStandardsIgnoreStart
 /**
  * Checks Postal Numbers (Poštanski broj) for Serbia
  *
@@ -45,6 +46,7 @@ class RsValidation {
 		$pattern = '/^[0-9]{6}$/';
 		return (bool)preg_match($pattern, $check);
 	}
+// @codingStandardsIgnoreEnd
 
 /**
  * Checks Unique Master Citizen Numbers (JMBG) for Serbia

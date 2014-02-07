@@ -66,7 +66,7 @@ class BrValidation {
 		// sometimes the user submits a masked CNPJ
 		if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
 			$check = str_replace(array('-', '.', '/'), '', $check);
-		} else if (!ctype_digit($check)) {
+		} elseif (!ctype_digit($check)) {
 			return false;
 		}
 
