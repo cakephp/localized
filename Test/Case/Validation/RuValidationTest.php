@@ -47,19 +47,6 @@ class RuValidationTest extends CakeTestCase {
 	}
 
 /**
- * test date of dob method of RuValidation
- *
- * @return void
- */
-	public function testDob() {
-		$this->assertTrue(RuValidation::dob('1.1.1960'));
-		$this->assertTrue(RuValidation::dob('01.01.1960'));
-
-		$this->assertFalse(RuValidation::dob('00.00.1960'));
-		$this->assertFalse(RuValidation::dob('1960.01.01'));
-	}
-
-/**
  * test address method of RuValidation
  *
  * @return void
