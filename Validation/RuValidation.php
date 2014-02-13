@@ -113,7 +113,7 @@ class RuValidation {
 			$calculatedChecksum = join('', $sum);
 		}
 
-		return (int) $checksum === (int) $calculatedChecksum;
+		return (int)$checksum === (int)$calculatedChecksum;
 	}
 
 /**
@@ -148,7 +148,7 @@ class RuValidation {
 
 		$sum = 0;
 		foreach ($digits as $position => $value) {
-			$sum += ($position+1) * $value;
+			$sum += ($position + 1) * $value;
 		}
 
 		$calculatedChecksum = $sum % 101;
