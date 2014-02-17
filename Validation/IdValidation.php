@@ -1,6 +1,6 @@
 <?php
 /**
- * ID Localized Validation class. Handles localized validation for Indonesia
+ * ID Localized Validation class. Handles localized validation for Indonesia.
  *
  * PHP 5
  *
@@ -15,8 +15,9 @@
  * @package       localized
  * @subpackage    localized.tests.cases.libs
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * IdValidation
@@ -24,13 +25,13 @@
  * @package       localized
  * @subpackage    localized.tests.cases.libs
  */
-class IdValidation {
+class IdValidation extends LocalizedValidation {
 
 /**
- * Checks zipcodes for Indonesia
+ * Checks a postal code for Indonesia.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function postal($check) {
 		$pattern = '/[1-9][0-9]{4}/';
@@ -38,13 +39,36 @@ class IdValidation {
 	}
 
 /**
- * Basic Check for Valid Mobile Mumbers for Indonesia
+ * Basic Check for Valid Mobile Mumbers for Indonesia.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function mobile($check) {
 		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
 		return preg_match($pattern, $check);
 	}
+
+/**
+ * Checks a phone number.
+ *
+ * @param string $check The value to check.
+ * @return boolean Success.
+ * @throws NotImplementedException
+ */
+	public static function phone($check) {
+		throw new NotImplementedException('Not implemented yet.');
+	}
+
+/**
+ * Checks a country specific person id.
+ *
+ * @param string $check The value to check.
+ * @return boolean Success.
+ * @throws NotImplementedException
+ */
+	public static function personId($check) {
+		throw new NotImplementedException('Not implemented yet.');
+	}
+
 }

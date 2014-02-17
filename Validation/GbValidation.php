@@ -11,60 +11,49 @@
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       Localized.Validation
- * @since         localized 0.1
+ * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
- * LT Localized Validation class. Handles localized validation for the Lithuanian language
+ * GB Localized Validation class. Handles localized validation for The United Kingdom
  *
  * @package       Localized.Validation
  */
-class LtValidation extends LocalizedValidation {
+class GbValidation extends LocalizedValidation {
 
 /**
- * Checks a phone number for the Lithuania.
- *
- * @param string $check The value to check.
- * @return boolean Success.
- */
-	public static function phone($check) {
-		$pattern = "/^(([\+]?370)|(8))[\s-]?\(?[0-9]{2,3}\)?[\s-]?([0-9]{2}[\s-]?){2}?[0-9]{1,2}$/";
-		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Checks a postal code for the Lithuania.
+ * Checks a postal code for The United Kingdom
  *
  * @param string $check The value to check.
  * @return boolean Success.
  */
 	public static function postal($check) {
-		$pattern = '/^(lt)?[\s-]?[\d]{5}$/i';
+		$pattern = '/\\A\\b[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][ABD-HJLNP-UW-Z]{2}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
 
 /**
- * Checks a social security number for the Lithuania.
+ * Checks a phone number.
  *
  * @param string $check The value to check.
  * @return boolean Success.
+ * @throws NotImplementedException
+ */
+	public static function phone($check) {
+		throw new NotImplementedException('Not implemented yet.');
+	}
+
+/**
+ * Checks a country specific person id.
+ *
+ * @param string $check The value to check.
+ * @return boolean Success.
+ * @throws NotImplementedException
  */
 	public static function personId($check) {
-		$pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
-		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Checks a social security number for the Lithuania.
- *
- * @param string $check The value to check.
- * @return boolean Success.
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
+		throw new NotImplementedException('Not implemented yet.');
 	}
 
 }

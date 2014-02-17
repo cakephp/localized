@@ -1,34 +1,33 @@
 <?php
 /**
- * US Localized Validation class. Handles localized validation for The United States
- *
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
- * UsValidation
+ * US Localized Validation class. Handles localized validation for The United States
  *
  * @package       Localized.Validation
  */
-class UsValidation {
+class UsValidation extends LocalizedValidation {
 
 /**
- * Checks phone numbers for The United States
+ * Checks a phone number for The United States
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function phone($check) {
 		$pattern = '/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|3[02-689][0-9]|9[02-57-9][0-9]|[246-8][02-46-8][02-46-9])\s*\)';
@@ -42,10 +41,10 @@ class UsValidation {
 	}
 
 /**
- * Checks zipcodes for The United States
+ * Checks a postal code for The United States
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function postal($check) {
 		$pattern = '/\\A\\b[0-9]{5}(?:-[0-9]{4})?\\b\\z/i';
@@ -53,13 +52,25 @@ class UsValidation {
 	}
 
 /**
- * Checks social security numbers for The United States
+ * Checks a social security number for The United States
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success
  */
-	public static function ssn($check) {
+	public static function personId($check) {
 		$pattern = '/\\A\\b[0-9]{3}-[0-9]{2}-[0-9]{4}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
+
+/**
+ * Checks a social security number for The United States
+ *
+ * @param string $check The value to check.
+ * @return boolean Success.
+ * @deprecated Use personId() instead.
+ */
+	public static function ssn($check) {
+		return self::personId($check);
+	}
+
 }
