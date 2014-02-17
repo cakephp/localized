@@ -25,7 +25,6 @@ App::uses('LocalizedValidation', 'Localized.Validation');
  */
 class RsValidation extends LocalizedValidation {
 
-// @codingStandardsIgnoreStart
 /**
  * Checks a postal code (Poštanski broj) for Serbia.
  *
@@ -64,8 +63,8 @@ class RsValidation extends LocalizedValidation {
 		$pattern = '/^[0-9]{6}$/';
 		return (bool)preg_match($pattern, $check);
 	}
-// @codingStandardsIgnoreEnd
 
+// @codingStandardsIgnoreStart
 /**
  * Checks an address code (Adresni kod) for Serbia.
  *
@@ -87,6 +86,7 @@ class RsValidation extends LocalizedValidation {
 	public static function postal_number($check) {
 		return self::postal($check);
 	}
+// @codingStandardsIgnoreEnd
 
 /**
  * Checks Unique Master Citizen Numbers (JMBG) for Serbia.
