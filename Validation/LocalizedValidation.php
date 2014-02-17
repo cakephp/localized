@@ -66,6 +66,7 @@ abstract class LocalizedValidation {
  *
  * @param string $name Name.
  * @return string Regex pattern.
+ * @throws NotImplementedException If no regex pattern can be found for this name.
  */
 	protected static function _getPattern($name) {
 		if (isset(static::$_pattern[$name])) {
