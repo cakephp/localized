@@ -36,24 +36,24 @@ class BdValidation extends LocalizedValidation {
 		return (bool)preg_match($pattern, $check);
 	}
 
-	/**
-	 * BdValidation::phone()
-	 *
-	 * @param mixed $string
-	 * @return boolean Success.
-	 * @throws NotImplementedException
-	 */
+/**
+ * BdValidation::phone()
+ *
+ * @param mixed $string
+ * @return boolean Success.
+ * @throws NotImplementedException
+ */
 	public static function phone($string) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
 
-	/**
-	 * BdValidation::personId()
-	 *
-	 * @param mixed $string
-	 * @return boolean Success.
-	 * @throws NotImplementedException
-	 */
+/**
+ * BdValidation::personId()
+ *
+ * @param mixed $string
+ * @return boolean Success.
+ * @throws NotImplementedException
+ */
 	public static function personId($string) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
