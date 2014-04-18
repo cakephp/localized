@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
-"Plural-Forms: nplurals=2; plural=(n==1? 0 : 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: Controller/Scaffold.php:128
 msgid "Scaffold :: "
