@@ -53,6 +53,10 @@ class ItValidation {
  * @return boolean
  */
 	public static function cf($check) {
+		if ((strlen($check) == 11) && preg_match('/[0-9]{11}/', $check)) {
+			return true;
+		}
+
 		$check = strtoupper($check);
 		if (strlen($check) != 16 || !preg_match('/[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/', $check)) {
 			return false;
