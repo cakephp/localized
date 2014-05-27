@@ -40,6 +40,8 @@ class RuValidationTest extends CakeTestCase {
 
 /**
  * test phone method of RuValidation
+ *
+ * @return void
  */
 	public function testPhone() {
 		$this->assertTrue(RuValidation::phone('+7 (342) 1234567'));
