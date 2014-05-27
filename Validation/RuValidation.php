@@ -61,7 +61,7 @@ class RuValidation {
 /**
  * Checks passport number
  *
- * @param string $check
+ * @param string $check The value to check
  * @return boolean
  * @link https://en.wikipedia.org/wiki/Internal_Passport_of_Russia
  */
@@ -73,7 +73,7 @@ class RuValidation {
 /**
  * VAT identification number (Tax Identification Number, ИНН)
  *
- * @param string $check
+ * @param string $check The value to check
  * @return boolean
  * @link https://en.wikipedia.org/wiki/VAT_identification_number
  */
@@ -119,9 +119,9 @@ class RuValidation {
 /**
  * Snils wrapper
  *
- * @see RuValidation::snils()
- * @param string $check
+ * @param string $check The value to check
  * @return boolean
+ * @see RuValidation::snils()
  */
 	public static function ssn($check) {
 		return self::snils($check);
@@ -130,7 +130,7 @@ class RuValidation {
 /**
  * Check SNILS (СНИЛС)
  *
- * @param string $check
+ * @param string $check The value to check
  * @return boolean
  * @link https://ru.wikipedia.org/wiki/СНИЛС
  */
