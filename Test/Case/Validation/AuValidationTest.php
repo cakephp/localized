@@ -41,11 +41,11 @@ class AuValidationTest extends CakeTestCase {
  * @return void
  */
 	public function testPhone() {
-		$this->assertTrue(AuValidation::phone('02 5551 5678')); 	//Standard areacode + PSTN service number.
-		$this->assertTrue(AuValidation::phone('0011 61 2 5551 5678')); 	//Full international prefix + standard areacode + PSTN service number.
-		$this->assertTrue(AuValidation::phone('+61 2 5551 5678')); 	//Breif international prefix + standard areacode + PSTN service number.
-		$this->assertTrue(AuValidation::phone('1300 555 567')); 	//1300 local call cost number
-		$this->assertTrue(AuValidation::phone('0412 515 678')); 	//Standard mobile number.
+		$this->assertTrue(AuValidation::phone('02 5551 5678'));		//Standard areacode + PSTN service number.
+		$this->assertTrue(AuValidation::phone('0011 61 2 5551 5678'));	//Full international prefix + standard areacode + PSTN service number.
+		$this->assertTrue(AuValidation::phone('+61 2 5551 5678'));	//Breif international prefix + standard areacode + PSTN service number.
+		$this->assertTrue(AuValidation::phone('1300 555 567'));		//1300 local call cost number
+		$this->assertTrue(AuValidation::phone('0412 515 678'));		//Standard mobile number.
 		$this->assertTrue(AuValidation::phone('0412515678'));		//Standard mobile number, no whitespace.
 		$this->assertTrue(AuValidation::phone('+61 412 515 678'));	//Breif international prefix + standard mobile number.
 		$this->assertTrue(AuValidation::phone('13 12 51'));		//13 local call cost number
@@ -58,6 +58,6 @@ class AuValidationTest extends CakeTestCase {
 		$this->assertTrue(AuValidation::phone('12456'));		//Telstra utility service numbers. (directory service etc).
 		$this->assertTrue(AuValidation::phone('127 22123'));		//Testing numbers
 		$this->assertFalse(AuValidation::phone('1300 TSTCAS'));		//1300 local call cost number (alphabetic representation).
-		$this->assertFalse(AuValidation::phone('0198 333 888')); 	//prefix reserved for dial-up internet services.
+		$this->assertFalse(AuValidation::phone('0198 333 888'));	//prefix reserved for dial-up internet services.
 	}
 }
