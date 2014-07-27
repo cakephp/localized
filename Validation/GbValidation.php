@@ -1,7 +1,5 @@
 <?php
 /**
- * Australian Localised Validation class. Handles localised validation for Australia.
- *
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
@@ -19,20 +17,20 @@
 App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
- * AuValidation
+ * GB Localized Validation class. Handles localized validation for The United Kingdom
  *
  * @package       Localized.Validation
  */
-class AuValidation implements ValidationInterface {
+class GbValidation implements ValidationInterface {
 
 /**
- * Checks a postal code for Australia.
+ * Checks a postal code for The United Kingdom
  *
  * @param string $check The value to check.
  * @return boolean Success.
  */
 	public static function postal($check) {
-		$pattern = '/^[0-9]{4}$/';
+		$pattern = '/\\A\\b[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][ABD-HJLNP-UW-Z]{2}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
 
@@ -48,7 +46,7 @@ class AuValidation implements ValidationInterface {
 	}
 
 /**
- * Checks an identification number.
+ * Checks a country specific identification number.
  *
  * @param string $check The value to check.
  * @return boolean Success.

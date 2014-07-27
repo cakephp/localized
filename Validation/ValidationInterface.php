@@ -11,16 +11,38 @@
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
  * @package       Localized.Validation
- * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('GbValidation', 'Localized.Validation');
 
 /**
- * UK Localized Validation class. Handles localized validation for The United Kingdom
+ * ValidationInterface
  *
  * @package       Localized.Validation
- * @deprecated		Use GbValidation instead.
  */
-class UkValidation extends GbValidation {
+interface ValidationInterface {
+
+/**
+ * Checks a phone number.
+ *
+ * @param string $string The value to check.
+ * @return boolean Success.
+ */
+	public static function phone($string);
+
+/**
+ * Checks a postal code.
+ *
+ * @param string $string The value to check.
+ * @return boolean Success.
+ */
+	public static function postal($string);
+
+/**
+ * Checks a country specific identification number.
+ *
+ * @param string $string The value to check.
+ * @return boolean Success.
+ */
+	public static function identification($string);
+
 }

@@ -1,64 +1,66 @@
 <?php
 /**
- * Brazillian Localized Validation class. Handles localized validation for Brazil
+ * Brazillian Localized Validation class. Handles localized validation for Brazil.
  *
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright    Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright    Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link         http://cakephp.org
  * @package      Localized.Validation
  * @since        Localized Plugin v 0.1
- * @license      MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license      http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * BrValidation
  *
  * @package       Localized.Validation
  */
-class BrValidation {
+class BrValidation implements ValidationInterface {
 
 /**
- * Checks phone numbers for Brazil
+ * Checks a phone number for Brazil.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function phone($check) {
 		return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?9?\d{4}[-. ]?\d{4}$/', $check);
 	}
 
 /**
- * Checks zipcodes (CEP) for Brazil
+ * Checks a postal code (CEP) for Brazil.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function postal($check) {
 		return (bool)preg_match('/^[0-9]{5}-?[0-9]{3}$/', $check);
 	}
 
 /**
- * Checks SSN for Brazil
+ * Checks SSN for Brazil.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
+ * @throws NotImplementedException
  */
-	public static function ssn($check) {
+	public static function identification($check) {
 		return BrValidation::cpf($check) || BrValidation::cnpj($check);
 	}
 
 /**
- * Checks CPF for Brazil
+ * Checks CPF for Brazil.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function cpf($check) {
 		$check = trim($check);
@@ -101,10 +103,10 @@ class BrValidation {
 	}
 
 /**
- * Checks CNPJ for Brazil
+ * Checks CNPJ for Brazil.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return boolean Success.
  */
 	public static function cnpj($check) {
 		$check = trim($check);
@@ -133,4 +135,16 @@ class BrValidation {
 
 		return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
 	}
+
+/**
+ * Checks SSN for Brazil.
+ *
+ * @param string $check The value to check.
+ * @return boolean Success.
+ * @deprecated Use identification() instead.
+ */
+	public static function ssn($check) {
+		return self::identification($check);
+	}
+
 }
