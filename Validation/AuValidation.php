@@ -16,14 +16,14 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * AuValidation
  *
  * @package       Localized.Validation
  */
-class AuValidation extends LocalizedValidation {
+class AuValidation implements ValidationInterface {
 
 /**
  * Checks a postal code for Australia.
@@ -48,13 +48,13 @@ class AuValidation extends LocalizedValidation {
 	}
 
 /**
- * Checks an person id.
+ * Checks an identification number.
  *
  * @param string $check The value to check.
  * @return boolean Success.
  * @throws NotImplementedException
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
 

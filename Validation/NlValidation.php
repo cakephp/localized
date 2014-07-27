@@ -14,14 +14,14 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * Dutch Localized Validation class. Handles localized validation for The Netherlands
  *
  * @package       Localized.Validation
  */
-class NlValidation extends LocalizedValidation {
+class NlValidation implements ValidationInterface {
 
 /**
  * Checks a phone number for The Netherlands
@@ -51,7 +51,7 @@ class NlValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return boolean Success.
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		$pattern = '/\\A\\b[0-9]{9}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
@@ -61,10 +61,10 @@ class NlValidation extends LocalizedValidation {
  *
  * @param string $check The value to check.
  * @return boolean Success.
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function ssn($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 }

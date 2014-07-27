@@ -16,14 +16,14 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * RsValidation
  *
  * @package       Localized.Validation
  */
-class RsValidation extends LocalizedValidation {
+class RsValidation implements ValidationInterface {
 
 /**
  * Checks a postal code (Poštanski broj) for Serbia.
@@ -43,7 +43,7 @@ class RsValidation extends LocalizedValidation {
  * @return boolean Success.
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		if (!preg_match('/^[0-9]{13}$/', $check)) {
 			return false;
 		}
@@ -64,7 +64,6 @@ class RsValidation extends LocalizedValidation {
 		return (bool)preg_match($pattern, $check);
 	}
 
-// @codingStandardsIgnoreStart
 /**
  * Checks an address code (Adresni kod) for Serbia.
  *
@@ -86,7 +85,6 @@ class RsValidation extends LocalizedValidation {
 	public static function postal_number($check) {
 		return self::postal($check);
 	}
-// @codingStandardsIgnoreEnd
 
 /**
  * Checks Unique Master Citizen Numbers (JMBG) for Serbia.
@@ -94,10 +92,10 @@ class RsValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return boolean Success.
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function jmbg($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 /**

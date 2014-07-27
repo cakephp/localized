@@ -16,14 +16,14 @@
  * @since        Localized Plugin v 0.1
  * @license      http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * BrValidation
  *
  * @package       Localized.Validation
  */
-class BrValidation extends LocalizedValidation {
+class BrValidation implements ValidationInterface {
 
 /**
  * Checks a phone number for Brazil.
@@ -52,7 +52,7 @@ class BrValidation extends LocalizedValidation {
  * @return boolean Success.
  * @throws NotImplementedException
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		return BrValidation::cpf($check) || BrValidation::cnpj($check);
 	}
 
@@ -141,10 +141,10 @@ class BrValidation extends LocalizedValidation {
  *
  * @param string $check The value to check.
  * @return boolean Success.
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function ssn($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 }

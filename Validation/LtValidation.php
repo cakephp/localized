@@ -14,14 +14,14 @@
  * @since         localized 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * LT Localized Validation class. Handles localized validation for the Lithuanian language
  *
  * @package       Localized.Validation
  */
-class LtValidation extends LocalizedValidation {
+class LtValidation implements ValidationInterface {
 
 /**
  * Checks a phone number for the Lithuania.
@@ -51,7 +51,7 @@ class LtValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return boolean Success.
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		$pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
 		return (bool)preg_match($pattern, $check);
 	}
@@ -61,10 +61,10 @@ class LtValidation extends LocalizedValidation {
  *
  * @param string $check The value to check.
  * @return boolean Success.
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function ssn($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 }

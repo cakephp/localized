@@ -14,14 +14,14 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * Iranian Localized Validation class. Handles localized validation for Iran.
  *
  * @package       Localized.Validation
  */
-class IrValidation extends LocalizedValidation {
+class IrValidation implements ValidationInterface {
 
 /**
  * Checks for Persian/Farsi characters and number an zero width non-joiner space.
@@ -96,7 +96,7 @@ class IrValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return boolean Success.
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		$pattern = '/^\d{10}$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -124,10 +124,10 @@ class IrValidation extends LocalizedValidation {
  *
  * @param string $check The value to check.
  * @return boolean Success.
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function ssn($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 }

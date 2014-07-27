@@ -14,14 +14,14 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * Polish Localized Validation class. Handles localized validation for Poland.
  *
  * @package       Localized.Validation
  */
-class PlValidation extends LocalizedValidation {
+class PlValidation implements ValidationInterface {
 
 /**
  * Checks a postal code for Poland.
@@ -41,7 +41,7 @@ class PlValidation extends LocalizedValidation {
  * @return boolean Success.
  * @link http://pl.wikipedia.org/wiki/NIP
  */
-	public static function personId($check) {
+	public static function identification($check) {
 		$pattern = '/^([0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})|([0-9]{10})$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -143,10 +143,10 @@ class PlValidation extends LocalizedValidation {
  * @param string $check Value to check
  * @return boolean Success.
  * @link http://pl.wikipedia.org/wiki/NIP
- * @deprecated Use personId() instead.
+ * @deprecated Use identification() instead.
  */
 	public static function ssn($check) {
-		return self::personId($check);
+		return self::identification($check);
 	}
 
 }
