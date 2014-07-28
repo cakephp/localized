@@ -54,11 +54,12 @@ class CnValidation {
 	}
 
 /**
- * Checks a country specific identification number.
+ * Checks national identify number for The Peoples Republic of China (mainland).
+ *
+ * Compliant with GB11643-1999 national standard.
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @throws NotImplementedException
  */
 	public static function personId($check) {
 		if (strlen($check) !== 18) {
@@ -83,18 +84,6 @@ class CnValidation {
 			}
 		}
 		return ($checksum === (12 - ($sum % 11)) % 11);
-	}
-/**
- * Checks national identify number for The Peoples Republic of China (mainland)
- *
- * Compliant with GB11643-1999 national standard
- *
- * @param string $check The value to check.
- * @return bool Success
- * @deprecated Use personId() instead.
- */
-	public static function personId($check) {
-		return self::personId($check);
 	}
 
 }
