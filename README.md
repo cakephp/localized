@@ -86,7 +86,7 @@ If you find that your country is not part of the Localized plugin, please fork t
 
 ### Validation methods
 
-There are a few methods that are common to all classes, defined through the interface "LocalizedValidation":
+There are a few methods that are common to all classes, defined through the interface "ValidationInterface":
 
 * phone() to check a phone number
 * postal() to check a postal code
