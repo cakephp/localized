@@ -60,7 +60,7 @@ class CnValidation {
  * @return bool Success.
  * @throws NotImplementedException
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		if (strlen($check) !== 18) {
 			return false;
 		}
@@ -91,10 +91,10 @@ class CnValidation {
  *
  * @param string $check The value to check.
  * @return bool Success
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function personId($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

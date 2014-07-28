@@ -92,7 +92,7 @@ class IrValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$pattern = '/^\d{10}$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -120,10 +120,10 @@ class IrValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function ssn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

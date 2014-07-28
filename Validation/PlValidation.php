@@ -37,7 +37,7 @@ class PlValidation implements ValidationInterface {
  * @return bool Success.
  * @link http://pl.wikipedia.org/wiki/NIP
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$pattern = '/^([0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})|([0-9]{10})$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -139,10 +139,10 @@ class PlValidation implements ValidationInterface {
  * @param string $check Value to check
  * @return bool Success.
  * @link http://pl.wikipedia.org/wiki/NIP
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function ssn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

@@ -39,6 +39,6 @@ interface ValidationInterface {
  * @param string $string The value to check.
  * @return bool Success.
  */
-	public static function identification($string);
+	public static function personId($string);
 
 }

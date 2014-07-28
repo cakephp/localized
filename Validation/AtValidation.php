@@ -50,7 +50,7 @@ class AtValidation implements ValidationInterface {
  * @return bool Success.
  * @throws NotImplementedException
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
 

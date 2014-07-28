@@ -38,7 +38,7 @@ class TrValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$pattern = '/^[0-9]{11}$/';
 		return (bool)preg_match($pattern, $check);
 	}
@@ -59,10 +59,10 @@ class TrValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function trIdentityNumber($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

@@ -47,7 +47,7 @@ class LtValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
 		return (bool)preg_match($pattern, $check);
 	}
@@ -57,10 +57,10 @@ class LtValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function ssn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

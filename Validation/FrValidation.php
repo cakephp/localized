@@ -49,7 +49,7 @@ class FrValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])\d{8}$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -76,10 +76,10 @@ class FrValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function ssn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

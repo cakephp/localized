@@ -49,7 +49,7 @@ class TwValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		$check = strtoupper($check);
 		if (!preg_match('/^[A-Z][1-2][0-9]{8}$/', $check)) {
 			return false;
@@ -95,10 +95,10 @@ class TwValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function nicn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

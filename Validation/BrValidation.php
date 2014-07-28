@@ -48,7 +48,7 @@ class BrValidation implements ValidationInterface {
  * @return bool Success.
  * @throws NotImplementedException
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		return BrValidation::cpf($check) || BrValidation::cnpj($check);
 	}
 
@@ -137,10 +137,10 @@ class BrValidation implements ValidationInterface {
  *
  * @param string $check The value to check.
  * @return bool Success.
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function ssn($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 }

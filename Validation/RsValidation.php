@@ -39,7 +39,7 @@ class RsValidation implements ValidationInterface {
  * @return bool Success.
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
  */
-	public static function identification($check) {
+	public static function personId($check) {
 		if (!preg_match('/^[0-9]{13}$/', $check)) {
 			return false;
 		}
@@ -92,10 +92,10 @@ class RsValidation implements ValidationInterface {
  * @param string $check The value to check.
  * @return bool Success.
  * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
- * @deprecated Use identification() instead.
+ * @deprecated Use personId() instead.
  */
 	public static function jmbg($check) {
-		return self::identification($check);
+		return self::personId($check);
 	}
 
 /**
