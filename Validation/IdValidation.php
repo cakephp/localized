@@ -2,8 +2,6 @@
 /**
  * ID Localized Validation class. Handles localized validation for Indonesia.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *

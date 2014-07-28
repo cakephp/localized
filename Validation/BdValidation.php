@@ -2,8 +2,6 @@
 /**
  * BD Localized Validation class. Handles localized validation for Bangladesh.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -24,7 +22,7 @@ App::uses('ValidationInterface', 'Localized.Validation');
 class BdValidation implements ValidationInterface {
 
 /**
- * Checks a postal code for Bangladesh.
+ * Checks a postal code.
  *
  * @param string $check The value to check.
  * @return bool Success.
@@ -34,11 +32,25 @@ class BdValidation implements ValidationInterface {
 		return (bool)preg_match($pattern, $check);
 	}
 
-	public static function phone($string) {
+/**
+ * Checks a phone number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function phone($check) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
 
-	public static function identification($string) {
+/**
+ * Checks a country specific identification number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function identification($check) {
 		throw new NotImplementedException('Not implemented yet.');
 	}
 

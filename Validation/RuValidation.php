@@ -2,8 +2,6 @@
 /**
  * Russian Localized Validation class. Handles localized validation for Russia
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -23,10 +21,10 @@
 class RuValidation {
 
 /**
- * Checks zipcodes for Russia
+ * Checks a postal code for Russia
  *
  * @param string $check The value to check.
- * @return bool
+ * @return bool Success.
  * @link https://en.wikipedia.org/wiki/List_of_postal_codes_in_Russia
  */
 	public static function postal($check) {
@@ -38,7 +36,7 @@ class RuValidation {
  * Checks an adress (street) for Russia.
  *
  * @param string $check The value to check.
- * @return bool
+ * @return bool Success.
  */
 	public static function address1($check) {
 		$pattern = '/^[a-zA-Z\p{Cyrillic} \.]+,/u';
@@ -49,7 +47,7 @@ class RuValidation {
  * Checks phone number for Russia
  *
  * @param string $check The value to check.
- * @return bool
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$pattern = '/^\+7 \(\d+\) \d{3,}$/';
@@ -60,7 +58,7 @@ class RuValidation {
  * Checks passport number
  *
  * @param string $check The value to check
- * @return bool
+ * @return bool Success.
  * @link https://en.wikipedia.org/wiki/Internal_Passport_of_Russia
  */
 	public static function passport($check) {
@@ -71,8 +69,8 @@ class RuValidation {
 /**
  * VAT identification number (Tax Identification Number, ИНН)
  *
- * @param string $check The value to check
- * @return bool
+ * @param string $check The value to check.
+ * @return bool Success.
  * @link https://en.wikipedia.org/wiki/VAT_identification_number
  */
 	public static function vatin($check) {
@@ -115,11 +113,23 @@ class RuValidation {
 	}
 
 /**
+ * Checks a country specific identification number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ */
+	public static function identification($check) {
+		return self::snils($check);
+	}
+
+/**
  * Snils wrapper
  *
- * @param string $check The value to check
- * @return boolean
- * @see RuValidation::snils() */
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @see RuValidation::snils()
+ * @deprecated Use identification() instead.
+ */
 	public static function ssn($check) {
 		return self::snils($check);
 	}
@@ -127,8 +137,8 @@ class RuValidation {
 /**
  * Check SNILS (СНИЛС)
  *
- * @param string $check The value to check
- * @return bool
+ * @param string $check The value to check.
+ * @return bool Success.
  * @link https://ru.wikipedia.org/wiki/СНИЛС
  */
 	public static function snils($check) {

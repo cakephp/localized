@@ -2,8 +2,6 @@
 /**
  * Serbian Localized Validation class. Handles localized validation for Serbia.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -62,6 +60,8 @@ class RsValidation implements ValidationInterface {
 		return (bool)preg_match($pattern, $check);
 	}
 
+// @codingStandardsIgnoreStart
+
 /**
  * Checks an address code (Adresni kod) for Serbia.
  *
@@ -83,6 +83,8 @@ class RsValidation implements ValidationInterface {
 	public static function postal_number($check) {
 		return self::postal($check);
 	}
+
+// @codingStandardsIgnoreEnd
 
 /**
  * Checks Unique Master Citizen Numbers (JMBG) for Serbia.

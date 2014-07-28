@@ -2,8 +2,6 @@
 /**
  * Portuguese Localized Validation class. Handles localized validation for Portugal
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *

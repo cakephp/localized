@@ -2,8 +2,6 @@
 /**
  * CN Localized Validation class test case
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -56,20 +54,21 @@ class CnValidationTest extends CakeTestCase {
 	}
 
 /**
- * test the personId method of CnValidation
+ * test the identification method of CnValidation
  *
  * @return void
  */
-	public function testPersonId() {
-		$this->assertTrue(CnValidation::personId('361181198507131951'));
-		$this->assertTrue(CnValidation::personId('361181197902271319'));
-		$this->assertTrue(CnValidation::personId('36118119780214411X'));
-		$this->assertTrue(CnValidation::personId('632321198701161557'));
-		$this->assertFalse(CnValidation::personId('123'));
-		$this->assertFalse(CnValidation::personId('1632321198701161557'));
-		$this->assertFalse(CnValidation::personId('X12312412412431233'));
-		$this->assertFalse(CnValidation::personId('361181198507131952'));
-		$this->assertFalse(CnValidation::personId('36118119790227131X'));
-		$this->assertFalse(CnValidation::personId('361181197802144119'));
+	public function testIdentification() {
+		$this->assertTrue(CnValidation::identification('361181198507131951'));
+		$this->assertTrue(CnValidation::identification('361181197902271319'));
+		$this->assertTrue(CnValidation::identification('36118119780214411X'));
+		$this->assertTrue(CnValidation::identification('632321198701161557'));
+		$this->assertFalse(CnValidation::identification('123'));
+		$this->assertFalse(CnValidation::identification('1632321198701161557'));
+		$this->assertFalse(CnValidation::identification('X12312412412431233'));
+		$this->assertFalse(CnValidation::identification('361181198507131952'));
+		$this->assertFalse(CnValidation::identification('36118119790227131X'));
+		$this->assertFalse(CnValidation::identification('361181197802144119'));
 	}
+
 }
