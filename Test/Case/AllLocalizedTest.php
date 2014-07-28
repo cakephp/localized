@@ -1,7 +1,5 @@
 <?php
 /**
- * AllTests file
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -13,6 +11,7 @@
  * @since         Localized Plugin v 0.3
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 /**
  * AllLocalizedTests class
  *
