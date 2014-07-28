@@ -1,7 +1,5 @@
 <?php
 /**
- * Australian Localized Validation class test case
- *
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
@@ -15,22 +13,21 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('AuValidation', 'Localized.Validation');
+App::uses('GbValidation', 'Localized.Validation');
 
 /**
- * AuValidationTest
+ * Gb Localized Validation class test case
  *
  */
-class AuValidationTest extends CakeTestCase {
+class GbValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of AuValidation
+ * test the postal method of GbValidation
  *
  * @return void
  */
 	public function testPostal() {
-		$this->assertTrue(AuValidation::postal('2300'));
-		$this->assertFalse(AuValidation::postal('02300'));
+		$this->assertTrue(GbValidation::postal('DT4 8PP'));
+		$this->assertFalse(GbValidation::postal('DT4-8PP'));
 	}
-
 }

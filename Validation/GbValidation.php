@@ -1,7 +1,5 @@
 <?php
 /**
- * Canadian Localized Validation class. Handles localized validation for Canada.
- * 
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
@@ -18,19 +16,19 @@
 App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
- * CaValidation
+ * GB Localized Validation class. Handles localized validation for The United Kingdom
  *
  */
-class CaValidation implements ValidationInterface {
+class GbValidation implements ValidationInterface {
 
 /**
- * Checks a postal code for Canada.
+ * Checks a postal code for The United Kingdom
  *
  * @param string $check The value to check.
  * @return bool Success.
  */
 	public static function postal($check) {
-		$pattern = '/\\A\\b[ABCEGHJKLMNPRSTVXY][0-9][A-Z] [0-9][A-Z][0-9]\\b\\z/i';
+		$pattern = '/\\A\\b[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][ABD-HJLNP-UW-Z]{2}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
 

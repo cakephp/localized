@@ -1,6 +1,6 @@
 <?php
 /**
- * ID Localized Validation class. Handles localized validation for Indonesia
+ * ID Localized Validation class. Handles localized validation for Indonesia.
  *
  * PHP 5
  *
@@ -12,25 +12,22 @@
  *
  * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       localized
- * @subpackage    localized.tests.cases.libs
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * IdValidation
  *
- * @package       localized
- * @subpackage    localized.tests.cases.libs
  */
-class IdValidation {
+class IdValidation implements ValidationInterface {
 
 /**
- * Checks zipcodes for Indonesia
+ * Checks a postal code for Indonesia.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/[1-9][0-9]{4}/';
@@ -38,13 +35,36 @@ class IdValidation {
 	}
 
 /**
- * Basic Check for Valid Mobile Mumbers for Indonesia
+ * Basic Check for Valid Mobile Mumbers for Indonesia.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function mobile($check) {
 		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
 		return preg_match($pattern, $check);
 	}
+
+/**
+ * Checks a phone number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function phone($check) {
+		throw new NotImplementedException('Not implemented yet.');
+	}
+
+/**
+ * Checks a country specific identification number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function identification($check) {
+		throw new NotImplementedException('Not implemented yet.');
+	}
+
 }

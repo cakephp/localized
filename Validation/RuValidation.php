@@ -12,7 +12,6 @@
  *
  * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 1.0.0
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
@@ -20,7 +19,6 @@
 /**
  * RuValidation
  *
- * @package       Localized.Validation
  */
 class RuValidation {
 
@@ -28,7 +26,7 @@ class RuValidation {
  * Checks zipcodes for Russia
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  * @link https://en.wikipedia.org/wiki/List_of_postal_codes_in_Russia
  */
 	public static function postal($check) {
@@ -40,7 +38,7 @@ class RuValidation {
  * Checks an adress (street) for Russia.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  */
 	public static function address1($check) {
 		$pattern = '/^[a-zA-Z\p{Cyrillic} \.]+,/u';
@@ -51,7 +49,7 @@ class RuValidation {
  * Checks phone number for Russia
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  */
 	public static function phone($check) {
 		$pattern = '/^\+7 \(\d+\) \d{3,}$/';
@@ -62,7 +60,7 @@ class RuValidation {
  * Checks passport number
  *
  * @param string $check The value to check
- * @return boolean
+ * @return bool
  * @link https://en.wikipedia.org/wiki/Internal_Passport_of_Russia
  */
 	public static function passport($check) {
@@ -74,7 +72,7 @@ class RuValidation {
  * VAT identification number (Tax Identification Number, ИНН)
  *
  * @param string $check The value to check
- * @return boolean
+ * @return bool
  * @link https://en.wikipedia.org/wiki/VAT_identification_number
  */
 	public static function vatin($check) {
@@ -121,8 +119,7 @@ class RuValidation {
  *
  * @param string $check The value to check
  * @return boolean
- * @see RuValidation::snils()
- */
+ * @see RuValidation::snils() */
 	public static function ssn($check) {
 		return self::snils($check);
 	}
@@ -131,7 +128,7 @@ class RuValidation {
  * Check SNILS (СНИЛС)
  *
  * @param string $check The value to check
- * @return boolean
+ * @return bool
  * @link https://ru.wikipedia.org/wiki/СНИЛС
  */
 	public static function snils($check) {

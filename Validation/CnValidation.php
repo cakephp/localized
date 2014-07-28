@@ -12,7 +12,6 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
@@ -20,7 +19,6 @@
 /**
  * CnValidation
  *
- * @package       Localized.Validation
  */
 class CnValidation {
 
@@ -33,7 +31,7 @@ class CnValidation {
  * just make it simple for now.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  */
 	public static function phone($check) {
 		$pattern = '/^(((0086)|(\+86))-?)?(';		// optional nation prefix
@@ -50,7 +48,7 @@ class CnValidation {
  * but few people write postal number in this way nowadays.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{6}$/';
@@ -63,7 +61,7 @@ class CnValidation {
  * Compliant with GB11643-1999 national standard
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool
  */
 	public static function personId($check) {
 		if (strlen($check) !== 18) {

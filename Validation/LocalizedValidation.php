@@ -10,14 +10,12 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 /**
  * LocalizedValidation
  *
- * @package       Localized.Validation
  */
 abstract class LocalizedValidation {
 
@@ -32,7 +30,7 @@ abstract class LocalizedValidation {
  * Checks a phone number.
  *
  * @param string $string The value to check.
- * @return boolean Success.
+ * @return bool Success.
  */
 	public static function phone($string) {
 		$pattern = static::_getPattern('phone');
@@ -43,7 +41,7 @@ abstract class LocalizedValidation {
  * Checks a postal code.
  *
  * @param string $string The value to check.
- * @return boolean Success.
+ * @return bool Success.
  */
 	public static function postal($string) {
 		$pattern = static::_getPattern('postal');
@@ -54,7 +52,7 @@ abstract class LocalizedValidation {
  * Checks a country specific person ID.
  *
  * @param string $string The value to check.
- * @return boolean Success.
+ * @return bool Success.
  */
 	public static function personId($string) {
 		$pattern = static::_getPattern('personId');
