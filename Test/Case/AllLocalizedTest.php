@@ -27,7 +27,7 @@ class AllLocalizedTests extends PHPUnit_Framework_TestSuite {
  */
 	public static function suite() {
 		$suite = new CakeTestSuite('All Tests');
-		$suite->addTestDirectoryRecursive(App::pluginPath('Localized') . 'Test' . DS . 'Case' . DS);
+		$suite->addTestDirectoryRecursive(CakePlugin::path('Localized') . 'Test' . DS . 'Case' . DS);
 
 		return $suite;
 	}
