@@ -50,12 +50,12 @@ class LocalizedPost extends CakeTestModel {
 	public $useTable = false;
 
 	public $validate = array(
-	    'postal' => array(
-	        'valid' => array(
-	            'rule' => array('postal', null, 'mx'),
-	            'message' => 'Must be valid mexico postal code'
-	        )
-	    )
+		'postal' => array(
+			'valid' => array(
+				'rule' => array('postal', null, 'mx'),
+				'message' => 'Must be valid mexico postal code'
+			)
+		)
 	);
 
 }
