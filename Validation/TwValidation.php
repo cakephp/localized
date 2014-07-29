@@ -1,34 +1,31 @@
 <?php
 /**
- * Taiwan Localized Validation class. Handles localized validation for Taiwan
- *
- * PHP 5
+ * Taiwan Localized Validation class. Handles localized validation for Taiwan.
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * TwValidation
  *
- * @package       Localized.Validation
  */
-class TwValidation {
+class TwValidation implements ValidationInterface {
 
 /**
- * Checks phone numbers for Taiwan
+ * Checks a phone number for Taiwan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$pattern = '/^\\(?(0|\\+886)[-. ]?[2-9][\\)-. ]?([0-9][\\)-. ]?){2}([0-9][-. ]?){3}[0-9]{2}[0-9]?$/';
@@ -36,10 +33,10 @@ class TwValidation {
 	}
 
 /**
- * Checks zipcodes for Taiwan
+ * Checks a postal code for Taiwan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[1-9][0-9]{2}([0-9]{2})?$/';
@@ -47,12 +44,12 @@ class TwValidation {
 	}
 
 /**
- * Checks national identify card number for Taiwan
+ * Checks national identify card number for Taiwan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
-	public static function nicn($check) {
+	public static function personId($check) {
 		$check = strtoupper($check);
 		if (!preg_match('/^[A-Z][1-2][0-9]{8}$/', $check)) {
 			return false;
@@ -73,10 +70,10 @@ class TwValidation {
 	}
 
 /**
- * Checks unified business number for Taiwan
+ * Checks unified business number for Taiwan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  * @link http://herolin.mine.nu/entry/is-valid-TW-company-ID
  */
 	public static function ubn($check) {
@@ -90,6 +87,18 @@ class TwValidation {
 			$intAddition = (floor($intMultiply / 10) + ($intMultiply % 10));
 			$intSum += $intAddition;
 		}
-		return ($intSum % 10 == 0) || ($intSum % 10 == 9 && $check[6] == 7);
+		return ($intSum % 10 === 0) || ($intSum % 10 === 9 && $check[6] === 7);
 	}
+
+/**
+ * Checks national identify card number for Taiwan.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @deprecated Use personId() instead.
+ */
+	public static function nicn($check) {
+		return self::personId($check);
+	}
+
 }

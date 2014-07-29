@@ -1,7 +1,5 @@
 <?php
 /**
- * Spanish Localized Validation class. Handles localized validation for Spain.
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -16,31 +14,31 @@
 App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
- * EsValidation
+ * GB Localized Validation class. Handles localized validation for The United Kingdom
  *
  */
-class EsValidation implements ValidationInterface {
+class GbValidation implements ValidationInterface {
 
 /**
- * Checks a postal code for Spain.
+ * Checks a postal code for The United Kingdom
  *
  * @param string $check The value to check.
  * @return bool Success.
  */
 	public static function postal($check) {
-		$pattern = '/^(5[0-2]|[0-4][0-9])[0-9]{3}$/';
+		$pattern = '/\\A\\b[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][ABD-HJLNP-UW-Z]{2}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
 	}
 
 /**
- * Checks a phone number for Spain.
+ * Checks a phone number.
  *
  * @param string $check The value to check.
  * @return bool Success.
+ * @throws NotImplementedException
  */
 	public static function phone($check) {
-		$pattern = '/^\\+?(34[-. ]?)?\\(?(([689]{1})(([0-9]{2})\\)?[-. ]?|([0-9]{1})\\)?[-. ]?([0-9]{1}))|70\\)?[-. ]?([0-9]{1}))([0-9]{2})[-. ]?([0-9]{1})[-. ]?([0-9]{1})[-. ]?([0-9]{2})$/';
-		return (bool)preg_match($pattern, $check);
+		throw new NotImplementedException('Validation method not implemented yet.');
 	}
 
 /**

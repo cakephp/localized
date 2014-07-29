@@ -2,26 +2,22 @@
 /**
  * Japanese Localized Validation class test case
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Test.Case.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('JpValidation', 'Localized.Validation');
 
 /**
  * JpValidationTest
  *
- * @package       Localized.Test.Case.Validation
  */
 class JpValidationTest extends CakeTestCase {
 
@@ -54,7 +50,6 @@ class JpValidationTest extends CakeTestCase {
  * test the postal method of JpValidation
  *
  * @return void
- * @access public
  */
 	public function testPostal() {
 		$this->assertTrue(JpValidation::postal('020-5045'));
@@ -65,7 +60,6 @@ class JpValidationTest extends CakeTestCase {
  * test the hiragana method of JpValidation
  *
  * @return void
- * @access public
  */
 	public function testHiragana() {
 		$this->assertTrue(JpValidation::hiragana('ぁい　ゔえおー'));
@@ -81,7 +75,6 @@ class JpValidationTest extends CakeTestCase {
  * test the katakana method of JpValidation
  *
  * @return void
- * @access public
  */
 	public function testKatakana() {
 		$this->assertTrue(JpValidation::katakana('ァイ　ヴエオヶー'));
@@ -97,7 +90,6 @@ class JpValidationTest extends CakeTestCase {
  * test the zenkaku method of JpValidation
  *
  * @return void
- * @access public
  */
 	public function testZenkaku() {
 		$this->assertTrue(JpValidation::zenkaku('０１２３ァイヴエオヶ　ぁいゔえおー：？！＄＃＠＋｜＿'));

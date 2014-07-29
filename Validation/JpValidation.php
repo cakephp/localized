@@ -1,34 +1,31 @@
 <?php
 /**
- * Japanese Localized Validation class. Handles localized validation for Japan
- *
- * PHP 5
+ * Japanese Localized Validation class. Handles localized validation for Japan.
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * JpValidation
  *
- * @package       Localized.Validation
  */
-class JpValidation {
+class JpValidation implements ValidationInterface {
 
 /**
- * Checks phone numbers for Japan
+ * Checks a phone number for Japan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
@@ -36,10 +33,10 @@ class JpValidation {
 	}
 
 /**
- * Checks zipcodes for Japan
+ * Checks a postal code for Japan.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{3}-[0-9]{4}$/';
@@ -51,8 +48,8 @@ class JpValidation {
  * ぁ-ゖー
  *
  * @param string $check The value to check.
- * @param boolean $allowSpace Allow double-byte space.
- * @return boolean
+ * @param bool $allowSpace Allow double-byte space.
+ * @return bool Success.
  */
 	public static function hiragana($check, $allowSpace = true) {
 		if ($allowSpace) {
@@ -68,8 +65,8 @@ class JpValidation {
  * ァ-ヶー
  *
  * @param string $check The value to check.
- * @param boolean $allowSpace Allow double-byte space.
- * @return boolean
+ * @param bool $allowSpace Allow double-byte space.
+ * @return bool Success.
  */
 	public static function katakana($check, $allowSpace = true) {
 		if ($allowSpace) {
@@ -84,7 +81,7 @@ class JpValidation {
  * Checks zenkaku(double-byte characters)
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function zenkaku($check) {
 		$length = mb_strlen($check);
@@ -96,4 +93,16 @@ class JpValidation {
 		}
 		return true;
 	}
+
+/**
+ * Checks a country specific identification number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function personId($check) {
+		throw new NotImplementedException('Validation method not implemented yet.');
+	}
+
 }

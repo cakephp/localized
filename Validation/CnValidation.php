@@ -2,8 +2,6 @@
 /**
  * CN Localized Validation class. Handles localized validation for The Peoples Republic of China (mainland)
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -12,7 +10,6 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
@@ -20,7 +17,6 @@
 /**
  * CnValidation
  *
- * @package       Localized.Validation
  */
 class CnValidation {
 
@@ -33,7 +29,7 @@ class CnValidation {
  * just make it simple for now.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$pattern = '/^(((0086)|(\+86))-?)?(';		// optional nation prefix
@@ -44,13 +40,13 @@ class CnValidation {
 	}
 
 /**
- * Checks zipcodes for The Peoples Republic of China (mainland)
+ * Checks a postal code for The Peoples Republic of China (mainland)
  *
  * In fact the national standard allows to omit the final two digits if they are both 0,
  * but few people write postal number in this way nowadays.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{6}$/';
@@ -58,12 +54,12 @@ class CnValidation {
 	}
 
 /**
- * Checks national identify number for The Peoples Republic of China (mainland)
+ * Checks national identify number for The Peoples Republic of China (mainland).
  *
- * Compliant with GB11643-1999 national standard
+ * Compliant with GB11643-1999 national standard.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function personId($check) {
 		if (strlen($check) !== 18) {
@@ -89,4 +85,5 @@ class CnValidation {
 		}
 		return ($checksum === (12 - ($sum % 11)) % 11);
 	}
+
 }

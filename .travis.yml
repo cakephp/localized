@@ -10,8 +10,8 @@ env:
     - REQUIRE=""
 
   matrix:
-    - DB=mysql CAKE_VERSION=2.4
     - DB=mysql CAKE_VERSION=2.5
+    - DB=mysql CAKE_VERSION=2.6
 
 matrix:
   include:

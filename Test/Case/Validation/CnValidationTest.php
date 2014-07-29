@@ -2,8 +2,6 @@
 /**
  * CN Localized Validation class test case
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -12,7 +10,6 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Test.Case.Validation
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
@@ -21,7 +18,6 @@ App::uses('CnValidation', 'Localized.Validation');
 /**
  * CnValidationTest
  *
- * @package       Localized.Test.Case.Validation
  */
 class CnValidationTest extends CakeTestCase {
 
@@ -74,4 +70,5 @@ class CnValidationTest extends CakeTestCase {
 		$this->assertFalse(CnValidation::personId('36118119790227131X'));
 		$this->assertFalse(CnValidation::personId('361181197802144119'));
 	}
+
 }

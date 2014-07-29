@@ -1,34 +1,31 @@
 <?php
 /**
- * Italian Localized Validation class. Handles localized validation for Italy
- *
- * PHP 5
+ * Italian Localized Validation class. Handles localized validation for Italy.
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
  * ItValidation
  *
- * @package       Localized.Validation
  */
-class ItValidation {
+class ItValidation implements ValidationInterface {
 
 /**
- * Checks phone numbers for Italy
+ * Checks a phone number for Italy.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$pattern = '/^([0-9]*\-?\ ?\/?[0-9]*)$/';
@@ -36,10 +33,10 @@ class ItValidation {
 	}
 
 /**
- * Checks zipcodes for Italy
+ * Checks a postal code for Italy.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{5}$/i';
@@ -47,10 +44,10 @@ class ItValidation {
 	}
 
 /**
- * Checks Codice Fiscale for Italy
+ * Checks Codice Fiscale for Italy.
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function cf($check) {
 		if ((strlen($check) === 11) && preg_match('/[0-9]{11}/', $check)) {
@@ -81,4 +78,16 @@ class ItValidation {
 		}
 		return (chr($sum % 26 + ord('A')) == $check[15]);
 	}
+
+/**
+ * Checks a country specific identification number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function personId($check) {
+		throw new NotImplementedException('Validation method not implemented yet.');
+	}
+
 }

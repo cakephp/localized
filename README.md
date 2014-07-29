@@ -86,14 +86,14 @@ If you find that your country is not part of the Localized plugin, please fork t
 
 ### Validation methods
 
-There are a few methods that are common to all classes, defined through an abstract base class "LocalizedValidation":
+There are a few methods that are common to all classes, defined through the interface "ValidationInterface":
 
 * phone() to check a phone number
 * postal() to check a postal code
 * personId() to check a country specific person ID
 
 Please try to fit your validation rules in that naming scheme.
-Apart from that you can also define further validation methods in your extending class, of course.
+Apart from that you can also define further validation methods in your implementing class, of course.
 
 ## Issues with Localized
 

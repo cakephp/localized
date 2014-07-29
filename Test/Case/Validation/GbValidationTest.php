@@ -1,7 +1,5 @@
 <?php
 /**
- * Turkey Localized Validation class test case
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -13,22 +11,21 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('TrValidation', 'Localized.Validation');
+App::uses('GbValidation', 'Localized.Validation');
 
 /**
- * TrValidationTest
+ * Gb Localized Validation class test case
  *
  */
-class TrValidationTest extends CakeTestCase {
+class GbValidationTest extends CakeTestCase {
 
 /**
- * test the postal method of TrValidation
+ * test the postal method of GbValidation
  *
  * @return void
  */
 	public function testPostal() {
-		$this->assertTrue(TrValidation::postal('02300'));
-		$this->assertFalse(TrValidation::postal('2300'));
-		$this->assertFalse(TrValidation::postal('230000'));
+		$this->assertTrue(GbValidation::postal('DT4 8PP'));
+		$this->assertFalse(GbValidation::postal('DT4-8PP'));
 	}
 }
