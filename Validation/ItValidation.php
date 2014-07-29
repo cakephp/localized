@@ -87,7 +87,7 @@ class ItValidation implements ValidationInterface {
  * @throws NotImplementedException
  */
 	public static function personId($check) {
-		throw new NotImplementedException('Not implemented yet.');
+		throw new NotImplementedException('Validation method not implemented yet.');
 	}
 
 }

@@ -58,7 +58,7 @@ class CnValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	public function testpersonId() {
+	public function testPersonId() {
 		$this->assertTrue(CnValidation::personId('361181198507131951'));
 		$this->assertTrue(CnValidation::personId('361181197902271319'));
 		$this->assertTrue(CnValidation::personId('36118119780214411X'));

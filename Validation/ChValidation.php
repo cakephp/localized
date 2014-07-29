@@ -42,7 +42,7 @@ class ChValidation implements ValidationInterface {
  * @throws NotImplementedException
  */
 	public static function phone($check) {
-		throw new NotImplementedException('Not implemented yet.');
+		throw new NotImplementedException('Validation method not implemented yet.');
 	}
 
 /**
@@ -53,7 +53,7 @@ class ChValidation implements ValidationInterface {
  * @throws NotImplementedException
  */
 	public static function personId($check) {
-		throw new NotImplementedException('Not implemented yet.');
+		throw new NotImplementedException('Validation method not implemented yet.');
 	}
 
 }
