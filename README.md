@@ -21,7 +21,7 @@ Ensure `require` is present in `composer.json`. This will install the plugin int
 ```
 {
     "require": {
-        "cakephp/localized": "2.1.*"
+        "cakephp/localized": "2.2.*"
     }
 }
 ```
@@ -54,8 +54,8 @@ For further information on validation rules see the [cakephp documentation on va
 You can also access the localized validators any time you would call `Validation` methods. After importing the validation class.
 
 ```php
-	if (Validation::phone($value, null, 'cz')) {
-		//do something with valid phone number
+	if (Validation::postal($value, null, 'cz')) {
+		// Do something with valid postal code
 	}
 ```
 
