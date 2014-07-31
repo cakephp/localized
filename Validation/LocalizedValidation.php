@@ -13,7 +13,7 @@
 App::uses('ValidationInterface', 'Localized.Validation');
 
 /**
- * US Localized Validation class. Handles localized validation for The United States
+ * Localized Validation base class.
  *
  */
 abstract class LocalizedValidation implements ValidationInterface {
