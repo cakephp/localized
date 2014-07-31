@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * SkValidation
  *
  */
-class SkValidation implements ValidationInterface {
+class SkValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code for Slovakia.

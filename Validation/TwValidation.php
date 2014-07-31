@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * TwValidation
  *
  */
-class TwValidation implements ValidationInterface {
+class TwValidation extends LocalizedValidation {
 
 /**
  * Checks a phone number for Taiwan.
@@ -98,7 +98,7 @@ class TwValidation implements ValidationInterface {
  * @deprecated Use personId() instead.
  */
 	public static function nicn($check) {
-		return self::personId($check);
+		return static::personId($check);
 	}
 
 }

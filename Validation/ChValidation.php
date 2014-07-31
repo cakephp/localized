@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * ChValidation
  *
  */
-class ChValidation implements ValidationInterface {
+class ChValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code for Switzerland & Liechtenstein

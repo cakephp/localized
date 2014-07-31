@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * RsValidation
  *
  */
-class RsValidation implements ValidationInterface {
+class RsValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code (Poštanski broj) for Serbia.
@@ -70,7 +70,7 @@ class RsValidation implements ValidationInterface {
  * @deprecated Use addressCode() instead.
  */
 	public static function address_code($check) {
-		return self::addressCode($check);
+		return static::addressCode($check);
 	}
 
 /**
@@ -81,7 +81,7 @@ class RsValidation implements ValidationInterface {
  * @deprecated Use postal() instead.
  */
 	public static function postal_number($check) {
-		return self::postal($check);
+		return static::postal($check);
 	}
 
 // @codingStandardsIgnoreEnd
@@ -95,7 +95,7 @@ class RsValidation implements ValidationInterface {
  * @deprecated Use personId() instead.
  */
 	public static function jmbg($check) {
-		return self::personId($check);
+		return static::personId($check);
 	}
 
 /**

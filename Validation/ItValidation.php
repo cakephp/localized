@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * ItValidation
  *
  */
-class ItValidation implements ValidationInterface {
+class ItValidation extends LocalizedValidation {
 
 /**
  * Checks a phone number for Italy.

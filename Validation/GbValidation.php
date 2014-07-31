@@ -11,13 +11,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * GB Localized Validation class. Handles localized validation for The United Kingdom
  *
  */
-class GbValidation implements ValidationInterface {
+class GbValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code for The United Kingdom

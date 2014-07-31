@@ -7,7 +7,7 @@ This plugin contains various localized validation classes for specific countries
 The master branch has the following requirements:
 
 * CakePHP 2.1.0 or greater.
-* PHP 5.2.8 or greater.
+* PHP 5.3 or greater.
 
 ## Installation
 
@@ -88,9 +88,9 @@ If you find that your country is not part of the Localized plugin, please fork t
 
 There are a few methods that are common to all classes, defined through the interface "ValidationInterface":
 
-* phone() to check a phone number
-* postal() to check a postal code
-* personId() to check a country specific person ID
+* `phone()` to check a phone number
+* `postal()` to check a postal code
+* `personId()` (and `ssn()` for BC) to check a country specific person ID
 
 Please try to fit your validation rules in that naming scheme.
 Apart from that you can also define further validation methods in your implementing class, of course.
