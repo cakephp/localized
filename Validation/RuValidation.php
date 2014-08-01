@@ -119,19 +119,7 @@ class RuValidation {
  * @return bool Success.
  */
 	public static function personId($check) {
-		return self::snils($check);
-	}
-
-/**
- * Snils wrapper
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @see RuValidation::snils()
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::snils($check);
+		return static::snils($check);
 	}
 
 /**

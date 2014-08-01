@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * TrValidation
  *
  */
-class TrValidation implements ValidationInterface {
+class TrValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code for Turkey.
@@ -62,7 +62,7 @@ class TrValidation implements ValidationInterface {
  * @deprecated Use personId() instead.
  */
 	public static function trIdentityNumber($check) {
-		return self::personId($check);
+		return static::personId($check);
 	}
 
 }

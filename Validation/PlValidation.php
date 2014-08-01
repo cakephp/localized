@@ -11,13 +11,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * Polish Localized Validation class. Handles localized validation for Poland.
  *
  */
-class PlValidation implements ValidationInterface {
+class PlValidation extends LocalizedValidation {
 
 /**
  * Checks a postal code for Poland.
@@ -131,18 +131,6 @@ class PlValidation implements ValidationInterface {
  */
 	public static function phone($check) {
 		throw new NotImplementedException('Validation method not implemented yet.');
-	}
-
-/**
- * Checks a social security number (NIP) for Poland.
- *
- * @param string $check Value to check
- * @return bool Success.
- * @link http://pl.wikipedia.org/wiki/NIP
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
 	}
 
 }

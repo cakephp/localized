@@ -12,7 +12,7 @@
  */
 
 /**
- * ValidationInterface
+ * ValidationInterface defining some common base validation methods.
  *
  */
 interface ValidationInterface {

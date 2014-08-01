@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * FrValidation
  *
  */
-class FrValidation implements ValidationInterface {
+class FrValidation extends LocalizedValidation {
 
 /**
  * Checks a phone number for France.
@@ -69,17 +69,6 @@ class FrValidation implements ValidationInterface {
 			$numberWithoutKey -= 2000000;
 		}
 		return $key == (97 - ($numberWithoutKey - (floor($numberWithoutKey / 97) * 97)));
-	}
-
-/**
- * Checks a social security number for France.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
 	}
 
 }

@@ -13,13 +13,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * DkValidation
  *
  */
-class DkValidation implements ValidationInterface {
+class DkValidation extends LocalizedValidation {
 
 /**
  * Checks a social security number for Denmark.
@@ -30,17 +30,6 @@ class DkValidation implements ValidationInterface {
 	public static function personId($check) {
 		$pattern = '/\\A\\b[0-9]{6}-[0-9]{4}\\b\\z/i';
 		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Checks a social security number for Denmark.
- *
- * @param string $check The value to check.
- * @return bool Success
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
 	}
 
 /**

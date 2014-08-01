@@ -11,13 +11,13 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * Iranian Localized Validation class. Handles localized validation for Iran.
  *
  */
-class IrValidation implements ValidationInterface {
+class IrValidation extends LocalizedValidation {
 
 /**
  * Checks for Persian/Farsi characters and number an zero width non-joiner space.
@@ -113,17 +113,6 @@ class IrValidation implements ValidationInterface {
 			return (bool)($remaining == $check{9});
 		}
 		return (bool)((11 - $remaining) == $check{9});
-	}
-
-/**
- * Checks a social security number for Iran.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
 	}
 
 }

@@ -13,13 +13,13 @@
  * @since        Localized Plugin v 0.1
  * @license      http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ValidationInterface', 'Localized.Validation');
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
  * BrValidation
  *
  */
-class BrValidation implements ValidationInterface {
+class BrValidation extends LocalizedValidation {
 
 /**
  * Checks a phone number for Brazil.
@@ -130,17 +130,6 @@ class BrValidation implements ValidationInterface {
 		$secondVerificationDigit = ($secondSum % 11) < 2 ? 0 : 11 - ($secondSum % 11);
 
 		return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
-	}
-
-/**
- * Checks SSN for Brazil.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @deprecated Use personId() instead.
- */
-	public static function ssn($check) {
-		return self::personId($check);
 	}
 
 }
