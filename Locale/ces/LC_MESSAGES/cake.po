@@ -1,0 +1,376 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-12-19 18:18+0000\n"
+"PO-Revision-Date: 2014-11-18 18:20+0100\n"
+"Last-Translator: Jan Ptacek <jan.ptacek@gmail.com>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.6.7\n"
+"Language: cs\n"
+
+#: Controller/Scaffold.php:128
+msgid "Scaffold :: "
+msgstr ""
+
+#: Controller/Scaffold.php:167;234;305
+msgid "Invalid %s"
+msgstr "nesprávné %s"
+
+#: Controller/Scaffold.php:222
+msgid "updated"
+msgstr "uloženo"
+
+#: Controller/Scaffold.php:225
+msgid "saved"
+msgstr "uloženo"
+
+#: Controller/Scaffold.php:245
+msgid "The %1$s has been %2$s"
+msgstr "%1$s bylo %2$s"
+
+#: Controller/Scaffold.php:256
+msgid "Please correct errors below."
+msgstr "Opravte prosím následující chyby"
+
+#: Controller/Scaffold.php:308
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr "%1$s s id: %2$s byla smazána"
+
+#: Controller/Scaffold.php:311
+msgid "There was an error deleting the %1$s with id: %2$s"
+msgstr "Při mazání %1$s s id: %2$s došlo k chybě"
+
+#: Controller/Component/AuthComponent.php:369
+msgid "You are not authorized to access that location."
+msgstr "Přihlašte se prosím"
+
+#: Error/ExceptionRenderer.php:209
+msgid "Not Found"
+msgstr "nenalezeno"
+
+#: Error/ExceptionRenderer.php:231
+msgid "An Internal Error Has Occurred."
+msgstr "Chyba systému, prosím kontaktujte administrátora"
+
+#: Model/Validator/CakeValidationSet.php:287
+msgid "This field cannot be left blank"
+msgstr "Prosím doplňte"
+
+#: Network/CakeResponse.php:1222
+msgid "The requested file was not found"
+msgstr "Soubor neexistuje"
+
+#: Utility/CakeNumber.php:101
+msgid "%d KB"
+msgstr ""
+
+#: Utility/CakeNumber.php:103
+msgid "%.2f MB"
+msgstr ""
+
+#: Utility/CakeNumber.php:105
+msgid "%.2f GB"
+msgstr ""
+
+#: Utility/CakeNumber.php:107
+msgid "%.2f TB"
+msgstr ""
+
+#: Utility/CakeNumber.php:99
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] "%d Byt"
+msgstr[1] "%d Byty"
+msgstr[2] "%d Bytů"
+
+#: Utility/CakeTime.php:389
+msgid "Today, %s"
+msgstr "dnes, %s"
+
+#: Utility/CakeTime.php:392
+msgid "Yesterday, %s"
+msgstr "včera, %s"
+
+#: Utility/CakeTime.php:395
+msgid "Tomorrow, %s"
+msgstr "zítra, %s"
+
+#: Utility/CakeTime.php:400
+msgid "Sunday"
+msgstr "neděle"
+
+#: Utility/CakeTime.php:401
+msgid "Monday"
+msgstr "pondělí"
+
+#: Utility/CakeTime.php:402
+msgid "Tuesday"
+msgstr "úterý"
+
+#: Utility/CakeTime.php:403
+msgid "Wednesday"
+msgstr "středa"
+
+#: Utility/CakeTime.php:404
+msgid "Thursday"
+msgstr "čtvrtek"
+
+#: Utility/CakeTime.php:405
+msgid "Friday"
+msgstr "pátek"
+
+#: Utility/CakeTime.php:406
+msgid "Saturday"
+msgstr "sobota"
+
+#: Utility/CakeTime.php:412
+msgid "On %s %s"
+msgstr "V %s %s"
+
+#: Utility/CakeTime.php:805
+msgid "just now"
+msgstr "nyní"
+
+#: Utility/CakeTime.php:809
+msgid "on %s"
+msgstr "v %s"
+
+#: Utility/CakeTime.php:853
+msgid "%s ago"
+msgstr "před %s"
+
+#: Utility/CakeTime.php:872;894
+msgid "days"
+msgstr "dnů"
+
+#: Utility/CakeTime.php:154
+msgid "abday"
+msgstr ""
+
+#: Utility/CakeTime.php:160
+msgid "day"
+msgstr "den"
+
+#: Utility/CakeTime.php:166
+msgid "d_t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:188
+msgid "abmon"
+msgstr ""
+
+#: Utility/CakeTime.php:194
+msgid "mon"
+msgstr ""
+
+#: Utility/CakeTime.php:205
+msgid "am_pm"
+msgstr ""
+
+#: Utility/CakeTime.php:212
+msgid "t_fmt_ampm"
+msgstr ""
+
+#: Utility/CakeTime.php:226
+msgid "d_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:232
+msgid "t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:831
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d rok"
+msgstr[1] "%d roky"
+msgstr[2] "%d let"
+
+#: Utility/CakeTime.php:834
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d měsíc"
+msgstr[1] "%d měsíce"
+msgstr[2] "%d měsíců"
+
+#: Utility/CakeTime.php:837
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d týden"
+msgstr[1] "%d týdny"
+msgstr[2] "%d týdnů"
+
+#: Utility/CakeTime.php:840
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d den"
+msgstr[1] "%d dny"
+msgstr[2] "%d dnů"
+
+#: Utility/CakeTime.php:843
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hodina"
+msgstr[1] "%d hodiny"
+msgstr[2] "%d hodin"
+
+#: Utility/CakeTime.php:846
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuta"
+msgstr[1] "%d minuty"
+msgstr[2] "%d minut"
+
+#: Utility/CakeTime.php:849
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d vteřina"
+msgstr[1] "%d vteřiny"
+msgstr[2] "%d vteřin"
+
+#: View/Helper/FormHelper.php:681
+msgid "Error in field %s"
+msgstr "Chyba v položce %s"
+
+#: View/Helper/FormHelper.php:868 View/Scaffolds/form.ctp:48
+#: View/Scaffolds/index.ctp:79;94 View/Scaffolds/view.ctp:66;81;192
+msgid "New %s"
+msgstr "Nový %s"
+
+#: View/Helper/FormHelper.php:874 View/Scaffolds/view.ctp:54;113
+msgid "Edit %s"
+msgstr "Upravit %s"
+
+#: View/Helper/FormHelper.php:1436
+msgid "empty"
+msgstr "prázdné"
+
+#: View/Helper/FormHelper.php:1796 View/Scaffolds/form.ctp:23
+msgid "Submit"
+msgstr "Odeslat"
+
+#: View/Helper/FormHelper.php:2704
+msgid "January"
+msgstr "Leden"
+
+#: View/Helper/FormHelper.php:2705
+msgid "February"
+msgstr "Únor"
+
+#: View/Helper/FormHelper.php:2706
+msgid "March"
+msgstr "Březen"
+
+#: View/Helper/FormHelper.php:2707
+msgid "April"
+msgstr "Duben"
+
+#: View/Helper/FormHelper.php:2708
+msgid "May"
+msgstr "Květen"
+
+#: View/Helper/FormHelper.php:2709
+msgid "June"
+msgstr "Červen"
+
+#: View/Helper/FormHelper.php:2710
+msgid "July"
+msgstr "Červenec"
+
+#: View/Helper/FormHelper.php:2711
+msgid "August"
+msgstr "Srpen"
+
+#: View/Helper/FormHelper.php:2712
+msgid "September"
+msgstr "Září"
+
+#: View/Helper/FormHelper.php:2713
+msgid "October"
+msgstr "Říjen"
+
+#: View/Helper/FormHelper.php:2714
+msgid "November"
+msgstr "Listopad"
+
+#: View/Helper/FormHelper.php:2715
+msgid "December"
+msgstr "Prosinec"
+
+#: View/Helper/HtmlHelper.php:747
+msgid "Home"
+msgstr "Titulka"
+
+#: View/Helper/PaginatorHelper.php:580
+msgid " of "
+msgstr " z "
+
+#: View/Scaffolds/form.ctp:27 View/Scaffolds/index.ctp:26;77
+#: View/Scaffolds/view.ctp:50
+msgid "Actions"
+msgstr "možnosti"
+
+#: View/Scaffolds/form.ctp:31 View/Scaffolds/index.ctp:51
+#: View/Scaffolds/view.ctp:177
+msgid "Delete"
+msgstr "smazat"
+
+#: View/Scaffolds/form.ctp:34
+msgid "Are you sure you want to delete # %s?"
+msgstr "Opravdu chcete smazat # %s?"
+
+#: View/Scaffolds/form.ctp:37
+msgid "List"
+msgstr "Seznam"
+
+#: View/Scaffolds/form.ctp:44 View/Scaffolds/index.ctp:87
+#: View/Scaffolds/view.ctp:62;75
+msgid "List %s"
+msgstr "Seznam %s"
+
+#: View/Scaffolds/index.ctp:48 View/Scaffolds/view.ctp:165
+msgid "View"
+msgstr "detail"
+
+#: View/Scaffolds/index.ctp:49 View/Scaffolds/view.ctp:171
+msgid "Edit"
+msgstr "upravit"
+
+#: View/Scaffolds/index.ctp:54 View/Scaffolds/view.ctp:58;180
+msgid "Are you sure you want to delete"
+msgstr "Opravdu chcete smazat"
+
+#: View/Scaffolds/index.ctp:65
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"Stránka {:page} z {:pages}, zobrazeno {:current} záznamů  z {:count} celkem, "
+"od {:start} do {:end}"
+
+#: View/Scaffolds/index.ctp:70
+msgid "previous"
+msgstr "předchozí"
+
+#: View/Scaffolds/index.ctp:72
+msgid "next"
+msgstr "následující"
+
+#: View/Scaffolds/view.ctp:20
+msgid "View %s"
+msgstr "detail %s"
+
+#: View/Scaffolds/view.ctp:58
+msgid "Delete %s"
+msgstr "smazat %s"
+
+#: View/Scaffolds/view.ctp:96;137
+msgid "Related %s"
+msgstr "související %s"
