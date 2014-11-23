@@ -28,7 +28,11 @@ class FrValidationTest extends CakeTestCase {
  */
 	public function testPhone() {
 		$this->assertTrue(FrValidation::phone('04 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('07 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('08 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('09 76 96 12 32'));
 		$this->assertFalse(FrValidation::phone('04 76 96 12 3'));
+		$this->assertFalse(FrValidation::phone('07 43 90 33'));
 	}
 
 /**
