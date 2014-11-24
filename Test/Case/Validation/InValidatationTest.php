@@ -22,6 +22,7 @@ class InValidationTest extends CakeTestCase {
 
 /**
  * Test the phone method of InValidation
+ *
  * @return void
  */
   public function testPhone() {
@@ -85,6 +86,7 @@ class InValidationTest extends CakeTestCase {
 
 /**
  * Test the postal method of InValidation
+ *
  * @return void
  */
   public function testPostal() {

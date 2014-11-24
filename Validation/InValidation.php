@@ -22,6 +22,7 @@ class InValidation extends LocalizedValidation {
 
 /**
  * Validate postal code
+ *
  * @param string $check The value to check.
  * @return bool Success.
  */
@@ -32,6 +33,7 @@ class InValidation extends LocalizedValidation {
 
 /**
  * Validate phone number
+ *
  * @param string $check The value to check.
  * @return bool Success.
  */
@@ -42,6 +44,7 @@ class InValidation extends LocalizedValidation {
 
 /**
  * Checks an identification number.
+ *
  * @param string $check The value to check.
  * @return bool Success.
  * @throws NotImplementedException
