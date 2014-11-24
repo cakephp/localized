@@ -8,10 +8,10 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright		 Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link					http://cakephp.org
+ * @since				 Localized Plugin v 0.1
+ * @license			 http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('LocalizedValidation', 'Localized.Validation');
 
@@ -26,10 +26,10 @@ class InValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return bool Success.
  */
-  public static function postal($check) {
-    $pattern = '/^\d{3}\s?\d{3}$/';
-    return (bool)preg_match($pattern, $check);
-  }
+	public static function postal($check) {
+		$pattern = '/^\d{3}\s?\d{3}$/';
+		return (bool)preg_match($pattern, $check);
+	}
 
 /**
  * Validate phone number
@@ -37,10 +37,10 @@ class InValidation extends LocalizedValidation {
  * @param string $check The value to check.
  * @return bool Success.
  */
-  public static function phone($check) {
-    $pattern = '/((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/';
-    return (bool)preg_match($pattern, $check);
-  }
+	public static function phone($check) {
+		$pattern = '/((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/';
+		return (bool)preg_match($pattern, $check);
+	}
 
 /**
  * Checks an identification number.
@@ -49,8 +49,8 @@ class InValidation extends LocalizedValidation {
  * @return bool Success.
  * @throws NotImplementedException
  */
-  public static function personId($check) {
-    throw new NotImplementedException('Validation method not implemented yet.');
-  }
+	public static function personId($check) {
+		throw new NotImplementedException('Validation method not implemented yet.');
+	}
 
 }
