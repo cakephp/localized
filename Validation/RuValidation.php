@@ -86,7 +86,7 @@ class RuValidation {
 			// legal person
 			$checksum = array_pop($digits);
 			$tbNum = array(2, 4, 10, 3, 5, 9, 4, 6, 8);
-			$calculatedChecksum = array_sum(array_map(function($value, $multiplier) {
+			$calculatedChecksum = array_sum(array_map(function ($value, $multiplier) {
 				return $value * $multiplier;
 			}, $tbNum, $digits)) % 11 % 10;
 		} else {
@@ -101,7 +101,7 @@ class RuValidation {
 
 			$sum = array(0, 0);
 			foreach ($tbNum as $key => $multipliers) {
-				$sum[$key] = array_sum(array_map(function($value, $multiplier) {
+				$sum[$key] = array_sum(array_map(function ($value, $multiplier) {
 					return $value * $multiplier;
 				}, $multipliers, $digits)) % 11 % 10;
 			}
