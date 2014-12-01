@@ -1,4 +1,5 @@
-# CakePHP Localized plugin [![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
+# CakePHP Localized plugin
+[![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
 
 This plugin contains various localized validation classes for specific countries.
 
@@ -21,7 +22,7 @@ Ensure `require` is present in `composer.json`. This will install the plugin int
 ```
 {
     "require": {
-        "cakephp/localized": "2.2.*"
+        "cakephp/localized": "2.4.*"
     }
 }
 ```
