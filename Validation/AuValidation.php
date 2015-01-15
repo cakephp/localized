@@ -33,7 +33,6 @@ class AuValidation extends LocalizedValidation {
 	}
 
 /**
-<<<<<<< HEAD
  * Checks Phone Numbers for Australia
  *
  * @param string $check The value to check.
