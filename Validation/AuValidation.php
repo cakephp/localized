@@ -28,7 +28,7 @@ class AuValidation {
  * Checks Postal Codes for Australia
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{4}$/';
@@ -39,7 +39,7 @@ class AuValidation {
  * Checks Phone Numbers for Australia
  *
  * @param string $check The value to check.
- * @return boolean
+ * @return bool Success.
  */
 	public static function phone($check) {
 		$normalized = preg_replace('/(\s+|-|\(|\))/', '', preg_replace('/0011\s?61/', '+61', $check)); //remove spaces, parentheses and hyphens, convert full intl prefix.
