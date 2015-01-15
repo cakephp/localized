@@ -2,26 +2,22 @@
 /**
  * French Localized Validation class test case
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Test.Case.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('FrValidation', 'Localized.Validation');
 
 /**
  * FrValidationTest
  *
- * @package       Localized.Test.Case.Validation
  */
 class FrValidationTest extends CakeTestCase {
 
@@ -32,7 +28,11 @@ class FrValidationTest extends CakeTestCase {
  */
 	public function testPhone() {
 		$this->assertTrue(FrValidation::phone('04 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('07 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('08 76 96 12 32'));
+		$this->assertTrue(FrValidation::phone('09 76 96 12 32'));
 		$this->assertFalse(FrValidation::phone('04 76 96 12 3'));
+		$this->assertFalse(FrValidation::phone('07 43 90 33'));
 	}
 
 /**

@@ -12,18 +12,18 @@
         }
     ],
     "support": {
-        "issues": "http://cakephp.lighthouseapp.com/projects/42658-localized/overview",
+        "issues": "https://github.com/cakephp/localized/issues",
         "forum": "http://stackoverflow.com/tags/cakephp",
         "irc": "irc://irc.freenode.org/cakephp",
         "source": "https://github.com/cakephp/localized"
     },
     "require": {
-        "php": ">=5.2.8",
+        "php": ">=5.3",
         "composer/installers": "*"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
+            "dev-master": "2.3.x-dev"
         },
         "installer-name": "Localized"
     }
