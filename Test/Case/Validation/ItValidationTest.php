@@ -2,26 +2,22 @@
 /**
  * Italian Localized Validation class test case
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Test.Case.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('ItValidation', 'Localized.Validation');
 
 /**
  * ItValidationTest
  *
- * @package       Localized.Test.Case.Validation
  */
 class ItValidationTest extends CakeTestCase {
 
@@ -55,10 +51,13 @@ class ItValidationTest extends CakeTestCase {
 		$this->assertTrue(ItValidation::cf('RSSMRA50A01F205R'));
 		$this->assertTrue(ItValidation::cf('TRVMRA30T31L736B'));
 		$this->assertTrue(ItValidation::cf('spsNTN55a01F839q'));
+		$this->assertTrue(ItValidation::cf('02345678901'));
 
 		$this->assertFalse(ItValidation::cf('MSSRNL30T31L736B'));
 		$this->assertFalse(ItValidation::cf('spsNTN55a01F839r'));
 		$this->assertFalse(ItValidation::cf('JLTRSSG8A41Z114A'));
+		$this->assertFalse(ItValidation::cf('023456789O1'));
+		$this->assertFalse(ItValidation::cf('0234567890'));
 		$this->assertFalse(ItValidation::cf('Fail'));
 	}
 }

@@ -2,14 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Dutch Translation\n"
 "POT-Creation-Date: 2012-12-19 18:18+0000\n"
-"PO-Revision-Date: 2013-05-11 16:02+0100\n"
-"Last-Translator: Rik van der Heijden <mail@rikvanderheijden.com>\n"
+"PO-Revision-Date: 2014-03-04 01:29+0200\n"
+"Last-Translator: Marlin Cremers <m.cremers@mms-projects.net>\n"
 "Language-Team: \n"
+"Language: nld\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: Dutch\n"
-"Plural-Forms: nplurals=2;plural=n!=1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.9-dev\n"
 
 #: Controller/Scaffold.php:128
 msgid "Scaffold :: "
@@ -53,7 +54,7 @@ msgstr "Niet Gevonden"
 
 #: Error/ExceptionRenderer.php:231
 msgid "An Internal Error Has Occurred."
-msgstr "Interne Fout"
+msgstr "Een Interne Fout Is Opgetreden."
 
 #: Model/Validator/CakeValidationSet.php:287
 msgid "This field cannot be left blank"
@@ -368,4 +369,3 @@ msgstr "Verwijder %s"
 #: View/Scaffolds/view.ctp:96;137
 msgid "Related %s"
 msgstr "Gerelateerde %s"
-

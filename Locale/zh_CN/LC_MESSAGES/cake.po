@@ -1,0 +1,357 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP\n"
+"POT-Creation-Date: 2012-12-19 18:18+0000\n"
+"PO-Revision-Date: 2014-02-07 18:35+0800\n"
+"Last-Translator: Hexcles Ma <bob1211@gmail.com>\n"
+"Language-Team: Hexcles <bob1211@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: Controller/Scaffold.php:128
+msgid "Scaffold :: "
+msgstr "脚手架 :: "
+
+#: Controller/Scaffold.php:167;234;305
+msgid "Invalid %s"
+msgstr "无效的%s"
+
+#: Controller/Scaffold.php:222
+msgid "updated"
+msgstr "已更新"
+
+#: Controller/Scaffold.php:225
+msgid "saved"
+msgstr "已保存"
+
+#: Controller/Scaffold.php:245
+msgid "The %1$s has been %2$s"
+msgstr "%1$s已更新为%2$s"
+
+#: Controller/Scaffold.php:256
+msgid "Please correct errors below."
+msgstr "请修复以下错误。"
+
+#: Controller/Scaffold.php:308
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr "%1$s（ID：%2$s）已被删除。"
+
+#: Controller/Scaffold.php:311
+msgid "There was an error deleting the %1$s with id: %2$s"
+msgstr "删除%1$s（ID：%2$s）时发生错误"
+
+#: Controller/Component/AuthComponent.php:369
+msgid "You are not authorized to access that location."
+msgstr "你无权访问该地址。"
+
+#: Error/ExceptionRenderer.php:209
+msgid "Not Found"
+msgstr "未找到"
+
+#: Error/ExceptionRenderer.php:231
+msgid "An Internal Error Has Occurred."
+msgstr "发生内部错误。"
+
+#: Model/Validator/CakeValidationSet.php:287
+msgid "This field cannot be left blank"
+msgstr "该字段不能为空"
+
+#: Network/CakeResponse.php:1222
+msgid "The requested file was not found"
+msgstr "未找到所请求的文件"
+
+#: Utility/CakeNumber.php:101
+msgid "%d KB"
+msgstr "%d KB"
+
+#: Utility/CakeNumber.php:103
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: Utility/CakeNumber.php:105
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: Utility/CakeNumber.php:107
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: Utility/CakeNumber.php:99
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] "%d Byte"
+
+#: Utility/CakeTime.php:389
+msgid "Today, %s"
+msgstr "今天，%s"
+
+#: Utility/CakeTime.php:392
+msgid "Yesterday, %s"
+msgstr "昨天，%s"
+
+#: Utility/CakeTime.php:395
+msgid "Tomorrow, %s"
+msgstr "明天，%s"
+
+#: Utility/CakeTime.php:400
+msgid "Sunday"
+msgstr "星期日"
+
+#: Utility/CakeTime.php:401
+msgid "Monday"
+msgstr "星期一"
+
+#: Utility/CakeTime.php:402
+msgid "Tuesday"
+msgstr "星期二"
+
+#: Utility/CakeTime.php:403
+msgid "Wednesday"
+msgstr "星期三"
+
+#: Utility/CakeTime.php:404
+msgid "Thursday"
+msgstr "星期四"
+
+#: Utility/CakeTime.php:405
+msgid "Friday"
+msgstr "星期五"
+
+#: Utility/CakeTime.php:406
+msgid "Saturday"
+msgstr "星期六"
+
+#: Utility/CakeTime.php:412
+msgid "On %s %s"
+msgstr "于%s %s"
+
+#: Utility/CakeTime.php:805
+msgid "just now"
+msgstr "刚刚"
+
+#: Utility/CakeTime.php:809
+msgid "on %s"
+msgstr "于%s"
+
+#: Utility/CakeTime.php:853
+msgid "%s ago"
+msgstr "%s之前"
+
+#: Utility/CakeTime.php:872;894
+msgid "days"
+msgstr "天"
+
+#: Utility/CakeTime.php:154
+msgid "abday"
+msgstr ""
+
+#: Utility/CakeTime.php:160
+msgid "day"
+msgstr "天"
+
+#: Utility/CakeTime.php:166
+msgid "d_t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:188
+msgid "abmon"
+msgstr ""
+
+#: Utility/CakeTime.php:194
+msgid "mon"
+msgstr "月"
+
+#: Utility/CakeTime.php:205
+msgid "am_pm"
+msgstr ""
+
+#: Utility/CakeTime.php:212
+msgid "t_fmt_ampm"
+msgstr ""
+
+#: Utility/CakeTime.php:226
+msgid "d_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:232
+msgid "t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:831
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d年"
+
+#: Utility/CakeTime.php:834
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d月"
+
+#: Utility/CakeTime.php:837
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d周"
+
+#: Utility/CakeTime.php:840
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d天"
+
+#: Utility/CakeTime.php:843
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d小时"
+
+#: Utility/CakeTime.php:846
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d分钟"
+
+#: Utility/CakeTime.php:849
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d秒"
+
+#: View/Helper/FormHelper.php:681
+msgid "Error in field %s"
+msgstr "字段%s含有错误"
+
+#: View/Helper/FormHelper.php:868 View/Scaffolds/form.ctp:48
+#: View/Scaffolds/index.ctp:79;94 View/Scaffolds/view.ctp:66;81;192
+msgid "New %s"
+msgstr "新建%s"
+
+#: View/Helper/FormHelper.php:874 View/Scaffolds/view.ctp:54;113
+msgid "Edit %s"
+msgstr "编辑%s"
+
+#: View/Helper/FormHelper.php:1436
+msgid "empty"
+msgstr "空"
+
+#: View/Helper/FormHelper.php:1796 View/Scaffolds/form.ctp:23
+msgid "Submit"
+msgstr "提交"
+
+#: View/Helper/FormHelper.php:2704
+msgid "January"
+msgstr "一月"
+
+#: View/Helper/FormHelper.php:2705
+msgid "February"
+msgstr "二月"
+
+#: View/Helper/FormHelper.php:2706
+msgid "March"
+msgstr "三月"
+
+#: View/Helper/FormHelper.php:2707
+msgid "April"
+msgstr "四月"
+
+#: View/Helper/FormHelper.php:2708
+msgid "May"
+msgstr "五月"
+
+#: View/Helper/FormHelper.php:2709
+msgid "June"
+msgstr "六月"
+
+#: View/Helper/FormHelper.php:2710
+msgid "July"
+msgstr "七月"
+
+#: View/Helper/FormHelper.php:2711
+msgid "August"
+msgstr "八月"
+
+#: View/Helper/FormHelper.php:2712
+msgid "September"
+msgstr "九月"
+
+#: View/Helper/FormHelper.php:2713
+msgid "October"
+msgstr "十月"
+
+#: View/Helper/FormHelper.php:2714
+msgid "November"
+msgstr "十一月"
+
+#: View/Helper/FormHelper.php:2715
+msgid "December"
+msgstr "十二月"
+
+#: View/Helper/HtmlHelper.php:747
+msgid "Home"
+msgstr "主页"
+
+#: View/Helper/PaginatorHelper.php:580
+msgid " of "
+msgstr " / "
+
+#: View/Scaffolds/form.ctp:27 View/Scaffolds/index.ctp:26;77
+#: View/Scaffolds/view.ctp:50
+msgid "Actions"
+msgstr "操作"
+
+#: View/Scaffolds/form.ctp:31 View/Scaffolds/index.ctp:51
+#: View/Scaffolds/view.ctp:177
+msgid "Delete"
+msgstr "删除"
+
+#: View/Scaffolds/form.ctp:34
+msgid "Are you sure you want to delete # %s?"
+msgstr "你确认要删除#%s吗？"
+
+#: View/Scaffolds/form.ctp:37
+msgid "List"
+msgstr "列表"
+
+#: View/Scaffolds/form.ctp:44 View/Scaffolds/index.ctp:87
+#: View/Scaffolds/view.ctp:62;75
+msgid "List %s"
+msgstr "列出%s"
+
+#: View/Scaffolds/index.ctp:48 View/Scaffolds/view.ctp:165
+msgid "View"
+msgstr "查看"
+
+#: View/Scaffolds/index.ctp:49 View/Scaffolds/view.ctp:171
+msgid "Edit"
+msgstr "编辑"
+
+#: View/Scaffolds/index.ctp:54 View/Scaffolds/view.ctp:58;180
+msgid "Are you sure you want to delete"
+msgstr "你确认要删除吗"
+
+#: View/Scaffolds/index.ctp:65
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"第{:page}页（共{:pages}页），显示{:count}条记录中的{:current}条（从{:start}至"
+"{:end}）"
+
+#: View/Scaffolds/index.ctp:70
+msgid "previous"
+msgstr "上一个"
+
+#: View/Scaffolds/index.ctp:72
+msgid "next"
+msgstr "下一个"
+
+#: View/Scaffolds/view.ctp:20
+msgid "View %s"
+msgstr "查看%s"
+
+#: View/Scaffolds/view.ctp:58
+msgid "Delete %s"
+msgstr "删除%s"
+
+#: View/Scaffolds/view.ctp:96;137
+msgid "Related %s"
+msgstr "相关%s"

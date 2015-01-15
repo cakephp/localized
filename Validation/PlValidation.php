@@ -1,34 +1,29 @@
 <?php
 /**
- * Polish Localized Validation class. Handles localized validation for Poland
- *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @package       Localized.Validation
  * @since         Localized Plugin v 0.1
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
- * PlValidation
+ * Polish Localized Validation class. Handles localized validation for Poland.
  *
- * @package       Localized.Validation
  */
-class PlValidation {
+class PlValidation extends LocalizedValidation {
 
 /**
- * Check zipcodes for Poland
+ * Checks a postal code for Poland.
  *
  * @param string $check Value to check
- * @return boolean
+ * @return bool Success.
  */
 	public static function postal($check) {
 		$pattern = '/^[0-9]{2}-[0-9]{3}$/D';
@@ -36,13 +31,13 @@ class PlValidation {
 	}
 
 /**
- * Checks social security numbers (NIP) for Poland
+ * Checks a social security number (NIP) for Poland.
  *
  * @param string $check Value to check
- * @return boolean
+ * @return bool Success.
  * @link http://pl.wikipedia.org/wiki/NIP
  */
-	public static function ssn($check) {
+	public static function personId($check) {
 		$pattern = '/^([0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})|([0-9]{10})$/';
 		if (!preg_match($pattern, $check)) {
 			return false;
@@ -68,11 +63,11 @@ class PlValidation {
 	}
 
 /**
- * Check PESEL
+ * Checks PESEL
  * Universal Electronic System for Registration of the Population in Poland
  *
  * @param string $check Value to check
- * @return boolean
+ * @return bool Success.
  * @link http://pl.wikipedia.org/wiki/PESEL
  */
 	public static function pesel($check) {
@@ -98,11 +93,11 @@ class PlValidation {
 	}
 
 /**
- * Check REGON
+ * Checks REGON
  * National Business Registry Number in Poland
  *
  * @param string $check Value to check
- * @return boolean
+ * @return bool Success.
  * @link http://pl.wikipedia.org/wiki/REGON
  */
 	public static function regon($check) {
@@ -126,4 +121,16 @@ class PlValidation {
 		}
 		return false;
 	}
+
+/**
+ * Checks a phone number.
+ *
+ * @param string $check The value to check.
+ * @return bool Success.
+ * @throws NotImplementedException
+ */
+	public static function phone($check) {
+		throw new NotImplementedException('Validation method not implemented yet.');
+	}
+
 }

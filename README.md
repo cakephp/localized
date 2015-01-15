@@ -1,4 +1,5 @@
-# CakePHP Localized plugin [![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
+# CakePHP Localized plugin
+[![Build Status](https://secure.travis-ci.org/cakephp/localized.png?branch=master)](http://travis-ci.org/cakephp/localized)
 
 This plugin contains various localized validation classes for specific countries.
 
@@ -7,7 +8,7 @@ This plugin contains various localized validation classes for specific countries
 The master branch has the following requirements:
 
 * CakePHP 2.1.0 or greater.
-* PHP 5.2.8 or greater.
+* PHP 5.3 or greater.
 
 ## Installation
 
@@ -21,7 +22,7 @@ Ensure `require` is present in `composer.json`. This will install the plugin int
 ```
 {
     "require": {
-        "cakephp/localized": "2.1.*"
+        "cakephp/localized": "2.4.*"
     }
 }
 ```
@@ -54,8 +55,8 @@ For further information on validation rules see the [cakephp documentation on va
 You can also access the localized validators any time you would call `Validation` methods. After importing the validation class.
 
 ```php
-	if (Validation::phone($value, null, 'cz')) {
-		//do something with valid phone number
+	if (Validation::postal($value, null, 'cz')) {
+		// Do something with valid postal code
 	}
 ```
 
@@ -83,6 +84,17 @@ You also need to adjust your App::uses() statements in your code accordingly:
 ## Contributing to Localized
 
 If you find that your country is not part of the Localized plugin, please fork the project on github.  Once you have forked the project you can commit your validator class (and any test cases).  Once you have pushed your changes back to github send a pull request, and your changes will be reviewed and merged in or feedback will be given.
+
+### Validation methods
+
+There are a few methods that are common to all classes, defined through the interface "ValidationInterface":
+
+* `phone()` to check a phone number
+* `postal()` to check a postal code
+* `personId()` (and `ssn()` for BC) to check a country specific person ID
+
+Please try to fit your validation rules in that naming scheme.
+Apart from that you can also define further validation methods in your implementing class, of course.
 
 ## Issues with Localized
 
