@@ -3,6 +3,7 @@ language: php
 php:
   - 5.3
   - 5.4
+  - 5.5
 
 env:
   global:
@@ -10,8 +11,8 @@ env:
     - REQUIRE=""
 
   matrix:
-    - DB=mysql CAKE_VERSION=2.5
     - DB=mysql CAKE_VERSION=2.6
+    - DB=mysql CAKE_VERSION=2.7
 
 matrix:
   include:
