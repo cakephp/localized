@@ -52,7 +52,7 @@ class DeValidation extends LocalizedValidation {
  * @return bool Success.
  */
 	public static function phone($check) {
-		$pattern = '/[0-9\/. \-]*/';
+		$pattern = '/^[0-9\/. \-]*$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
