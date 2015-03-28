@@ -63,7 +63,7 @@ msgstr ""
 
 #: Controller/Component/AuthComponent.php:432
 msgid "You are not authorized to access that location."
-msgstr "لا تملك صلاحية الدخول إلي هذه الصفحة"
+msgstr "لا تملك صلاحية الدخول إلى هذه الصفحة"
 
 #: Error/ExceptionRenderer.php:222
 msgid "Not Found"
