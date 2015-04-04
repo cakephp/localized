@@ -109,6 +109,7 @@ class IrValidationTest extends CakeTestCase {
 		$this->assertTrue(IrValidation::mobile('+98 9373334444'));
 		$this->assertTrue(IrValidation::mobile('(+98) 9383334444'));
 		$this->assertTrue(IrValidation::mobile('+98-9323334444'));
+		$this->assertTrue(IrValidation::mobile('+989203334444'));
 
 		$this->assertFalse(IrValidation::mobile('teststring'));
 		$this->assertFalse(IrValidation::mobile('999123334444'));

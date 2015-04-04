@@ -71,7 +71,7 @@ class IrValidation extends LocalizedValidation {
  * @return bool Success.
  */
 	public static function mobile($check) {
-		$pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}((91)|(93)){1}[0-9]{8}$/';
+		$pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}((91)|(92)|(93)){1}[0-9]{8}$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
