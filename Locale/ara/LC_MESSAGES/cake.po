@@ -1,6 +1,3 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright Mustapha ELBAKAI<m.elbakai@gmail.com>
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Arabic Translation\n"
