@@ -26,11 +26,11 @@ class RsValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	public function testJMBG() {
-		$this->assertTrue(RsValidation::jmbg('1707017170007'));
-		$this->assertFalse(RsValidation::jmbg('1707017170008'));
-		$this->assertFalse(RsValidation::jmbg('170701717000'));
-		$this->assertFalse(RsValidation::jmbg('A707017170007'));
+	public function testPersonId() {
+		$this->assertTrue(RsValidation::personId('1707017170007'));
+		$this->assertFalse(RsValidation::personId('1707017170008'));
+		$this->assertFalse(RsValidation::personId('170701717000'));
+		$this->assertFalse(RsValidation::personId('A707017170007'));
 	}
 
 /**
@@ -38,10 +38,10 @@ class RsValidationTest extends CakeTestCase {
  *
  * @return void
  */
-	public function testPostalNumber() {
-		$this->assertTrue(RsValidation::postal_number('11090'));
-		$this->assertFalse(RsValidation::postal_number('111000'));
-		$this->assertFalse(RsValidation::postal_number('A1100'));
+	public function testPostal() {
+		$this->assertTrue(RsValidation::postal('11090'));
+		$this->assertFalse(RsValidation::postal('111000'));
+		$this->assertFalse(RsValidation::postal('A1100'));
 	}
 
 /**
@@ -50,8 +50,8 @@ class RsValidationTest extends CakeTestCase {
  * @return void
  */
 	public function testAddressCode() {
-		$this->assertTrue(RsValidation::address_code('122407'));
-		$this->assertFalse(RsValidation::address_code('11090'));
-		$this->assertFalse(RsValidation::address_code('A11090'));
+		$this->assertTrue(RsValidation::addressCode('122407'));
+		$this->assertFalse(RsValidation::addressCode('11090'));
+		$this->assertFalse(RsValidation::addressCode('A11090'));
 	}
 }

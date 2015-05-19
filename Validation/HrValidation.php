@@ -1,45 +1,33 @@
 <?php
 /**
- * ID Localized Validation class. Handles localized validation for Indonesia.
+ * Localized Validation class. Handles localized validation for Croatia.
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('LocalizedValidation', 'Localized.Validation');
 
 /**
- * IdValidation
+ * HrValidation
  *
  */
-class IdValidation extends LocalizedValidation {
+class HrValidation extends LocalizedValidation {
 
 /**
- * Checks a postal code for Indonesia.
+ * Checks a postal code for Croatia.
  *
  * @param string $check The value to check.
  * @return bool Success.
  */
 	public static function postal($check) {
-		$pattern = '/[1-9][0-9]{4}/';
-		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Basic Check for Valid Mobile Mumbers for Indonesia.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function mobile($check) {
-		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
+		$pattern = '/^\d{5}$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
