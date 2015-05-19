@@ -89,7 +89,7 @@ class RuValidationTest extends CakeTestCase {
  *
  * @return void
  *
- * @covers RuValidation::ssn
+ * @covers RuValidation::personId
  * @covers RuValidation::snils
  */
 	public function testSnils() {
