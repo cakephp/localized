@@ -29,7 +29,7 @@ class IdValidation extends LocalizedValidation {
  */
 	public static function postal($check) {
 		$pattern = '/[1-9][0-9]{4}/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
@@ -40,7 +40,7 @@ class IdValidation extends LocalizedValidation {
  */
 	public static function mobile($check) {
 		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
-		return preg_match($pattern, $check);
+		return (bool)preg_match($pattern, $check);
 	}
 
 /**
