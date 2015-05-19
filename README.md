@@ -63,14 +63,14 @@ You can also access the localized validators any time you would call `Validation
 
 ## PO files
 
-This plugin also houses translations for the client-facing translated strings in the core (the cake domain). to use these files link or copy them
-into their expected location: `APP/locale/<locale>/LC_MESSAGES/cake.po`
+This plugin also houses translations for the client-facing translated strings in the core (the `cake` domain). to use these files link or copy them
+into their expected location: `APP/Locale/<locale>/LC_MESSAGES/cake.po`
 
 ## LC_TIME files
 
 This plugin also houses POSIX compliant LC_TIME files which are used for translating
 time related string of LC_TIME domain. To use these files link or copy them into
-their expected location: `APP/locale/<locale>/LC_TIME`.
+their expected location: `APP/Locale/<locale>/LC_TIME`.
 
 ## Migration Guide
 
