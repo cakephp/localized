@@ -1,0 +1,394 @@
+# Hungarian translation of CakePHP Application
+# Copyright 2015 Peter Zsak <wroadd@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP\n"
+"POT-Creation-Date: 2015-06-24 18:53+0100\n"
+"PO-Revision-Date: 2015-06-24 19:24+0100\n"
+"Last-Translator: Peter Zsak <wroadd@gmail.com>\n"
+"Language-Team: HUN \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.1\n"
+"Language: Hungarian\n"
+
+#: View/Errors/error400.ctp:19 View/Errors/error500.ctp:19
+msgid "Error"
+msgstr "Hiba"
+
+#: View/Errors/error400.ctp:21
+msgid "The requested address %s was not found on this server."
+msgstr "A kért cím (%s) nem található a kiszolgálón."
+
+#: View/Errors/error500.ctp:20 Error/ExceptionRenderer.php:245
+msgid "An Internal Error Has Occurred."
+msgstr "Belső hiba történt!"
+
+#: Controller/Scaffold.php:127
+msgid "Scaffold :: "
+msgstr "Scaffold ::"
+
+#: Controller/Scaffold.php:166;233;302
+msgid "Invalid %s"
+msgstr "Érvénytelen%s"
+
+#: Controller/Scaffold.php:221
+msgid "updated"
+msgstr "Frissítve"
+
+#: Controller/Scaffold.php:224
+msgid "saved"
+msgstr "Mentve."
+
+#: Controller/Scaffold.php:244
+msgid "The %1$s has been %2$s"
+msgstr "A(z) %1$s %2$s"
+
+#: Controller/Scaffold.php:254
+msgid "Please correct errors below."
+msgstr ""
+"Kérjük, javítsa ki az alább kiemelt hibákat vagy hiányzó információkat."
+
+#: Controller/Scaffold.php:305
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr "A(z) %1$s az alábbi azonosítóval törölve lett: %2$s."
+
+#: Controller/Scaffold.php:308
+msgid "There was an error deleting the %1$s with id: %2$s"
+msgstr "Hiba történt a %2$s azonosítójú %1$s  törlése közben."
+
+#: Controller/Component/AuthComponent.php:432
+msgid "You are not authorized to access that location."
+msgstr "Ön nem jogosult hozzáférni ahhoz a helyhez."
+
+#: Error/ExceptionRenderer.php:222
+msgid "Not Found"
+msgstr "Nem található"
+
+#: Model/Validator/CakeValidationSet.php:286
+msgid "This field cannot be left blank"
+msgstr "Ez a mező nem lehet üres"
+
+#: Network/CakeResponse.php:1355
+msgid "The requested file was not found"
+msgstr "A kért fájl nem található"
+
+#: Utility/CakeNumber.php:119
+msgid "%s KB"
+msgstr "%s KB"
+
+#: Utility/CakeNumber.php:121
+msgid "%s MB"
+msgstr "%s MB"
+
+#: Utility/CakeNumber.php:123
+msgid "%s GB"
+msgstr "%s GB"
+
+#: Utility/CakeNumber.php:125
+msgid "%s TB"
+msgstr "%s TB"
+
+#: Utility/CakeNumber.php:117
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] "%d Byte"
+msgstr[1] "%d Byte"
+
+#: Utility/CakeTime.php:397
+msgid "Today, %s"
+msgstr "Ma, %s"
+
+#: Utility/CakeTime.php:400
+msgid "Yesterday, %s"
+msgstr "Tegnap: %s"
+
+#: Utility/CakeTime.php:403
+msgid "Tomorrow, %s"
+msgstr "Holnap: %s"
+
+#: Utility/CakeTime.php:408
+msgid "Sunday"
+msgstr "Vasárnap"
+
+#: Utility/CakeTime.php:409
+msgid "Monday"
+msgstr "Hétfő"
+
+#: Utility/CakeTime.php:410
+msgid "Tuesday"
+msgstr "Kedd"
+
+#: Utility/CakeTime.php:411
+msgid "Wednesday"
+msgstr "Szerda"
+
+#: Utility/CakeTime.php:412
+msgid "Thursday"
+msgstr "Csütörtök"
+
+#: Utility/CakeTime.php:413
+msgid "Friday"
+msgstr "Péntek"
+
+#: Utility/CakeTime.php:414
+msgid "Saturday"
+msgstr "Szombat"
+
+#: Utility/CakeTime.php:420
+msgid "On %s %s"
+msgstr "Ekkor: %s %s"
+
+#: Utility/CakeTime.php:743
+msgid "%s ago"
+msgstr "%s ezelőtt"
+
+#: Utility/CakeTime.php:744
+msgid "in %s"
+msgstr "Ekkor: %s"
+
+#: Utility/CakeTime.php:745
+msgid "on %s"
+msgstr "Ekkor: %s"
+
+#: Utility/CakeTime.php:801
+msgid "just now"
+msgstr "éppen most"
+
+#: Utility/CakeTime.php:924
+msgid "in about a second"
+msgstr "kevesebb, mint egy másodperce"
+
+#: Utility/CakeTime.php:925
+msgid "in about a minute"
+msgstr "kevesebb, mintegy perce"
+
+#: Utility/CakeTime.php:926
+msgid "in about an hour"
+msgstr "kevesebb, mintegy órája"
+
+#: Utility/CakeTime.php:927
+msgid "in about a day"
+msgstr "kevesebb, mintegy napja"
+
+#: Utility/CakeTime.php:928
+msgid "in about a week"
+msgstr "kevesebb, mintegy hete"
+
+#: Utility/CakeTime.php:929
+msgid "in about a year"
+msgstr "kevesebb, mint egy  éve"
+
+#: Utility/CakeTime.php:933
+msgid "about a second ago"
+msgstr "körülbelül egy másodperce"
+
+#: Utility/CakeTime.php:934
+msgid "about a minute ago"
+msgstr "körülbelül egy perce"
+
+#: Utility/CakeTime.php:935
+msgid "about an hour ago"
+msgstr "körülbelül egy órája"
+
+#: Utility/CakeTime.php:936
+msgid "about a day ago"
+msgstr "körülbelül egy napja"
+
+#: Utility/CakeTime.php:937
+msgid "about a week ago"
+msgstr "körülbelül egy hete"
+
+#: Utility/CakeTime.php:938
+msgid "about a year ago"
+msgstr "körülbelül egy  éve"
+
+#: Utility/CakeTime.php:958;980
+msgid "days"
+msgstr "nap"
+
+#: Utility/CakeTime.php:895
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d év"
+msgstr[1] "%d év"
+
+#: Utility/CakeTime.php:898
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d hónap"
+msgstr[1] "%d hónap"
+
+#: Utility/CakeTime.php:901
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d nap"
+msgstr[1] "%d nap"
+
+#: Utility/CakeTime.php:904
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d nap"
+msgstr[1] "%d nap"
+
+#: Utility/CakeTime.php:907
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d óra"
+msgstr[1] "%d óra"
+
+#: Utility/CakeTime.php:910
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d perc"
+msgstr[1] "%d perc"
+
+#: Utility/CakeTime.php:913
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d másodperc"
+msgstr[1] "%d másodperc"
+
+#: Utility/String.php:701
+msgid "and"
+msgstr "és"
+
+#: View/Helper/FormHelper.php:732
+msgid "Error in field %s"
+msgstr "Hiba van az alábbi mezőben: %s"
+
+#: View/Helper/FormHelper.php:921 View/Scaffolds/form.ctp:46
+#: View/Scaffolds/index.ctp:77;92 View/Scaffolds/view.ctp:63;78;188
+msgid "New %s"
+msgstr "Új: %s"
+
+#: View/Helper/FormHelper.php:927 View/Scaffolds/view.ctp:51;109
+msgid "Edit %s"
+msgstr "Szerkesztés: %s"
+
+#: View/Helper/FormHelper.php:1500
+msgid "empty"
+msgstr "üres"
+
+#: View/Helper/FormHelper.php:1895 View/Scaffolds/form.ctp:21
+msgid "Submit"
+msgstr "Elküldés"
+
+#: View/Helper/FormHelper.php:2874
+msgid "January"
+msgstr "Január"
+
+#: View/Helper/FormHelper.php:2875
+msgid "February"
+msgstr "Február"
+
+#: View/Helper/FormHelper.php:2876
+msgid "March"
+msgstr "Március"
+
+#: View/Helper/FormHelper.php:2877
+msgid "April"
+msgstr "Április"
+
+#: View/Helper/FormHelper.php:2878
+msgid "May"
+msgstr "Május"
+
+#: View/Helper/FormHelper.php:2879
+msgid "June"
+msgstr "Június"
+
+#: View/Helper/FormHelper.php:2880
+msgid "July"
+msgstr "Július"
+
+#: View/Helper/FormHelper.php:2881
+msgid "August"
+msgstr "Augusztus"
+
+#: View/Helper/FormHelper.php:2882
+msgid "September"
+msgstr "Szeptember"
+
+#: View/Helper/FormHelper.php:2883
+msgid "October"
+msgstr "Október"
+
+#: View/Helper/FormHelper.php:2884
+msgid "November"
+msgstr "November"
+
+#: View/Helper/FormHelper.php:2885
+msgid "December"
+msgstr "December"
+
+#: View/Helper/HtmlHelper.php:782
+msgid "Home"
+msgstr "KEZDŐ OLDAL"
+
+#: View/Helper/PaginatorHelper.php:637
+msgid " of "
+msgstr " ennyiből: "
+
+#: View/Scaffolds/form.ctp:25 View/Scaffolds/index.ctp:24;75
+#: View/Scaffolds/view.ctp:47
+msgid "Actions"
+msgstr "Műveletek"
+
+#: View/Scaffolds/form.ctp:29 View/Scaffolds/index.ctp:49
+#: View/Scaffolds/view.ctp:173
+msgid "Delete"
+msgstr "Törlés"
+
+#: View/Scaffolds/form.ctp:32 View/Scaffolds/index.ctp:52
+#: View/Scaffolds/view.ctp:55;176
+msgid "Are you sure you want to delete # %s?"
+msgstr "Biztos, hogy törölni szeretné ezt: #%s?"
+
+#: View/Scaffolds/form.ctp:35
+msgid "List"
+msgstr "Lista"
+
+#: View/Scaffolds/form.ctp:42 View/Scaffolds/index.ctp:85
+#: View/Scaffolds/view.ctp:59;72
+msgid "List %s"
+msgstr "Lista: %s"
+
+#: View/Scaffolds/index.ctp:46 View/Scaffolds/view.ctp:161
+msgid "View"
+msgstr "Megnéz"
+
+#: View/Scaffolds/index.ctp:47 View/Scaffolds/view.ctp:167
+msgid "Edit"
+msgstr "Szerkeszt"
+
+#: View/Scaffolds/index.ctp:63
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"Oldal {: page} {a:} oldalból, jelenleg {: current} bejegyzés látható az "
+"összesen  {: count} bejegyzésből, kezdve inne:{: start}, eddig: {: end}"
+
+#: View/Scaffolds/index.ctp:68
+msgid "previous"
+msgstr "előző"
+
+#: View/Scaffolds/index.ctp:70
+msgid "next"
+msgstr "﻿következő"
+
+#: View/Scaffolds/view.ctp:18
+msgid "View %s"
+msgstr "Megtekintés: %s"
+
+#: View/Scaffolds/view.ctp:55
+msgid "Delete %s"
+msgstr "Törlés: %s"
+
+#: View/Scaffolds/view.ctp:93;133
+msgid "Related %s"
+msgstr "Kapcsolódó: %s"
