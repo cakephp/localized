@@ -28,7 +28,7 @@ class FrValidation extends LocalizedValidation {
  * @return bool Success.
  */
 	public static function phone($check) {
-		$pattern = '/^0[1-9]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$/';
+		$pattern = '/^0[1-9]{1}(([0-9]{8})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})|((\.[0-9]{2}){4}))$/';
 		return (bool)preg_match($pattern, $check);
 	}
 
