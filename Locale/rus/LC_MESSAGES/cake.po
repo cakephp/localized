@@ -1,9 +1,10 @@
+# Dmitry Romanov, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: CakePHP\n"
-"POT-Creation-Date: 2013-08-02 23:13+0400\n"
-"PO-Revision-Date: 2013-08-01 20:19+0400\n"
-"Last-Translator: Dmitry Romanov\n"
+"Project-Id-Version: CakePHP 2.5.2\n"
+"POT-Creation-Date: 2014-06-25 11:33+0300\n"
+"PO-Revision-Date: 2014-06-25 11:57+0300\n"
+"Last-Translator: Alexandr Boltris <ua2fgb@gmail.com>\n"
 "Language-Team: \n"
 "Language: Russian\n"
 "MIME-Version: 1.0\n"
@@ -13,382 +14,388 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: View/Errors/error400.ctp:22
-#: View/Errors/error500.ctp:22
+#: View/Errors/error400ctp:21
+#: View/Errors/error500ctp:21
 msgid "Error"
 msgstr "Ошибка"
 
-#: View/Errors/error400.ctp:24
+#: View/Errors/error400ctp:23
 msgid "The requested address %s was not found on this server."
 msgstr "Запрошенный адрес %s не был найден на этом сервере"
 
-#: View/Errors/error500.ctp:23
-#: Error/ExceptionRenderer.php:234
+#: View/Errors/error500ctp:22
+#: Error/ExceptionRendererphp:234
 msgid "An Internal Error Has Occurred."
 msgstr "Произошла внутренняя ошибка"
 
-#: Controller/Scaffold.php:130
+#: Controller/Scaffoldphp:127
 msgid "Scaffold :: "
 msgstr "Скаффолдинг :: "
 
-#: Controller/Scaffold.php:169;236;305
+#: Controller/Scaffoldphp:166;233;302
 msgid "Invalid %s"
 msgstr "Неправильный %s"
 
-#: Controller/Scaffold.php:224
+#: Controller/Scaffoldphp:221
 msgid "updated"
-msgstr "обновлен"
+msgstr "обновлён"
 
-#: Controller/Scaffold.php:227
+#: Controller/Scaffoldphp:224
 msgid "saved"
-msgstr "сохранен"
+msgstr "сохранён"
 
-#: Controller/Scaffold.php:247
+#: Controller/Scaffoldphp:244
 msgid "The %1$s has been %2$s"
 msgstr "%1$s успешно %2$s"
 
-#: Controller/Scaffold.php:257
+#: Controller/Scaffoldphp:254
 msgid "Please correct errors below."
 msgstr "Пожалуйста, исправьте ошибки ниже."
 
-#: Controller/Scaffold.php:308
+#: Controller/Scaffoldphp:305
 msgid "The %1$s with id: %2$s has been deleted."
-msgstr "%1$s с идентификатором %2$s успешно удален."
+msgstr "%1$s с идентификатором %2$s успешно удалён."
 
-#: Controller/Scaffold.php:311
+#: Controller/Scaffoldphp:308
 msgid "There was an error deleting the %1$s with id: %2$s"
 msgstr "При удалении %1$s с идентификатором %2$s произошла ошибка"
 
-#: Controller/Component/AuthComponent.php:377
+#: Controller/Component/AuthComponentphp:430
 msgid "You are not authorized to access that location."
 msgstr "У вас нет доступа к этой странице."
 
-#: Error/ExceptionRenderer.php:212
+#: Error/ExceptionRendererphp:211
 msgid "Not Found"
 msgstr "Не найдено"
 
-#: Model/Validator/CakeValidationSet.php:288
+#: Model/Validator/CakeValidationSetphp:286
 msgid "This field cannot be left blank"
 msgstr "Это поле не может быть пустым"
 
-#: Network/CakeResponse.php:1246
+#: Network/CakeResponsephp:1352
 msgid "The requested file was not found"
 msgstr "Запрашиваемый файл не найден"
 
-#: Utility/CakeNumber.php:102
-msgid "%d KB"
-msgstr "%d кБ"
+#: Utility/CakeNumberphp:119
+msgid "%s KB"
+msgstr "%s кБ"
 
-#: Utility/CakeNumber.php:104
-msgid "%.2f MB"
-msgstr "%.2f МБ"
+#: Utility/CakeNumberphp:121
+msgid "%s MB"
+msgstr "%s МБ"
 
-#: Utility/CakeNumber.php:106
-msgid "%.2f GB"
-msgstr "%.2f ГБ"
+#: Utility/CakeNumberphp:123
+msgid "%s GB"
+msgstr "%s ГБ"
 
-#: Utility/CakeNumber.php:108
-msgid "%.2f TB"
-msgstr "%.2f ТБ"
+#: Utility/CakeNumberphp:125
+msgid "%s TB"
+msgstr "%s ТБ"
 
-#: Utility/CakeNumber.php:100
+#: Utility/CakeNumberphp:117
 msgid "%d Byte"
 msgid_plural "%d Bytes"
 msgstr[0] "%d байт"
 msgstr[1] "%d байта"
 msgstr[2] "%d байт"
 
-#: Utility/CakeTime.php:394
+#: Utility/CakeTimephp:398
 msgid "Today, %s"
 msgstr "Сегодня, %s"
 
-#: Utility/CakeTime.php:397
+#: Utility/CakeTimephp:401
 msgid "Yesterday, %s"
 msgstr "Вчера, %s"
 
-#: Utility/CakeTime.php:400
+#: Utility/CakeTimephp:404
 msgid "Tomorrow, %s"
 msgstr "Завтра, %s"
 
-#: Utility/CakeTime.php:405
+#: Utility/CakeTimephp:409
 msgid "Sunday"
 msgstr "Воскресенье"
 
-#: Utility/CakeTime.php:406
+#: Utility/CakeTimephp:410
 msgid "Monday"
 msgstr "Понедельник"
 
-#: Utility/CakeTime.php:407
+#: Utility/CakeTimephp:411
 msgid "Tuesday"
 msgstr "Вторник"
 
-#: Utility/CakeTime.php:408
+#: Utility/CakeTimephp:412
 msgid "Wednesday"
 msgstr "Среда"
 
-#: Utility/CakeTime.php:409
+#: Utility/CakeTimephp:413
 msgid "Thursday"
 msgstr "Четверг"
 
-#: Utility/CakeTime.php:410
+#: Utility/CakeTimephp:414
 msgid "Friday"
 msgstr "Пятница"
 
-#: Utility/CakeTime.php:411
+#: Utility/CakeTimephp:415
 msgid "Saturday"
 msgstr "Суббота"
 
-#: Utility/CakeTime.php:417
+#: Utility/CakeTimephp:421
 msgid "On %s %s"
 msgstr "в %s %s"
 
-#: Utility/CakeTime.php:816
-msgid "just now"
-msgstr "только что"
-
-#: Utility/CakeTime.php:820
-msgid "on %s"
-msgstr "%s"
-
-#: Utility/CakeTime.php:864
+#: Utility/CakeTimephp:742
 msgid "%s ago"
 msgstr "%s назад"
 
-#: Utility/CakeTime.php:883;906
+#: Utility/CakeTimephp:743
+msgid "on %s"
+msgstr "%s"
+
+#: Utility/CakeTimephp:795
+msgid "just now"
+msgstr "только что"
+
+#: Utility/CakeTimephp:911
+msgid "about a second ago"
+msgstr "около секунды назад"
+
+#: Utility/CakeTimephp:912
+msgid "about a minute ago"
+msgstr "около минуты назад"
+
+#: Utility/CakeTimephp:913
+msgid "about an hour ago"
+msgstr "около часа назад"
+
+#: Utility/CakeTimephp:914
+msgid "about a day ago"
+msgstr "около дня назад"
+
+#: Utility/CakeTimephp:915
+msgid "about a week ago"
+msgstr "около недели назад"
+
+#: Utility/CakeTimephp:916
+msgid "about a year ago"
+msgstr "около года назад"
+
+#: Utility/CakeTimephp:925
+msgid "in about a second"
+msgstr "примерно через секунду"
+
+#: Utility/CakeTimephp:926
+msgid "in about a minute"
+msgstr "примерно через минуту"
+
+#: Utility/CakeTimephp:927
+msgid "in about an hour"
+msgstr "примерно через час"
+
+#: Utility/CakeTimephp:928
+msgid "in about a day"
+msgstr "примерно через день"
+
+#: Utility/CakeTimephp:929
+msgid "in about a week"
+msgstr "примерно через неделю"
+
+#: Utility/CakeTimephp:930
+msgid "in about a year"
+msgstr "примерно через год"
+
+#: Utility/CakeTimephp:952;974
 msgid "days"
 msgstr "дней"
 
-# Используется в Time Helper
-#: Utility/CakeTime.php:154
-msgid "abday"
-msgstr ""
-
-#: Utility/CakeTime.php:160
-msgid "day"
-msgstr "день"
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:166
-msgid "d_t_fmt"
-msgstr ""
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:188
-msgid "abmon"
-msgstr ""
-
-#: Utility/CakeTime.php:194
-msgid "mon"
-msgstr "мес"
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:205
-msgid "am_pm"
-msgstr ""
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:212
-msgid "t_fmt_ampm"
-msgstr ""
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:226
-msgid "d_fmt"
-msgstr ""
-
-# Используется в Time Helper
-#: Utility/CakeTime.php:232
-msgid "t_fmt"
-msgstr ""
-
-#: Utility/CakeTime.php:842
+#: Utility/CakeTimephp:884
 msgid "%d year"
 msgid_plural "%d years"
 msgstr[0] "%d год"
 msgstr[1] "%d года"
 msgstr[2] "%d лет"
 
-#: Utility/CakeTime.php:845
+#: Utility/CakeTimephp:887
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] "%d месяц"
 msgstr[1] "%d месяца"
 msgstr[2] "%d месяцев"
 
-#: Utility/CakeTime.php:848
+#: Utility/CakeTimephp:890
 msgid "%d week"
 msgid_plural "%d weeks"
 msgstr[0] "%d неделя"
 msgstr[1] "%d недели"
 msgstr[2] "%d недель"
 
-#: Utility/CakeTime.php:851
+#: Utility/CakeTimephp:893
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "%d день"
 msgstr[1] "%d дня"
 msgstr[2] "%d дней"
 
-#: Utility/CakeTime.php:854
+#: Utility/CakeTimephp:896
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d час"
 msgstr[1] "%d часа"
 msgstr[2] "%d часов"
 
-#: Utility/CakeTime.php:857
+#: Utility/CakeTimephp:899
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d минута"
 msgstr[1] "%d минуты"
-msgstr[2] "1%d минут"
+msgstr[2] "%d минут"
 
-#: Utility/CakeTime.php:860
+#: Utility/CakeTimephp:902
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
 
-#: View/Helper/FormHelper.php:695
+#: View/Helper/FormHelperphp:733
 msgid "Error in field %s"
 msgstr "Ошибка в поле %s"
 
-#: View/Helper/FormHelper.php:884
-#: View/Scaffolds/form.ctp:49
-#: View/Scaffolds/index.ctp:80;95
-#: View/Scaffolds/view.ctp:67;82;193
+#: View/Helper/FormHelperphp:922
+#: View/Scaffolds/formctp:48
+#: View/Scaffolds/indexctp:79;94
+#: View/Scaffolds/viewctp:65;80;190
 msgid "New %s"
 msgstr "Добавить %s"
 
-#: View/Helper/FormHelper.php:890
-#: View/Scaffolds/view.ctp:55;114
+#: View/Helper/FormHelperphp:928
+#: View/Scaffolds/viewctp:53;111
 msgid "Edit %s"
 msgstr "Редактировать %s"
 
-#: View/Helper/FormHelper.php:1458
+#: View/Helper/FormHelperphp:1500
 msgid "empty"
 msgstr "пусто"
 
-#: View/Helper/FormHelper.php:1830
-#: View/Scaffolds/form.ctp:24
+#: View/Helper/FormHelperphp:1894
+#: View/Scaffolds/formctp:23
 msgid "Submit"
 msgstr "Отправить"
 
-#: View/Helper/FormHelper.php:2747
+#: View/Helper/FormHelperphp:2875
 msgid "January"
 msgstr "Январь"
 
-#: View/Helper/FormHelper.php:2748
+#: View/Helper/FormHelperphp:2876
 msgid "February"
 msgstr "Февраль"
 
-#: View/Helper/FormHelper.php:2749
+#: View/Helper/FormHelperphp:2877
 msgid "March"
 msgstr "Март"
 
-#: View/Helper/FormHelper.php:2750
+#: View/Helper/FormHelperphp:2878
 msgid "April"
 msgstr "Апрель"
 
-#: View/Helper/FormHelper.php:2751
+#: View/Helper/FormHelperphp:2879
 msgid "May"
 msgstr "Май"
 
-#: View/Helper/FormHelper.php:2752
+#: View/Helper/FormHelperphp:2880
 msgid "June"
 msgstr "Июнь"
 
-#: View/Helper/FormHelper.php:2753
+#: View/Helper/FormHelperphp:2881
 msgid "July"
 msgstr "Июль"
 
-#: View/Helper/FormHelper.php:2754
+#: View/Helper/FormHelperphp:2882
 msgid "August"
 msgstr "Август"
 
-#: View/Helper/FormHelper.php:2755
+#: View/Helper/FormHelperphp:2883
 msgid "September"
 msgstr "Сентябрь"
 
-#: View/Helper/FormHelper.php:2756
+#: View/Helper/FormHelperphp:2884
 msgid "October"
 msgstr "Октябрь"
 
-#: View/Helper/FormHelper.php:2757
+#: View/Helper/FormHelperphp:2885
 msgid "November"
 msgstr "Ноябрь"
 
-#: View/Helper/FormHelper.php:2758
+#: View/Helper/FormHelperphp:2886
 msgid "December"
 msgstr "Декабрь"
 
-#: View/Helper/HtmlHelper.php:748
+#: View/Helper/HtmlHelperphp:769
 msgid "Home"
 msgstr "Домой"
 
-#: View/Helper/PaginatorHelper.php:606
+#: View/Helper/PaginatorHelperphp:638
 msgid " of "
 msgstr " из "
 
-#: View/Scaffolds/form.ctp:28
-#: View/Scaffolds/index.ctp:27;78
-#: View/Scaffolds/view.ctp:51
+#: View/Scaffolds/formctp:27
+#: View/Scaffolds/indexctp:26;77
+#: View/Scaffolds/viewctp:49
 msgid "Actions"
 msgstr "Действия"
 
-#: View/Scaffolds/form.ctp:32
-#: View/Scaffolds/index.ctp:52
-#: View/Scaffolds/view.ctp:178
+#: View/Scaffolds/formctp:31
+#: View/Scaffolds/indexctp:51
+#: View/Scaffolds/viewctp:175
 msgid "Delete"
 msgstr "Удалить"
 
-#: View/Scaffolds/form.ctp:35
-#: View/Scaffolds/index.ctp:55
-#: View/Scaffolds/view.ctp:59;181
+#: View/Scaffolds/formctp:34
+#: View/Scaffolds/indexctp:54
+#: View/Scaffolds/viewctp:57;178
 msgid "Are you sure you want to delete # %s?"
-msgstr "Вы уверены, что хотите удалить # %s ?"
+msgstr "Вы уверены, что хотите удалить # %s?"
 
-#: View/Scaffolds/form.ctp:38
+#: View/Scaffolds/formctp:37
 msgid "List"
 msgstr "Список"
 
-#: View/Scaffolds/form.ctp:45
-#: View/Scaffolds/index.ctp:88
-#: View/Scaffolds/view.ctp:63;76
+#: View/Scaffolds/formctp:44
+#: View/Scaffolds/indexctp:87
+#: View/Scaffolds/viewctp:61;74
 msgid "List %s"
 msgstr "Список %s"
 
-#: View/Scaffolds/index.ctp:49
-#: View/Scaffolds/view.ctp:166
+#: View/Scaffolds/indexctp:48
+#: View/Scaffolds/viewctp:163
 msgid "View"
 msgstr "Просмотреть"
 
-#: View/Scaffolds/index.ctp:50
-#: View/Scaffolds/view.ctp:172
+#: View/Scaffolds/indexctp:49
+#: View/Scaffolds/viewctp:169
 msgid "Edit"
 msgstr "Редактировать"
 
-#: View/Scaffolds/index.ctp:66
+#: View/Scaffolds/indexctp:65
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
 msgstr "Страница {:page} из {:pages}, показано {:current} записей из {:count}, начиная с {:start}, заканчивая {:end}"
 
-#: View/Scaffolds/index.ctp:71
+#: View/Scaffolds/indexctp:70
 msgid "previous"
 msgstr "назад"
 
-#: View/Scaffolds/index.ctp:73
+#: View/Scaffolds/indexctp:72
 msgid "next"
 msgstr "вперёд"
 
-#: View/Scaffolds/view.ctp:21
+#: View/Scaffolds/viewctp:20
 msgid "View %s"
-msgstr "Посмотр %s"
+msgstr "Просмотр %s"
 
-#: View/Scaffolds/view.ctp:59
+#: View/Scaffolds/viewctp:57
 msgid "Delete %s"
 msgstr "Удалить %s"
 
-#: View/Scaffolds/view.ctp:97;138
+#: View/Scaffolds/viewctp:95;135
 msgid "Related %s"
 msgstr "Связанные %s"
+
