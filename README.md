@@ -38,7 +38,7 @@ class PostsTable extends Table
     {
         $validator = new Validator();
         $validator->provider('fr', 'Localized\Validation\FrValidation');
-        $validator->add('phoneField', 'myCustomRuleForPhone', [
+        $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
             'provider' => 'fr'
         ]);
@@ -49,42 +49,10 @@ class PostsTable extends Table
 
 For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
 
-## Using localized validations with Validation
-
-You can also access the localized validators any time you would call `Validation` methods. After importing the validation class.
-
-```php
-if (Validation::postal($value, null, 'cz')) {
-    // Do something with valid postal code
-}
-```
-
-## Dynamic forwarding of validation
-Using a snippet like the following could reduce the manual include/setup part when using multiple localizations:
-```php
-// Inside your custom validation rule validatePostal()
-// $country (de, at, ...) and $value (12345, 1234, ...) given
-$className = ucfirst($country) . 'Validation';
-App::uses($className, 'Localized.Validation');
-
-// Skip if we don't have that country, then only check for existence
-if (!class_exists($className) || !method_exists($className, 'postal')) {
-    return !empty($value);
-}
-
-try {
-    $result = Validation::postal($value, null, $country);
-} catch (NotImplementedException $e) {
-    $result = !empty($value);
-}
-
-return $result;
-```
-
 ## PO files
 
 This plugin also houses translations for the client-facing translated strings in the core (the `cake` domain). to use these files link or copy them
-into their expected location: `APP/Locale/<locale>/LC_MESSAGES/cake.po`
+into their expected location: `src/Locale/<locale>/LC_MESSAGES/cake.po`
 
 ## LC_TIME files
 
