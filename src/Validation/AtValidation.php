@@ -24,7 +24,6 @@ use Localized\Validation\LocalizedValidation;
  */
 class AtValidation extends LocalizedValidation
 {
-
     /**
      * Checks a postal code.
      *

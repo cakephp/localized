@@ -24,7 +24,6 @@ use Localized\Validation\LocalizedValidation;
  */
 class AuValidation extends LocalizedValidation
 {
-
     /**
      * Checks a postal code for Australia.
      *
