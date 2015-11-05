@@ -8,24 +8,17 @@ This plugin contains various localized validation classes for specific countries
 
 The master branch has the following requirements:
 
-* CakePHP 2.1.0 or greater.
-* PHP 5.3 or greater.
+* CakePHP 3.1.0 or greater.
+* PHP 5.4.16 or greater.
 
 ## Installation
 
-* Clone/Copy the files in this directory into `app/Plugin/Localized`
-* Ensure the plugin is loaded in `app/Config/bootstrap.php` by calling `CakePlugin::load('Localized');`
+You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
 
-### Using Composer
-
-Ensure `require` is present in `composer.json`. This will install the plugin into `Plugin/Localized`:
+The recommended way to install composer packages is:
 
 ```
-{
-    "require": {
-        "cakephp/localized": "2.4.*"
-    }
-}
+composer require --dev cakephp/localized
 ```
 
 ## Model validation
