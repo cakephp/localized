@@ -27,7 +27,7 @@ Localized validation classes can be used for validating model fields.
 
 ```php
 <?php
-namespace Indices\Model\Table;
+namespace App\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
@@ -59,16 +59,6 @@ into their expected location: `src/Locale/<locale>/LC_MESSAGES/cake.po`
 This plugin also houses POSIX compliant LC_TIME files which are used for translating
 time related string of LC_TIME domain. To use these files link or copy them into
 their expected location: `APP/Locale/<locale>/LC_TIME`.
-
-## Migration Guide
-
-### Localized.Validation
-
-The lib path for validation files changed. They should now be either in `APP/Validation/` or in `APP/PluginName/Validation/`.
-
-You also need to adjust your App::uses() statements in your code accordingly:
-
-`App::uses('MxValidation', 'Localized.Lib');` is now `App::uses('MxValidation', 'Localized.Validation');`
 
 ## Contributing to Localized
 
