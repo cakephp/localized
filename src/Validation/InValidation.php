@@ -13,44 +13,48 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+namespace Localized\Validation;
+
+use Localized\Validation\LocalizedValidation;
 
 /**
  * InValidation
  */
-class InValidation extends LocalizedValidation {
+class InValidation extends LocalizedValidation
+{
+    /**
+     * Validate postal code
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function postal($check)
+    {
+        $pattern = '/^\d{3}\s?\d{3}$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Validate postal code
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function postal($check) {
-		$pattern = '/^\d{3}\s?\d{3}$/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Validate phone number
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function phone($check)
+    {
+        $pattern = '/((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Validate phone number
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function phone($check) {
-		$pattern = '/((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/';
-		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Checks an identification number.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @throws NotImplementedException
- */
-	public static function personId($check) {
-		throw new NotImplementedException('Validation method not implemented yet.');
-	}
-
+    /**
+     * Checks an identification number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     * @throws NotImplementedException
+     */
+    public static function personId($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 }

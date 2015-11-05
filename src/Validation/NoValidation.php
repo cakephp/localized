@@ -13,62 +13,67 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+namespace Localized\Validation;
+
+use Localized\Validation\LocalizedValidation;
 
 /**
  * NoValidation
  *
  */
-class NoValidation extends LocalizedValidation {
+class NoValidation extends LocalizedValidation
+{
+    /**
+     * Checks date of birth formal format for Norway (dd.mm.yyyy),
+     * afterwards checks if is a valid gregorian calendar date.
+     *
+     * @param string $check the date of birth.
+     * @return bool Success.
+     */
+    public static function dob($check)
+    {
+        $pattern = '/^\d{1,2}\.\d{1,2}\.(\d{2}|\d{4})$/';
+        $return = preg_match($pattern, $check);
+        if (!$return) {
+            return false;
+        }
+        $check = str_replace('.', ',', $check);
+        $check = explode(',', $check, 3);
+        return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
+    }
 
-/**
- * Checks date of birth formal format for Norway (dd.mm.yyyy),
- * afterwards checks if is a valid gregorian calendar date.
- *
- * @param string $check the date of birth.
- * @return bool Success.
- */
-	public static function dob($check) {
-		$pattern = '/^\d{1,2}\.\d{1,2}\.(\d{2}|\d{4})$/';
-		$return = preg_match($pattern, $check);
-		if (!$return) {
-			return false;
-		}
-		$check = str_replace('.', ',', $check);
-		$check = explode(',', $check, 3);
-		return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
-	}
+    /**
+     * Checks a phone number for Norway.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function phone($check)
+    {
+        return (bool)preg_match('/^((\d{8})|(\d{3} \d{2} \d{3})|(\d{2} \d{2} \d{2} \d{2}))$/', $check);
+    }
 
-/**
- * Checks a phone number for Norway.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function phone($check) {
-		return (bool)preg_match('/^((\d{8})|(\d{3} \d{2} \d{3})|(\d{2} \d{2} \d{2} \d{2}))$/', $check);
-	}
+    /**
+     * Checks a postal code for Norway.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function postal($check)
+    {
+        $pattern = '/^\d{4}$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Checks a postal code for Norway.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function postal($check) {
-		$pattern = '/^\d{4}$/';
-		return (bool)preg_match($pattern, $check);
-	}
-
-/**
- * Checks a social security number for Norway.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function personId($check) {
-		$pattern = '/^(\d{11})|(\d{6} \d{5})$/';
-		return (bool)preg_match($pattern, $check);
-	}
-
+    /**
+     * Checks a social security number for Norway.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function personId($check)
+    {
+        $pattern = '/^(\d{11})|(\d{6} \d{5})$/';
+        return (bool)preg_match($pattern, $check);
+    }
 }

@@ -13,76 +13,81 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+namespace Localized\Validation;
+
+use Localized\Validation\LocalizedValidation;
 
 /**
  * DeValidation
  *
  */
-class DeValidation extends LocalizedValidation {
+class DeValidation extends LocalizedValidation
+{
+    /**
+     * Checks a postal code for Germany.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function postal($check)
+    {
+        $pattern = '/^[0-9]{5}$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Checks a postal code for Germany.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function postal($check) {
-		$pattern = '/^[0-9]{5}$/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Checks an address (street and number) for Germany.
+     * That is what is called "Straße und Hausnummer",
+     * the first line of a german formal address block.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function address1($check)
+    {
+        $pattern = '/[a-zA-ZäöüÄÖÜß \.]+ [0-9]+[a-zA-Z]?/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Checks an address (street and number) for Germany.
- * That is what is called "Straße und Hausnummer",
- * the first line of a german formal address block.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function address1($check) {
-		$pattern = '/[a-zA-ZäöüÄÖÜß \.]+ [0-9]+[a-zA-Z]?/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Checks a phone number for Germany.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function phone($check)
+    {
+        $pattern = '/^[0-9\/. \-]*$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Checks a phone number for Germany.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function phone($check) {
-		$pattern = '/^[0-9\/. \-]*$/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Checks date of birth formal format for Germany (dd.mm.yyyy),
+     * afterwards checks it is a valid gregorian calendar date.
+     *
+     * @param string $check the date of birth.
+     * @return bool Success.
+     */
+    public static function dob($check)
+    {
+        $pattern = '/^\d{2}\.\d{2}\.(\d{2}|\d{4})$/';
+        $return = preg_match($pattern, $check);
+        if (!$return) {
+            return false;
+        }
+        $check = str_replace('.', ',', $check);
+        $check = explode(',', $check, 3);
+        return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
+    }
 
-/**
- * Checks date of birth formal format for Germany (dd.mm.yyyy),
- * afterwards checks it is a valid gregorian calendar date.
- *
- * @param string $check the date of birth.
- * @return bool Success.
- */
-	public static function dob($check) {
-		$pattern = '/^\d{2}\.\d{2}\.(\d{2}|\d{4})$/';
-		$return = preg_match($pattern, $check);
-		if (!$return) {
-			return false;
-		}
-		$check = str_replace('.', ',', $check);
-		$check = explode(',', $check, 3);
-		return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
-	}
-
-/**
- * Checks a country specific identification number.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @throws NotImplementedException
- */
-	public static function personId($check) {
-		throw new NotImplementedException('Validation method not implemented yet.');
-	}
-
+    /**
+     * Checks a country specific identification number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function personId($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 }

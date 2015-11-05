@@ -13,45 +13,48 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('LocalizedValidation', 'Localized.Validation');
+namespace Localized\Validation;
+
+use Localized\Validation\LocalizedValidation;
 
 /**
  * AtValidation
  *
  */
-class AtValidation extends LocalizedValidation {
+class AtValidation extends LocalizedValidation
+{
 
-/**
- * Checks a postal code.
- *
- * @param string $check The value to check.
- * @return bool Success.
- */
-	public static function postal($check) {
-		$pattern = '/^[0-9]{4}$/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Checks a postal code.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function postal($check)
+    {
+        $pattern = '/^[0-9]{4}$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-/**
- * Checks a phone number.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @throws NotImplementedException
- */
-	public static function phone($check) {
-		throw new NotImplementedException('Validation method not implemented yet.');
-	}
+    /**
+     * Checks a phone number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function phone($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 
-/**
- * Checks a country specific identification number.
- *
- * @param string $check The value to check.
- * @return bool Success.
- * @throws NotImplementedException
- */
-	public static function personId($check) {
-		throw new NotImplementedException('Validation method not implemented yet.');
-	}
-
+    /**
+     * Checks a country specific identification number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function personId($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 }
