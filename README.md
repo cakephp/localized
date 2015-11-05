@@ -18,7 +18,7 @@ You can install this plugin into your CakePHP application using [composer](http:
 The recommended way to install composer packages is:
 
 ```
-composer require --dev cakephp/localized
+composer require cakephp/localized
 ```
 
 ## Model validation
@@ -27,22 +27,27 @@ Localized validation classes can be used for validating model fields.
 
 ```php
 <?php
-App::uses('MxValidation', 'Localized.Validation');
+namespace Indices\Model\Table;
 
-class Post extends AppModel {
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
 
-	public $validate = array(
-		'postal' => array(
-			'valid' => array(
-				'rule' => array('postal', null, 'mx'),
-				'message' => 'Must be valid mexico postal code'
-			)
-		)
-	);
+class PostsTable extends Table
+{
+    public function validationDefault(Validator $validator)
+    {
+        $validator = new Validator();
+        $validator->provider('fr', 'Localized\Validation\FrValidation');
+        $validator->add('phoneField', 'myCustomRuleForPhone', [
+            'rule' => 'phone',
+            'provider' => 'fr'
+        ]);
+
+    }
 }
 ```
 
-For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/2.0/en/models/data-validation.html)
+For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
 
 ## Using localized validations with Validation
 
@@ -50,7 +55,7 @@ You can also access the localized validators any time you would call `Validation
 
 ```php
 if (Validation::postal($value, null, 'cz')) {
-	// Do something with valid postal code
+    // Do something with valid postal code
 }
 ```
 
@@ -64,13 +69,13 @@ App::uses($className, 'Localized.Validation');
 
 // Skip if we don't have that country, then only check for existence
 if (!class_exists($className) || !method_exists($className, 'postal')) {
-	return !empty($value);
+    return !empty($value);
 }
 
 try {
-	$result = Validation::postal($value, null, $country);
+    $result = Validation::postal($value, null, $country);
 } catch (NotImplementedException $e) {
-	$result = !empty($value);
+    $result = !empty($value);
 }
 
 return $result;

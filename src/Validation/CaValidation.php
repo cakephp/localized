@@ -15,6 +15,7 @@
  */
 namespace Localized\Validation;
 
+use Cake\Network\Exception\NotImplementedException;
 use Localized\Validation\LocalizedValidation;
 
 /**
@@ -39,11 +40,12 @@ class CaValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
+     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone($check)
     {
-        //$this->markTestIncomplete('Not implemented yet.');
+        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
 
     /**
@@ -54,6 +56,6 @@ class CaValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-        //$this->markTestIncomplete('Not implemented yet.');
+        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
 }

@@ -34,15 +34,4 @@ class AtValidationTest extends TestCase
         $this->assertTrue(AtValidation::postal('5110'));
         $this->assertFalse(AtValidation::postal('05110'));
     }
-
-    /**
-     * test not implemented method
-     *
-     * @expectedException NotImplementedException
-     */
-    // public function testPhone()
-    // {
-    //     $this->markTestIncomplete('Not implemented yet.');
-    //     // AtValidation::phone('05110');
-    // }
 }
