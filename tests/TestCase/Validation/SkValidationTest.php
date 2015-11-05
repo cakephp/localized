@@ -13,21 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('SkValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\SkValidation;
 
 /**
  * SkValidationTest
  *
  */
-class SkValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of SkValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(SkValidation::postal('95616'));
-		$this->assertFalse(SkValidation::postal('0989'));
-	}
+class SkValidationTest extends TestCase
+{
+    /**
+     * test the postal method of SkValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(SkValidation::postal('95616'));
+        $this->assertFalse(SkValidation::postal('0989'));
+    }
 }

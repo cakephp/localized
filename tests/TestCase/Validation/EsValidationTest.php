@@ -13,42 +13,47 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('EsValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\EsValidation;
 
 /**
  * EsValidationTest
  *
  */
-class EsValidationTest extends CakeTestCase {
+class EsValidationTest extends TestCase
+{
+    /**
+     * test the postal method of EsValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(EsValidation::postal('02300'));
+        $this->assertFalse(EsValidation::postal('2300'));
+        $this->assertFalse(EsValidation::postal('230000'));
+    }
 
-/**
- * test the postal method of EsValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(EsValidation::postal('02300'));
-		$this->assertFalse(EsValidation::postal('2300'));
-		$this->assertFalse(EsValidation::postal('230000'));
-	}
-
-/**
- * test the phone method of EsValidation
- *
- * @return void
- */
-	public function testPhone() {
-		$this->assertTrue(EsValidation::phone('924227227'));
-		$this->assertTrue(EsValidation::phone('924.227.227'));
-		$this->assertTrue(EsValidation::phone('924-227-227'));
-		$this->assertTrue(EsValidation::phone('924-22-72-27'));
-		$this->assertTrue(EsValidation::phone('924 22 72 27'));
-		$this->assertTrue(EsValidation::phone('924227227'));
-		$this->assertTrue(EsValidation::phone('624227227'));
-		$this->assertTrue(EsValidation::phone('924-227227'));
-		$this->assertTrue(EsValidation::phone('827-227227'));
-		$this->assertTrue(EsValidation::phone('91-2227227'));
-		$this->assertFalse(EsValidation::phone('127227227'));
-		$this->assertFalse(EsValidation::phone('813 4567'));
-	}
+    /**
+     * test the phone method of EsValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(EsValidation::phone('924227227'));
+        $this->assertTrue(EsValidation::phone('924.227.227'));
+        $this->assertTrue(EsValidation::phone('924-227-227'));
+        $this->assertTrue(EsValidation::phone('924-22-72-27'));
+        $this->assertTrue(EsValidation::phone('924 22 72 27'));
+        $this->assertTrue(EsValidation::phone('924227227'));
+        $this->assertTrue(EsValidation::phone('624227227'));
+        $this->assertTrue(EsValidation::phone('924-227227'));
+        $this->assertTrue(EsValidation::phone('827-227227'));
+        $this->assertTrue(EsValidation::phone('91-2227227'));
+        $this->assertFalse(EsValidation::phone('127227227'));
+        $this->assertFalse(EsValidation::phone('813 4567'));
+    }
 }

@@ -13,23 +13,27 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('BdValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\BdValidation;
 
 /**
  * BdValidationTest
  *
  */
-class BdValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of BdValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(BdValidation::postal('1200'));
-		$this->assertTrue(BdValidation::postal('3100'));
-		$this->assertFalse(BdValidation::postal('111'));
-		$this->assertFalse(BdValidation::postal('11123'));
-	}
+class BdValidationTest extends TestCase
+{
+    /**
+     * test the postal method of BdValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(BdValidation::postal('1200'));
+        $this->assertTrue(BdValidation::postal('3100'));
+        $this->assertFalse(BdValidation::postal('111'));
+        $this->assertFalse(BdValidation::postal('11123'));
+    }
 }

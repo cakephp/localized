@@ -13,31 +13,36 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('DeValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\DeValidation;
 
 /**
  * DeValidationTest
  *
  */
-class DeValidationTest extends CakeTestCase {
+class DeValidationTest extends TestCase
+{
+    /**
+     * test the phone method of DeValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(DeValidation::phone('0123456789'));
+        $this->assertFalse(DeValidation::phone('sometext'));
+    }
 
-/**
- * test the phone method of DeValidation
- *
- * @return void
- */
-	public function testPhone() {
-		$this->assertTrue(DeValidation::phone('0123456789'));
-		$this->assertFalse(DeValidation::phone('sometext'));
-	}
-
-/**
- * test the postal method of DeValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(DeValidation::postal('51109'));
-		$this->assertFalse(DeValidation::postal('051109'));
-	}
+    /**
+     * test the postal method of DeValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(DeValidation::postal('51109'));
+        $this->assertFalse(DeValidation::postal('051109'));
+    }
 }

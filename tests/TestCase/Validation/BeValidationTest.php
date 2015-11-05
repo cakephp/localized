@@ -13,21 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('BeValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\BeValidation;
 
 /**
  * BeValidationTest
  *
  */
-class BeValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of BeValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(BeValidation::postal('1804'));
-		$this->assertFalse(BeValidation::postal('01804'));
-	}
+class BeValidationTest extends TestCase
+{
+    /**
+     * test the postal method of BeValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(BeValidation::postal('1804'));
+        $this->assertFalse(BeValidation::postal('01804'));
+    }
 }

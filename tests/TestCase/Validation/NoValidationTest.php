@@ -13,65 +13,72 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('NoValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\NoValidation;
 
 /**
  * NoValidationTest
  *
  */
-class NoValidationTest extends CakeTestCase {
+class NoValidationTest extends TestCase
+{
+    /**
+     * test the dob method of NoValidation
+     *
+     * @return void
+     */
+    public function testDob()
+    {
+        // Examples from https://no.wikipedia.org/wiki/Dato
+        $this->assertTrue(NoValidation::dob('10.8.1962'));
+        $this->assertTrue(NoValidation::dob('10.08.1962'));
+        $this->assertTrue(NoValidation::dob('10.8.62'));
+        $this->assertTrue(NoValidation::dob('10.08.62'));
+        $this->assertTrue(NoValidation::dob('02.08.1965'));
+        $this->assertTrue(NoValidation::dob('2.8.1965'));
+        $this->assertTrue(NoValidation::dob('02.08.65'));
+        $this->assertTrue(NoValidation::dob('2.8.65'));
+        $this->assertFalse(NoValidation::dob('10/8/1962'));
+        $this->assertFalse(NoValidation::dob('10.24.1962'));
+    }
 
-/**
- * test the dob method of NoValidation
- *
- * @return void
- */
-	public function testDob() {
-		// Examples from https://no.wikipedia.org/wiki/Dato
-		$this->assertTrue(NoValidation::dob('10.8.1962'));
-		$this->assertTrue(NoValidation::dob('10.08.1962'));
-		$this->assertTrue(NoValidation::dob('10.8.62'));
-		$this->assertTrue(NoValidation::dob('10.08.62'));
-		$this->assertTrue(NoValidation::dob('02.08.1965'));
-		$this->assertTrue(NoValidation::dob('2.8.1965'));
-		$this->assertTrue(NoValidation::dob('02.08.65'));
-		$this->assertTrue(NoValidation::dob('2.8.65'));
-		$this->assertFalse(NoValidation::dob('10/8/1962'));
-		$this->assertFalse(NoValidation::dob('10.24.1962'));
-	}
+    /**
+     * test the phone method of NoValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(NoValidation::phone('12345678'));
+        $this->assertTrue(NoValidation::phone('12 34 56 78'));
+        $this->assertTrue(NoValidation::phone('123 45 678'));
+        $this->assertFalse(NoValidation::phone('1234567'));
+        $this->assertFalse(NoValidation::phone('1234567489'));
+    }
 
-/**
- * test the phone method of NoValidation
- *
- * @return void
- */
-	public function testPhone() {
-		$this->assertTrue(NoValidation::phone('12345678'));
-		$this->assertTrue(NoValidation::phone('12 34 56 78'));
-		$this->assertTrue(NoValidation::phone('123 45 678'));
-		$this->assertFalse(NoValidation::phone('1234567'));
-		$this->assertFalse(NoValidation::phone('1234567489'));
-	}
+    /**
+     * test the postal method of NoValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(NoValidation::postal('0123'));
+        $this->assertFalse(NoValidation::postal('90210'));
+    }
 
-/**
- * test the postal method of NoValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(NoValidation::postal('0123'));
-		$this->assertFalse(NoValidation::postal('90210'));
-	}
-
-/**
- * test the ssn method of NoValidation
- *
- * @return void
- */
-	public function testSsn() {
-		$this->assertTrue(NoValidation::ssn('12345678901'));
-		$this->assertTrue(NoValidation::ssn('123456 78901'));
-		$this->assertFalse(NoValidation::ssn('1234567890'));
-		$this->assertFalse(NoValidation::ssn('123456 7890'));
-	}
+    /**
+     * test the ssn method of NoValidation
+     *
+     * @return void
+     */
+    public function testSsn()
+    {
+        $this->assertTrue(NoValidation::ssn('12345678901'));
+        $this->assertTrue(NoValidation::ssn('123456 78901'));
+        $this->assertFalse(NoValidation::ssn('1234567890'));
+        $this->assertFalse(NoValidation::ssn('123456 7890'));
+    }
 }

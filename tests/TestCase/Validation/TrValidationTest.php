@@ -13,22 +13,26 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('TrValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\TrValidation;
 
 /**
  * TrValidationTest
  *
  */
-class TrValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of TrValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(TrValidation::postal('02300'));
-		$this->assertFalse(TrValidation::postal('2300'));
-		$this->assertFalse(TrValidation::postal('230000'));
-	}
+class TrValidationTest extends TestCase
+{
+    /**
+     * test the postal method of TrValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(TrValidation::postal('02300'));
+        $this->assertFalse(TrValidation::postal('2300'));
+        $this->assertFalse(TrValidation::postal('230000'));
+    }
 }

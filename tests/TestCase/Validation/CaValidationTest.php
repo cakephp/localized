@@ -13,21 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('CaValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\CaValidation;
 
 /**
  * CaValidationTest
  *
  */
-class CaValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of CaValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(CaValidation::postal('L4W 1S2'));
-		$this->assertFalse(CaValidation::postal('LI4 SOC'));
-	}
+class CaValidationTest extends TestCase
+{
+    /**
+     * test the postal method of CaValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(CaValidation::postal('L4W 1S2'));
+        $this->assertFalse(CaValidation::postal('LI4 SOC'));
+    }
 }

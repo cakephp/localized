@@ -13,54 +13,60 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('NlValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\NlValidation;
 
 /**
  * NlValidationTest
  *
  */
-class NlValidationTest extends CakeTestCase {
+class NlValidationTest extends TestCase
+{
+    /**
+     * test the phone method of NlValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(NlValidation::phone('020-5045100'));
+        $this->assertTrue(NlValidation::phone('0572-212121'));
+        $this->assertTrue(NlValidation::phone('0205045100'));
+        $this->assertTrue(NlValidation::phone('0572212121'));
+        $this->assertTrue(NlValidation::phone('0653123456'));
+        $this->assertTrue(NlValidation::phone('06-53123456'));
+        $this->assertFalse(NlValidation::phone('020-50451009'));
+    }
 
-/**
- * test the phone method of NlValidation
- *
- * @return void
- */
-	public function testPhone() {
-		$this->assertTrue(NlValidation::phone('020-5045100'));
-		$this->assertTrue(NlValidation::phone('0572-212121'));
-		$this->assertTrue(NlValidation::phone('0205045100'));
-		$this->assertTrue(NlValidation::phone('0572212121'));
-		$this->assertTrue(NlValidation::phone('0653123456'));
-		$this->assertTrue(NlValidation::phone('06-53123456'));
-		$this->assertFalse(NlValidation::phone('020-50451009'));
-	}
+    /**
+     * test the postal method of NlValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(NlValidation::postal('1620AB'));
+        $this->assertTrue(NlValidation::postal('1620 AB'));
+        $this->assertTrue(NlValidation::postal('5020FZ'));
+        $this->assertTrue(NlValidation::postal('5020 FZ'));
+        $this->assertFalse(NlValidation::postal('5020-FZ'));
+        $this->assertFalse(NlValidation::postal('5020'));
+        $this->assertFalse(NlValidation::postal('0110 AS'));
+        $this->assertFalse(NlValidation::postal('50222FZ'));
+    }
 
-/**
- * test the postal method of NlValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(NlValidation::postal('1620AB'));
-		$this->assertTrue(NlValidation::postal('1620 AB'));
-		$this->assertTrue(NlValidation::postal('5020FZ'));
-		$this->assertTrue(NlValidation::postal('5020 FZ'));
-		$this->assertFalse(NlValidation::postal('5020-FZ'));
-		$this->assertFalse(NlValidation::postal('5020'));
-		$this->assertFalse(NlValidation::postal('0110 AS'));
-		$this->assertFalse(NlValidation::postal('50222FZ'));
-	}
-
-/**
- * test the ssn method of NlValidation
- *
- * @return void
- */
-	public function testSsn() {
-		$this->assertTrue(NlValidation::ssn('187821321'));
-		$this->assertTrue(NlValidation::ssn('502222314'));
-		$this->assertFalse(NlValidation::ssn('18782132'));
-		$this->assertFalse(NlValidation::ssn('50222FZ'));
-	}
+    /**
+     * test the ssn method of NlValidation
+     *
+     * @return void
+     */
+    public function testSsn()
+    {
+        $this->assertTrue(NlValidation::ssn('187821321'));
+        $this->assertTrue(NlValidation::ssn('502222314'));
+        $this->assertFalse(NlValidation::ssn('18782132'));
+        $this->assertFalse(NlValidation::ssn('50222FZ'));
+    }
 }

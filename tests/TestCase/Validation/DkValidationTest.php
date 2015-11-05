@@ -13,21 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('DkValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\DkValidation;
 
 /**
  * DkValidationTest
  *
  */
-class DkValidationTest extends CakeTestCase {
-
-/**
- * test the ssn method of DkValidation
- *
- * @return void
- */
-	public function testSsn() {
-		$this->assertTrue(DkValidation::ssn('111111-3334'));
-		$this->assertFalse(DkValidation::ssn('111111-333'));
-	}
+class DkValidationTest extends TestCase
+{
+    /**
+     * test the ssn method of DkValidation
+     *
+     * @return void
+     */
+    public function testSsn()
+    {
+        $this->assertTrue(DkValidation::ssn('111111-3334'));
+        $this->assertFalse(DkValidation::ssn('111111-333'));
+    }
 }

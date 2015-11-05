@@ -13,23 +13,26 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('RoValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\RoValidation;
 
 /**
  * RoValidationTest
  *
  */
-class RoValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of RoValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(RoValidation::postal('517006'));
-		$this->assertFalse(RoValidation::postal('23708'));
-		$this->assertFalse(RoValidation::postal('23 708'));
-	}
-
+class RoValidationTest extends TestCase
+{
+    /**
+     * test the postal method of RoValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(RoValidation::postal('517006'));
+        $this->assertFalse(RoValidation::postal('23708'));
+        $this->assertFalse(RoValidation::postal('23 708'));
+    }
 }

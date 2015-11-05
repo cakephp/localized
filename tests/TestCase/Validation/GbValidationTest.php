@@ -11,21 +11,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('GbValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\GbValidation;
 
 /**
  * Gb Localized Validation class test case
  *
  */
-class GbValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of GbValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(GbValidation::postal('DT4 8PP'));
-		$this->assertFalse(GbValidation::postal('DT4-8PP'));
-	}
+class GbValidationTest extends TestCase
+{
+    /**
+     * test the postal method of GbValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(GbValidation::postal('DT4 8PP'));
+        $this->assertFalse(GbValidation::postal('DT4-8PP'));
+    }
 }

@@ -12,31 +12,35 @@
  * @link          http://cakephp.org
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('IdValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\IdValidation;
 
 /**
  * Indonesian Validation Test Case
  */
-class IdValidationTest extends CakeTestCase {
+class IdValidationTest extends TestCase
+{
+    /**
+     * Test the mobile method of IdValidation
+     *
+     * @return void
+     */
+    public function testMobile()
+    {
+        $this->assertTrue(IdValidation::mobile('08125985608'));
+        $this->assertFalse(IdValidation::mobile('8125985608'));
+    }
 
-/**
- * Test the mobile method of IdValidation
- *
- * @return void
- */
-	public function testMobile() {
-		$this->assertTrue(IdValidation::mobile('08125985608'));
-		$this->assertFalse(IdValidation::mobile('8125985608'));
-	}
-
-/**
- * Test the postal method of IdValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(IdValidation::postal('15000'));
-		$this->assertFalse(IdValidation::postal('00091'));
-	}
-
+    /**
+     * Test the postal method of IdValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(IdValidation::postal('15000'));
+        $this->assertFalse(IdValidation::postal('00091'));
+    }
 }

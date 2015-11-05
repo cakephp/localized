@@ -12,21 +12,25 @@
  * @link          http://cakephp.org
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('HrValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\HrValidation;
 
 /**
  * HrValidationTest
  *
  */
-class HrValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of HrValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(HrValidation::postal('25616'));
-		$this->assertFalse(HrValidation::postal('0989'));
-	}
+class HrValidationTest extends TestCase
+{
+    /**
+     * test the postal method of HrValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(HrValidation::postal('25616'));
+        $this->assertFalse(HrValidation::postal('0989'));
+    }
 }

@@ -13,42 +13,47 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('MxValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\MxValidation;
 
 /**
  * Mexican Validation Test Case
  *
  */
-class MxValidationTest extends CakeTestCase {
+class MxValidationTest extends TestCase
+{
+    /**
+     * test the phone method of MxValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(MxValidation::phone('1122334455'));
+        $this->assertTrue(MxValidation::phone('11 22 33 44 55'));
+        $this->assertTrue(MxValidation::phone('11-22-33-44-55'));
+        $this->assertTrue(MxValidation::phone('22334455'));
+        $this->assertTrue(MxValidation::phone('(112)233-4455'));
+        $this->assertTrue(MxValidation::phone('(11)2233-4455'));
 
-/**
- * test the phone method of MxValidation
- *
- * @return void
- */
-	public function testPhone() {
-		$this->assertTrue(MxValidation::phone('1122334455'));
-		$this->assertTrue(MxValidation::phone('11 22 33 44 55'));
-		$this->assertTrue(MxValidation::phone('11-22-33-44-55'));
-		$this->assertTrue(MxValidation::phone('22334455'));
-		$this->assertTrue(MxValidation::phone('(112)233-4455'));
-		$this->assertTrue(MxValidation::phone('(11)2233-4455'));
+        $this->assertFalse(MxValidation::phone('112233445566'));
+        $this->assertFalse(MxValidation::phone('22 33 44 55'));
+        $this->assertFalse(MxValidation::phone('11-22-33-44-552'));
+        $this->assertFalse(MxValidation::phone('122334455'));
+        $this->assertFalse(MxValidation::phone('(112)2233-4455'));
+        $this->assertFalse(MxValidation::phone('(111)2233-4455'));
+    }
 
-		$this->assertFalse(MxValidation::phone('112233445566'));
-		$this->assertFalse(MxValidation::phone('22 33 44 55'));
-		$this->assertFalse(MxValidation::phone('11-22-33-44-552'));
-		$this->assertFalse(MxValidation::phone('122334455'));
-		$this->assertFalse(MxValidation::phone('(112)2233-4455'));
-		$this->assertFalse(MxValidation::phone('(111)2233-4455'));
-	}
-
-/**
- * test the postal method of MxValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(MxValidation::postal('98000'));
-		$this->assertFalse(MxValidation::postal('1046'));
-	}
+    /**
+     * test the postal method of MxValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(MxValidation::postal('98000'));
+        $this->assertFalse(MxValidation::postal('1046'));
+    }
 }

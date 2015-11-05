@@ -13,22 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('ChValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\ChValidation;
 
 /**
  * ChValidationTest
  *
  */
-class ChValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of ChValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(ChValidation::postal('5112'));
-		$this->assertFalse(ChValidation::postal('05112'));
-	}
-
+class ChValidationTest extends TestCase
+{
+    /**
+     * test the postal method of ChValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(ChValidation::postal('5112'));
+        $this->assertFalse(ChValidation::postal('05112'));
+    }
 }

@@ -13,21 +13,25 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('CzValidation', 'Localized.Validation');
+namespace Localized\Test\TestCase\Validation;
+
+use Cake\TestSuite\TestCase;
+use Localized\Validation\CzValidation;
 
 /**
  * CzValidationTest
  *
  */
-class CzValidationTest extends CakeTestCase {
-
-/**
- * test the postal method of CzValidation
- *
- * @return void
- */
-	public function testPostal() {
-		$this->assertTrue(CzValidation::postal('123 45'));
-		$this->assertFalse(CzValidation::postal('95616'));
-	}
+class CzValidationTest extends TestCase
+{
+    /**
+     * test the postal method of CzValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(CzValidation::postal('123 45'));
+        $this->assertFalse(CzValidation::postal('95616'));
+    }
 }
