@@ -68,7 +68,7 @@ class BrValidation extends LocalizedValidation
 
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
-            $check = str_replace(array('-', '.', '/'), '', $check);
+            $check = str_replace(['-', '.', '/'], '', $check);
         } elseif (!ctype_digit($check)) {
             return false;
         }
@@ -114,7 +114,7 @@ class BrValidation extends LocalizedValidation
         $check = trim($check);
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
-            $check = str_replace(array('-', '.', '/'), '', $check);
+            $check = str_replace(['-', '.', '/'], '', $check);
         } elseif (!ctype_digit($check)) {
             return false;
         }

@@ -35,10 +35,13 @@ class CnValidation extends LocalizedValidation
      * @return bool Success.
      */
     public static function phone($check)
-	{
-        $pattern = '/^(((0086)|(\+86))-?)?(';        // optional nation prefix
-        $pattern .= '(1\d{10})';            // 1XXXXXXXXXX cellphone
-        $pattern .= '|(\d{3,4}-\d{7,8}(-\d{1,6})?)';    // XXX(X)-XXXXXXX(X)(-...) house phone
+    {
+        // optional nation prefix
+        $pattern = '/^(((0086)|(\+86))-?)?(';
+        // 1XXXXXXXXXX cellphone
+        $pattern .= '(1\d{10})';
+        // XXX(X)-XXXXXXX(X)(-...) house phone
+        $pattern .= '|(\d{3,4}-\d{7,8}(-\d{1,6})?)';
         $pattern .= ')$/';
         return (bool)preg_match($pattern, $check);
     }
@@ -53,7 +56,7 @@ class CnValidation extends LocalizedValidation
      * @return bool Success.
      */
     public static function postal($check)
-	{
+    {
         $pattern = '/^[0-9]{6}$/';
         return (bool)preg_match($pattern, $check);
     }
@@ -67,7 +70,7 @@ class CnValidation extends LocalizedValidation
      * @return bool Success.
      */
     public static function personId($check)
-	{
+    {
         if (strlen($check) !== 18) {
             return false;
         }

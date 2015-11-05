@@ -29,7 +29,8 @@ class DkValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success
      */
-    public static function personId($check) {
+    public static function personId($check)
+    {
         $pattern = '/\\A\\b[0-9]{6}-[0-9]{4}\\b\\z/i';
         return (bool)preg_match($pattern, $check);
     }
@@ -41,7 +42,8 @@ class DkValidation extends LocalizedValidation
      * @return bool Success
      * @throws NotImplementedException
      */
-    public static function postal($check) {
+    public static function postal($check)
+    {
         //$this->markTestIncomplete('Not implemented yet.');
     }
 
@@ -52,7 +54,8 @@ class DkValidation extends LocalizedValidation
      * @return bool Success.
      * @throws NotImplementedException
      */
-    public static function phone($check) {
+    public static function phone($check)
+    {
         //$this->markTestIncomplete('Not implemented yet.');
     }
 }

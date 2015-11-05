@@ -48,7 +48,7 @@ class PlValidation extends LocalizedValidation
         }
 
         $sum = 0;
-        $weights = array(6, 5, 7, 2, 3, 4, 5, 6, 7);
+        $weights = [6, 5, 7, 2, 3, 4, 5, 6, 7];
         $check = str_replace('-', '', $check);
 
         for ($i = 0; $i < 9; $i++) {
@@ -79,7 +79,7 @@ class PlValidation extends LocalizedValidation
         $pattern = '/^[0-9]{11}$/';
         if (preg_match($pattern, $check)) {
             $sum = 0;
-            $weights = array(1, 3, 7, 9, 1, 3, 7, 9, 1, 3);
+            $weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
 
             for ($i = 0; $i < 10; $i++) {
                 $sum += $check[$i] * $weights[$i];
@@ -110,7 +110,7 @@ class PlValidation extends LocalizedValidation
         $pattern = '/^[0-9]{9}$/';
         if (preg_match($pattern, $check)) {
             $sum = 0;
-            $weights = array(8, 9, 2, 3, 4, 5, 6, 7);
+            $weights = [8, 9, 2, 3, 4, 5, 6, 7];
 
             for ($i = 0; $i < 8; $i++) {
                 $sum += $check[$i] * $weights[$i];

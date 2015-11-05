@@ -93,7 +93,7 @@ class RuValidation extends LocalizedValidation
         if (strlen($check) === 10) {
             // legal person
             $checksum = array_pop($digits);
-            $tbNum = array(2, 4, 10, 3, 5, 9, 4, 6, 8);
+            $tbNum = [2, 4, 10, 3, 5, 9, 4, 6, 8];
             $calculatedChecksum = array_sum(array_map(function ($value, $multiplier) {
                 return $value * $multiplier;
             }, $tbNum, $digits)) % 11 % 10;
@@ -102,12 +102,12 @@ class RuValidation extends LocalizedValidation
             $checksum = join('', array_slice($digits, -2));
             $digits = array_slice($digits, 0, -1);
 
-            $tbNum = array(
-                array(7, 2, 4, 10, 3, 5, 9, 4, 6, 8),
-                array(3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8),
+            $tbNum = [
+                [7, 2, 4, 10, 3, 5, 9, 4, 6, 8],
+                [3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8],
             );
 
-            $sum = array(0, 0);
+            $sum = [0, 0];
             foreach ($tbNum as $key => $multipliers) {
                 $sum[$key] = array_sum(array_map(function ($value, $multiplier) {
                     return $value * $multiplier;

@@ -29,7 +29,8 @@ class EsValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function postal($check) {
+    public static function postal($check)
+    {
         $pattern = '/^(5[0-2]|[0-4][0-9])[0-9]{3}$/';
         return (bool)preg_match($pattern, $check);
     }
@@ -41,7 +42,7 @@ class EsValidation extends LocalizedValidation
      * @return bool Success.
      */
     public static function phone($check)
-	{
+    {
         $pattern = '/^\\+?(34[-. ]?)?\\(?(([689]{1})(([0-9]{2})\\)?[-. ]?|([0-9]{1})\\)?[-. ]?([0-9]{1}))|70\\)?[-. ]?([0-9]{1}))([0-9]{2})[-. ]?([0-9]{1})[-. ]?([0-9]{1})[-. ]?([0-9]{2})$/';
         return (bool)preg_match($pattern, $check);
     }
@@ -53,7 +54,7 @@ class EsValidation extends LocalizedValidation
      * @return bool Success.
      */
     public static function personId($check)
-	{
+    {
         //$this->markTestIncomplete('Not implemented yet.');
     }
 }

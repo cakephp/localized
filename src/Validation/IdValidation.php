@@ -23,49 +23,49 @@ use Localized\Validation\LocalizedValidation;
  */
 class IdValidation extends LocalizedValidation
 {
-	/**
-	 * Checks a postal code for Indonesia.
-	 *
-	 * @param string $check The value to check.
-	 * @return bool Success.
-	 */
-	public static function postal($check)
-	{
-		$pattern = '/[1-9][0-9]{4}/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Checks a postal code for Indonesia.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function postal($check)
+    {
+        $pattern = '/[1-9][0-9]{4}/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-	/**
-	 * Basic Check for Valid Mobile Mumbers for Indonesia.
-	 *
-	 * @param string $check The value to check.
-	 * @return bool Success.
-	 */
-	public static function mobile($check)
-	{
-		$pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
-		return (bool)preg_match($pattern, $check);
-	}
+    /**
+     * Basic Check for Valid Mobile Mumbers for Indonesia.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function mobile($check)
+    {
+        $pattern = '/(^0|^62|\+62)(8[0-9]{8,10})$/';
+        return (bool)preg_match($pattern, $check);
+    }
 
-	/**
-	 * Checks a phone number.
-	 *
-	 * @param string $check The value to check.
-	 * @return bool Success.
-	 */
-	public static function phone($check)
-	{
-		//$this->markTestIncomplete('Not implemented yet.');
-	}
+    /**
+     * Checks a phone number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function phone($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 
-	/**
-	 * Checks a country specific identification number.
-	 *
-	 * @param string $check The value to check.
-	 * @return bool Success.
-	 */
-	public static function personId($check)
-	{
-		//$this->markTestIncomplete('Not implemented yet.');
-	}
+    /**
+     * Checks a country specific identification number.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function personId($check)
+    {
+        //$this->markTestIncomplete('Not implemented yet.');
+    }
 }

@@ -25,21 +25,21 @@ use Localized\Validation\AtValidation;
 class AtValidationTest extends TestCase
 {
     /**
-	 * test the postal method of AtValidation
-	 *
-	 * @return void
-	 */
+     * test the postal method of AtValidation
+     *
+     * @return void
+     */
     public function testPostal()
     {
         $this->assertTrue(AtValidation::postal('5110'));
         $this->assertFalse(AtValidation::postal('05110'));
     }
 
-	/**
-	 * test not implemented method
-	 *
-	 * @expectedException NotImplementedException
-	 */
+    /**
+     * test not implemented method
+     *
+     * @expectedException NotImplementedException
+     */
     // public function testPhone()
     // {
     //     $this->markTestIncomplete('Not implemented yet.');
