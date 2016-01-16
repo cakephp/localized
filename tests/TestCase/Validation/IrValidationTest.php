@@ -148,13 +148,13 @@ class IrValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(IrValidation::ssn('9876543210'));
-        $this->assertTrue(IrValidation::ssn('1234567891'));
-        $this->assertTrue(IrValidation::ssn('0324354657'));
+        $this->assertTrue(IrValidation::personId('9876543210'));
+        $this->assertTrue(IrValidation::personId('1234567891'));
+        $this->assertTrue(IrValidation::personId('0324354657'));
 
-        $this->assertFalse(IrValidation::ssn('1234567890'));
-        //$this->assertFalse(IrValidation::ssn('3333333333'));
-        $this->assertFalse(IrValidation::ssn('0324354654'));
-        $this->assertFalse(IrValidation::ssn('12345'));
+        $this->assertFalse(IrValidation::personId('1234567890'));
+        //$this->assertFalse(IrValidation::personId('3333333333'));
+        $this->assertFalse(IrValidation::personId('0324354654'));
+        $this->assertFalse(IrValidation::personId('12345'));
     }
 }

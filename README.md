@@ -1,6 +1,7 @@
 # CakePHP Localized plugin
 [![Build Status](https://secure.travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
 [![License](https://poser.pugx.org/cakephp/localized/license.svg)](https://packagist.org/packages/cakephp/localized)
+[![Total Downloads](https://poser.pugx.org/cakephp/localized/d/total.svg)](https://packagist.org/packages/cakephp/localized)
 
 This plugin contains various localized validation classes for specific countries.
 
@@ -20,6 +21,12 @@ The recommended way to install composer packages is:
 ```
 composer require cakephp/localized
 ```
+
+Load your plugin using
+```
+bin/cake plugin load Localized
+```
+or by manually putting `CakePlugin::load('Localized')` in your `boostrap.php`.
 
 ## Model validation
 
@@ -42,12 +49,11 @@ class PostsTable extends Table
             'rule' => 'phone',
             'provider' => 'fr'
         ]);
-
     }
 }
 ```
 
-For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
+For further information on validation rules see the [CakePHP documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
 
 ## PO files
 
@@ -62,7 +68,9 @@ their expected location: `APP/Locale/<locale>/LC_TIME`.
 
 ## Contributing to Localized
 
-If you find that your country is not part of the Localized plugin, please fork the project on github.  Once you have forked the project you can commit your validator class (and any test cases).  Once you have pushed your changes back to github send a pull request, and your changes will be reviewed and merged in or feedback will be given.
+If you find that your country is not part of the Localized plugin, please fork the project on Github.
+Once you have forked the project you can commit your validator class (and any test cases).
+As soon as you have pushed your changes back to Github you can send a pull request and your changes will be reviewed and merged in, or feedback will be given.
 
 ### Validation methods
 
@@ -70,11 +78,11 @@ There are a few methods that are common to all classes, defined through the inte
 
 * `phone()` to check a phone number
 * `postal()` to check a postal code
-* `personId()` (and `ssn()` for BC) to check a country specific person ID
+* `personId()` to check a country specific person ID
 
 Please try to fit your validation rules in that naming scheme.
 Apart from that you can also define further validation methods in your implementing class, of course.
 
 ## Issues with Localized
 
-If you have issues with Localized, you can report them at https://github.com/cakephp/localized/issues
+If you have issues with Localized, you can report them at [github.com/cakephp/localized/issues](https://github.com/cakephp/localized/issues).

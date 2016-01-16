@@ -103,9 +103,9 @@ class UsValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertFalse(UsValidation::ssn('11-33-4333'));
-        $this->assertFalse(UsValidation::ssn('113-3-4333'));
-        $this->assertFalse(UsValidation::ssn('111-33-333'));
-        $this->assertTrue(UsValidation::ssn('111-33-4333'));
+        $this->assertFalse(UsValidation::personId('11-33-4333'));
+        $this->assertFalse(UsValidation::personId('113-3-4333'));
+        $this->assertFalse(UsValidation::personId('111-33-333'));
+        $this->assertTrue(UsValidation::personId('111-33-4333'));
     }
 }
