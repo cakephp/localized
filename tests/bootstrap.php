@@ -3,6 +3,8 @@
 require dirname(__DIR__) . '/vendor/cakephp/cakephp/src/basics.php';
 require dirname(__DIR__) . '/vendor/autoload.php';
 
+mb_internal_encoding('UTF-8');
+
 define('ROOT', dirname(__DIR__));
 define('APP_DIR', 'src');
 
@@ -29,6 +31,7 @@ Cake\Core\Configure::write('App', [
 ]);
 
 Cake\Core\Configure::write('debug', true);
+
 
 $cache = [
     'default' => [
