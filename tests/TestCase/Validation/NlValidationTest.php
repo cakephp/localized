@@ -64,9 +64,9 @@ class NlValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(NlValidation::ssn('187821321'));
-        $this->assertTrue(NlValidation::ssn('502222314'));
-        $this->assertFalse(NlValidation::ssn('18782132'));
-        $this->assertFalse(NlValidation::ssn('50222FZ'));
+        $this->assertTrue(NlValidation::personId('187821321'));
+        $this->assertTrue(NlValidation::personId('502222314'));
+        $this->assertFalse(NlValidation::personId('18782132'));
+        $this->assertFalse(NlValidation::personId('50222FZ'));
     }
 }

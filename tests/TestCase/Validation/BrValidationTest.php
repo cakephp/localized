@@ -121,29 +121,29 @@ class BrValidationTest extends TestCase
 
         $this->assertTrue(BrValidation::cnpj('04295166000133'));
         $this->assertTrue(BrValidation::cnpj('33530486000129'));
-        $this->assertTrue(BrValidation::ssn('04.295.166/0001-33'));
-        $this->assertTrue(BrValidation::ssn('33.530.486/0001-29'));
+        $this->assertTrue(BrValidation::personId('04.295.166/0001-33'));
+        $this->assertTrue(BrValidation::personId('33.530.486/0001-29'));
 
         // Testing ssn
-        $this->assertFalse(BrValidation::ssn('04295165000133'));
-        $this->assertFalse(BrValidation::ssn('33530485000129'));
-        $this->assertFalse(BrValidation::ssn('04295166000101'));
-        $this->assertFalse(BrValidation::ssn('33530486000130'));
-        $this->assertFalse(BrValidation::ssn('04.295.165/0001-33'));
-        $this->assertFalse(BrValidation::ssn('33.530.485/0001-29'));
-        $this->assertFalse(BrValidation::ssn('04.295.166/0001-01'));
-        $this->assertFalse(BrValidation::ssn('33.530.486/0001-30'));
-        $this->assertTrue(BrValidation::ssn('04295166000133'));
-        $this->assertTrue(BrValidation::ssn('33530486000129'));
-        $this->assertTrue(BrValidation::ssn('04.295.166/0001-33'));
-        $this->assertTrue(BrValidation::ssn('33.530.486/0001-29'));
+        $this->assertFalse(BrValidation::personId('04295165000133'));
+        $this->assertFalse(BrValidation::personId('33530485000129'));
+        $this->assertFalse(BrValidation::personId('04295166000101'));
+        $this->assertFalse(BrValidation::personId('33530486000130'));
+        $this->assertFalse(BrValidation::personId('04.295.165/0001-33'));
+        $this->assertFalse(BrValidation::personId('33.530.485/0001-29'));
+        $this->assertFalse(BrValidation::personId('04.295.166/0001-01'));
+        $this->assertFalse(BrValidation::personId('33.530.486/0001-30'));
+        $this->assertTrue(BrValidation::personId('04295166000133'));
+        $this->assertTrue(BrValidation::personId('33530486000129'));
+        $this->assertTrue(BrValidation::personId('04.295.166/0001-33'));
+        $this->assertTrue(BrValidation::personId('33.530.486/0001-29'));
 
         // Testing invalid input
-        $this->assertFalse(BrValidation::ssn('3712093712890371289073901287390812'));
-        $this->assertFalse(BrValidation::ssn('33aaaa86000129'));
-        $this->assertFalse(BrValidation::ssn('22692173813xxx'));
-        $this->assertFalse(BrValidation::ssn('226921xxx73813'));
-        $this->assertFalse(BrValidation::ssn('11111111111'));
+        $this->assertFalse(BrValidation::personId('3712093712890371289073901287390812'));
+        $this->assertFalse(BrValidation::personId('33aaaa86000129'));
+        $this->assertFalse(BrValidation::personId('22692173813xxx'));
+        $this->assertFalse(BrValidation::personId('226921xxx73813'));
+        $this->assertFalse(BrValidation::personId('11111111111'));
         $this->assertFalse(BrValidation::cpf('abcdefghi'));
     }
 }

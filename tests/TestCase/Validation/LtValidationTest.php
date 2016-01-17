@@ -88,13 +88,13 @@ class LtValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(LtValidation::ssn('SK 4321425'));
-        $this->assertTrue(LtValidation::ssn('SP 4321475'));
-        $this->assertTrue(LtValidation::ssn('NS-4321425'));
-        $this->assertTrue(LtValidation::ssn('zc 4321425'));
-        $this->assertFalse(LtValidation::ssn('a 4525214'));
-        $this->assertFalse(LtValidation::ssn('bfd 4521455'));
-        $this->assertFalse(LtValidation::ssn('111-4555115'));
-        $this->assertFalse(LtValidation::ssn('11-1421455'));
+        $this->assertTrue(LtValidation::personId('SK 4321425'));
+        $this->assertTrue(LtValidation::personId('SP 4321475'));
+        $this->assertTrue(LtValidation::personId('NS-4321425'));
+        $this->assertTrue(LtValidation::personId('zc 4321425'));
+        $this->assertFalse(LtValidation::personId('a 4525214'));
+        $this->assertFalse(LtValidation::personId('bfd 4521455'));
+        $this->assertFalse(LtValidation::personId('111-4555115'));
+        $this->assertFalse(LtValidation::personId('11-1421455'));
     }
 }

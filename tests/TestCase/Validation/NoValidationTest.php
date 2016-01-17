@@ -76,9 +76,9 @@ class NoValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(NoValidation::ssn('12345678901'));
-        $this->assertTrue(NoValidation::ssn('123456 78901'));
-        $this->assertFalse(NoValidation::ssn('1234567890'));
-        $this->assertFalse(NoValidation::ssn('123456 7890'));
+        $this->assertTrue(NoValidation::personId('12345678901'));
+        $this->assertTrue(NoValidation::personId('123456 78901'));
+        $this->assertFalse(NoValidation::personId('1234567890'));
+        $this->assertFalse(NoValidation::personId('123456 7890'));
     }
 }

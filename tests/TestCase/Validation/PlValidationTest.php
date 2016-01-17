@@ -43,12 +43,12 @@ class PlValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(PlValidation::ssn('768-000-24-66'));
-        $this->assertTrue(PlValidation::ssn('768-00-02-466'));
-        $this->assertTrue(PlValidation::ssn('7680002466'));
-        $this->assertFalse(PlValidation::ssn('768-000-24-65'));
-        $this->assertFalse(PlValidation::ssn('769-000-24-66'));
-        $this->assertFalse(PlValidation::ssn('7680002566'));
+        $this->assertTrue(PlValidation::personId('768-000-24-66'));
+        $this->assertTrue(PlValidation::personId('768-00-02-466'));
+        $this->assertTrue(PlValidation::personId('7680002466'));
+        $this->assertFalse(PlValidation::personId('768-000-24-65'));
+        $this->assertFalse(PlValidation::personId('769-000-24-66'));
+        $this->assertFalse(PlValidation::personId('7680002566'));
     }
 
     /**

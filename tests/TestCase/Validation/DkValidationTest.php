@@ -31,7 +31,7 @@ class DkValidationTest extends TestCase
      */
     public function testSsn()
     {
-        $this->assertTrue(DkValidation::ssn('111111-3334'));
-        $this->assertFalse(DkValidation::ssn('111111-333'));
+        $this->assertTrue(DkValidation::personId('111111-3334'));
+        $this->assertFalse(DkValidation::personId('111111-333'));
     }
 }
