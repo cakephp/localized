@@ -49,12 +49,17 @@ class FrValidationTest extends TestCase
      */
     public function testPostal()
     {
+        $this->assertTrue(FrValidation::postal('01001'));
         $this->assertTrue(FrValidation::postal('14000'));
         $this->assertTrue(FrValidation::postal('75001'));
         $this->assertTrue(FrValidation::postal('13200'));
         $this->assertTrue(FrValidation::postal('97500'));
+        $this->assertTrue(FrValidation::postal('99138'));
         $this->assertFalse(FrValidation::postal('1400'));
         $this->assertFalse(FrValidation::postal('14 000'));
+        $this->assertFalse(FrValidation::postal('00000'));
+        $this->assertFalse(FrValidation::postal('01000'));
+        $this->assertFalse(FrValidation::postal('99139'));
     }
 
     /**
