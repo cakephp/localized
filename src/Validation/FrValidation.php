@@ -44,7 +44,11 @@ class FrValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{5}$/';
-        return (bool)preg_match($pattern, $check);
+        if ((bool)preg_match($pattern, $check)) {
+            $value = intval($check);
+            return $value >= 1001 && $value <= 99138;
+        }
+        return false;
     }
 
     /**
