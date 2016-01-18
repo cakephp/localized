@@ -6,6 +6,8 @@ php:
   - 5.6
   - 7.0
 
+sudo: false
+
 matrix:
   fast_finish: true
 
