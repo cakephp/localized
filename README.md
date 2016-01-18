@@ -33,7 +33,6 @@ or by manually putting `CakePlugin::load('Localized')` in your `boostrap.php`.
 Localized validation classes can be used for validating model fields.
 
 ```php
-<?php
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
@@ -64,7 +63,7 @@ into their expected location: `src/Locale/<locale>/LC_MESSAGES/cake.po`
 
 This plugin also houses POSIX compliant LC_TIME files which are used for translating
 time related string of LC_TIME domain. To use these files link or copy them into
-their expected location: `APP/Locale/<locale>/LC_TIME`.
+their expected location: `src/Locale/<locale>/LC_TIME`.
 
 ## Contributing to Localized
 
