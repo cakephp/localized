@@ -42,7 +42,6 @@ class PostsTable extends Table
 {
     public function validationDefault(Validator $validator)
     {
-        $validator = new Validator();
         $validator->provider('fr', 'Localized\Validation\FrValidation');
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
