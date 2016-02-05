@@ -15,8 +15,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\BdValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * BdValidationTest

@@ -15,8 +15,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\CzValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * CzValidationTest

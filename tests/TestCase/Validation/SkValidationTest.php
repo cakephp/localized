@@ -15,8 +15,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\SkValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * SkValidationTest

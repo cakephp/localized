@@ -15,8 +15,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\ChValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * ChValidationTest

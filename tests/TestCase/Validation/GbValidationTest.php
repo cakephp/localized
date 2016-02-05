@@ -13,8 +13,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\GbValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * Gb Localized Validation class test case

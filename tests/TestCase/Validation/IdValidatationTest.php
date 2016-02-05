@@ -14,8 +14,8 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
-use Cake\TestSuite\TestCase;
 use Cake\Localized\Validation\IdValidation;
+use Cake\TestSuite\TestCase;
 
 /**
  * Indonesian Validation Test Case
