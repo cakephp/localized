@@ -10,7 +10,7 @@
  * @link          http://cakephp.org
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Validation;
+namespace Cake\Localized\Validation;
 
 /**
  * Localized Validation base class.

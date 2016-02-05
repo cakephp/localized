@@ -13,7 +13,7 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Test\TestCase\Validation;
+namespace Cake\Localized\Test\TestCase\Validation;
 
 use Cake\TestSuite\TestCase;
 use Cake\Validation\Validator;
@@ -32,7 +32,7 @@ class IntegrationTest extends TestCase
     public function testLocalizedProviderIntegration()
     {
         $validator = new Validator;
-        $validator->provider('fr', 'Localized\Validation\FrValidation');
+        $validator->provider('fr', 'Cake\Localized\Validation\FrValidation');
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
             'provider' => 'fr',

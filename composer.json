@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Localized\\": "src"
+            "Cake\\Localized\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests",
-            "Localized\\Test\\": "tests"
+            "Cake\\Localized\\Test\\": "tests"
         }
     },
     "minimum-stability": "beta"
