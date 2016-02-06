@@ -13,10 +13,10 @@
  * @since         Localized Plugin v 1.0.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Test\TestCase\Validation;
+namespace Cake\Localized\Test\TestCase\Validation;
 
+use Cake\Localized\Validation\RuValidation;
 use Cake\TestSuite\TestCase;
-use Localized\Validation\RuValidation;
 
 /**
  * RuValidationTest

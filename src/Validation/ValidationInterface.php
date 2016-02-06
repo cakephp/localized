@@ -11,7 +11,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-namespace Localized\Validation;
+namespace Cake\Localized\Validation;
 
 /**
  * ValidationInterface defining some common base validation methods.

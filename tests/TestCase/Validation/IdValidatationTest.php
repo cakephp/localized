@@ -12,10 +12,10 @@
  * @link          http://cakephp.org
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Test\TestCase\Validation;
+namespace Cake\Localized\Test\TestCase\Validation;
 
+use Cake\Localized\Validation\IdValidation;
 use Cake\TestSuite\TestCase;
-use Localized\Validation\IdValidation;
 
 /**
  * Indonesian Validation Test Case

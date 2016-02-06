@@ -11,10 +11,9 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Validation;
+namespace Cake\Localized\Validation;
 
 use Cake\Network\Exception\NotImplementedException;
-use Localized\Validation\LocalizedValidation;
 
 /**
  * GB Localized Validation class. Handles localized validation for The United Kingdom

@@ -13,9 +13,7 @@
  * @since         Localized Plugin v 1.0.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Validation;
-
-use Localized\Validation\LocalizedValidation;
+namespace Cake\Localized\Validation;
 
 /**
  * RuValidation

@@ -23,4 +23,4 @@ if (file_exists($root . '/config/bootstrap.php')) {
 
 require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
 
-Plugin::load('Localized', ['path' => dirname(dirname(__FILE__)) . DS]);
+Plugin::load('Cake/Localized', ['path' => dirname(dirname(__FILE__)) . DS]);

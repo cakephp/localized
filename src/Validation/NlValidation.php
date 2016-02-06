@@ -11,9 +11,7 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Localized\Validation;
-
-use Localized\Validation\LocalizedValidation;
+namespace Cake\Localized\Validation;
 
 /**
  * Dutch Localized Validation class. Handles localized validation for The Netherlands

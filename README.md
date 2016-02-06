@@ -26,7 +26,7 @@ Load your plugin using
 ```
 bin/cake plugin load Localized
 ```
-or by manually putting `CakePlugin::load('Localized')` in your `boostrap.php`.
+or by manually putting `CakePlugin::load('Cake/Localized')` in your `boostrap.php`.
 
 ## Model validation
 
@@ -36,13 +36,14 @@ Localized validation classes can be used for validating model fields.
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
+use Cake\Localized\Validation\FrValidation
 use Cake\Validation\Validator;
 
 class PostsTable extends Table
 {
     public function validationDefault(Validator $validator)
     {
-        $validator->provider('fr', 'Localized\Validation\FrValidation');
+        $validator->provider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
             'provider' => 'fr'
