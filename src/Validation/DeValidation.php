@@ -31,7 +31,7 @@ class DeValidation extends LocalizedValidation
      */
     public static function postal($check)
     {
-        $pattern = '/^[0-9]{5}$/';
+        $pattern = '/^(0[1-46-9]\d{3}|[1-357-9]\d{4}|[4][0-24-9]\d{3}|[6][013-9]\d{3})$/';
         return (bool)preg_match($pattern, $check);
     }
 

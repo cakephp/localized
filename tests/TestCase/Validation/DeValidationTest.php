@@ -43,6 +43,20 @@ class DeValidationTest extends TestCase
     public function testPostal()
     {
         $this->assertTrue(DeValidation::postal('51109'));
+        // must have 5 digits
+        $this->assertFalse(DeValidation::postal('1109'));
         $this->assertFalse(DeValidation::postal('051109'));
+        /**
+         * according to wikipedia, some combinations are reserved and therefore not valid
+         * https://de.wikipedia.org/wiki/Liste_der_Postleitregionen_in_Deutschland#F.C3.BCnfstelliges_System_seit_1993
+         */
+        $this->assertFalse(DeValidation::postal('00109'));
+        $this->assertTrue(DeValidation::postal('01109'));
+        $this->assertFalse(DeValidation::postal('05000'));
+        $this->assertTrue(DeValidation::postal('06109'));
+        $this->assertFalse(DeValidation::postal('43000'));
+        $this->assertTrue(DeValidation::postal('44109'));
+        $this->assertFalse(DeValidation::postal('62000'));
+        $this->assertTrue(DeValidation::postal('63109'));
     }
 }
