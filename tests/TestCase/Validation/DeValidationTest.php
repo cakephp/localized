@@ -59,5 +59,4 @@ class DeValidationTest extends TestCase
         $this->assertFalse(DeValidation::postal('62000'));
         $this->assertTrue(DeValidation::postal('63109'));
     }
-
 }
