@@ -207,7 +207,7 @@ msgstr "il y a environ un an"
 
 #: Utility/CakeTime.php:958;980
 msgid "days"
-msgstr jours
+msgstr "jours"
 
 #: Utility/CakeTime.php:895
 msgid "%d year"
