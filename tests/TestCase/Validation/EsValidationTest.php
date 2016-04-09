@@ -53,6 +53,7 @@ class EsValidationTest extends TestCase
         $this->assertTrue(EsValidation::phone('924-227227'));
         $this->assertTrue(EsValidation::phone('827-227227'));
         $this->assertTrue(EsValidation::phone('91-2227227'));
+        $this->assertTrue(EsValidation::phone('721233223'));
         $this->assertFalse(EsValidation::phone('127227227'));
         $this->assertFalse(EsValidation::phone('813 4567'));
         $this->assertFalse(EsValidation::phone('(666) 232 323'));
