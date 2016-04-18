@@ -28,7 +28,7 @@ class EsValidation extends LocalizedValidation
      *
      * @var string
      */
-    const CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
+    private static $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
     /**
      * Checks a postal code for Spain.
@@ -62,9 +62,9 @@ class EsValidation extends LocalizedValidation
      *                      Can be either `dni`, `nie` and/or `nif`.
      * @return bool Success.
      */
-    public static function personId($check, $checks = array())
+    public static function personId($check, $checks = [])
     {
-        $default = array('dni', 'nie', 'nif');
+        $default = ['dni', 'nie', 'nif'];
         if (!empty($checks)) {
             $checks = array_intersect($default, $checks);
         } else {
@@ -95,7 +95,7 @@ class EsValidation extends LocalizedValidation
         array_shift($matches);
         list($num, $letter) = $matches;
 
-        return ($letter == self::CODES[$num % 23]);
+        return ($letter == self::$CODES[$num % 23]);
     }
 
     /**
@@ -114,7 +114,7 @@ class EsValidation extends LocalizedValidation
         list($first, $num, $letter) = $matches;
         $num = strtr($first, 'XYZ', '012') . $num;
 
-        return ($letter == self::CODES[$num % 23]);
+        return ($letter == self::$CODES[$num % 23]);
     }
 
     /**
