@@ -62,9 +62,9 @@ class EsValidation extends LocalizedValidation
      *                      Can be either `dni`, `nie` and/or `nif`.
      * @return bool Success.
      */
-    public static function personId($check, $checks = [])
+    public static function personId($check, $checks = array())
     {
-        $default = ['dni', 'nie', 'nif'];
+        $default = array('dni', 'nie', 'nif');
         if (!empty($checks)) {
             $checks = array_intersect($default, $checks);
         } else {
