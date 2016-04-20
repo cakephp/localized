@@ -69,11 +69,8 @@ class EsValidationTest extends TestCase
         $this->assertTrue(EsValidation::personId('32050031Z'));
         $this->assertTrue(EsValidation::personId('X2546874S'));
         $this->assertTrue(EsValidation::personId('K1254868A'));
-        $this->assertTrue(EsValidation::personId('K1254868A', ['nif', 'nie']));
 
-        $this->assertFalse(EsValidation::personId('X2546874S', ['dni']));
-        $this->assertFalse(EsValidation::personId('32050031Z', ['nif']));
-        $this->assertFalse(EsValidation::personId('K1254868A', ['nie']));
+        $this->assertFalse(EsValidation::personId('23232323'));
     }
 
     /**
