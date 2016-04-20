@@ -58,18 +58,11 @@ class EsValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @param array $checks The check types to be performed.
-     *                      Can be either `dni`, `nie` and/or `nif`.
      * @return bool Success.
      */
-    public static function personId($check, $checks = [])
+    public static function personId($check)
     {
-        $default = ['dni', 'nie', 'nif'];
-        if (!empty($checks)) {
-            $checks = array_intersect($default, $checks);
-        } else {
-            $checks = $default;
-        }
+        $checks = ['dni', 'nie', 'nif'];
 
         foreach ($checks as $method) {
             if (self::$method($check)) {
