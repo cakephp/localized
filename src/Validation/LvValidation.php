@@ -73,12 +73,15 @@ class LvValidation extends LocalizedValidation
             return false;
         }
 
-        $counter = false;
+        $counter = 0;
         $map = [0 => 1, 1 => 6, 2 => 3, 3 => 7, 4 => 9, 5 => 10, 6 => 5, 7 => 8, 8 => 4, 9 => 2];
         foreach ($map as $index => $multiplier) {
-            !isset($counter) ? $counter = 0 : $counter += (int)$check[$index] * $multiplier;
+            $counter += (int)$check[$index] * $multiplier;
         }
 
-        return $counter === false ? false : ((1101 - $counter) % 11 === (int)$check[10]);
+        if ($counter === false) {
+            return false;
+        }
+        return (1101 - $counter) % 11 === (int)$check[10];
     }
 }
