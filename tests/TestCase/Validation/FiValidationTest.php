@@ -33,6 +33,7 @@ class FiValidationTest extends TestCase
     public function personIdProvider()
     {
         return [
+            ['120553-128K', true],
             ['010100+991D', true],
             ['010100-9857', true],
             ['010100A929D', true],
