@@ -72,10 +72,14 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $list = array_merge(range(0, 9), range('A', 'Z'));
-        foreach ($list as &$item) {
-            $item = (string)$item;
+        $list = array_merge(range(0, 9), range('A', 'Y'));
+        foreach ($list as $key => $item) {
+            if ($item !== 0 && in_array($item, ['G', 'I', 'O', 'Q'])) {
+                unset($list[$key]);
+            }
+            $list[$key] = (string)$item;
         }
+        $list = array_values($list);
 
         return $check[strlen($check) - 1] == $list[intval(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
     }
