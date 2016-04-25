@@ -44,6 +44,7 @@ class FiValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
+     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone($check)
@@ -57,7 +58,6 @@ class FiValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function personId($check)
@@ -81,6 +81,6 @@ class FiValidation extends LocalizedValidation
         }
         $list = array_values($list);
 
-        return $check[strlen($check) - 1] == $list[intval(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
+        return $check[strlen($check) - 1] === $list[intval(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
     }
 }
