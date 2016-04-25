@@ -74,7 +74,7 @@ class FiValidation extends LocalizedValidation
 
         $list = array_merge(range(0, 9), range('A', 'Y'));
         foreach ($list as $key => $item) {
-            if ($item !== 0 && in_array($item, ['G', 'I', 'O', 'Q'])) {
+            if (in_array($item, ['G', 'I', 'O', 'Q'], true)) {
                 unset($list[$key]);
             }
             $list[$key] = (string)$item;
