@@ -28,7 +28,7 @@ class EsValidation extends LocalizedValidation
      *
      * @var string
      */
-    private static $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
+    protected static $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
     /**
      * Checks a postal code for Spain.
