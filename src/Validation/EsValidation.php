@@ -88,7 +88,7 @@ class EsValidation extends LocalizedValidation
         array_shift($matches);
         list($num, $letter) = $matches;
 
-        return ($letter == self::$CODES[$num % 23]);
+        return ($letter === self::$CODES[$num % 23]);
     }
 
     /**
@@ -107,7 +107,7 @@ class EsValidation extends LocalizedValidation
         list($first, $num, $letter) = $matches;
         $num = strtr($first, 'XYZ', '012') . $num;
 
-        return ($letter == self::$CODES[$num % 23]);
+        return ($letter === self::$CODES[$num % 23]);
     }
 
     /**
@@ -131,6 +131,6 @@ class EsValidation extends LocalizedValidation
 
         $num = 10 - substr($sum, -1);
 
-        return $check[strlen($check) - 1] == chr($num + 64);
+        return $check[strlen($check) - 1] === chr($num + 64);
     }
 }
