@@ -65,7 +65,7 @@ class EsValidation extends LocalizedValidation
         $checks = ['dni', 'nie', 'nif'];
 
         foreach ($checks as $method) {
-            if (self::$method($check)) {
+            if (static::$method($check)) {
                 return true;
             }
         }
@@ -88,7 +88,7 @@ class EsValidation extends LocalizedValidation
         array_shift($matches);
         list($num, $letter) = $matches;
 
-        return $letter === self::$CODES[$num % 23];
+        return $letter === static::$CODES[$num % 23];
     }
 
     /**
@@ -107,7 +107,7 @@ class EsValidation extends LocalizedValidation
         list($first, $num, $letter) = $matches;
         $num = strtr($first, 'XYZ', '012') . $num;
 
-        return $letter === self::$CODES[$num % 23];
+        return $letter === static::$CODES[$num % 23];
     }
 
     /**
