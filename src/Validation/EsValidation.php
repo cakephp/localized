@@ -76,7 +76,7 @@ class EsValidation extends LocalizedValidation
     /**
      * Only checks the DNI type personId.
      *
-     * @param  string $check The value to check.
+     * @param string $check The value to check.
      * @return bool Success.
      */
     public static function dni($check)
@@ -94,7 +94,7 @@ class EsValidation extends LocalizedValidation
     /**
      * Only checks the NIE type personId.
      *
-     * @param  string $check The value to check.
+     * @param string $check The value to check.
      * @return bool Success.
      */
     public static function nie($check)
@@ -113,7 +113,7 @@ class EsValidation extends LocalizedValidation
     /**
      * Only checks the NIF type personId.
      *
-     * @param  string $check The value to check.
+     * @param string $check The value to check.
      * @return bool Success
      */
     public static function nif($check)
