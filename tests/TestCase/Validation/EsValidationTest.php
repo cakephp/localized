@@ -58,4 +58,62 @@ class EsValidationTest extends TestCase
         $this->assertFalse(EsValidation::phone('813 4567'));
         $this->assertFalse(EsValidation::phone('(666) 232 323'));
     }
+
+    /**
+     * test the personId method of EsValidation
+     *
+     * @return void
+     */
+    public function testPersonId()
+    {
+        $this->assertTrue(EsValidation::personId('32050031Z'));
+        $this->assertTrue(EsValidation::personId('X2546874S'));
+        $this->assertTrue(EsValidation::personId('K1254868A'));
+
+        $this->assertFalse(EsValidation::personId('23232323'));
+    }
+
+    /**
+     * Test the dni validation.
+     *
+     * @return void
+     */
+    public function testDni()
+    {
+        $this->assertTrue(EsValidation::dni('32050031Z'));
+        $this->assertTrue(EsValidation::dni('03654968S'));
+        $this->assertTrue(EsValidation::dni('00000014Z'));
+        $this->assertTrue(EsValidation::dni('14Z'));
+        $this->assertFalse(EsValidation::dni('145'));
+        $this->assertFalse(EsValidation::dni('21856874H'));
+    }
+
+    /**
+     * Test the nie validation.
+     *
+     * @return void
+     */
+    public function testNie()
+    {
+        $this->assertTrue(EsValidation::nie('X2546874S'));
+        $this->assertTrue(EsValidation::nie('Y2332323E'));
+        $this->assertTrue(EsValidation::nie('Z2548769Y'));
+        $this->assertFalse(EsValidation::nie('35489765Y'));
+        $this->assertFalse(EsValidation::nie('123456'));
+    }
+
+    /**
+     * Test the nif validation.
+     *
+     * @return void
+     */
+    public function testNif()
+    {
+        $this->assertTrue(EsValidation::nif('K1254868A'));
+        $this->assertTrue(EsValidation::nif('K3548762H'));
+        $this->assertTrue(EsValidation::nif('L5876542A'));
+        $this->assertFalse(EsValidation::nif('X5876542A'));
+        $this->assertFalse(EsValidation::nif('Z2548769Y'));
+        $this->assertFalse(EsValidation::nif('32050031Z'));
+    }
 }

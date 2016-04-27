@@ -24,6 +24,13 @@ use Cake\Network\Exception\NotImplementedException;
 class EsValidation extends LocalizedValidation
 {
     /**
+     * The list of allowed personId codes. Sorted as wee need them.
+     *
+     * @var string
+     */
+    protected static $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
+
+    /**
      * Checks a postal code for Spain.
      *
      * @param string $check The value to check.
@@ -51,11 +58,79 @@ class EsValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function personId($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $checks = ['dni', 'nie', 'nif'];
+
+        foreach ($checks as $method) {
+            if (static::$method($check)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Only checks the DNI type personId.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function dni($check)
+    {
+        if (!preg_match('/^([0-9]+)([A-Z]{1})$/', $check, $matches)) {
+            return false;
+        }
+
+        array_shift($matches);
+        list($num, $letter) = $matches;
+
+        return $letter === static::$CODES[$num % 23];
+    }
+
+    /**
+     * Only checks the NIE type personId.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+    public static function nie($check)
+    {
+        if (!preg_match('/^([XYZ])([0-9]+)([A-Z]{1})$/', $check, $matches)) {
+            return false;
+        }
+
+        array_shift($matches);
+        list($first, $num, $letter) = $matches;
+        $num = strtr($first, 'XYZ', '012') . $num;
+
+        return $letter === static::$CODES[$num % 23];
+    }
+
+    /**
+     * Only checks the NIF type personId.
+     *
+     * @param string $check The value to check.
+     * @return bool Success
+     */
+    public static function nif($check)
+    {
+        if (!preg_match('/^[KLM]{1}([0-9]+)([A-Z]{1})$/', $check, $matches)) {
+            return false;
+        }
+
+        $sum = $check[2] + $check[4] + $check[6];
+
+        for ($i = 1; $i < 8; $i += 2) {
+            $tmp = (string)(2 * $check[$i]);
+            $sum += $tmp[0] + ((strlen($tmp) == 2) ? $tmp[1] : 0);
+        }
+
+        $num = 10 - substr($sum, -1);
+
+        return $check[strlen($check) - 1] === chr($num + 64);
     }
 }
