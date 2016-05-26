@@ -1,6 +1,6 @@
 <?php
 /**
- * Finnish Localized Validation class. Handles localized validation for Finland.
+ * Latvian Localized Validation class. Handles localized validation for Latvia.
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -18,29 +18,28 @@ namespace Cake\Localized\Validation;
 use Cake\Network\Exception\NotImplementedException;
 
 /**
- * FiValidation
+ * LvValidation
  *
  */
-class FiValidation extends LocalizedValidation
+class LvValidation extends LocalizedValidation
 {
 
     /**
-     * Checks a postal code for Finland.
+     * Checks a postal code for Latvia.
      *
      * @param string $check The value to check.
      *
+     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function postal($check)
     {
-        $pattern = '/^[0-9]{5}$/';
-
-        return (bool)preg_match($pattern, $check);
+        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
 
 
     /**
-     * Checks a phone number for Finland.
+     * Checks a phone number for Latvia.
      *
      * @param string $check The value to check.
      *
@@ -62,7 +61,9 @@ class FiValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-        $pattern = '/^[0-9]{6}[-+A][0-9A-Z]{4}$/';
+        $check = trim(str_replace('-', '', $check));
+
+        $pattern = '/^[0-9]{6}[0-9A-Z]{5}$/';
         if (!(bool)preg_match($pattern, $check)) {
             return false;
         }
@@ -72,15 +73,15 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $list = array_merge(range(0, 9), range('A', 'Y'));
-        foreach ($list as $key => $item) {
-            if (in_array($item, ['G', 'I', 'O', 'Q'], true)) {
-                unset($list[$key]);
-            }
-            $list[$key] = (string)$item;
+        $counter = 0;
+        $map = [0 => 1, 1 => 6, 2 => 3, 3 => 7, 4 => 9, 5 => 10, 6 => 5, 7 => 8, 8 => 4, 9 => 2];
+        foreach ($map as $index => $multiplier) {
+            $counter += (int)$check[$index] * $multiplier;
         }
-        $list = array_values($list);
 
-        return $check[strlen($check) - 1] === $list[intval(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
+        if ($counter === false) {
+            return false;
+        }
+        return (1101 - $counter) % 11 === (int)$check[10];
     }
 }
