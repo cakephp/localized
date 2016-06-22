@@ -65,9 +65,9 @@ class BrValidation extends LocalizedValidation
         if(empty($cpf)) {
             return false;
         }
-     
+    
         // avoid mask, format number with zeros
-        $cpf = ereg_replace('[^0-9]', '', $cpf);
+        $cpf = preg_replace('/[^0-9]/', '', $cpf);
         $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
          
         $invalid_cpfs = array('00000000000',
