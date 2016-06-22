@@ -60,15 +60,19 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cpf($cpf){
+    public static function cpf($check){
         // Check if it's not empty
-        if(empty($cpf)) {
+        $check = trim($check);
+
+        if(!$check)
             return false;
+
+        if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
+            $check = str_replace(['-', '.', '/'], '', $check);
         }
-    
+   
         // avoid mask, format number with zeros
-        $cpf = preg_replace('/[^0-9]/', '', $cpf);
-        $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+        $check = str_pad($check, 11, '0', STR_PAD_LEFT);
          
         $invalid_cpfs = array('00000000000',
             '11111111111',
@@ -82,9 +86,9 @@ class BrValidation extends LocalizedValidation
             '99999999999');
 
         // Check number size, it pass:
-        if (strlen($cpf) != 11){
+        if (strlen($check) != 11){
             return false;
-        }else if(in_array($cpf, $invalid_cpfs)) {
+        }else if(in_array($check, $invalid_cpfs)) {
             return false;
          // Calculate check digits:
          } else {
@@ -92,12 +96,12 @@ class BrValidation extends LocalizedValidation
 
             for ($t = 9; $t < 11; $t++) { 
                 for ($d = 0, $c = 0; $c < $t; $c++) {
-                    $d += $cpf{$c} * (($t + 1) - $c);
+                    $d += $check{$c} * (($t + 1) - $c);
                 }
                 
                 $d = ((10 * $d) % 11) % 10;
 
-                if ($cpf{$c} != $d) {
+                if ($check{$c} != $d) {
                     return false;
                 }
             }
