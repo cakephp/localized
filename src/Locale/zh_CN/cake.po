@@ -355,3 +355,221 @@ msgstr "删除%s"
 #: View/Scaffolds/view.ctp:96;137
 msgid "Related %s"
 msgstr "相关%s"
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "{0}前"
+
+#: I18n/RelativeTimeFormatter.php:82
+msgid "{0} after"
+msgstr "{0}后"
+
+#: I18n/RelativeTimeFormatter.php:82
+msgid "{0} before"
+msgstr "{0}前"
+
+#: I18n/RelativeTimeFormatter.php:113
+msgid "just now"
+msgstr "刚刚"
+
+#: I18n/RelativeTimeFormatter.php:150
+msgid "about a second ago"
+msgstr "1秒钟前"
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a minute ago"
+msgstr "1分钟前"
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about an hour ago"
+msgstr "1个小时前"
+
+#: I18n/RelativeTimeFormatter.php:153;328
+msgid "about a day ago"
+msgstr "1天前"
+
+#: I18n/RelativeTimeFormatter.php:154;329
+msgid "about a week ago"
+msgstr "1周前"
+
+#: I18n/RelativeTimeFormatter.php:155;330
+msgid "about a month ago"
+msgstr "1个月内"
+
+#: I18n/RelativeTimeFormatter.php:156;331
+msgid "about a year ago"
+msgstr "1年之前"
+
+#: I18n/RelativeTimeFormatter.php:166
+msgid "in about a second"
+msgstr "1秒内"
+
+#: I18n/RelativeTimeFormatter.php:167
+msgid "in about a minute"
+msgstr "1分钟内"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about an hour"
+msgstr "1个小时内"
+
+#: I18n/RelativeTimeFormatter.php:169;341
+msgid "in about a day"
+msgstr "1天内"
+
+#: I18n/RelativeTimeFormatter.php:170;342
+msgid "in about a week"
+msgstr "1周内"
+
+#: I18n/RelativeTimeFormatter.php:171;343
+msgid "in about a month"
+msgstr "1个月内"
+
+#: I18n/RelativeTimeFormatter.php:172;344
+msgid "in about a year"
+msgstr "1年内"
+
+#: I18n/RelativeTimeFormatter.php:300
+msgid "today"
+msgstr "今天"
+
+#: I18n/RelativeTimeFormatter.php:364
+msgid "%s ago"
+msgstr "%s前"
+
+#: I18n/RelativeTimeFormatter.php:365
+msgid "on %s"
+msgstr "在 %s"
+
+#: I18n/RelativeTimeFormatter.php:47;125;312
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0}年"
+msgstr[1] "{0}年"
+
+#: I18n/RelativeTimeFormatter.php:51;128;315
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0}月"
+msgstr[1] "{0}月"
+
+#: I18n/RelativeTimeFormatter.php:57;131;318
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0}周"
+msgstr[1] "{0}周"
+
+#: I18n/RelativeTimeFormatter.php:59;134;321
+msgid "{0} day"
+msgid_plural "{0}days"
+msgstr[0] "{0}天"
+msgstr[1] "{0}天"
+
+#: I18n/RelativeTimeFormatter.php:64;137
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0}小时"
+msgstr[1] "{0}小时"
+
+#: I18n/RelativeTimeFormatter.php:68;140
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0}分钟"
+msgstr[1] "{0}分钟"
+
+#: I18n/RelativeTimeFormatter.php:72;143
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0}秒"
+msgstr[1] "{0}秒"
+
+#: Network/Response.php:1417
+msgid "The requested file was not found"
+msgstr ""
+
+#: ORM/RulesChecker.php:49
+msgid "This value is already in use"
+msgstr ""
+
+#: ORM/RulesChecker.php:83
+msgid "This value does not exist"
+msgstr ""
+
+#: Utility/Text.php:744
+msgid "and"
+msgstr ""
+
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr ""
+
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr ""
+
+#: Validation/Validator.php:1447
+msgid "The provided value is invalid"
+msgstr ""
+
+#: View/Helper/FormHelper.php:946
+msgid "New %s"
+msgstr ""
+
+#: View/Helper/FormHelper.php:949
+msgid "Edit %s"
+msgstr ""
+
+#: View/Helper/HtmlHelper.php:770
+msgid "Home"
+msgstr "主页"
+
+#: View/Widget/DateTimeWidget.php:530
+msgid "January"
+msgstr "一月"
+
+#: View/Widget/DateTimeWidget.php:531
+msgid "February"
+msgstr "二月"
+
+#: View/Widget/DateTimeWidget.php:532
+msgid "March"
+msgstr "三月"
+
+#: View/Widget/DateTimeWidget.php:533
+msgid "April"
+msgstr "四月"
+
+#: View/Widget/DateTimeWidget.php:534
+msgid "May"
+msgstr "五月"
+
+#: View/Widget/DateTimeWidget.php:535
+msgid "June"
+msgstr "六月"
+
+#: View/Widget/DateTimeWidget.php:536
+msgid "July"
+msgstr "七月"
+
+#: View/Widget/DateTimeWidget.php:537
+msgid "August"
+msgstr "八月"
+
+#: View/Widget/DateTimeWidget.php:538
+msgid "September"
+msgstr "九月"
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "October"
+msgstr "十月"
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "November"
+msgstr "十一月"
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "December"
+msgstr "十二月"
