@@ -60,7 +60,7 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cpf($cpf = null){
+    public static function cpf($cpf){
         // Check if it's not empty
         if(empty($cpf)) {
             return false;
@@ -82,10 +82,14 @@ class BrValidation extends LocalizedValidation
             '99999999999');
 
         // Check number size, it pass:
-        if (strlen($cpf) != 11 || in_array($cpf, $invalid_cpfs)) {
+        if (strlen($cpf) != 11){
+            return false;
+        }else if(in_array($cpf, $invalid_cpfs)) {
             return false;
          // Calculate check digits:
-         } else {        
+         } else {
+            $d = 0;
+
             for ($t = 9; $t < 11; $t++) { 
                 for ($d = 0, $c = 0; $c < $t; $c++) {
                     $d += $cpf{$c} * (($t + 1) - $c);
@@ -108,8 +112,7 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cnpj($check)
-    {
+    public static function cnpj($check){
         $check = trim($check);
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
@@ -121,6 +124,7 @@ class BrValidation extends LocalizedValidation
         if (strlen($check) != 14) {
             return false;
         }
+        
         $firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
             ($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
             ($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
