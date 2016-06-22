@@ -60,45 +60,46 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cpf($check)
-    {
-        $check = trim($check);
-
-        // sometimes the user submits a masked CNPJ
-        if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
-            $check = str_replace(['-', '.', '/'], '', $check);
-        } elseif (!ctype_digit($check)) {
+    public static function cpf($cpf = null){
+        // Check if it's not empty
+        if(empty($cpf)) {
             return false;
         }
+     
+        // avoid mask, format number with zeros
+        $cpf = ereg_replace('[^0-9]', '', $cpf);
+        $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+         
+        $invalid_cpfs = array('00000000000',
+            '11111111111',
+            '22222222222', 
+            '33333333333', 
+            '44444444444', 
+            '55555555555', 
+            '66666666666', 
+            '77777777777', 
+            '88888888888', 
+            '99999999999');
 
-        if (strlen($check) != 11) {
+        // Check number size, it pass:
+        if (strlen($cpf) != 11 || in_array($cpf, $invalid_cpfs)) {
             return false;
-        }
+         // Calculate check digits:
+         } else {        
+            for ($t = 9; $t < 11; $t++) { 
+                for ($d = 0, $c = 0; $c < $t; $c++) {
+                    $d += $cpf{$c} * (($t + 1) - $c);
+                }
+                
+                $d = ((10 * $d) % 11) % 10;
 
-        // repeated values are invalid, but algorithms fails to check it
-        for ($i = 0; $i < 10; $i++) {
-            if (str_repeat($i, 11) === $check) {
-                return false;
+                if ($cpf{$c} != $d) {
+                    return false;
+                }
             }
+            //What if go to this, this is true:
+            return true;
         }
-
-        $dv = substr($check, -2);
-        for ($pos = 9; $pos <= 10; $pos++) {
-            $sum = 0;
-            $position = $pos + 1;
-            for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-                $sum += $check[$i] * $position;
-            }
-            $div = $sum % 11;
-            if ($div < 2) {
-                $check[$pos] = 0;
-            } else {
-                $check[$pos] = 11 - $div;
-            }
-        }
-        $dvRight = $check[9] * 10 + $check[10];
-
-        return ($dvRight == $dv);
     }
 
     /**
