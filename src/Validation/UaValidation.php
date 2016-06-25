@@ -88,7 +88,7 @@ class UaValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-        $pattern = '^\d{10}$/';
+        $pattern = '/^\d{10}$/';
         return (bool)preg_match($pattern, $check);
     }
 }
