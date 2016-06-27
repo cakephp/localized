@@ -44,7 +44,8 @@ class DkValidation extends LocalizedValidation
      */
     public static function postal($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $pattern = '/\\A\\b[0-9]{4}\\b\\z/i';
+        return (bool)preg_match($pattern, $check);
     }
 
     /**
@@ -56,6 +57,7 @@ class DkValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $pattern = '/\\A\\b[0-9]{8}\\b\\z/i';
+        return (bool)preg_match($pattern, $check);
     }
 }

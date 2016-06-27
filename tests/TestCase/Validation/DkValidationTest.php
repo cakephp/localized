@@ -34,4 +34,28 @@ class DkValidationTest extends TestCase
         $this->assertTrue(DkValidation::personId('111111-3334'));
         $this->assertFalse(DkValidation::personId('111111-333'));
     }
+
+    /**
+     * test the postal method of DkValidation
+     *
+     * @return void
+     */
+    public function testPostal()
+    {
+        $this->assertTrue(DkValidation::postal('4444'));
+        $this->assertFalse(DkValidation::postal('333'));
+        $this->assertFalse(DkValidation::postal('55555'));
+    }
+
+    /**
+     * test the phone method of DkValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(DkValidation::phone('88888888'));
+        $this->assertFalse(DkValidation::phone('7777777'));
+        $this->assertFalse(DkValidation::phone('999999999'));
+    }
 }
