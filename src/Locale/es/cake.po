@@ -218,7 +218,7 @@ msgstr "Los valores proporcionados no son válidos"
 
 #: View/Helper/FormHelper.php:947
 msgid "New %s"
-msgstr "Nuevo %s"
+msgstr "Nuevo registro"
 
 #: View/Helper/FormHelper.php:950
 msgid "Edit %s"
