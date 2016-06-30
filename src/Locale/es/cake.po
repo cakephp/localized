@@ -1,17 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-05-10 13:30+0200\n"
-"PO-Revision-Date: 2016-05-10 13:32+0200\n"
-"Last-Translator: Òscar Casajuana <oscar@cirici.com>\n"
+"POT-Creation-Date: 2016-06-26 21:34+0000\n"
+"PO-Revision-Date: 2016-06-26 18:43-0300\n"
+"Last-Translator: Raúl Arellano <raul338@elhacker.net>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
@@ -189,13 +188,17 @@ msgstr[1] "{0} segundos"
 msgid "The requested file was not found"
 msgstr "No se encontró el archivo solicitado"
 
-#: ORM/RulesChecker.php:49
+#: ORM/RulesChecker.php:50
 msgid "This value is already in use"
 msgstr "Este valor ya está en uso"
 
-#: ORM/RulesChecker.php:83
+#: ORM/RulesChecker.php:84
 msgid "This value does not exist"
 msgstr "Este valor no existe"
+
+#: ORM/RulesChecker.php:107
+msgid "The count does not match {0}{1}"
+msgstr "El recuento no coincide {0}{1}"
 
 #: Utility/Text.php:744
 msgid "and"
@@ -209,19 +212,19 @@ msgstr "Este campo es obligatorio"
 msgid "This field cannot be left empty"
 msgstr "Este campo no puede quedar vacío"
 
-#: Validation/Validator.php:1447
+#: Validation/Validator.php:1501
 msgid "The provided value is invalid"
 msgstr "Los valores proporcionados no son válidos"
 
-#: View/Helper/FormHelper.php:946
+#: View/Helper/FormHelper.php:947
 msgid "New %s"
 msgstr "Nuevo registro"
 
-#: View/Helper/FormHelper.php:949
+#: View/Helper/FormHelper.php:950
 msgid "Edit %s"
 msgstr "Editar %s"
 
-#: View/Helper/FormHelper.php:1756
+#: View/Helper/FormHelper.php:1770
 msgid "Submit"
 msgstr "Enviar"
 
