@@ -61,7 +61,7 @@ class UaValidation extends LocalizedValidation
      */
     public static function passport($check)
     {
-        $pattern = '/^[A-Z\p{Cyrillic}]{2}\d{6}/u';
+        $pattern = '/^[А-Я\p{Cyrillic}]{2}\d{6}/u';
         return (bool)preg_match($pattern, $check);
     }
 
