@@ -32,6 +32,7 @@ class DeValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^(0[1-46-9]\d{3}|[1-357-9]\d{4}|[4][0-24-9]\d{3}|[6][013-9]\d{3})$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -46,6 +47,7 @@ class DeValidation extends LocalizedValidation
     public static function address1($check)
     {
         $pattern = '/[a-zA-ZäöüÄÖÜß \.]+ [0-9]+[a-zA-Z]?/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -58,6 +60,7 @@ class DeValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^[0-9\/. \-]*$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -77,6 +80,7 @@ class DeValidation extends LocalizedValidation
         }
         $check = str_replace('.', ',', $check);
         $check = explode(',', $check, 3);
+
         return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
     }
 

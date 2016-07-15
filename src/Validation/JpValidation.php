@@ -32,6 +32,7 @@ class JpValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -44,6 +45,7 @@ class JpValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{3}-[0-9]{4}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -62,6 +64,7 @@ class JpValidation extends LocalizedValidation
         } else {
             $pattern = '/^(\xe3(\x81[\x81-\xbf]|\x82[\x80-\x96]|\x83\xbc))*$/';
         }
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -80,6 +83,7 @@ class JpValidation extends LocalizedValidation
         } else {
             $pattern = '/^(\xe3(\x82[\xa1-\xbf]|\x83[\x80-\xb6]|\x83\xbc))*$/';
         }
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -98,6 +102,7 @@ class JpValidation extends LocalizedValidation
                 return false;
             }
         }
+
         return true;
     }
 

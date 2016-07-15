@@ -31,6 +31,7 @@ class HrValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{5}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

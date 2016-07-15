@@ -32,6 +32,7 @@ class DkValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/\\A\\b[0-9]{6}-[0-9]{4}\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -45,6 +46,7 @@ class DkValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/\\A\\b[0-9]{4}\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -58,6 +60,7 @@ class DkValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/\\A\\b[0-9]{8}\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 }

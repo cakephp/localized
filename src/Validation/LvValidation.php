@@ -82,6 +82,7 @@ class LvValidation extends LocalizedValidation
         if ($counter === false) {
             return false;
         }
+
         return (1101 - $counter) % 11 === (int)$check[10];
     }
 }

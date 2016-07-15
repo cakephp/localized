@@ -37,6 +37,7 @@ class NoValidation extends LocalizedValidation
         }
         $check = str_replace('.', ',', $check);
         $check = explode(',', $check, 3);
+
         return checkdate((int)$check[1], (int)$check[0], (int)$check[2]);
     }
 
@@ -60,6 +61,7 @@ class NoValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{4}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -72,6 +74,7 @@ class NoValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/^(\d{11})|(\d{6} \d{5})$/';
+
         return (bool)preg_match($pattern, $check);
     }
 }

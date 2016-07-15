@@ -29,6 +29,7 @@ class IrValidation extends LocalizedValidation
     public static function alphaNumeric($check)
     {
         $pattern = '/[^\x{0600}-\x{06FF}\x{FB50}-\x{FDFD}\x{FE70}-\x{FEFF}\x{0750}-\x{077F}0-9\s\x{200C}]+/u';
+
         return !preg_match($pattern, $check);
     }
 
@@ -41,6 +42,7 @@ class IrValidation extends LocalizedValidation
     public static function numeric($check)
     {
         $pattern = '/[^\x{06F0}-\x{06F9}\x]+/u';
+
         return !preg_match($pattern, $check);
     }
 
@@ -53,6 +55,7 @@ class IrValidation extends LocalizedValidation
     public static function cc($check)
     {
         $pattern = '/[0-9]{4}-?[0-9]{4}-?[0-9]{4}-?[0-9]{4}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -65,6 +68,7 @@ class IrValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}[1-9]{1}[0-9]{1,}[- .\(\)]*[0-9]{3,8}[- .\(\)]?$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -77,6 +81,7 @@ class IrValidation extends LocalizedValidation
     public static function mobile($check)
     {
         $pattern = '/^[- .\(\)]?((98)|(\+98)|(0098)|0){1}[- .\(\)]{0,3}((91)|(92)|(93)){1}[0-9]{8}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -89,6 +94,7 @@ class IrValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{10}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -119,6 +125,7 @@ class IrValidation extends LocalizedValidation
         if ($remaining <= 1) {
             return (bool)($remaining == $check{9});
         }
+
         return (bool)((11 - $remaining) == $check{9});
     }
 }

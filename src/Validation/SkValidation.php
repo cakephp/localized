@@ -32,6 +32,7 @@ class SkValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0,8,9]\d{2} ?\d{2}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

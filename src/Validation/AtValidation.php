@@ -32,6 +32,7 @@ class AtValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{4}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

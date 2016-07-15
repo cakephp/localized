@@ -34,6 +34,7 @@ class UsValidation extends LocalizedValidation
         $pattern .= '([2-9]1[02-9]|[2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)';
         $pattern .= '?([0-9]{4})';
         $pattern .= '(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -46,6 +47,7 @@ class UsValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/\\A\\b[0-9]{5}(?:-[0-9]{4})?\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -58,6 +60,7 @@ class UsValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/\\A\\b[0-9]{3}-[0-9]{2}-[0-9]{4}\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 }

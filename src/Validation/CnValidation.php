@@ -41,6 +41,7 @@ class CnValidation extends LocalizedValidation
         // XXX(X)-XXXXXXX(X)(-...) house phone
         $pattern .= '|(\d{3,4}-\d{7,8}(-\d{1,6})?)';
         $pattern .= ')$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -56,6 +57,7 @@ class CnValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{6}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -90,6 +92,7 @@ class CnValidation extends LocalizedValidation
                 return false;
             }
         }
+
         return ($checksum === (12 - ($sum % 11)) % 11);
     }
 }

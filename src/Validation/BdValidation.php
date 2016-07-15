@@ -32,6 +32,7 @@ class BdValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{4}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

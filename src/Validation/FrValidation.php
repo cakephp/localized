@@ -30,6 +30,7 @@ class FrValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^0[1-9]{1}(([0-9]{8})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})|((\.[0-9]{2}){4}))$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -44,8 +45,10 @@ class FrValidation extends LocalizedValidation
         $pattern = '/^\d{5}$/';
         if ((bool)preg_match($pattern, $check)) {
             $value = intval($check);
+
             return $value >= 1001 && $value <= 99138;
         }
+
         return false;
     }
 
@@ -75,6 +78,7 @@ class FrValidation extends LocalizedValidation
             $numberWithoutKey = str_replace('B', '0', $numberWithoutKey);
             $numberWithoutKey -= 2000000;
         }
+
         return $key == (97 - ($numberWithoutKey - (floor($numberWithoutKey / 97) * 97)));
     }
 }

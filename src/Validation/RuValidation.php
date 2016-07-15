@@ -31,6 +31,7 @@ class RuValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^((1[0-2][1-9]|110|120)|14[0-24]|15[0236]|16[01236789]|17[03]|18[03-8]|19[0-9]|214|236|24[18]|30[01258]|344|35[0589]|36[0-4789]|39[0246-8]|40[034]|41[04]|42[04568]|43[0-2]|44[03]|45[0234]|460|555|60[012367]|61[049]|62[0589]|63[04]|64[04789]|65[056]|66[04579]|67[0125789]|68[035789]|69[03])[0-9]{3}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -43,6 +44,7 @@ class RuValidation extends LocalizedValidation
     public static function address1($check)
     {
         $pattern = '/^[a-zA-Z\p{Cyrillic} \.]+,/u';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -55,6 +57,7 @@ class RuValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^\+7 \(\d+\) \d{3,}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -68,6 +71,7 @@ class RuValidation extends LocalizedValidation
     public static function passport($check)
     {
         $pattern = '/^\d{4} \d{6}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

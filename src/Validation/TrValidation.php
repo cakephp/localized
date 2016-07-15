@@ -32,6 +32,7 @@ class TrValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{5}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -44,6 +45,7 @@ class TrValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/^[0-9]{11}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

@@ -32,6 +32,7 @@ class CzValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[1-7]\d{2} ?\d{2}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
