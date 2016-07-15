@@ -32,6 +32,7 @@ class MxValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^(\d{8}|\d{10}|\d{13}|((\d{2}[-,\s]){4}\d{2})|\(\d{3}\)\d{3}-\d{4}|\(\d{2}\)\d{4}-\d{4}|\d{3}[-,\s]\d{2}[-,\s]\d{8})$/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -44,6 +45,7 @@ class MxValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{5}$/i';
+
         return (bool)preg_match($pattern, $check);
     }
 

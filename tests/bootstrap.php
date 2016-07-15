@@ -18,6 +18,7 @@ unset($findRoot);
 chdir($root);
 if (file_exists($root . '/config/bootstrap.php')) {
     require $root . '/config/bootstrap.php';
+
     return;
 }
 

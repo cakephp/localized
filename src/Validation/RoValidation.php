@@ -32,6 +32,7 @@ class RoValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{6}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

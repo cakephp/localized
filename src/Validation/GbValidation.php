@@ -30,6 +30,7 @@ class GbValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/\\A\\b[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][ABD-HJLNP-UW-Z]{2}\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 

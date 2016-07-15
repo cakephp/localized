@@ -30,6 +30,7 @@ class PlValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{2}-[0-9]{3}$/D';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -63,6 +64,7 @@ class PlValidation extends LocalizedValidation
         if ($check[9] == $control) {
             return true;
         }
+
         return false;
     }
 
@@ -94,6 +96,7 @@ class PlValidation extends LocalizedValidation
                 return true;
             }
         }
+
         return false;
     }
 
@@ -125,6 +128,7 @@ class PlValidation extends LocalizedValidation
                 return true;
             }
         }
+
         return false;
     }
 

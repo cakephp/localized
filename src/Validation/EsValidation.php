@@ -39,6 +39,7 @@ class EsValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^(5[0-2]|[0-4][0-9])[0-9]{3}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -51,6 +52,7 @@ class EsValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^\\+?(34[-. ]?)?(([6789]{1})(([0-9]{2})[-. ]?|([0-9]{1})[-. ]?([0-9]{1}))|70[-. ]?([0-9]{1}))([0-9]{2})[-. ]?([0-9]{1})[-. ]?([0-9]{1})[-. ]?([0-9]{2})$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

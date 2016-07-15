@@ -31,6 +31,7 @@ class InValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^\d{3}\s?\d{3}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -43,6 +44,7 @@ class InValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/';
+
         return (bool)preg_match($pattern, $check);
     }
 

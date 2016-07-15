@@ -28,6 +28,7 @@ class LtValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = "/^(([\+]?370)|(8))[\s-]?\(?[0-9]{2,3}\)?[\s-]?([0-9]{2}[\s-]?){2}?[0-9]{1,2}$/";
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -40,6 +41,7 @@ class LtValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^(lt)?[\s-]?[\d]{5}$/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -52,6 +54,7 @@ class LtValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
+
         return (bool)preg_match($pattern, $check);
     }
 }

@@ -32,6 +32,7 @@ class CaValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/\\A\\b[ABCEGHJKLMNPRSTVXY][0-9][A-Z] [0-9][A-Z][0-9]\\b\\z/i';
+
         return (bool)preg_match($pattern, $check);
     }
 

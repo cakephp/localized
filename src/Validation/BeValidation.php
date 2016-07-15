@@ -32,6 +32,7 @@ class BeValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[1-9]{1}[0-9]{3}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 

@@ -32,6 +32,7 @@ class ItValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^([0-9]*\-?\ ?\/?[0-9]*)$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -44,6 +45,7 @@ class ItValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{5}$/i';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -82,6 +84,7 @@ class ItValidation extends LocalizedValidation
         for ($i = 0; $i <= 14; $i += 2) {
             $sum += $checkOdd[$check[$i]];
         }
+
         return (chr($sum % 26 + ord('A')) == $check[15]);
     }
 

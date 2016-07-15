@@ -30,6 +30,7 @@ class TwValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^\\(?(0|\\+886)[-. ]?[2-9][\\)-. ]?([0-9][\\)-. ]?){2}([0-9][-. ]?){3}[0-9]{2}[0-9]?$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -42,6 +43,7 @@ class TwValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[1-9][0-9]{2}([0-9]{2})?$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -69,6 +71,7 @@ class TwValidation extends LocalizedValidation
         for ($i = 1; $i < 9; $i++) {
             $checksum += $check[$i] * (9 - $i);
         }
+
         return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
     }
 
@@ -91,6 +94,7 @@ class TwValidation extends LocalizedValidation
             $intAddition = (floor($intMultiply / 10) + ($intMultiply % 10));
             $intSum += $intAddition;
         }
+
         return ($intSum % 10 === 0) || ($intSum % 10 === 9 && $check[6] === 7);
     }
 

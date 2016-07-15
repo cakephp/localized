@@ -32,6 +32,7 @@ class RsValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^[0-9]{5}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -50,6 +51,7 @@ class RsValidation extends LocalizedValidation
 
         list($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m) = str_split($check);
         $checksum = 11 - ( 7 * ($a + $g) + 6 * ($b + $h) + 5 * ($c + $i) + 4 * ($d + $j) + 3 * ($e + $k) + 2 * ($f + $l) ) % 11;
+
         return ($checksum == $m);
     }
 
@@ -62,6 +64,7 @@ class RsValidation extends LocalizedValidation
     public static function addressCode($check)
     {
         $pattern = '/^[0-9]{6}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
