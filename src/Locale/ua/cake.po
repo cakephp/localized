@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.8\n"
 "Last-Translator: Пухальський Микола\n"
-"Language: uk\n"
+"Language: ua\n"
 
 #: Template/Error/error400.ctp:33 Template/Error/error500.ctp:35
 msgid "Error"
