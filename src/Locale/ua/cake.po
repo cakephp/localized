@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-07-19 00:27+0300\n"
-"PO-Revision-Date: 2016-07-19 00:33+0300\n"
+"POT-Creation-Date: 2016-07-19 00:39+0300\n"
+"PO-Revision-Date: 2016-07-19 00:40+0300\n"
 "Last-Translator: Пухальський Микола\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: ua\n"
@@ -16,15 +16,15 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.8\n"
 
-#: Template/Error/error400.ctp:36 Template/Error/error500.ctp:41
+#: Template/Error/error400.ctp:39 Template/Error/error500.ctp:37
 msgid "Error"
 msgstr "Помилка"
 
-#: Template/Error/error400.ctp:38
+#: Template/Error/error400.ctp:41
 msgid "The requested address %s was not found on this server."
 msgstr "Запитувана адреса %s не була знайдена на цьому сервері."
 
-#: Template/Error/error500.ctp:39
+#: Template/Error/error500.ctp:35
 msgid "An Internal Error Has Occurred"
 msgstr "Сталася внутрішня помилка"
 
@@ -236,7 +236,7 @@ msgstr "Це поле є обов'язковим"
 msgid "This field cannot be left empty"
 msgstr "Це поле не може бути пустим"
 
-#: Validation/Validator.php:1501
+#: Validation/Validator.php:1518
 msgid "The provided value is invalid"
 msgstr "Вказане значення є недійсним"
 

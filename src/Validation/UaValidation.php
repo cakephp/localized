@@ -61,7 +61,7 @@ class UaValidation extends LocalizedValidation
      */
     public static function passport($check)
     {
-        $pattern = '/^[А-Я\p{Cyrillic}]{2}\d{6}/u';
+        $pattern = '/^[АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ]{2}\d{6}/u';
         return (bool)preg_match($pattern, $check);
     }
 
@@ -73,9 +73,10 @@ class UaValidation extends LocalizedValidation
      * @throws NotImplementedException Exception
      * @link https://en.wikipedia.org/wiki/Ukrainian_identity_card#Current_identity_card
      */
-    public static function IdCard($check)
+    public static function idCard($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $pattern = '/^(\d{8}-\d{5})$/';
+		return (bool)preg_match($pattern, $check);
     }
 
     /**

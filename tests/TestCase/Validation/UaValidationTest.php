@@ -84,4 +84,19 @@ class UaValidationTest extends TestCase
         $this->assertFalse(UaValidation::personId('12345678999'));
         $this->assertFalse(UaValidation::personId('112-233-445 96'));
     }
+
+    /**
+     * test IdCard method of UaValidation
+     *
+     * @return void
+     *
+     * @covers UaValidation::personId
+     */
+    public function testIdCard()
+    {
+        $this->assertTrue(UaValidation::idCard('19910824-00016'));
+
+        $this->assertFalse(UaValidation::idCard('1991082400016'));
+        $this->assertFalse(UaValidation::idCard('19910824-OO016'));
+    }
 }
