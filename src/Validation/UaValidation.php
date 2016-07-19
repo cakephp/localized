@@ -34,6 +34,7 @@ class UaValidation extends LocalizedValidation
     public static function postal($check)
     {
         $pattern = '/^(0[1-9][0-9][0-9][0-9]|1[0-9][0-9][0-9][0-9]|2[0-9][0-9][0-9][0-9]|3[0-9][0-9][0-9][0-9]|4[0-9][0-9][0-9][0-9]|5[0-9][0-9][0-9][0-9]|6[0-9][0-9][0-9][0-9]|7[0-9][0-9][0-9][0-9]|8[0-9][0-9][0-9][0-9]|9[0-9][0-9][0-9][0-9]|)$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -48,6 +49,7 @@ class UaValidation extends LocalizedValidation
     public static function phone($check)
     {
         $pattern = '/^((8|\+38)-?)?(\(?+...\)?)?-?\d{3}-?\d{2}-?\d{2}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -62,6 +64,7 @@ class UaValidation extends LocalizedValidation
     public static function passport($check)
     {
         $pattern = '/^[АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ]{2}\d{6}/u';
+
         return (bool)preg_match($pattern, $check);
     }
 
@@ -70,26 +73,26 @@ class UaValidation extends LocalizedValidation
      *
      * @param string $check The value to check
      * @return bool Success.
-     * @throws NotImplementedException Exception
      * @link https://en.wikipedia.org/wiki/Ukrainian_identity_card#Current_identity_card
      */
     public static function idCard($check)
     {
         $pattern = '/^(\d{8}-\d{5})$/';
-		return (bool)preg_match($pattern, $check);
+
+        return (bool)preg_match($pattern, $check);
     }
 
     /**
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/VAT_identification_number#VAT_numbers_of_non-EU_countries
      */
     public static function personId($check)
     {
         $pattern = '/^\d{10}$/';
+
         return (bool)preg_match($pattern, $check);
     }
 }
