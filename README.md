@@ -36,7 +36,7 @@ Localized validation classes can be used for validating model fields.
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-use Cake\Localized\Validation\FrValidation
+use Cake\Localized\Validation\FrValidation;
 use Cake\Validation\Validator;
 
 class PostsTable extends Table
