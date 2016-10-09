@@ -1,371 +1,459 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP Dutch Translation\n"
-"POT-Creation-Date: 2012-12-19 18:18+0000\n"
-"PO-Revision-Date: 2014-03-04 01:29+0200\n"
-"Last-Translator: Marlin Cremers <m.cremers@mms-projects.net>\n"
+"POT-Creation-Date: 2016-10-09 13:27+0200\n"
+"PO-Revision-Date: 2016-10-09 14:53+0200\n"
+"Last-Translator: Anne <annuh@users.noreply.github.com>\n"
 "Language-Team: \n"
 "Language: nld\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: Controller/Scaffold.php:128
-msgid "Scaffold :: "
-msgstr ""
+#: Template/Error/error400.ctp:36 Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Fout"
 
-#: Controller/Scaffold.php:167;234;305
-msgid "Invalid %s"
-msgstr "%s ongeldig"
+#: Template/Error/error400.ctp:38
+msgid "The requested address %s was not found on this server."
+msgstr "Het opgegeven pad %s is niet gevonden op deze server."
 
-#: Controller/Scaffold.php:222
-msgid "updated"
-msgstr "bijgewerkt"
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Er is een interne fout opgetreden"
 
-#: Controller/Scaffold.php:225
-msgid "saved"
-msgstr "opgeslagen"
-
-#: Controller/Scaffold.php:245
-msgid "The %1$s has been %2$s"
-msgstr "De %1$s is %2$s"
-
-#: Controller/Scaffold.php:256
-msgid "Please correct errors below."
-msgstr "Corrigeer de onderstaande fouten aub."
-
-#: Controller/Scaffold.php:308
-msgid "The %1$s with id: %2$s has been deleted."
-msgstr "De %1$s met id: %2$s werd verwijderd."
-
-#: Controller/Scaffold.php:311
-msgid "There was an error deleting the %1$s with id: %2$s"
-msgstr "Een fout heeft zich voorgedaan bij het verwijderen van %1$s met id: %2$s"
-
-#: Controller/Component/AuthComponent.php:369
+#: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
 msgstr "U heeft geen toestemming om die locatie te bekijken."
 
-#: Error/ExceptionRenderer.php:209
+#: Controller/Component/CsrfComponent.php:154
+msgid "Missing CSRF token cookie"
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:158
+msgid "CSRF token mismatch."
+msgstr ""
+
+#: Error/ExceptionRenderer.php:247
 msgid "Not Found"
-msgstr "Niet Gevonden"
+msgstr "Niet gevonden"
 
-#: Error/ExceptionRenderer.php:231
+#: Error/ExceptionRenderer.php:249
 msgid "An Internal Error Has Occurred."
-msgstr "Een Interne Fout Is Opgetreden."
+msgstr "Er is een interne fout opgetreden."
 
-#: Model/Validator/CakeValidationSet.php:287
-msgid "This field cannot be left blank"
-msgstr "Dit is een verplicht veld"
+#: I18n/Number.php:89
+msgid "{0,number,#,###.##} KB"
+msgstr ""
 
-#: Network/CakeResponse.php:1222
-msgid "The requested file was not found"
-msgstr "Het gevraagde bestand werd niet gevonden"
+#: I18n/Number.php:91
+msgid "{0,number,#,###.##} MB"
+msgstr ""
 
-#: Utility/CakeNumber.php:101
-msgid "%d KB"
-msgstr "%d KB"
+#: I18n/Number.php:93
+msgid "{0,number,#,###.##} GB"
+msgstr ""
 
-#: Utility/CakeNumber.php:103
-msgid "%.2f MB"
-msgstr "%.2f MB"
+#: I18n/Number.php:95
+msgid "{0,number,#,###.##} TB"
+msgstr ""
 
-#: Utility/CakeNumber.php:105
-msgid "%.2f GB"
-msgstr "%.2f GB"
+#: I18n/Number.php:87
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] ""
+msgstr[1] ""
 
-#: Utility/CakeNumber.php:107
-msgid "%.2f TB"
-msgstr "%.2f TB"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "{0} vanaf nu"
 
-#: Utility/CakeNumber.php:99
-msgid "%d Byte"
-msgid_plural "%d Bytes"
-msgstr[0] "%d Byte"
-msgstr[1] "%d Bytes"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "{0} geleden"
 
-#: Utility/CakeTime.php:389
-msgid "Today, %s"
-msgstr "Vandaag, %s"
+#: I18n/RelativeTimeFormatter.php:82
+msgid "{0} after"
+msgstr "{0} later"
 
-#: Utility/CakeTime.php:392
-msgid "Yesterday, %s"
-msgstr "Gisteren, %s"
+#: I18n/RelativeTimeFormatter.php:82
+msgid "{0} before"
+msgstr "{0} ervoor"
 
-#: Utility/CakeTime.php:395
-msgid "Tomorrow, %s"
-msgstr "Morgen, %s"
-
-#: Utility/CakeTime.php:400
-msgid "Sunday"
-msgstr "zondag"
-
-#: Utility/CakeTime.php:401
-msgid "Monday"
-msgstr "maandag"
-
-#: Utility/CakeTime.php:402
-msgid "Tuesday"
-msgstr "dinsdag"
-
-#: Utility/CakeTime.php:403
-msgid "Wednesday"
-msgstr "woensdag"
-
-#: Utility/CakeTime.php:404
-msgid "Thursday"
-msgstr "donderdag"
-
-#: Utility/CakeTime.php:405
-msgid "Friday"
-msgstr "vrijdag"
-
-#: Utility/CakeTime.php:406
-msgid "Saturday"
-msgstr "zaterdag"
-
-#: Utility/CakeTime.php:412
-msgid "On %s %s"
-msgstr "Op %s %s"
-
-#: Utility/CakeTime.php:805
+#: I18n/RelativeTimeFormatter.php:113
 msgid "just now"
 msgstr "zojuist"
 
-#: Utility/CakeTime.php:809
-msgid "on %s"
-msgstr "op %s"
+#: I18n/RelativeTimeFormatter.php:150
+msgid "about a second ago"
+msgstr "ongeveer een seconde geleden"
 
-#: Utility/CakeTime.php:853
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a minute ago"
+msgstr "ongeveer een minuut geleden"
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about an hour ago"
+msgstr "ongeveer een uur geleden"
+
+#: I18n/RelativeTimeFormatter.php:153;328
+msgid "about a day ago"
+msgstr "ongeveer een dag gelden"
+
+#: I18n/RelativeTimeFormatter.php:154;329
+msgid "about a week ago"
+msgstr "ongeveer een week geleden"
+
+#: I18n/RelativeTimeFormatter.php:155;330
+msgid "about a month ago"
+msgstr "ongeveer een maand geleden"
+
+#: I18n/RelativeTimeFormatter.php:156;331
+msgid "about a year ago"
+msgstr "ongeveer een jaar geleden"
+
+#: I18n/RelativeTimeFormatter.php:166
+msgid "in about a second"
+msgstr "over ongeveer een seconde"
+
+#: I18n/RelativeTimeFormatter.php:167
+msgid "in about a minute"
+msgstr "over ongeveer een minuut"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about an hour"
+msgstr "over ongeveer een uur"
+
+#: I18n/RelativeTimeFormatter.php:169;341
+msgid "in about a day"
+msgstr "over ongeveer een dag"
+
+#: I18n/RelativeTimeFormatter.php:170;342
+msgid "in about a week"
+msgstr "over ongeveer een week"
+
+#: I18n/RelativeTimeFormatter.php:171;343
+msgid "in about a month"
+msgstr "over ongeveer een maand"
+
+#: I18n/RelativeTimeFormatter.php:172;344
+msgid "in about a year"
+msgstr "over ongeveer een jaar"
+
+#: I18n/RelativeTimeFormatter.php:300
+msgid "today"
+msgstr "vandaag"
+
+#: I18n/RelativeTimeFormatter.php:364
 msgid "%s ago"
 msgstr "%s geleden"
 
-#: Utility/CakeTime.php:872;894
-msgid "days"
-msgstr "dagen"
+#: I18n/RelativeTimeFormatter.php:365
+msgid "on %s"
+msgstr "op %s"
 
-#: Utility/CakeTime.php:154
-msgid "abday"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:47;125;312
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} jaar"
+msgstr[1] "{0} jaren"
 
-#: Utility/CakeTime.php:160
-msgid "day"
-msgstr "dag"
+#: I18n/RelativeTimeFormatter.php:51;128;315
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} maand"
+msgstr[1] "{0} maanden"
 
-#: Utility/CakeTime.php:166
-msgid "d_t_fmt"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:57;131;318
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} week"
+msgstr[1] "{0} weken"
 
-#: Utility/CakeTime.php:188
-msgid "abmon"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:59;134;321
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} dag"
+msgstr[1] "{0} dagen"
 
-#: Utility/CakeTime.php:194
-msgid "mon"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:64;137
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} uur"
+msgstr[1] "{0} uren"
 
-#: Utility/CakeTime.php:205
-msgid "am_pm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:68;140
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minuut"
+msgstr[1] "{0} minuut"
 
-#: Utility/CakeTime.php:212
-msgid "t_fmt_ampm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:72;143
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} seconde"
+msgstr[1] "{0} seconden"
 
-#: Utility/CakeTime.php:226
-msgid "d_fmt"
-msgstr ""
+#: Network/Response.php:1417
+msgid "The requested file was not found"
+msgstr "Het gevraagde bestand werd niet gevonden"
 
-#: Utility/CakeTime.php:232
-msgid "t_fmt"
-msgstr ""
+#: ORM/RulesChecker.php:50
+msgid "This value is already in use"
+msgstr "Deze waarde is al in gebruik"
 
-#: Utility/CakeTime.php:831
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] "%d jaar"
-msgstr[1] "%d jaren"
+#: ORM/RulesChecker.php:84
+msgid "This value does not exist"
+msgstr "Deze waarde bestaat niet"
 
-#: Utility/CakeTime.php:834
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] "%d maand"
-msgstr[1] "%d maanden"
+#: ORM/RulesChecker.php:107
+msgid "The count does not match {0}{1}"
+msgstr "Het aantal komt niet overeen {0}{1}"
 
-#: Utility/CakeTime.php:837
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] "%d week"
-msgstr[1] "%d weken"
+#: Utility/Text.php:744
+msgid "and"
+msgstr "en"
 
-#: Utility/CakeTime.php:840
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] "%d dag"
-msgstr[1] "%d dagen"
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr "Dit veld is verplicht"
 
-#: Utility/CakeTime.php:843
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] "%d uur"
-msgstr[1] "%d uren"
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr "Dit veld mag niet leeg zijn"
 
-#: Utility/CakeTime.php:846
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "%d minuut"
-msgstr[1] "%d minuten"
+#: Validation/Validator.php:1501
+msgid "The provided value is invalid"
+msgstr "De opgegeven waarde is niet geldig"
 
-#: Utility/CakeTime.php:849
-msgid "%d second"
-msgid_plural "%d seconds"
-msgstr[0] "%d seconde"
-msgstr[1] "%d seconden"
-
-#: View/Helper/FormHelper.php:681
-msgid "Error in field %s"
-msgstr "Fout in veld %s"
-
-#: View/Helper/FormHelper.php:868
-#: View/Scaffolds/form.ctp:48
-#: View/Scaffolds/index.ctp:79;94
-#: View/Scaffolds/view.ctp:66;81;192
+#: View/Helper/FormHelper.php:947
 msgid "New %s"
 msgstr "Nieuw %s"
 
-#: View/Helper/FormHelper.php:874
-#: View/Scaffolds/view.ctp:54;113
+#: View/Helper/FormHelper.php:950
 msgid "Edit %s"
 msgstr "Wijzig %s"
 
-#: View/Helper/FormHelper.php:1436
-msgid "empty"
-msgstr "leeg"
-
-#: View/Helper/FormHelper.php:1796
-#: View/Scaffolds/form.ctp:23
+#: View/Helper/FormHelper.php:1770
 msgid "Submit"
 msgstr "Verzenden"
 
-#: View/Helper/FormHelper.php:2704
-msgid "January"
-msgstr "januari"
-
-#: View/Helper/FormHelper.php:2705
-msgid "February"
-msgstr "februari"
-
-#: View/Helper/FormHelper.php:2706
-msgid "March"
-msgstr "maart"
-
-#: View/Helper/FormHelper.php:2707
-msgid "April"
-msgstr "april"
-
-#: View/Helper/FormHelper.php:2708
-msgid "May"
-msgstr "mei"
-
-#: View/Helper/FormHelper.php:2709
-msgid "June"
-msgstr "juni"
-
-#: View/Helper/FormHelper.php:2710
-msgid "July"
-msgstr "juli"
-
-#: View/Helper/FormHelper.php:2711
-msgid "August"
-msgstr "augustus"
-
-#: View/Helper/FormHelper.php:2712
-msgid "September"
-msgstr "september"
-
-#: View/Helper/FormHelper.php:2713
-msgid "October"
-msgstr "oktober"
-
-#: View/Helper/FormHelper.php:2714
-msgid "November"
-msgstr "november"
-
-#: View/Helper/FormHelper.php:2715
-msgid "December"
-msgstr "december"
-
-#: View/Helper/HtmlHelper.php:747
+#: View/Helper/HtmlHelper.php:770
 msgid "Home"
 msgstr "Home"
 
-#: View/Helper/PaginatorHelper.php:580
-msgid " of "
-msgstr " van "
+#: View/Widget/DateTimeWidget.php:530
+msgid "January"
+msgstr "januari"
 
-#: View/Scaffolds/form.ctp:27
-#: View/Scaffolds/index.ctp:26;77
-#: View/Scaffolds/view.ctp:50
-msgid "Actions"
-msgstr "Acties"
+#: View/Widget/DateTimeWidget.php:531
+msgid "February"
+msgstr "februari"
 
-#: View/Scaffolds/form.ctp:31
-#: View/Scaffolds/index.ctp:51
-#: View/Scaffolds/view.ctp:177
-msgid "Delete"
-msgstr "Verwijder"
+#: View/Widget/DateTimeWidget.php:532
+msgid "March"
+msgstr "maart"
 
-#: View/Scaffolds/form.ctp:34
-msgid "Are you sure you want to delete # %s?"
-msgstr "Bent u zeker dat u # %s wilt verwijderen?"
+#: View/Widget/DateTimeWidget.php:533
+msgid "April"
+msgstr "april"
 
-#: View/Scaffolds/form.ctp:37
-msgid "List"
-msgstr "Lijst"
+#: View/Widget/DateTimeWidget.php:534
+msgid "May"
+msgstr "mei"
 
-#: View/Scaffolds/form.ctp:44
-#: View/Scaffolds/index.ctp:87
-#: View/Scaffolds/view.ctp:62;75
-msgid "List %s"
-msgstr "%s weergeven"
+#: View/Widget/DateTimeWidget.php:535
+msgid "June"
+msgstr "juni"
 
-#: View/Scaffolds/index.ctp:48
-#: View/Scaffolds/view.ctp:165
-msgid "View"
-msgstr "Bekijk"
+#: View/Widget/DateTimeWidget.php:536
+msgid "July"
+msgstr "juli"
 
-#: View/Scaffolds/index.ctp:49
-#: View/Scaffolds/view.ctp:171
-msgid "Edit"
-msgstr "Wijzig"
+#: View/Widget/DateTimeWidget.php:537
+msgid "August"
+msgstr "augustus"
 
-#: View/Scaffolds/index.ctp:54
-#: View/Scaffolds/view.ctp:58;180
-msgid "Are you sure you want to delete"
-msgstr "Bent u zeker dat u wilt verwijderen"
+#: View/Widget/DateTimeWidget.php:538
+msgid "September"
+msgstr "september"
 
-#: View/Scaffolds/index.ctp:65
-msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr "Pagina {:page} van {:pages}, {:current} rijen zichtbaar van {:count} totaal, startend vanaf {:start}, eindigend op {:end}"
+#: View/Widget/DateTimeWidget.php:539
+msgid "October"
+msgstr "oktober"
 
-#: View/Scaffolds/index.ctp:70
-msgid "previous"
-msgstr "vorige"
+#: View/Widget/DateTimeWidget.php:540
+msgid "November"
+msgstr "november"
 
-#: View/Scaffolds/index.ctp:72
-msgid "next"
-msgstr "volgende"
+#: View/Widget/DateTimeWidget.php:541
+msgid "December"
+msgstr "december"
 
-#: View/Scaffolds/view.ctp:20
-msgid "View %s"
-msgstr "Bekijk %s"
+#~ msgid "Invalid %s"
+#~ msgstr "%s ongeldig"
 
-#: View/Scaffolds/view.ctp:58
-msgid "Delete %s"
-msgstr "Verwijder %s"
+#~ msgid "updated"
+#~ msgstr "bijgewerkt"
 
-#: View/Scaffolds/view.ctp:96;137
-msgid "Related %s"
-msgstr "Gerelateerde %s"
+#~ msgid "saved"
+#~ msgstr "opgeslagen"
+
+#~ msgid "The %1$s has been %2$s"
+#~ msgstr "De %1$s is %2$s"
+
+#~ msgid "Please correct errors below."
+#~ msgstr "Corrigeer de onderstaande fouten aub."
+
+#~ msgid "The %1$s with id: %2$s has been deleted."
+#~ msgstr "De %1$s met id: %2$s werd verwijderd."
+
+#~ msgid "There was an error deleting the %1$s with id: %2$s"
+#~ msgstr "Een fout heeft zich voorgedaan bij het verwijderen van %1$s met id: %2$s"
+
+#~ msgid "This field cannot be left blank"
+#~ msgstr "Dit is een verplicht veld"
+
+#~ msgid "%d KB"
+#~ msgstr "%d KB"
+
+#~ msgid "%.2f MB"
+#~ msgstr "%.2f MB"
+
+#~ msgid "%.2f GB"
+#~ msgstr "%.2f GB"
+
+#~ msgid "%.2f TB"
+#~ msgstr "%.2f TB"
+
+#~ msgid "%d Byte"
+#~ msgid_plural "%d Bytes"
+#~ msgstr[0] "%d Byte"
+#~ msgstr[1] "%d Bytes"
+
+#~ msgid "Today, %s"
+#~ msgstr "Vandaag, %s"
+
+#~ msgid "Yesterday, %s"
+#~ msgstr "Gisteren, %s"
+
+#~ msgid "Tomorrow, %s"
+#~ msgstr "Morgen, %s"
+
+#~ msgid "Sunday"
+#~ msgstr "zondag"
+
+#~ msgid "Monday"
+#~ msgstr "maandag"
+
+#~ msgid "Tuesday"
+#~ msgstr "dinsdag"
+
+#~ msgid "Wednesday"
+#~ msgstr "woensdag"
+
+#~ msgid "Thursday"
+#~ msgstr "donderdag"
+
+#~ msgid "Friday"
+#~ msgstr "vrijdag"
+
+#~ msgid "Saturday"
+#~ msgstr "zaterdag"
+
+#~ msgid "On %s %s"
+#~ msgstr "Op %s %s"
+
+#~ msgid "days"
+#~ msgstr "dagen"
+
+#~ msgid "day"
+#~ msgstr "dag"
+
+#~ msgid "%d year"
+#~ msgid_plural "%d years"
+#~ msgstr[0] "%d jaar"
+#~ msgstr[1] "%d jaren"
+
+#~ msgid "%d month"
+#~ msgid_plural "%d months"
+#~ msgstr[0] "%d maand"
+#~ msgstr[1] "%d maanden"
+
+#~ msgid "%d week"
+#~ msgid_plural "%d weeks"
+#~ msgstr[0] "%d week"
+#~ msgstr[1] "%d weken"
+
+#~ msgid "%d day"
+#~ msgid_plural "%d days"
+#~ msgstr[0] "%d dag"
+#~ msgstr[1] "%d dagen"
+
+#~ msgid "%d hour"
+#~ msgid_plural "%d hours"
+#~ msgstr[0] "%d uur"
+#~ msgstr[1] "%d uren"
+
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "%d minuut"
+#~ msgstr[1] "%d minuten"
+
+#~ msgid "%d second"
+#~ msgid_plural "%d seconds"
+#~ msgstr[0] "%d seconde"
+#~ msgstr[1] "%d seconden"
+
+#~ msgid "Error in field %s"
+#~ msgstr "Fout in veld %s"
+
+#~ msgid "empty"
+#~ msgstr "leeg"
+
+#~ msgid " of "
+#~ msgstr " van "
+
+#~ msgid "Actions"
+#~ msgstr "Acties"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijder"
+
+#~ msgid "Are you sure you want to delete # %s?"
+#~ msgstr "Bent u zeker dat u # %s wilt verwijderen?"
+
+#~ msgid "List"
+#~ msgstr "Lijst"
+
+#~ msgid "List %s"
+#~ msgstr "%s weergeven"
+
+#~ msgid "View"
+#~ msgstr "Bekijk"
+
+#~ msgid "Edit"
+#~ msgstr "Wijzig"
+
+#~ msgid "Are you sure you want to delete"
+#~ msgstr "Bent u zeker dat u wilt verwijderen"
+
+#~ msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+#~ msgstr "Pagina {:page} van {:pages}, {:current} rijen zichtbaar van {:count} totaal, startend vanaf {:start}, eindigend op {:end}"
+
+#~ msgid "previous"
+#~ msgstr "vorige"
+
+#~ msgid "next"
+#~ msgstr "volgende"
+
+#~ msgid "View %s"
+#~ msgstr "Bekijk %s"
+
+#~ msgid "Delete %s"
+#~ msgstr "Verwijder %s"
+
+#~ msgid "Related %s"
+#~ msgstr "Gerelateerde %s"
