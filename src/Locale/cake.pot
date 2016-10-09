@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-09 12:43+0000\n"
+"POT-Creation-Date: 2016-10-09 12:56+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -13,11 +13,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: Template/Admin/Markts/edit.ctp:87;88
-#: I18n/RelativeTimeFormatter.php:370
-msgid "%s ago"
-msgstr ""
 
 #: Template/Error/error400.ctp:33
 #: Template/Error/error500.ctp:35
@@ -152,6 +147,10 @@ msgstr ""
 
 #: I18n/RelativeTimeFormatter.php:304
 msgid "today"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
 msgstr ""
 
 #: I18n/RelativeTimeFormatter.php:371
