@@ -17,7 +17,7 @@ msgstr ""
 
 #: Template/Error/error400.ctp:36 Template/Error/error500.ctp:41
 msgid "Error"
-msgstr "Błąð"
+msgstr "Błąd"
 
 #: Template/Error/error400.ctp:38
 msgid "The requested address %s was not found on this server."
@@ -104,7 +104,7 @@ msgstr "godzinę temu"
 
 #: I18n/RelativeTimeFormatter.php:153;328
 msgid "about a day ago"
-msgstr "dzień temu"
+msgstr "wczoraj"
 
 #: I18n/RelativeTimeFormatter.php:154;329
 msgid "about a week ago"
@@ -112,7 +112,7 @@ msgstr "tydzień temu"
 
 #: I18n/RelativeTimeFormatter.php:155;330
 msgid "about a month ago"
-msgstr "miesiąć temu"
+msgstr "miesiąc temu"
 
 #: I18n/RelativeTimeFormatter.php:156;331
 msgid "about a year ago"
@@ -168,9 +168,9 @@ msgstr[2] "{0} lat"
 #: I18n/RelativeTimeFormatter.php:51;128;315
 msgid "{0} month"
 msgid_plural "{0} months"
-msgstr[0] "{0} miesiąć"
+msgstr[0] "{0} miesiąc"
 msgstr[1] "{0} miesiące"
-msgstr[2] "{0} miesiący"
+msgstr[2] "{0} miesięcy"
 
 #: I18n/RelativeTimeFormatter.php:57;131;318
 msgid "{0} week"
@@ -233,7 +233,7 @@ msgstr "To pole jest wymagane"
 
 #: Validation/Validator.php:104
 msgid "This field cannot be left empty"
-msgstr "To pole nie może być puste "
+msgstr "To pole nie może być puste"
 
 #: Validation/Validator.php:1501
 msgid "The provided value is invalid"
@@ -241,7 +241,7 @@ msgstr "Podana wartość jest nieprawidłowa"
 
 #: View/Helper/FormHelper.php:947
 msgid "New %s"
-msgstr "Nowy"
+msgstr "Nowy %s"
 
 #: View/Helper/FormHelper.php:950
 msgid "Edit %s"
@@ -257,7 +257,7 @@ msgstr "Strona główna"
 
 #: View/Widget/DateTimeWidget.php:530
 msgid "January"
-msgstr "stydzeń"
+msgstr "styczeń"
 
 #: View/Widget/DateTimeWidget.php:531
 msgid "February"
@@ -265,7 +265,7 @@ msgstr "luty"
 
 #: View/Widget/DateTimeWidget.php:532
 msgid "March"
-msgstr "Marzec"
+msgstr "marzec"
 
 #: View/Widget/DateTimeWidget.php:533
 msgid "April"
@@ -273,7 +273,7 @@ msgstr "kwiecień"
 
 #: View/Widget/DateTimeWidget.php:534
 msgid "May"
-msgstr "Maj"
+msgstr "maj"
 
 #: View/Widget/DateTimeWidget.php:535
 msgid "June"
@@ -301,4 +301,4 @@ msgstr "listopad"
 
 #: View/Widget/DateTimeWidget.php:541
 msgid "December"
-msgstr "Grudzeiń"
+msgstr "grudzień"
