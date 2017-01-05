@@ -1,372 +1,293 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-10-22 10:52+0200\n"
-"PO-Revision-Date: 2012-10-22 11:24+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2016-10-09 12:56+0000\n"
+"PO-Revision-Date: 2017-01-05 14:25+0000\n"
+"Last-Translator: Niklas Rother <nrother@users.noreply.github.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2;plural=n!=1;\n"
 "Language: German\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
-#: Controller/Scaffold.php:128
-msgid "Scaffold :: "
-msgstr ""
+#: Template/Error/error400.ctp:33
+#: Template/Error/error500.ctp:35
+msgid "Error"
+msgstr "Fehler"
 
-#: Controller/Scaffold.php:167;234;305
-msgid "Invalid %s"
-msgstr "%s ungültig"
+#: Template/Error/error400.ctp:35
+msgid "The requested address %s was not found on this server."
+msgstr "Die angeforderte Adresse %s wurde auf diesem Server nicht gefunden."
 
-#: Controller/Scaffold.php:222
-msgid "updated"
-msgstr "geändert"
+#: Template/Error/error500.ctp:33
+msgid "An Internal Error Has Occurred"
+msgstr "Ein interner Fehler ist aufgetreten"
 
-#: Controller/Scaffold.php:225
-msgid "saved"
-msgstr "gespeichert"
-
-#: Controller/Scaffold.php:245
-msgid "The %1$s has been %2$s"
-msgstr "%1$s wurde %2$s"
-
-#: Controller/Scaffold.php:256
-msgid "Please correct errors below."
-msgstr "Bitte die Fehler korrigieren."
-
-#: Controller/Scaffold.php:308
-msgid "The %1$s with id: %2$s has been deleted."
-msgstr "%1$s mit id: %2$s wurde gelöscht."
-
-#: Controller/Scaffold.php:311
-msgid "There was an error deleting the %1$s with id: %2$s"
-msgstr "Ein Fehler ist aufgetreten beim Löschen von %1$s mit id: %2$s"
-
-#: Controller/Component/AuthComponent.php:369
+#: Controller/Component/AuthComponent.php:461
 msgid "You are not authorized to access that location."
 msgstr "Sie sind nicht berechtigt, diese Seite aufzurufen."
 
-#: Error/ExceptionRenderer.php:209
+#: Controller/Component/CsrfComponent.php:154
+msgid "Missing CSRF token cookie"
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:158
+msgid "CSRF token mismatch."
+msgstr ""
+
+#: Error/ExceptionRenderer.php:251
 msgid "Not Found"
 msgstr "Seite nicht gefunden"
 
-#: Error/ExceptionRenderer.php:231
+#: Error/ExceptionRenderer.php:253
 msgid "An Internal Error Has Occurred."
 msgstr "Ein interner Fehler ist aufgetreten"
 
-#: Model/Validator/CakeValidationSet.php:287
-msgid "This field cannot be left blank"
-msgstr "Dieses Feld darf nicht leer gelassen werden"
-
-#: Network/CakeResponse.php:1222
-msgid "The requested file was not found"
-msgstr "Die angeforderte Datei wurde nicht gefunden"
-
-#: Utility/CakeNumber.php:101
-msgid "%d KB"
+#: I18n/Number.php:90
+msgid "{0,number,#,###.##} KB"
 msgstr ""
 
-#: Utility/CakeNumber.php:103
-msgid "%.2f MB"
+#: I18n/Number.php:92
+msgid "{0,number,#,###.##} MB"
 msgstr ""
 
-#: Utility/CakeNumber.php:105
-msgid "%.2f GB"
+#: I18n/Number.php:94
+msgid "{0,number,#,###.##} GB"
 msgstr ""
 
-#: Utility/CakeNumber.php:107
-msgid "%.2f TB"
+#: I18n/Number.php:96
+msgid "{0,number,#,###.##} TB"
 msgstr ""
 
-#: Utility/CakeNumber.php:99
-msgid "%d Byte"
-msgid_plural "%d Bytes"
+#: I18n/Number.php:88
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Utility/CakeTime.php:389
-msgid "Today, %s"
-msgstr "Heute, %s"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "in {0}"
 
-#: Utility/CakeTime.php:392
-msgid "Yesterday, %s"
-msgstr "Gestern, %s"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "vor {0}"
 
-#: Utility/CakeTime.php:395
-msgid "Tomorrow, %s"
-msgstr "Morgen, %s"
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr "{0} später"
 
-#: Utility/CakeTime.php:400
-msgid "Sunday"
-msgstr "Sonntag"
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr "{0} vorher"
 
-#: Utility/CakeTime.php:401
-msgid "Monday"
-msgstr "Montag"
-
-#: Utility/CakeTime.php:402
-msgid "Tuesday"
-msgstr "Dienstag"
-
-#: Utility/CakeTime.php:403
-msgid "Wednesday"
-msgstr "Mittwoch"
-
-#: Utility/CakeTime.php:404
-msgid "Thursday"
-msgstr "Donnerstag"
-
-#: Utility/CakeTime.php:405
-msgid "Friday"
-msgstr "Freitag"
-
-#: Utility/CakeTime.php:406
-msgid "Saturday"
-msgstr "Samstag"
-
-#: Utility/CakeTime.php:412
-msgid "On %s %s"
-msgstr "Am %s %s"
-
-#: Utility/CakeTime.php:805
+#: I18n/RelativeTimeFormatter.php:114
 msgid "just now"
 msgstr "gerade eben"
 
-#: Utility/CakeTime.php:809
-msgid "on %s"
-msgstr "am %s"
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr "vor etwa einer Sekunde"
 
-#: Utility/CakeTime.php:853
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr "vor etwa einer Minute"
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr "vor etwa einer Stunde"
+
+#: I18n/RelativeTimeFormatter.php:154;332
+msgid "about a day ago"
+msgstr "vor etwa einem Tag"
+
+#: I18n/RelativeTimeFormatter.php:155;333
+msgid "about a week ago"
+msgstr "vor etwa einer Woche"
+
+#: I18n/RelativeTimeFormatter.php:156;334
+msgid "about a month ago"
+msgstr "vor etwa einem Monat"
+
+#: I18n/RelativeTimeFormatter.php:157;159;335
+msgid "about a year ago"
+msgstr "vor etwa einem Jahr"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr "in etwa einer Sekunde"
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr "in etwa einer Minute"
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr "in etwa einer Stunde"
+
+#: I18n/RelativeTimeFormatter.php:171;346
+msgid "in about a day"
+msgstr "in etwa einem Tag"
+
+#: I18n/RelativeTimeFormatter.php:172;347
+msgid "in about a week"
+msgstr "in etwa einer Woche"
+
+#: I18n/RelativeTimeFormatter.php:173;348
+msgid "in about a month"
+msgstr "in etwa einem Montat"
+
+#: I18n/RelativeTimeFormatter.php:174;349
+msgid "in about a year"
+msgstr "in etwa einem Jahr"
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr "heute"
+
+#: I18n/RelativeTimeFormatter.php:370
 msgid "%s ago"
 msgstr "vor %s"
 
-#: Utility/CakeTime.php:872;894
-msgid "days"
-msgstr "Tage"
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr "um %s"
 
-#: Utility/CakeTime.php:154
-msgid "abday"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:47;126;316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} Jahr"
+msgstr[1] " {0} Jahre"
 
-#: Utility/CakeTime.php:160
-msgid "day"
-msgstr "Tag"
+#: I18n/RelativeTimeFormatter.php:51;129;319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} Monat"
+msgstr[1] "{0} Monate"
 
-#: Utility/CakeTime.php:166
-msgid "d_t_fmt"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:57;132;322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} Woche"
+msgstr[1] "{0} Wochen"
 
-#: Utility/CakeTime.php:188
-msgid "abmon"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:59;135;325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} Tag"
+msgstr[1] "{0} Tage"
 
-#: Utility/CakeTime.php:194
-msgid "mon"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:64;138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} Stunde"
+msgstr[1] "{0} Stunden"
 
-#: Utility/CakeTime.php:205
-msgid "am_pm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:68;141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} Minute"
+msgstr[1] "{0} Minuten"
 
-#: Utility/CakeTime.php:212
-msgid "t_fmt_ampm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:72;144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} Sekunde"
+msgstr[1] "{0} Sekunden"
 
-#: Utility/CakeTime.php:226
-msgid "d_fmt"
-msgstr ""
+#: Network/Response.php:1472
+msgid "The requested file was not found"
+msgstr "Die angeforderte Datei wurde nicht gefunden"
 
-#: Utility/CakeTime.php:232
-msgid "t_fmt"
-msgstr ""
+#: ORM/RulesChecker.php:57
+msgid "This value is already in use"
+msgstr "Dieser Wert wird breits benutzt"
 
-#: Utility/CakeTime.php:831
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] "%d Jahr"
-msgstr[1] "%d Jahre"
+#: ORM/RulesChecker.php:104
+msgid "This value does not exist"
+msgstr "Dieser Wert existiert nicht"
 
-#: Utility/CakeTime.php:834
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] "%d Monat"
-msgstr[1] "%d Monate"
+#: ORM/RulesChecker.php:128
+msgid "The count does not match {0}{1}"
+msgstr "Die Anzahl stimmt nicht überein {0}{1}"
 
-#: Utility/CakeTime.php:837
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] "%d Woche"
-msgstr[1] "%d Wochen"
+#: Utility/Text.php:894
+msgid "and"
+msgstr "und"
 
-#: Utility/CakeTime.php:840
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] "%d Tag"
-msgstr[1] "%d Tage"
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr "Dieses Feld ist erforderlich"
 
-#: Utility/CakeTime.php:843
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] "%d Stunde"
-msgstr[1] "%d Stunden"
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr "Dieses Feld darf nicht leer gelassen werden"
 
-#: Utility/CakeTime.php:846
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "%d Minute"
-msgstr[1] "%d Minuten"
+#: Validation/Validator.php:1712
+msgid "The provided value is invalid"
+msgstr "Der angegebene Wert ist ungültig"
 
-#: Utility/CakeTime.php:849
-msgid "%d second"
-msgid_plural "%d seconds"
-msgstr[0] "%d Sekunde"
-msgstr[1] "%d Sekunden"
-
-#: View/Helper/FormHelper.php:681
-msgid "Error in field %s"
-msgstr "Fehler im Feld %s"
-
-#: View/Helper/FormHelper.php:868
-#: View/Scaffolds/form.ctp:48
-#: View/Scaffolds/index.ctp:79;94
-#: View/Scaffolds/view.ctp:66;81;192
+#: View/Helper/FormHelper.php:963
 msgid "New %s"
-msgstr "%s hinzufügen"
+msgstr ""
 
-#: View/Helper/FormHelper.php:874
-#: View/Scaffolds/view.ctp:54;113
+#: View/Helper/FormHelper.php:966
 msgid "Edit %s"
-msgstr "%s bearbeiten"
+msgstr ""
 
-#: View/Helper/FormHelper.php:1436
-msgid "empty"
-msgstr "leer"
-
-#: View/Helper/FormHelper.php:1796
-#: View/Scaffolds/form.ctp:23
+#: View/Helper/FormHelper.php:1812
 msgid "Submit"
-msgstr "Weiter"
+msgstr "Absenden"
 
-#: View/Helper/FormHelper.php:2704
+#: View/Helper/HtmlHelper.php:781
+msgid "Home"
+msgstr "Start"
+
+#: View/Widget/DateTimeWidget.php:540
 msgid "January"
 msgstr "Januar"
 
-#: View/Helper/FormHelper.php:2705
+#: View/Widget/DateTimeWidget.php:541
 msgid "February"
 msgstr "Februar"
 
-#: View/Helper/FormHelper.php:2706
+#: View/Widget/DateTimeWidget.php:542
 msgid "March"
 msgstr "März"
 
-#: View/Helper/FormHelper.php:2707
+#: View/Widget/DateTimeWidget.php:543
 msgid "April"
 msgstr "April"
 
-#: View/Helper/FormHelper.php:2708
+#: View/Widget/DateTimeWidget.php:544
 msgid "May"
 msgstr "Mai"
 
-#: View/Helper/FormHelper.php:2709
+#: View/Widget/DateTimeWidget.php:545
 msgid "June"
 msgstr "Juni"
 
-#: View/Helper/FormHelper.php:2710
+#: View/Widget/DateTimeWidget.php:546
 msgid "July"
 msgstr "Juli"
 
-#: View/Helper/FormHelper.php:2711
+#: View/Widget/DateTimeWidget.php:547
 msgid "August"
 msgstr "August"
 
-#: View/Helper/FormHelper.php:2712
+#: View/Widget/DateTimeWidget.php:548
 msgid "September"
 msgstr "September"
 
-#: View/Helper/FormHelper.php:2713
+#: View/Widget/DateTimeWidget.php:549
 msgid "October"
 msgstr "Oktober"
 
-#: View/Helper/FormHelper.php:2714
+#: View/Widget/DateTimeWidget.php:550
 msgid "November"
-msgstr "November"
+msgstr "Novemeber"
 
-#: View/Helper/FormHelper.php:2715
+#: View/Widget/DateTimeWidget.php:551
 msgid "December"
 msgstr "Dezember"
-
-#: View/Helper/HtmlHelper.php:747
-msgid "Home"
-msgstr "Startseite"
-
-#: View/Helper/PaginatorHelper.php:580
-msgid " of "
-msgstr " von "
-
-#: View/Scaffolds/form.ctp:27
-#: View/Scaffolds/index.ctp:26;77
-#: View/Scaffolds/view.ctp:50
-msgid "Actions"
-msgstr "Aktionen"
-
-#: View/Scaffolds/form.ctp:31
-#: View/Scaffolds/index.ctp:51
-#: View/Scaffolds/view.ctp:177
-msgid "Delete"
-msgstr "Löschen"
-
-#: View/Scaffolds/form.ctp:34
-msgid "Are you sure you want to delete # %s?"
-msgstr "Sicher, dass # %s gelöscht werden soll?"
-
-#: View/Scaffolds/form.ctp:37
-msgid "List"
-msgstr "Übersicht"
-
-#: View/Scaffolds/form.ctp:44
-#: View/Scaffolds/index.ctp:87
-#: View/Scaffolds/view.ctp:62;75
-msgid "List %s"
-msgstr "Übersicht aller %s"
-
-#: View/Scaffolds/index.ctp:48
-#: View/Scaffolds/view.ctp:165
-msgid "View"
-msgstr "Anzeigen"
-
-#: View/Scaffolds/index.ctp:49
-#: View/Scaffolds/view.ctp:171
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: View/Scaffolds/index.ctp:54
-#: View/Scaffolds/view.ctp:58;180
-msgid "Are you sure you want to delete"
-msgstr "Löschen bestätigen"
-
-#: View/Scaffolds/index.ctp:65
-msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr "Seite {:page} von {:pages}, zeige {:current} von insgesamt {:count} Einträgen, beginnend bei {:start}, endend mit {:end}"
-
-#: View/Scaffolds/index.ctp:70
-msgid "previous"
-msgstr "zurück"
-
-#: View/Scaffolds/index.ctp:72
-msgid "next"
-msgstr "weiter"
-
-#: View/Scaffolds/view.ctp:20
-msgid "View %s"
-msgstr "%s anzeigen"
-
-#: View/Scaffolds/view.ctp:58
-msgid "Delete %s"
-msgstr "%s löschen"
-
-#: View/Scaffolds/view.ctp:96;137
-msgid "Related %s"
-msgstr "Verwandte %s"
-
