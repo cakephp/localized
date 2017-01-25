@@ -25,6 +25,60 @@ use Cake\TestSuite\TestCase;
 class CaValidationTest extends TestCase
 {
     /**
+     * test the phone method of CaValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(CaValidation::phone('+1 702 425 5085'));
+        $this->assertFalse(CaValidation::phone('teststring'));
+        $this->assertFalse(CaValidation::phone('1-(33)-(333)-(4444)'));
+        $this->assertFalse(CaValidation::phone('1-(33)-3333-4444'));
+        $this->assertFalse(CaValidation::phone('1-(33)-33-4444'));
+        $this->assertFalse(CaValidation::phone('1-(33)-3-44444'));
+        $this->assertFalse(CaValidation::phone('1-(33)-3-444'));
+        $this->assertFalse(CaValidation::phone('1-(33)-3-44'));
+
+        $this->assertFalse(CaValidation::phone('(055) 999-9999'));
+        $this->assertFalse(CaValidation::phone('(155) 999-9999'));
+        $this->assertFalse(CaValidation::phone('(595) 999-9999'));
+        $this->assertFalse(CaValidation::phone('(213) 099-9999'));
+        $this->assertFalse(CaValidation::phone('(213) 199-9999'));
+
+        // invalid area-codes
+        $this->assertFalse(CaValidation::phone('1-(511)-999-9999'));
+        $this->assertFalse(CaValidation::phone('1-(379)-999-9999'));
+        $this->assertFalse(CaValidation::phone('1-(962)-999-9999'));
+        $this->assertFalse(CaValidation::phone('1-(295)-999-9999'));
+        $this->assertFalse(CaValidation::phone('1-(555)-999-9999'));
+
+        // invalid exhange
+        $this->assertFalse(CaValidation::phone('1-(222)-511-9999'));
+
+        // invalid phone number
+        $this->assertFalse(CaValidation::phone('1-(222)-555-0199'));
+        $this->assertFalse(CaValidation::phone('1-(222)-555-0122'));
+
+        // valid phone numbers
+        $this->assertTrue(CaValidation::phone('1-(369)-333-4444'));
+        $this->assertTrue(CaValidation::phone('1-(973)-333-4444'));
+        $this->assertTrue(CaValidation::phone('1-(313)-555-9999'));
+        $this->assertTrue(CaValidation::phone('1-(222)-555-0299'));
+
+        $this->assertTrue(CaValidation::phone('1 (222) 333 4444'));
+        $this->assertTrue(CaValidation::phone('+1 (222) 333 4444'));
+        $this->assertTrue(CaValidation::phone('(222) 333 4444'));
+
+        $this->assertTrue(CaValidation::phone('1-(333)-333-4444'));
+        $this->assertTrue(CaValidation::phone('1.(333)-333-4444'));
+        $this->assertTrue(CaValidation::phone('1.(333).333-4444'));
+        $this->assertTrue(CaValidation::phone('1.(333).333.4444'));
+        $this->assertTrue(CaValidation::phone('1-333-333-4444'));
+        $this->assertFalse(CaValidation::phone('7002 425 5085'));
+    }
+
+    /**
      * test the postal method of CaValidation
      *
      * @return void
