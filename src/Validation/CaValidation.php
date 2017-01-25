@@ -45,7 +45,15 @@ class CaValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $pattern = '/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|3[02-689][0-9]|9[02-57-9][0-9]|[246-8][02-46-8][02-46-9])\s*\)';
+        $pattern .= '|(55[0-46-9]|5[0-46-9][5]|[0-46-9]55|[2-9]1[02-9]|[2-9][02-8]1|[2-46-9][02-46-8][02-46-9]))\s*(?:[.-]\s*)?)';
+        $pattern .= '(?!(555(?:\s*(?:[.|\-|\s]\s*))(01([0-9][0-9])|1212)))';
+        $pattern .= '(?!(555(01([0-9][0-9])|1212)))';
+        $pattern .= '([2-9]1[02-9]|[2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)';
+        $pattern .= '?([0-9]{4})';
+        $pattern .= '(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/';
+
+        return (bool)preg_match($pattern, $check);
     }
 
     /**
