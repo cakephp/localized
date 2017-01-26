@@ -46,13 +46,14 @@ class CaValidation extends LocalizedValidation
     public static function phone($check)
     {
         $invalid_num = new InvalidNumberRule();
+
         $invalid_num->add(null, 're[0-9]11', null, null);
         $invalid_num->add(null, null, 're[0-9]11', null);
         $invalid_num->add(null, 're[01][0-9][0-9]', null, null);
         $invalid_num->add(null, null, 're[01][0-9][0-9]', null);
         $invalid_num->add(null, null, 555, 'ra0100-0199');
 
-        // Unassigned area codes
+        // Unassigned area codes (incomplete)
         $invalid_num->add(null, 'ra221-223', null, null);
         $invalid_num->add(null, '230', null, null);
         $invalid_num->add(null, 'ra232-233', null, null);
