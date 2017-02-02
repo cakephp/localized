@@ -30,11 +30,11 @@ msgstr "Sie sind nicht berechtigt, diese Seite aufzurufen."
 
 #: Controller/Component/CsrfComponent.php:154
 msgid "Missing CSRF token cookie"
-msgstr ""
+msgstr "Fehlendes CSRF-Token-Cookie"
 
 #: Controller/Component/CsrfComponent.php:158
 msgid "CSRF token mismatch."
-msgstr ""
+msgstr "Ungültiges CSRF-Token."
 
 #: Error/ExceptionRenderer.php:251
 msgid "Not Found"
@@ -42,7 +42,7 @@ msgstr "Seite nicht gefunden"
 
 #: Error/ExceptionRenderer.php:253
 msgid "An Internal Error Has Occurred."
-msgstr "Ein interner Fehler ist aufgetreten"
+msgstr "Ein interner Fehler ist aufgetreten."
 
 #: I18n/Number.php:90
 msgid "{0,number,#,###.##} KB"
@@ -202,7 +202,7 @@ msgstr "Die angeforderte Datei wurde nicht gefunden"
 
 #: ORM/RulesChecker.php:57
 msgid "This value is already in use"
-msgstr "Dieser Wert wird breits benutzt"
+msgstr "Dieser Wert wird bereits benutzt"
 
 #: ORM/RulesChecker.php:104
 msgid "This value does not exist"
@@ -230,11 +230,11 @@ msgstr "Der angegebene Wert ist ungültig"
 
 #: View/Helper/FormHelper.php:963
 msgid "New %s"
-msgstr ""
+msgstr "%s hinzufügen"
 
 #: View/Helper/FormHelper.php:966
 msgid "Edit %s"
-msgstr ""
+msgstr "%s bearbeiten"
 
 #: View/Helper/FormHelper.php:1812
 msgid "Submit"
@@ -246,7 +246,7 @@ msgstr "Start"
 
 #: View/Widget/DateTimeWidget.php:540
 msgid "January"
-msgstr "Januar"
+msgstr "Jänner"
 
 #: View/Widget/DateTimeWidget.php:541
 msgid "February"
@@ -286,7 +286,7 @@ msgstr "Oktober"
 
 #: View/Widget/DateTimeWidget.php:550
 msgid "November"
-msgstr "Novemeber"
+msgstr "November"
 
 #: View/Widget/DateTimeWidget.php:551
 msgid "December"
