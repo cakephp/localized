@@ -31,7 +31,7 @@ class TrValidation extends LocalizedValidation
      */
     public static function postal($check)
     {
-        $pattern = '/^[0-9]{5}$/';
+        $pattern = '/^(0[1-9]|[1-7][0-9]|8[0-1])[0-9]{3}$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -39,14 +39,32 @@ class TrValidation extends LocalizedValidation
     /**
      * Checks an identity number for Turkey.
      *
-     * @param string $check The value to check.
+     * @param string $tckn The value to check.
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId($tckn)
     {
-        $pattern = '/^[0-9]{11}$/';
+        if (strlen($tckn) !== 11) {
+            return false;
+        }
 
-        return (bool)preg_match($pattern, $check);
+        if ($tckn[0] === 0) {
+            return false;
+        }
+
+        $even = $tckn[0] + $tckn[2] + $tckn[4] + $tckn[6] + $tckn[8];
+        $odd = $tckn[1] + $tckn[3] + $tckn[5] + $tckn[7];
+        $check = ($even * 7) - $odd;
+        if ($check % 10 !== (int)$tckn[9]) {
+            return false;
+        }
+
+        $check = $even + $odd + $tckn[9];
+        if ($check % 10 !== (int)$tckn[10]) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
