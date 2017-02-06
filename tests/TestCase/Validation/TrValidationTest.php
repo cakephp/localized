@@ -35,7 +35,7 @@ class TrValidationTest extends TestCase
         $this->assertFalse(TrValidation::postal('2300'));
         $this->assertFalse(TrValidation::postal('230000'));
     }
-    
+
     /**
      * test the personId method of TrValidation
      *
@@ -43,12 +43,12 @@ class TrValidationTest extends TestCase
      */
     public function testPersonId()
     {
-    	//random identification numbers generated here: http://www.simlict.com/tcno.html
-    	$this->assertTrue(TrValidation::personId('15315680458'));
-    	$this->assertTrue(TrValidation::personId('49972028292'));
-    	$this->assertTrue(TrValidation::personId('31216166938'));
-    	$this->assertFalse(TrValidation::postal('31216166930'));
-    	$this->assertFalse(TrValidation::postal('01216166930'));
-    	$this->assertFalse(TrValidation::postal('31216166931'));
-    }    
+        //random identification numbers generated here: http://www.simlict.com/tcno.html
+        $this->assertTrue(TrValidation::personId('15315680458'));
+        $this->assertTrue(TrValidation::personId('49972028292'));
+        $this->assertTrue(TrValidation::personId('31216166938'));
+        $this->assertFalse(TrValidation::personId('31216166930'));
+        $this->assertFalse(TrValidation::personId('01216166930'));
+        $this->assertFalse(TrValidation::personId('31216166931'));
+    }
 }
