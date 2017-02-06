@@ -44,16 +44,30 @@ class TrValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-    	$tckn=array_shift(array_values($check));
-    	if(strlen($tckn)!=11) return false;
-    	if($tckn[0]==0) return false;
-    	$even = $tckn[0] + $tckn[2] + $tckn[4] + $tckn[6] + $tckn[8];
-    	$odd = $tckn[1] + $tckn[3] + $tckn[5] + $tckn[7];
-    	$check = ($even * 7) - $odd;
-    	if($check % 10 != $tckn[9]) return false;
-    	$check = $even + $odd + $tckn[9];
-    	if($check % 10 != $tckn[10]) return false;
-    	return true;
+        $tckn = array_shift(array_values($check));
+        if (strlen($tckn) != 11) {
+            return false;
+        }
+        
+        if ($tckn[0] == 0) {
+            return false;
+        }
+        
+        $even = $tckn[0] + $tckn[2] + $tckn[4] + $tckn[6] + $tckn[8];
+        $odd = $tckn[1] + $tckn[3] + $tckn[5] + $tckn[7];
+        $check = ($even * 7) - $odd;
+        
+        if ($check % 10 != $tckn[9]) {
+            return false;
+        }
+        
+        $check = $even + $odd + $tckn[9];
+        
+        if ($check % 10 != $tckn[10]) {
+            return false;
+        }
+        
+        return true;
     }
 
     /**
