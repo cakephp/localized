@@ -32,8 +32,12 @@ class TrValidationTest extends TestCase
     public function testPostal()
     {
         $this->assertTrue(TrValidation::postal('02300'));
+        $this->assertTrue(TrValidation::postal('01000'));
+        $this->assertTrue(TrValidation::postal('81999'));
         $this->assertFalse(TrValidation::postal('2300'));
         $this->assertFalse(TrValidation::postal('230000'));
+        $this->assertFalse(TrValidation::postal('00000'));
+        $this->assertFalse(TrValidation::postal('82000'));
     }
 
     /**
