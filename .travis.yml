@@ -5,6 +5,7 @@ php:
   - 5.5
   - 5.6
   - 7.0
+  - 7.1
 
 sudo: false
 
@@ -18,9 +19,10 @@ matrix:
 install:
   - composer self-update
   - composer install --prefer-dist --no-interaction
+  - composer require phpunit/phpunit
 
 script:
-  - sh -c "if [ '$PHPCS' != '1' ]; then phpunit; fi"
+  - sh -c "if [ '$PHPCS' != '1' ]; then vendor/bin/phpunit; fi"
   - sh -c "if [ '$PHPCS' = '1' ]; then ./vendor/bin/phpcs -n -p --extensions=php --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests; fi"
 
 notifications:
