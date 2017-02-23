@@ -29,7 +29,20 @@ class GbValidationTest extends TestCase
      */
     public function testPostal()
     {
-        $this->assertTrue(GbValidation::postal('DT4 8PP'));
         $this->assertFalse(GbValidation::postal('DT4-8PP'));
+        $this->assertTrue(GbValidation::postal('sp110qn'));
+        $this->assertTrue(GbValidation::postal('SP110QN'));
+        $this->assertTrue(GbValidation::postal('DT4 8PP'));
+        $this->assertTrue(GbValidation::postal('W1A 1AA'));
+        $this->assertTrue(GbValidation::postal('W12 7TQ'));
+        $this->assertTrue(GbValidation::postal('SW1A 0AA'));
+        $this->assertTrue(GbValidation::postal('W1J 7NT'));
+        $this->assertTrue(GbValidation::postal('EC1A 1BB'));
+        $this->assertTrue(GbValidation::postal('W1A 0AX'));
+        $this->assertTrue(GbValidation::postal('M1 1AE'));
+        $this->assertTrue(GbValidation::postal('B33 8TH'));
+        $this->assertTrue(GbValidation::postal('CR2 6XH'));
+        $this->assertTrue(GbValidation::postal('XM45HQ'));
+        $this->assertFalse(GbValidation::postal('SAN TA1'));
     }
 }
