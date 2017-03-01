@@ -40,8 +40,6 @@ class LvValidationTest extends TestCase
         ];
     }
 
-
-
     /**
      * Test Latvian person id
      *
