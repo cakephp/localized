@@ -45,7 +45,6 @@ class FiValidationTest extends TestCase
         ];
     }
 
-
     /**
      * Postal data provider
      * @return array
@@ -61,7 +60,6 @@ class FiValidationTest extends TestCase
         ];
     }
 
-
     /**
      * Test Finnish person id
      *
@@ -72,7 +70,6 @@ class FiValidationTest extends TestCase
     {
         $this->assertEquals($assert, FiValidation::personId($item));
     }
-
 
     /**
      * Test Finnish postal

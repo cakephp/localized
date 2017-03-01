@@ -38,7 +38,6 @@ class FiValidation extends LocalizedValidation
         return (bool)preg_match($pattern, $check);
     }
 
-
     /**
      * Checks a phone number for Finland.
      *
@@ -51,7 +50,6 @@ class FiValidation extends LocalizedValidation
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
-
 
     /**
      * Checks a country specific identification number.

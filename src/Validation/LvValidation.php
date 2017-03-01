@@ -37,7 +37,6 @@ class LvValidation extends LocalizedValidation
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
 
-
     /**
      * Checks a phone number for Latvia.
      *
@@ -50,7 +49,6 @@ class LvValidation extends LocalizedValidation
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
-
 
     /**
      * Checks a country specific identification number.
