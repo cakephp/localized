@@ -46,7 +46,7 @@ class FrValidation extends LocalizedValidation
         if ((bool)preg_match($pattern, $check)) {
             $value = intval($check);
 
-            return $value >= 1001 && $value <= 99138;
+            return $value >= 1000 && $value <= 99138;
         }
 
         return false;
