@@ -59,6 +59,7 @@ class JpValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      * @return bool Success.
+     * @link http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/q_and_a.html
      */
     public static function phoneDigits($check)
     {
