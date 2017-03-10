@@ -57,6 +57,7 @@ class JpValidationTest extends TestCase
         $this->assertFalse(JpValidation::phone('+8190111122221199'));
         $this->assertFalse(JpValidation::phone('+8111-90-1111-2222'));
         $this->assertFalse(JpValidation::phone('056'));
+        $this->assertFalse(JpValidation::phone('01000-0000-0000'));
     }
 
     /**

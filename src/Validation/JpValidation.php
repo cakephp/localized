@@ -47,7 +47,7 @@ class JpValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        $pattern = '/^(?:(?:0|\+81[\s\-]?)[1-9](?:0(?:\d{8}|(?:[\s\-]\d{4}){2})|(?:[1-9]\d{7}|(?:[1-9]0(?:[\s\-]\d{3}){2}|\d{0,3}[\s\-]\d{1,4}[\s\-]\d{4}))))$/';
+        $pattern = '/^(?:(?:0|\+81[\s\-]?)[1-9](?:0(?:\d{8}|(?:[\s\-]\d{4}){2})|(?:[1-9]\d{7}|(?:[1-9]0(?:[\s\-]\d{3}){2}|[\s\-]\d{4}[\s\-]\d{4}|[1-9]\d{1,2}[\s\-]\d{1,4}[\s\-]\d{4}))))$/';
 
         return (bool)preg_match($pattern, $check);
     }
