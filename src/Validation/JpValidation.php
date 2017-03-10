@@ -25,13 +25,47 @@ class JpValidation extends LocalizedValidation
 {
     /**
      * Checks a phone number for Japan.
+     * Accepts the following format.
+     * - 0311112222
+     * - 03 1111 2222 or 09876 1 2222
+     * - 03-1111-2222 or 09876-1-2222
+     * - +81311112222
+     * - +81 3 1111 2222
+     * - +81-3-1111-2222
+     * - 09011112222
+     * - 090 1111 2222
+     * - 090-1111-2222
+     * - +819011112222
+     * - +81 90 1111 2222
+     * - +81-90-1111-2222
+     * - 0120111222
+     * - 0120 111 222
+     * - 0120-111-222
      *
      * @param string $check The value to check.
      * @return bool Success.
      */
     public static function phone($check)
     {
-        $pattern = '/^(0\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4}|\+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,4})$/';
+        $pattern = '/^(?:(?:0|\+81[\s\-]?)[1-9](?:0(?:\d{8}|(?:[\s\-]\d{4}){2})|(?:[1-9]\d{7}|(?:[1-9]0(?:[\s\-]\d{3}){2}|[\s\-]\d{4}[\s\-]\d{4}|[1-9]\d{1,2}[\s\-]\d{1,4}[\s\-]\d{4}))))$/';
+
+        return (bool)preg_match($pattern, $check);
+    }
+
+    /**
+     * Checks a phone number of digits for Japan.
+     * - Numbers starting with 0A0 (A is not 0) is 11 digits.
+     * - Numbers starting with 0ABC (A,B,C is not 0) is 10 digits.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     * @link http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/q_and_a.html
+     */
+    public static function phoneDigits($check)
+    {
+        $check = preg_replace(['/[\s\-]/', '/\+81/'], ['', '0'], $check);
+
+        $pattern = '/^0(?:[1-9]0\d{8}|[1-9]{2}\d{7})$/';
 
         return (bool)preg_match($pattern, $check);
     }
