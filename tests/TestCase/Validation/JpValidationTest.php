@@ -33,21 +33,64 @@ class JpValidationTest extends TestCase
     {
         $this->assertTrue(JpValidation::phone('03-1111-2222'));
         $this->assertTrue(JpValidation::phone('090-1111-2222'));
+        $this->assertTrue(JpValidation::phone('0120-111-222'));
         $this->assertTrue(JpValidation::phone('0111-11-2222'));
         $this->assertTrue(JpValidation::phone('02222-1-1111'));
         $this->assertTrue(JpValidation::phone('0311112222'));
         $this->assertTrue(JpValidation::phone('09011112222'));
         $this->assertTrue(JpValidation::phone('03 1111 2222'));
         $this->assertTrue(JpValidation::phone('090 1111 2222'));
+        $this->assertTrue(JpValidation::phone('0120 111 222'));
         $this->assertTrue(JpValidation::phone('+81 90 1111 2222'));
         $this->assertTrue(JpValidation::phone('+81-90-1111-2222'));
         $this->assertTrue(JpValidation::phone('+819011112222'));
 
+        $this->assertFalse(JpValidation::phone('03-1111-22223'));
+        $this->assertFalse(JpValidation::phone('090-1111-222'));
+        $this->assertFalse(JpValidation::phone('0120-1111-222'));
+        $this->assertFalse(JpValidation::phone('0111-11-222'));
+        $this->assertFalse(JpValidation::phone('02222-1-111'));
         $this->assertFalse(JpValidation::phone('051238-1-111'));
         $this->assertFalse(JpValidation::phone('90-1111-2222'));
+        $this->assertFalse(JpValidation::phone('03111122223'));
+        $this->assertFalse(JpValidation::phone('0901111222'));
         $this->assertFalse(JpValidation::phone('+8190111122221199'));
         $this->assertFalse(JpValidation::phone('+8111-90-1111-2222'));
         $this->assertFalse(JpValidation::phone('056'));
+    }
+
+    /**
+     * test the phoneDigits method of JpValidation
+     *
+     * @return void
+     */
+    public function testPhoneDigits()
+    {
+        $this->assertTrue(JpValidation::phoneDigits('03-1111-2222'));
+        $this->assertTrue(JpValidation::phoneDigits('090-1111-2222'));
+        $this->assertTrue(JpValidation::phoneDigits('0120-111-222'));
+        $this->assertTrue(JpValidation::phoneDigits('0111-11-2222'));
+        $this->assertTrue(JpValidation::phoneDigits('02222-1-1111'));
+        $this->assertTrue(JpValidation::phoneDigits('0311112222'));
+        $this->assertTrue(JpValidation::phoneDigits('09011112222'));
+        $this->assertTrue(JpValidation::phoneDigits('03 1111 2222'));
+        $this->assertTrue(JpValidation::phoneDigits('090 1111 2222'));
+        $this->assertTrue(JpValidation::phoneDigits('0120 111 222'));
+        $this->assertTrue(JpValidation::phoneDigits('+81 90 1111 2222'));
+        $this->assertTrue(JpValidation::phoneDigits('+81-90-1111-2222'));
+        $this->assertTrue(JpValidation::phoneDigits('+819011112222'));
+
+        $this->assertFalse(JpValidation::phoneDigits('03-1111-22223'));
+        $this->assertFalse(JpValidation::phoneDigits('090-1111-222'));
+        $this->assertFalse(JpValidation::phoneDigits('0120-111-2223'));
+        $this->assertFalse(JpValidation::phoneDigits('0111-11-222'));
+        $this->assertFalse(JpValidation::phoneDigits('02222-1-111'));
+        $this->assertFalse(JpValidation::phoneDigits('90-1111-2222'));
+        $this->assertFalse(JpValidation::phoneDigits('03111122223'));
+        $this->assertFalse(JpValidation::phoneDigits('0901111222'));
+        $this->assertFalse(JpValidation::phoneDigits('+8190111122221199'));
+        $this->assertFalse(JpValidation::phoneDigits('+8111-90-1111-2222'));
+        $this->assertFalse(JpValidation::phoneDigits('056'));
     }
 
     /**
