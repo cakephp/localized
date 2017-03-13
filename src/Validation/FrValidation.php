@@ -29,7 +29,7 @@ class FrValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        $pattern = '/^0[1-9]{1}(([0-9]{8})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})|((\.[0-9]{2}){4}))$/';
+        $pattern = '/(^0|\+33)(0?[1-9]{1}|\s0?[1-9]{1}|-0?[1-9]{1}|\.0?[1-9]{1})(([0-9]{8})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})|((\.[0-9]{2}){4}))$|(^0(508|596|590|594|262))(([0-9]{6})|((\s[0-9]{2}){3})|((-[0-9]{2}){3})|((\.[0-9]{2}){3}))$|(^\+(?\'intl\'508|596|590|594|262))((\k\'intl\'[0-9]{6})|(\s\k\'intl\'(\s[0-9]{2}){3})|(-\k\'intl\'(-[0-9]{2}){3})|(\.\k\'intl\'(\.[0-9]{2}){3}))$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -46,7 +46,7 @@ class FrValidation extends LocalizedValidation
         if ((bool)preg_match($pattern, $check)) {
             $value = intval($check);
 
-            return $value >= 1000 && $value <= 99138;
+            return $value >= 1001 && $value <= 99138;
         }
 
         return false;

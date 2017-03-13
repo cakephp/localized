@@ -40,6 +40,45 @@ class FrValidationTest extends TestCase
         $this->assertFalse(FrValidation::phone('04 76 96 12 33 '));
         $this->assertFalse(FrValidation::phone('047696123323'));
         $this->assertFalse(FrValidation::phone('07 43 90 33'));
+
+        /*
+         * Test cases for French metropolitan international number formats
+         */
+        $this->assertTrue(FrValidation::phone('+33476961232'));
+        $this->assertTrue(FrValidation::phone('+330476961232'));
+        $this->assertTrue(FrValidation::phone('+33 4 76 96 12 32'));
+        $this->assertTrue(FrValidation::phone('+33 04 76 96 12 32'));
+        $this->assertTrue(FrValidation::phone('+33-04-76-96-12-32'));
+        $this->assertTrue(FrValidation::phone('+33.04.76.96.12.32'));
+
+        $this->assertFalse(FrValidation::phone('+331476961232'));
+        $this->assertFalse(FrValidation::phone('+33.14.76.96.12.32'));
+        $this->assertFalse(FrValidation::phone('+33.04.76.96.12'));
+
+        /*
+         * Test cases for DOM/TOM national number formats
+         */
+        $this->assertTrue(FrValidation::phone('0590123456'));
+        $this->assertTrue(FrValidation::phone('0596 12 34 56'));
+        $this->assertTrue(FrValidation::phone('0594-12-34-56'));
+        $this->assertTrue(FrValidation::phone('0262.12.34.56'));
+        $this->assertTrue(FrValidation::phone('0508.12.34.56'));
+
+        $this->assertFalse(FrValidation::phone('0262.12.34.56.78'));
+        $this->assertFalse(FrValidation::phone('0262-12-34-5'));
+
+        /*
+         * Test cases for DOM/TOM international number formats
+         */
+        $this->assertTrue(FrValidation::phone('+590590123456'));
+        $this->assertTrue(FrValidation::phone('+596 596 12 34 56'));
+        $this->assertTrue(FrValidation::phone('+594-594-12-34-56'));
+        $this->assertTrue(FrValidation::phone('+262.262.12.34.56'));
+        $this->assertTrue(FrValidation::phone('+508.508.12.34.56'));
+
+        $this->assertFalse(FrValidation::phone('+590123456'));
+        $this->assertFalse(FrValidation::phone('+590 12 34 56'));
+        $this->assertFalse(FrValidation::phone('+596 594 12 34 56'));
     }
 
     /**
