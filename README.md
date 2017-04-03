@@ -26,7 +26,7 @@ Load your plugin using
 ```
 bin/cake plugin load Cake/Localized
 ```
-or by manually putting `CakePlugin::load('Cake/Localized')` in your `boostrap.php`.
+or by manually putting `Plugin::load('Cake/Localized')` in your `boostrap.php`.
 
 ## Model validation
 
