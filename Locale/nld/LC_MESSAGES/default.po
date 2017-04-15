@@ -1,0 +1,365 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP Dutch Translation\n"
+"POT-Creation-Date: 2012-12-19 18:18+0000\n"
+"PO-Revision-Date: 2013-04-11 16:02+0100\n"
+"Last-Translator: Glenn <gravke@gmail.com>\n"
+"Language-Team: Calcyfer <ccf@anonspeed.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=n!=1;\n"
+"Language: Dutch\n"
+
+#: Controller/Scaffold.php:128
+msgid "Scaffold :: "
+msgstr ""
+
+#: Controller/Scaffold.php:167;234;305
+msgid "Invalid %s"
+msgstr "%s ongeldig"
+
+#: Controller/Scaffold.php:222
+msgid "updated"
+msgstr "bijgewerkt"
+
+#: Controller/Scaffold.php:225
+msgid "saved"
+msgstr "opgeslagen"
+
+#: Controller/Scaffold.php:245
+msgid "The %1$s has been %2$s"
+msgstr "De %1$s werd %2$s"
+
+#: Controller/Scaffold.php:256
+msgid "Please correct errors below."
+msgstr "Corrigeer de onderstaande fouten aub."
+
+#: Controller/Scaffold.php:308
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr "De %1$s met id: %2$s werd verwijderd."
+
+#: Controller/Scaffold.php:311
+msgid "There was an error deleting the %1$s with id: %2$s"
+msgstr ""
+"Een fout heeft zich voorgedaan bij het verwijderen van %1$s met id: %2$s"
+
+#: Controller/Component/AuthComponent.php:369
+msgid "You are not authorized to access that location."
+msgstr "U heeft geen toestemming om die locatie te bekijken."
+
+#: Error/ExceptionRenderer.php:209
+msgid "Not Found"
+msgstr "Niet Gevonden"
+
+#: Error/ExceptionRenderer.php:231
+msgid "An Internal Error Has Occurred."
+msgstr "Interne Fout"
+
+#: Model/Validator/CakeValidationSet.php:287
+msgid "This field cannot be left blank"
+msgstr "Dit is een verplicht veld"
+
+#: Network/CakeResponse.php:1222
+msgid "The requested file was not found"
+msgstr "Het gevraagde bestand werd niet gevonden"
+
+#: Utility/CakeNumber.php:101
+msgid "%d KB"
+msgstr "%d KB"
+
+#: Utility/CakeNumber.php:103
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: Utility/CakeNumber.php:105
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: Utility/CakeNumber.php:107
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: Utility/CakeNumber.php:99
+msgid "%d Byte"
+msgid_plural "%d Bytes"
+msgstr[0] "%d Byte"
+msgstr[1] "%d Bytes"
+
+#: Utility/CakeTime.php:389
+msgid "Today, %s"
+msgstr "Vandaag, %s"
+
+#: Utility/CakeTime.php:392
+msgid "Yesterday, %s"
+msgstr "Gisteren, %s"
+
+#: Utility/CakeTime.php:395
+msgid "Tomorrow, %s"
+msgstr "Morgen, %s"
+
+#: Utility/CakeTime.php:400
+msgid "Sunday"
+msgstr "Zondag"
+
+#: Utility/CakeTime.php:401
+msgid "Monday"
+msgstr "Maandag"
+
+#: Utility/CakeTime.php:402
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#: Utility/CakeTime.php:403
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#: Utility/CakeTime.php:404
+msgid "Thursday"
+msgstr "Donderdag"
+
+#: Utility/CakeTime.php:405
+msgid "Friday"
+msgstr "Vrijdag"
+
+#: Utility/CakeTime.php:406
+msgid "Saturday"
+msgstr "Zaterdag"
+
+#: Utility/CakeTime.php:412
+msgid "On %s %s"
+msgstr "Op %s %s"
+
+#: Utility/CakeTime.php:805
+msgid "just now"
+msgstr "zojuist"
+
+#: Utility/CakeTime.php:809
+msgid "on %s"
+msgstr "op %s"
+
+#: Utility/CakeTime.php:853
+msgid "%s ago"
+msgstr "%s geleden"
+
+#: Utility/CakeTime.php:872;894
+msgid "days"
+msgstr "dagen"
+
+#: Utility/CakeTime.php:154
+msgid "abday"
+msgstr ""
+
+#: Utility/CakeTime.php:160
+msgid "day"
+msgstr "dag"
+
+#: Utility/CakeTime.php:166
+msgid "d_t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:188
+msgid "abmon"
+msgstr ""
+
+#: Utility/CakeTime.php:194
+msgid "mon"
+msgstr ""
+
+#: Utility/CakeTime.php:205
+msgid "am_pm"
+msgstr ""
+
+#: Utility/CakeTime.php:212
+msgid "t_fmt_ampm"
+msgstr ""
+
+#: Utility/CakeTime.php:226
+msgid "d_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:232
+msgid "t_fmt"
+msgstr ""
+
+#: Utility/CakeTime.php:831
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d jaar"
+msgstr[1] "%d jaren"
+
+#: Utility/CakeTime.php:834
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d maand"
+msgstr[1] "%d maanden"
+
+#: Utility/CakeTime.php:837
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d week"
+msgstr[1] "%d weken"
+
+#: Utility/CakeTime.php:840
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dag"
+msgstr[1] "%d dagen"
+
+#: Utility/CakeTime.php:843
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d uur"
+msgstr[1] "%d uren"
+
+#: Utility/CakeTime.php:846
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuut"
+msgstr[1] "%d minuten"
+
+#: Utility/CakeTime.php:849
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d seconde"
+msgstr[1] "%d seconden"
+
+#: View/Helper/FormHelper.php:681
+msgid "Error in field %s"
+msgstr "Fout in veld %s"
+
+#: View/Helper/FormHelper.php:868 View/Scaffolds/form.ctp:48
+#: View/Scaffolds/index.ctp:79;94 View/Scaffolds/view.ctp:66;81;192
+msgid "New %s"
+msgstr "%s Aanmaken"
+
+#: View/Helper/FormHelper.php:874 View/Scaffolds/view.ctp:54;113
+msgid "Edit %s"
+msgstr "%s Wijzigen"
+
+#: View/Helper/FormHelper.php:1436
+msgid "empty"
+msgstr "leeg"
+
+#: View/Helper/FormHelper.php:1796 View/Scaffolds/form.ctp:23
+msgid "Submit"
+msgstr "Verzenden"
+
+#: View/Helper/FormHelper.php:2704
+msgid "January"
+msgstr "Januari"
+
+#: View/Helper/FormHelper.php:2705
+msgid "February"
+msgstr "Februari"
+
+#: View/Helper/FormHelper.php:2706
+msgid "March"
+msgstr "Maart"
+
+#: View/Helper/FormHelper.php:2707
+msgid "April"
+msgstr "April"
+
+#: View/Helper/FormHelper.php:2708
+msgid "May"
+msgstr "Mei"
+
+#: View/Helper/FormHelper.php:2709
+msgid "June"
+msgstr "Juni"
+
+#: View/Helper/FormHelper.php:2710
+msgid "July"
+msgstr "Juli"
+
+#: View/Helper/FormHelper.php:2711
+msgid "August"
+msgstr "Augustus"
+
+#: View/Helper/FormHelper.php:2712
+msgid "September"
+msgstr "September"
+
+#: View/Helper/FormHelper.php:2713
+msgid "October"
+msgstr "Oktober"
+
+#: View/Helper/FormHelper.php:2714
+msgid "November"
+msgstr "November"
+
+#: View/Helper/FormHelper.php:2715
+msgid "December"
+msgstr "December"
+
+#: View/Helper/HtmlHelper.php:747
+msgid "Home"
+msgstr "Start"
+
+#: View/Helper/PaginatorHelper.php:580
+msgid " of "
+msgstr " van "
+
+#: View/Scaffolds/form.ctp:27 View/Scaffolds/index.ctp:26;77
+#: View/Scaffolds/view.ctp:50
+msgid "Actions"
+msgstr "Acties"
+
+#: View/Scaffolds/form.ctp:31 View/Scaffolds/index.ctp:51
+#: View/Scaffolds/view.ctp:177
+msgid "Delete"
+msgstr "Verwijder"
+
+#: View/Scaffolds/form.ctp:34
+msgid "Are you sure you want to delete # %s?"
+msgstr "Bent u zeker dat u # %s wilt verwijderen?"
+
+#: View/Scaffolds/form.ctp:37
+msgid "List"
+msgstr "Lijst"
+
+#: View/Scaffolds/form.ctp:44 View/Scaffolds/index.ctp:87
+#: View/Scaffolds/view.ctp:62;75
+msgid "List %s"
+msgstr "%s Weergeven"
+
+#: View/Scaffolds/index.ctp:48 View/Scaffolds/view.ctp:165
+msgid "View"
+msgstr "Bekijk"
+
+#: View/Scaffolds/index.ctp:49 View/Scaffolds/view.ctp:171
+msgid "Edit"
+msgstr "Wijzig"
+
+#: View/Scaffolds/index.ctp:54 View/Scaffolds/view.ctp:58;180
+msgid "Are you sure you want to delete"
+msgstr "Bent u zeker dat u dit wilt verwijderen"
+
+#: View/Scaffolds/index.ctp:65
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+"Pagina {:page} van {:pages}, {:current} rijen zichtbaar van {:count} totaal, "
+"startend vanaf {:start}, eindigend bij {:end}"
+
+#: View/Scaffolds/index.ctp:70
+msgid "previous"
+msgstr "vorige"
+
+#: View/Scaffolds/index.ctp:72
+msgid "next"
+msgstr "volgende"
+
+#: View/Scaffolds/view.ctp:20
+msgid "View %s"
+msgstr "Bekijk %s"
+
+#: View/Scaffolds/view.ctp:58
+msgid "Delete %s"
+msgstr "Verwijder %s"
+
+#: View/Scaffolds/view.ctp:96;137
+msgid "Related %s"
+msgstr "Gerelateerde %s"
