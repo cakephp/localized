@@ -110,26 +110,48 @@ class PlValidation extends LocalizedValidation
      */
     public static function regon($check)
     {
-        $pattern = '/^[0-9]{9}$/';
-        if (preg_match($pattern, $check)) {
-            $sum = 0;
-            $weights = [8, 9, 2, 3, 4, 5, 6, 7];
-
-            for ($i = 0; $i < 8; $i++) {
-                $sum += $check[$i] * $weights[$i];
-            }
-
-            $control = $sum % 11;
-            if ($control == 10) {
-                $control = 0;
-            }
-
-            if ($check[8] == $control) {
-                return true;
-            }
+        if (!preg_match('/^([\d]{9}|[\d]{14})$/', $check)) {
+            return false;
         }
+        if (strlen($check) == 9) {
+            return static::hasProperChecksumForShort($check);
+        } else {
+            return static::hasProperChecksumForLong($check);
+        }
+    }
 
-        return false;
+    /**
+     * Checks checksum for a regon with 9 digits.
+     *
+     * @param $value
+     * @return bool
+     */
+    private static function hasProperChecksumForShort($value)
+    {
+        $chars = str_split($value);
+        $sum = array_sum(array_map(function($weight, $digit) {
+            return $weight * $digit;
+        }, array(8, 9, 2, 3, 4, 5, 6, 7), array_slice($chars, 0, 8)));
+        $checksum = $sum % 11;
+
+        return $checksum == $chars[8];
+    }
+
+    /**
+     * Checks checksum for a regon with 14 digits.
+     *
+     * @param $value
+     * @return bool
+     */
+    private function hasProperChecksumForLong($value)
+    {
+        $chars = str_split($value);
+        $sum = array_sum(array_map(function($weight, $digit) {
+            return $weight * $digit;
+        }, array(2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8), array_slice($chars, 0, 13)));
+        $checksum = $sum % 11;
+
+        return $checksum == $chars[13];
     }
 
     /**
