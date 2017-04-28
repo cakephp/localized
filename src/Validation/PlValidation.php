@@ -103,6 +103,7 @@ class PlValidation extends LocalizedValidation
     /**
      * Checks REGON
      * National Business Registry Number in Poland
+     * Used script from https://github.com/kiczort/polish-validator
      *
      * @param string $check Value to check
      * @return bool Success.
