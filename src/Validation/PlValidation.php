@@ -159,11 +159,13 @@ class PlValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $phone = preg_replace("/[^0-9]/", "", $check);
+        $pattern = '/^[0-9]{9}$/';
+
+        return (bool)preg_match($pattern, $phone);
     }
 }
