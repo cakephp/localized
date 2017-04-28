@@ -103,36 +103,38 @@ class BrValidation extends LocalizedValidation
 
     /**
      * Checks CNPJ for Brazil.
+     * Used code from https://github.com/Respect/Validation/blob/master/library/Rules/Cnpj.php
      *
      * @param string $check The value to check.
      * @return bool Success.
      */
     public static function cnpj($check)
     {
-        $check = trim($check);
-        // sometimes the user submits a masked CNPJ
-        if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
-            $check = str_replace(['-', '.', '/'], '', $check);
-        } elseif (!ctype_digit($check)) {
+        if (!is_scalar($check)) {
             return false;
         }
 
-        if (strlen($check) != 14) {
+        $cleanInput = preg_replace('/\D/', '', $check);
+        $b = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+        if ($cleanInput < 1) {
             return false;
         }
-        $firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
-            ($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
-            ($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
+        if (mb_strlen($cleanInput) != 14) {
+            return false;
+        }
+        for ($i = 0, $n = 0; $i < 12; $n += $cleanInput[$i] * $b[++$i]) {
+            ;
+        }
+        if ($cleanInput[12] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
+            return false;
+        }
+        for ($i = 0, $n = 0; $i <= 12; $n += $cleanInput[$i] * $b[$i++]) {
+            ;
+        }
+        if ($cleanInput[13] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
+            return false;
+        }
 
-        $firstVerificationDigit = ($firstSum % 11) < 2 ? 0 : 11 - ($firstSum % 11);
-
-        $secondSum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4) + ($check[3] * 3) +
-            ($check[4] * 2) + ($check[5] * 9) + ($check[6] * 8) + ($check[7] * 7) +
-            ($check[8] * 6) + ($check[9] * 5) + ($check[10] * 4) + ($check[11] * 3) +
-            ($check[12] * 2);
-
-        $secondVerificationDigit = ($secondSum % 11) < 2 ? 0 : 11 - ($secondSum % 11);
-
-        return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
+        return true;
     }
 }
