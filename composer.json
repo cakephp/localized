@@ -22,7 +22,7 @@
         "cakephp/cakephp": "~3.1"
     },
     "require-dev": {
-        "cakephp/cakephp-codesniffer": "^2.1",
+        "cakephp/cakephp-codesniffer": "^3.0",
         "phpunit/phpunit": "^4.8|^5.7|^6.0"
     },
     "autoload": {
