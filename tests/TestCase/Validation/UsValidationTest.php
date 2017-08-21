@@ -65,6 +65,9 @@ class UsValidationTest extends TestCase
         $this->assertTrue(UsValidation::phone('1-(973)-333-4444'));
         $this->assertTrue(UsValidation::phone('1-(313)-555-9999'));
         $this->assertTrue(UsValidation::phone('1-(222)-555-0299'));
+        $this->assertTrue(UsValidation::phone('1-(205)-773-0789'));
+        $this->assertTrue(UsValidation::phone('1-(805)-773-0789'));
+        $this->assertTrue(UsValidation::phone('806 773 0789'));
 
         $this->assertTrue(UsValidation::phone('1 (222) 333 4444'));
         $this->assertTrue(UsValidation::phone('+1 (222) 333 4444'));
