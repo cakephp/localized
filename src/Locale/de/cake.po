@@ -1,48 +1,59 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-09 12:56+0000\n"
-"PO-Revision-Date: 2017-01-05 14:25+0000\n"
-"Last-Translator: Niklas Rother <nrother@users.noreply.github.com>\n"
-"Language-Team: \n"
+"Project-Id-Version: CakePHP 3.5.1\n"
+"POT-Creation-Date: 2017-08-31 20:06+0200\n"
+"PO-Revision-Date: 2017-08-31 20:36+0200\n"
+"Last-Translator: Oliver Nowak <info@nowak-media.de>\n"
+"Language-Team: The CakePHP Community <https://github.com/cakephp/localized/graphs/contributors>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2;plural=n!=1;\n"
-"Language: German\n"
+"X-Generator: Poedit 2.0.1\n"
 
-#: Template/Error/error400.ctp:33
-#: Template/Error/error500.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
 msgid "Error"
 msgstr "Fehler"
 
-#: Template/Error/error400.ctp:35
+#: Template/Error/error400.ctp:38
 msgid "The requested address %s was not found on this server."
 msgstr "Die angeforderte Adresse %s wurde auf diesem Server nicht gefunden."
 
-#: Template/Error/error500.ctp:33
+#: Template/Error/error500.ctp:39
 msgid "An Internal Error Has Occurred"
 msgstr "Ein interner Fehler ist aufgetreten"
 
-#: Controller/Component/AuthComponent.php:461
+#: Controller/Component/AuthComponent.php:496
 msgid "You are not authorized to access that location."
 msgstr "Sie sind nicht berechtigt, diese Seite aufzurufen."
 
-#: Controller/Component/CsrfComponent.php:154
+#: Controller/Component/CsrfComponent.php:157
+#: Http/Middleware/CsrfProtectionMiddleware.php:190
 msgid "Missing CSRF token cookie"
-msgstr ""
+msgstr "Fehlendes CSRF-Token-Cookie"
 
-#: Controller/Component/CsrfComponent.php:158
+#: Controller/Component/CsrfComponent.php:161
+#: Http/Middleware/CsrfProtectionMiddleware.php:194
 msgid "CSRF token mismatch."
-msgstr ""
+msgstr "Ungültiges CSRF-Token."
 
-#: Error/ExceptionRenderer.php:251
+#: Error/ExceptionRenderer.php:258
 msgid "Not Found"
 msgstr "Seite nicht gefunden"
 
-#: Error/ExceptionRenderer.php:253
+#: Error/ExceptionRenderer.php:260
 msgid "An Internal Error Has Occurred."
-msgstr "Ein interner Fehler ist aufgetreten"
+msgstr "Ein interner Fehler ist aufgetreten."
+
+#: Http/Response.php:2389
+msgid "The requested file contains `..` and will not be read."
+msgstr "Die angeforderte Datei wird nicht gelesen, da der Dateipfad `..` enthält."
+
+#: Http/Response.php:2400
+msgid "The requested file was not found"
+msgstr "Die angeforderte Datei wurde nicht gefunden"
 
 #: I18n/Number.php:90
 msgid "{0,number,#,###.##} KB"
@@ -110,7 +121,7 @@ msgstr "vor etwa einer Woche"
 msgid "about a month ago"
 msgstr "vor etwa einem Monat"
 
-#: I18n/RelativeTimeFormatter.php:157;159;335
+#: I18n/RelativeTimeFormatter.php:157;335
 msgid "about a year ago"
 msgstr "vor etwa einem Jahr"
 
@@ -136,7 +147,7 @@ msgstr "in etwa einer Woche"
 
 #: I18n/RelativeTimeFormatter.php:173;348
 msgid "in about a month"
-msgstr "in etwa einem Montat"
+msgstr "in etwa einem Monat"
 
 #: I18n/RelativeTimeFormatter.php:174;349
 msgid "in about a year"
@@ -196,13 +207,9 @@ msgid_plural "{0} seconds"
 msgstr[0] "{0} Sekunde"
 msgstr[1] "{0} Sekunden"
 
-#: Network/Response.php:1472
-msgid "The requested file was not found"
-msgstr "Die angeforderte Datei wurde nicht gefunden"
-
 #: ORM/RulesChecker.php:57
 msgid "This value is already in use"
-msgstr "Dieser Wert wird breits benutzt"
+msgstr "Dieser Wert wird bereits benutzt"
 
 #: ORM/RulesChecker.php:104
 msgid "This value does not exist"
@@ -212,35 +219,35 @@ msgstr "Dieser Wert existiert nicht"
 msgid "The count does not match {0}{1}"
 msgstr "Die Anzahl stimmt nicht überein {0}{1}"
 
-#: Utility/Text.php:894
+#: Utility/Text.php:897
 msgid "and"
 msgstr "und"
 
-#: Validation/Validator.php:103
+#: Validation/Validator.php:111
 msgid "This field is required"
 msgstr "Dieses Feld ist erforderlich"
 
-#: Validation/Validator.php:104
+#: Validation/Validator.php:112
 msgid "This field cannot be left empty"
 msgstr "Dieses Feld darf nicht leer gelassen werden"
 
-#: Validation/Validator.php:1712
+#: Validation/Validator.php:1885
 msgid "The provided value is invalid"
 msgstr "Der angegebene Wert ist ungültig"
 
-#: View/Helper/FormHelper.php:963
+#: View/Helper/FormHelper.php:1009
 msgid "New %s"
-msgstr ""
+msgstr "%s hinzufügen"
 
-#: View/Helper/FormHelper.php:966
+#: View/Helper/FormHelper.php:1012
 msgid "Edit %s"
-msgstr ""
+msgstr "%s bearbeiten"
 
-#: View/Helper/FormHelper.php:1812
+#: View/Helper/FormHelper.php:1889
 msgid "Submit"
 msgstr "Absenden"
 
-#: View/Helper/HtmlHelper.php:781
+#: View/Helper/HtmlHelper.php:794
 msgid "Home"
 msgstr "Start"
 
@@ -286,7 +293,7 @@ msgstr "Oktober"
 
 #: View/Widget/DateTimeWidget.php:550
 msgid "November"
-msgstr "Novemeber"
+msgstr "November"
 
 #: View/Widget/DateTimeWidget.php:551
 msgid "December"
