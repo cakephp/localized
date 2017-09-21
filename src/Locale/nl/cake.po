@@ -188,7 +188,7 @@ msgstr[1] "{0} uren"
 msgid "{0} minute"
 msgid_plural "{0} minutes"
 msgstr[0] "{0} minuut"
-msgstr[1] "{0} minuut"
+msgstr[1] "{0} minuten"
 
 #: I18n/RelativeTimeFormatter.php:72;144
 msgid "{0} second"
