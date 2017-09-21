@@ -29,23 +29,9 @@ class TnValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        // Tunisia telephone numbers
-        // source : https://en.wikipedia.org/wiki/Telephone_numbers_in_Tunisia
-        $pattern = '/^(00216|\+216){0,1}[7]([0-9]{7})$/';
-
-        return (bool)preg_match($pattern, $check);
-    }
-    /**
-     * Checks mobile numbers for Tunisia.
-     *
-     * @param string $check The value to check.
-     * @return bool Success.
-     */
-    public static function mobile($check)
-    {
         // Tunisia mobile numbers
         // source : https://en.wikipedia.org/wiki/Telephone_numbers_in_Tunisia
-        $pattern = '/^(00216|\+216){0,1}(2|4|5|9)([0-9]{7})$/';
+        $pattern = '/^(00216|\+216){0,1}(2|4|5|7|9)([0-9]{7})$/';
 
         return (bool)preg_match($pattern, $check);
     }
