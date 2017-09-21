@@ -42,7 +42,7 @@ class TnValidationTest extends TestCase
         $this->assertTrue(TnValidation::phone('22000000'));
         $this->assertTrue(TnValidation::phone('98999999'));
         $this->assertTrue(TnValidation::phone('98999999'));
-        $this->assertTrue(TnValidation::phone('4012345678'));       
+        $this->assertTrue(TnValidation::phone('412345678'));       
         $this->assertFalse(TnValidation::phone('21671000000'));
         $this->assertFalse(TnValidation::phone('+00216'));
         $this->assertFalse(TnValidation::phone('0021398000000'));
