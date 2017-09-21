@@ -33,42 +33,29 @@ class TnValidationTest extends TestCase
     {
         $this->assertTrue(TnValidation::phone('0021671000000'));
         $this->assertTrue(TnValidation::phone('+21671000000'));
+        $this->assertTrue(TnValidation::phone('0021622000000'));
+        $this->assertTrue(TnValidation::phone('0021698000000'));
+        $this->assertTrue(TnValidation::phone('0021651000000'));
+        $this->assertTrue(TnValidation::phone('+21640000000'));
         $this->assertTrue(TnValidation::phone('71000000'));
         $this->assertTrue(TnValidation::phone('70999999'));
+        $this->assertTrue(TnValidation::phone('22000000'));
+        $this->assertTrue(TnValidation::phone('98999999'));
+        $this->assertTrue(TnValidation::phone('98999999'));
+        $this->assertTrue(TnValidation::phone('4012345678'));       
         $this->assertFalse(TnValidation::phone('21671000000'));
-        $this->assertFalse(TnValidation::phone('+0021671000000'));
-        $this->assertFalse(TnValidation::phone('22000000'));
+        $this->assertFalse(TnValidation::phone('+00216'));
+        $this->assertFalse(TnValidation::phone('0021398000000'));
+        $this->assertFalse(TnValidation::phone('+21630000000'));
         $this->assertFalse(TnValidation::phone('71 000 000'));
         $this->assertFalse(TnValidation::phone('7100000'));
         $this->assertFalse(TnValidation::phone('710000000'));
-        $this->assertFalse(TnValidation::phone(true));
+        $this->assertFalse(TnValidation::phone('60000000'));
+        $this->assertFalse(TnValidation::phone('9899999'));
+        $this->assertFalse(TnValidation::phone('989999999'));
+        $this->assertFalse(TnValidation::phone('004012345678'));
+        $this->assertFalse(TnValidation::phone(false));
         $this->assertFalse(TnValidation::phone('abcdef'));
-    }
-    /**
-     * test the mobile method of TnValidation
-     *
-     * @return void
-     */
-    public function testMobile()
-    {
-        $this->assertTrue(TnValidation::mobile('0021622000000'));
-        $this->assertTrue(TnValidation::mobile('0021698000000'));
-        $this->assertTrue(TnValidation::mobile('0021651000000'));
-        $this->assertTrue(TnValidation::mobile('+21640000000'));
-        $this->assertTrue(TnValidation::mobile('22000000'));
-        $this->assertTrue(TnValidation::mobile('98999999'));
-        $this->assertTrue(TnValidation::mobile('98999999'));
-        $this->assertTrue(TnValidation::mobile('4012345678'));
-        $this->assertFalse(TnValidation::mobile('+0021622000000'));
-        $this->assertFalse(TnValidation::mobile('0021398000000'));
-        $this->assertFalse(TnValidation::mobile('0021671000000'));
-        $this->assertFalse(TnValidation::mobile('+21630000000'));
-        $this->assertFalse(TnValidation::mobile('60000000'));
-        $this->assertFalse(TnValidation::mobile('9899999'));
-        $this->assertFalse(TnValidation::mobile('989999999'));
-        $this->assertFalse(TnValidation::mobile('004012345678'));
-        $this->assertFalse(TnValidation::mobile(false));
-        $this->assertFalse(TnValidation::mobile('abcdef'));
     }
     /**
      * test the postal method of TnValidation
