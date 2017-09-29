@@ -60,45 +60,54 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cpf($check)
-    {
+    public static function cpf($check){
+        // Check if it's not empty
         $check = trim($check);
 
-        // sometimes the user submits a masked CNPJ
+        if(!$check)
+            return false;
+
         if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
             $check = str_replace(['-', '.', '/'], '', $check);
-        } elseif (!ctype_digit($check)) {
+        }
+   
+        // avoid mask, format number with zeros
+        $check = str_pad($check, 11, '0', STR_PAD_LEFT);
+         
+        $invalid_cpfs = array('00000000000',
+            '11111111111',
+            '22222222222', 
+            '33333333333', 
+            '44444444444', 
+            '55555555555', 
+            '66666666666', 
+            '77777777777', 
+            '88888888888', 
+            '99999999999');
+
+        // Check number size, it pass:
+        if (strlen($check) != 11){
             return false;
-        }
-
-        if (strlen($check) != 11) {
+        }else if(in_array($check, $invalid_cpfs)) {
             return false;
-        }
+         // Calculate check digits:
+         } else {
+            $d = 0;
 
-        // repeated values are invalid, but algorithms fails to check it
-        for ($i = 0; $i < 10; $i++) {
-            if (str_repeat($i, 11) === $check) {
-                return false;
-            }
-        }
+            for ($t = 9; $t < 11; $t++) { 
+                for ($d = 0, $c = 0; $c < $t; $c++) {
+                    $d += $check{$c} * (($t + 1) - $c);
+                }
+                
+                $d = ((10 * $d) % 11) % 10;
 
-        $dv = substr($check, -2);
-        for ($pos = 9; $pos <= 10; $pos++) {
-            $sum = 0;
-            $position = $pos + 1;
-            for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-                $sum += $check[$i] * $position;
+                if ($check{$c} != $d) {
+                    return false;
+                }
             }
-            $div = $sum % 11;
-            if ($div < 2) {
-                $check[$pos] = 0;
-            } else {
-                $check[$pos] = 11 - $div;
-            }
+            //What if go to this, this is true:
+            return true;
         }
-        $dvRight = $check[9] * 10 + $check[10];
-
-        return ($dvRight == $dv);
     }
 
     /**
@@ -107,8 +116,7 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cnpj($check)
-    {
+    public static function cnpj($check){
         $check = trim($check);
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
@@ -120,6 +128,7 @@ class BrValidation extends LocalizedValidation
         if (strlen($check) != 14) {
             return false;
         }
+        
         $firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
             ($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
             ($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
