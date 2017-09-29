@@ -153,6 +153,6 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::cnh('11111111111'));
         $this->assertFalse(BrValidation::cnh('018278545'));
         $this->assertFalse(BrValidation::cnh('abcdefghij'));
-        $this->assertFalse(BrValidation::cnh(array('01827854569')));
+        $this->assertFalse(BrValidation::cnh(['01827854569']));
     }
 }
