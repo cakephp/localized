@@ -26,32 +26,31 @@ class TnValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      * @return bool Success.
+     * @see https://en.wikipedia.org/wiki/Telephone_numbers_in_Tunisia
      */
     public static function phone($check)
     {
-        // Tunisia mobile numbers
-        // source : https://en.wikipedia.org/wiki/Telephone_numbers_in_Tunisia
         $pattern = '/^(00216|\+216){0,1}(2|4|5|7|9)([0-9]{7})$/';
 
         return (bool)preg_match($pattern, $check);
     }
+
     /**
      * Checks a postal code for Tunisia.
      *
      * @param string $check The value to check.
      * @return bool Success.
+     * @see https://en.wikipedia.org/wiki/Postal_codes_in_Tunisia
      */
     public static function postal($check)
     {
-        // Tunisia postal code
-        // source : https://en.wikipedia.org/wiki/Postal_codes_in_Tunisia
         $pattern = '/^[1-9][0-2][0-9]{2}$/';
 
         return (bool)preg_match($pattern, $check);
     }
 
     /**
-     * Checks an identity social security number for Tunisia.
+     * Checks a Tunisian identification number.
      *
      * @param string $check The value to check.
      * @return bool Success.
