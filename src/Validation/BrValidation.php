@@ -139,9 +139,7 @@ class BrValidation extends LocalizedValidation
     /**
      * Checks for license driver for Brazil
      *
-     * @access public
-     * @static
-     * @param string|int $cnh License driver number
+     * @param string $cnh License driver number
      * @return bool
      */
     public static function cnh($cnh)
