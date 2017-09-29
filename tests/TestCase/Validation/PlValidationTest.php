@@ -73,5 +73,19 @@ class PlValidationTest extends TestCase
         $this->assertTrue(PlValidation::regon('590096454'));
         $this->assertFalse(PlValidation::regon('590096453'));
         $this->assertFalse(PlValidation::regon('591096454'));
+        $this->assertTrue(PlValidation::regon('09843171082679'));
+        $this->assertFalse(PlValidation::regon('12345678901234'));
+    }
+
+    /**
+     * Test the phone method of PlValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(PlValidation::phone('797281129'));
+        $this->assertTrue(PlValidation::phone('79 728 11 29'));
+        $this->assertFalse(PlValidation::phone('1234567890'));
     }
 }

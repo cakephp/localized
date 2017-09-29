@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-09 12:56+0000\n"
+"POT-Creation-Date: 2017-04-28 08:43+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,37 +14,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Template/Error/error400.ctp:33
-#: Template/Error/error500.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
 msgid "Error"
 msgstr ""
 
-#: Template/Error/error400.ctp:35
-msgid "The requested address %s was not found on this server."
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
 msgstr ""
 
-#: Template/Error/error500.ctp:33
+#: Template/Error/error500.ctp:39
 msgid "An Internal Error Has Occurred"
 msgstr ""
 
-#: Controller/Component/AuthComponent.php:461
+#: Controller/Component/AuthComponent.php:496
 msgid "You are not authorized to access that location."
 msgstr ""
 
-#: Controller/Component/CsrfComponent.php:154
+#: Controller/Component/CsrfComponent.php:155
 msgid "Missing CSRF token cookie"
 msgstr ""
 
-#: Controller/Component/CsrfComponent.php:158
+#: Controller/Component/CsrfComponent.php:159
 msgid "CSRF token mismatch."
 msgstr ""
 
-#: Error/ExceptionRenderer.php:251
+#: Error/ExceptionRenderer.php:258
 msgid "Not Found"
 msgstr ""
 
-#: Error/ExceptionRenderer.php:253
+#: Error/ExceptionRenderer.php:260
 msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: Http/Response.php:2259
+msgid "The requested file contains `..` and will not be read."
+msgstr ""
+
+#: Http/Response.php:2270
+msgid "The requested file was not found"
 msgstr ""
 
 #: I18n/Number.php:90
@@ -113,7 +121,7 @@ msgstr ""
 msgid "about a month ago"
 msgstr ""
 
-#: I18n/RelativeTimeFormatter.php:157;159;335
+#: I18n/RelativeTimeFormatter.php:157;335
 msgid "about a year ago"
 msgstr ""
 
@@ -199,10 +207,6 @@ msgid_plural "{0} seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: Network/Response.php:1472
-msgid "The requested file was not found"
-msgstr ""
-
 #: ORM/RulesChecker.php:57
 msgid "This value is already in use"
 msgstr ""
@@ -215,7 +219,7 @@ msgstr ""
 msgid "The count does not match {0}{1}"
 msgstr ""
 
-#: Utility/Text.php:894
+#: Utility/Text.php:899
 msgid "and"
 msgstr ""
 
@@ -227,23 +231,23 @@ msgstr ""
 msgid "This field cannot be left empty"
 msgstr ""
 
-#: Validation/Validator.php:1712
+#: Validation/Validator.php:1782
 msgid "The provided value is invalid"
 msgstr ""
 
-#: View/Helper/FormHelper.php:963
+#: View/Helper/FormHelper.php:1008
 msgid "New %s"
 msgstr ""
 
-#: View/Helper/FormHelper.php:966
+#: View/Helper/FormHelper.php:1011
 msgid "Edit %s"
 msgstr ""
 
-#: View/Helper/FormHelper.php:1812
+#: View/Helper/FormHelper.php:1887
 msgid "Submit"
 msgstr ""
 
-#: View/Helper/HtmlHelper.php:781
+#: View/Helper/HtmlHelper.php:793
 msgid "Home"
 msgstr ""
 
