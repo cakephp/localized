@@ -135,4 +135,50 @@ class BrValidation extends LocalizedValidation
 
         return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
     }
+
+    /**
+     * Checks for license driver for Brazil
+     *
+     * @param string $cnh License driver number
+     * @return bool
+     */
+    public static function cnh($cnh)
+    {
+        if (!is_numeric($cnh) && !is_string($cnh)) {
+            return false;
+        }
+        $check = preg_replace('/[^\d]/', '', $cnh);
+
+        if (strlen($check) !== 11) {
+            return false;
+        }
+        // Check for repeated values
+        for ($i = 0; $i < 10; $i++) {
+            if (str_repeat($i, 11) === $check) {
+                return false;
+            }
+        }
+        // Calculate the number
+        for ($i = 0, $j = 9, $v = 0; $i < 9; ++$i, --$j) {
+            $v += $check[$i] * $j;
+        }
+
+        $dsc = 0;
+        // Calculate first digit
+        $dv1 = $v % 11;
+        if ($dv1 >= 10) {
+            $dv1 = 0;
+            $dsc = 2;
+        }
+
+        for ($i = 0, $j = 1, $v = 0; $i < 9; ++$i, ++$j) {
+            $v += $check[$i] * $j;
+        }
+
+        // Calculate second digit
+        $x = $v % 11;
+        $dv2 = ($x >= 10) ? 0 : $x - $dsc;
+
+        return ($dv1 . $dv2) === substr($check, -2);
+    }
 }
