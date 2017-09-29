@@ -57,6 +57,7 @@ class TnValidationTest extends TestCase
         $this->assertFalse(TnValidation::phone(false));
         $this->assertFalse(TnValidation::phone('abcdef'));
     }
+
     /**
      * test the postal method of TnValidation
      *
@@ -82,6 +83,7 @@ class TnValidationTest extends TestCase
         $this->assertFalse(TnValidation::postal('10'));
         $this->assertFalse(TnValidation::postal(true));
     }
+
     /**
      * test the personId method of TnValidation
      *
