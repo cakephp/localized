@@ -141,8 +141,8 @@ class BrValidation extends LocalizedValidation
      *
      * @access public
      * @static
-     * @param string|integer $cnh Numeração da CNH
-     * @return boolean
+     * @param string|int $cnh Numeração da CNH
+     * @return bool
      */
     public static function cnh($cnh)
     {
@@ -180,6 +180,7 @@ class BrValidation extends LocalizedValidation
         // Calculate second digit
         $x = $v % 11;
         $dv2 = ($x >= 10) ? 0 : $x - $dsc;
+
         return ($dv1 . $dv2) == substr($check, -2);
     }
 }
