@@ -137,11 +137,11 @@ class BrValidation extends LocalizedValidation
     }
 
     /**
-     * Checks for license drive for Brazil - CNH (Carteira Nacional de Habilitação)
+     * Checks for license driver for Brazil
      *
      * @access public
      * @static
-     * @param string|int $cnh Numeração da CNH
+     * @param string|int $cnh License driver number
      * @return bool
      */
     public static function cnh($cnh)
@@ -151,7 +151,7 @@ class BrValidation extends LocalizedValidation
         }
         $check = preg_replace('/[^\d]/', '', $cnh);
 
-        if (strlen($check) != 11) {
+        if (strlen($check) !== 11) {
             return false;
         }
         // Check for repeated values
@@ -181,6 +181,6 @@ class BrValidation extends LocalizedValidation
         $x = $v % 11;
         $dv2 = ($x >= 10) ? 0 : $x - $dsc;
 
-        return ($dv1 . $dv2) == substr($check, -2);
+        return ($dv1 . $dv2) === substr($check, -2);
     }
 }
