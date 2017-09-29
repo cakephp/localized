@@ -145,5 +145,14 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::personId('226921xxx73813'));
         $this->assertFalse(BrValidation::personId('11111111111'));
         $this->assertFalse(BrValidation::cpf('abcdefghi'));
+        
+        // Testing cnh
+        $this->assertTrue(BrValidation::cnh('01827854569'));
+        $this->assertFalse(BrValidation::cnh('01827854568'));
+        $this->assertFalse(BrValidation::cnh('12345678909'));
+        $this->assertFalse(BrValidation::cnh('11111111111'));
+        $this->assertFalse(BrValidation::cnh('018278545'));
+        $this->assertFalse(BrValidation::cnh('abcdefghij'));
+        $this->assertFalse(BrValidation::cnh(['01827854569']));
     }
 }
