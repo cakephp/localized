@@ -181,4 +181,31 @@ class BrValidation extends LocalizedValidation
 
         return ($dv1 . $dv2) === substr($check, -2);
     }
+    
+    /**
+     * Checks for National Health Card emitted from S.U.S in Brazil
+     *
+     * @param string|int $cns National Heath Card Number
+     * @return bool
+     */
+    public static function cns($cns)
+    {
+        if (!is_numeric($cns) && !is_string($cns)) {
+		    return false;
+	    }
+	
+        $cns = preg_replace('/[^0-9]/', '', $cns);
+
+        if (preg_match("/[1-2]\\d{10}00[0-1]\\d/", $cns) || preg_match("/[7-9]\\d{14}/", $cns)) {
+            $len = strlen($cns);
+            $soma = 0;
+            for ($i = 0; $i < $len; $i++) {
+                $soma += $cns[$i] * (15 - $i);
+            }
+
+            return $soma % 11 === 0;
+        }
+
+        return false;
+    }
 }
