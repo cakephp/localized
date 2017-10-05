@@ -181,7 +181,7 @@ class BrValidation extends LocalizedValidation
 
         return ($dv1 . $dv2) === substr($check, -2);
     }
-    
+
     /**
      * Checks for National Health Card emitted from S.U.S in Brazil
      *
@@ -191,9 +191,9 @@ class BrValidation extends LocalizedValidation
     public static function cns($cns)
     {
         if (!is_numeric($cns) && !is_string($cns)) {
-		    return false;
-	    }
-	
+            return false;
+        }
+
         $cns = preg_replace('/[^0-9]/', '', $cns);
 
         if (preg_match("/[1-2]\\d{10}00[0-1]\\d/", $cns) || preg_match("/[7-9]\\d{14}/", $cns)) {
