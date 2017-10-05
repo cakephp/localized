@@ -165,7 +165,7 @@ class BrValidationTest extends TestCase
     }
 
     /**
-     * test the cnh method of BrValidation
+     * test the cns method of BrValidation
      *
      * @return void
      */
