@@ -147,6 +147,8 @@ class PlValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        $pattern = '/^([0+]48)?\d{9}$';
+
+        return (bool)preg_match($pattern, str_replace([' ', '-'], '', $check));
     }
 }
