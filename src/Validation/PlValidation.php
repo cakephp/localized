@@ -144,7 +144,7 @@ class PlValidation extends LocalizedValidation
      */
     public static function phone($check)
     {
-        $pattern = '/^([0+]48)?\d{9}$';
+        $pattern = '/^([0+]48)?\d{9}$/';
 
         return (bool)preg_match($pattern, str_replace([' ', '-'], '', $check));
     }
