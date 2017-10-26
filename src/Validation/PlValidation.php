@@ -103,6 +103,7 @@ class PlValidation extends LocalizedValidation
     /**
      * Checks REGON
      * National Business Registry Number in Poland
+     * Used script from https://github.com/kiczort/polish-validator
      *
      * @param string $check Value to check
      * @return bool Success.
@@ -110,26 +111,31 @@ class PlValidation extends LocalizedValidation
      */
     public static function regon($check)
     {
-        $pattern = '/^[0-9]{9}$/';
-        if (preg_match($pattern, $check)) {
-            $sum = 0;
-            $weights = [8, 9, 2, 3, 4, 5, 6, 7];
-
-            for ($i = 0; $i < 8; $i++) {
-                $sum += $check[$i] * $weights[$i];
-            }
-
-            $control = $sum % 11;
-            if ($control == 10) {
-                $control = 0;
-            }
-
-            if ($check[8] == $control) {
-                return true;
-            }
+        if (! preg_match('/^([\d]{9}|[\d]{14})$/', $check)) {
+            return false;
         }
 
-        return false;
+        if (strlen($check) == 9) {
+            // Validate short version (9 digits)
+            $chars = str_split($check);
+            $sum = array_sum(array_map(function($weight, $digit) {
+                return $weight * $digit;
+            }, array(8, 9, 2, 3, 4, 5, 6, 7), array_slice($chars, 0, 8)));
+
+            $checksum = $sum % 11;
+
+            return $checksum % 10 == $chars[8];
+        } else {
+            // Validate long version (14 digits)
+            $chars = str_split($check);
+            $sum = array_sum(array_map(function($weight, $digit) {
+                return $weight * $digit;
+            }, array(2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8), array_slice($chars, 0, 13)));
+
+            $checksum = $sum % 11;
+
+            return $checksum % 10 == $chars[13];
+        }
     }
 
     /**
