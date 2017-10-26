@@ -98,9 +98,8 @@ class PlValidationTest extends TestCase
         $this->assertTrue(PlValidation::phone('123456789'));
         $this->assertTrue(PlValidation::phone('+48123456789'));
         $this->assertTrue(PlValidation::phone('048123456789'));
-        $this->assertTrue(PlValidation::phone('123 45 678'));
+        $this->assertFalse(PlValidation::phone('123 45 678'));
         $this->assertFalse(PlValidation::phone('1234567'));
         $this->assertFalse(PlValidation::phone('12345674890'));
     }
-
 }

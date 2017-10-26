@@ -13,8 +13,6 @@
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
-
 /**
  * Polish Localized Validation class. Handles localized validation for Poland.
  *
@@ -111,16 +109,16 @@ class PlValidation extends LocalizedValidation
      */
     public static function regon($check)
     {
-        if (! preg_match('/^([\d]{9}|[\d]{14})$/', $check)) {
+        if (!preg_match('/^([\d]{9}|[\d]{14})$/', $check)) {
             return false;
         }
 
         if (strlen($check) == 9) {
             // Validate short version (9 digits)
             $chars = str_split($check);
-            $sum = array_sum(array_map(function($weight, $digit) {
+            $sum = array_sum(array_map(function ($weight, $digit) {
                 return $weight * $digit;
-            }, array(8, 9, 2, 3, 4, 5, 6, 7), array_slice($chars, 0, 8)));
+            }, [8, 9, 2, 3, 4, 5, 6, 7], array_slice($chars, 0, 8)));
 
             $checksum = $sum % 11;
 
@@ -128,9 +126,9 @@ class PlValidation extends LocalizedValidation
         } else {
             // Validate long version (14 digits)
             $chars = str_split($check);
-            $sum = array_sum(array_map(function($weight, $digit) {
+            $sum = array_sum(array_map(function ($weight, $digit) {
                 return $weight * $digit;
-            }, array(2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8), array_slice($chars, 0, 13)));
+            }, [2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8], array_slice($chars, 0, 13)));
 
             $checksum = $sum % 11;
 
@@ -142,7 +140,6 @@ class PlValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone($check)
