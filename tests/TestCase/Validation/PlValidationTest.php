@@ -73,5 +73,33 @@ class PlValidationTest extends TestCase
         $this->assertTrue(PlValidation::regon('590096454'));
         $this->assertFalse(PlValidation::regon('590096453'));
         $this->assertFalse(PlValidation::regon('591096454'));
+        $this->assertFalse(PlValidation::regon('12345678'));
+        $this->assertFalse(PlValidation::regon('123456789012345'));
+        $this->assertFalse(PlValidation::regon('1234567890'));
+        $this->assertFalse(PlValidation::regon('12345678901'));
+        $this->assertFalse(PlValidation::regon('123456789012'));
+        $this->assertFalse(PlValidation::regon('1234567890123'));
+        $this->assertFalse(PlValidation::regon('12345678a'));
+        $this->assertFalse(PlValidation::regon('123456786'));
+        $this->assertFalse(PlValidation::regon('12345678512346'));
+        $this->assertTrue(PlValidation::regon('123456785'));
+        $this->assertTrue(PlValidation::regon('12345678512347'));
+        $this->assertTrue(PlValidation::regon('251890090'));
+        $this->assertTrue(PlValidation::regon('55678259078290'));
+    }
+
+    /**
+     * test the phone method of PlValidation
+     *
+     * @return void
+     */
+    public function testPhone()
+    {
+        $this->assertTrue(PlValidation::phone('123456789'));
+        $this->assertTrue(PlValidation::phone('+48123456789'));
+        $this->assertTrue(PlValidation::phone('048123456789'));
+        $this->assertFalse(PlValidation::phone('123 45 678'));
+        $this->assertFalse(PlValidation::phone('1234567'));
+        $this->assertFalse(PlValidation::phone('12345674890'));
     }
 }
