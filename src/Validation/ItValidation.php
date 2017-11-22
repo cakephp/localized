@@ -138,6 +138,6 @@ class ItValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-        return cf($check);
+        return static::cf($check);
     }
 }
