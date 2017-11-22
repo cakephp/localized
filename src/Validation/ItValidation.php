@@ -87,16 +87,15 @@ class ItValidation extends LocalizedValidation
 
         return (chr($sum % 26 + ord('A')) == $check[15]);
     }
-
     
-	
     /**
      * Checks Partita IVA, VAT number for Italy.
      *
      * @param string $check The value to check.
      * @return bool Success.
      */
-	public static function piva($check){
+	public static function piva($check)
+    {
 		if (!$check) {
 			return false;
 		}
@@ -127,7 +126,7 @@ class ItValidation extends LocalizedValidation
 			}
 		}
 		
-		return ((10 - $s % 10) % 10) == (ord(substr($check, 10, 1)) - 48);
+		return ((10 - $s % 10) % 10) === (ord(substr($check, 10, 1)) - 48);
 	}
 
     /**
