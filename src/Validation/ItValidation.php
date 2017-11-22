@@ -88,6 +88,48 @@ class ItValidation extends LocalizedValidation
         return (chr($sum % 26 + ord('A')) == $check[15]);
     }
 
+    
+	
+    /**
+     * Checks Partita IVA, VAT number for Italy.
+     *
+     * @param string $check The value to check.
+     * @return bool Success.
+     */
+	public static function piva($check){
+		if (!$check) {
+			return false;
+		}
+		
+		if (preg_match('/^[A-Z]{2}[0-9]{11}$/i', $check)) {
+			$check = substr($check, 2, 11);
+		}
+		
+		if (!preg_match('/^[0-9]{11}$/', $check)) {
+			return false;
+		}
+		
+		$s = 0;
+		
+		for ($i = 0; $i <= 9; $i++) {
+			$cps = ord(substr($check, $i, 1)) - 48;
+			
+			if ($i % 2 == 0) {
+				$s += $cps;
+			} else {
+				$c = 2 * $cps;
+				
+				if ($c > 9) {
+					$c -= 9;
+				}
+				
+				$s += $c;
+			}
+		}
+		
+		return ((10 - $s % 10) % 10) == (ord(substr($check, 10, 1)) - 48);
+	}
+
     /**
      * Checks a country specific identification number.
      *
@@ -97,6 +139,6 @@ class ItValidation extends LocalizedValidation
      */
     public static function personId($check)
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        return cf($check);
     }
 }
