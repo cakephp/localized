@@ -100,7 +100,7 @@ msgstr "ongeveer een uur geleden"
 
 #: I18n/RelativeTimeFormatter.php:154;332
 msgid "about a day ago"
-msgstr "ongeveer een dag gelden"
+msgstr "ongeveer een dag geleden"
 
 #: I18n/RelativeTimeFormatter.php:155;333
 msgid "about a week ago"
