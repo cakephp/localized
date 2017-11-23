@@ -62,7 +62,7 @@ class ItValidation extends LocalizedValidation
         }
 
         $check = strtoupper($check);
-        if (strlen($check) != 16 || !preg_match('/[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/', $check)) {
+        if (strlen($check) !== 16 || !preg_match('/[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/', $check)) {
             return false;
         }
 
@@ -113,7 +113,7 @@ class ItValidation extends LocalizedValidation
         for ($i = 0; $i <= 9; $i++) {
             $cps = ord(substr($check, $i, 1)) - 48;
 
-            if ($i % 2 == 0) {
+            if ($i % 2 === 0) {
                 $s += $cps;
             } else {
                 $c = 2 * $cps;
@@ -133,7 +133,6 @@ class ItValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
      * @return bool Success.
      */
     public static function personId($check)
