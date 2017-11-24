@@ -37,18 +37,18 @@ class PlValidationTest extends TestCase
     }
 
     /**
-     * test the ssn method of PlValidation
+     * test the nip method of PlValidation
      *
      * @return void
      */
-    public function testSsn()
+    public function testNip()
     {
-        $this->assertTrue(PlValidation::personId('768-000-24-66'));
-        $this->assertTrue(PlValidation::personId('768-00-02-466'));
-        $this->assertTrue(PlValidation::personId('7680002466'));
-        $this->assertFalse(PlValidation::personId('768-000-24-65'));
-        $this->assertFalse(PlValidation::personId('769-000-24-66'));
-        $this->assertFalse(PlValidation::personId('7680002566'));
+        $this->assertTrue(PlValidation::nip('768-000-24-66'));
+        $this->assertTrue(PlValidation::nip('768-00-02-466'));
+        $this->assertTrue(PlValidation::nip('7680002466'));
+        $this->assertFalse(PlValidation::nip('768-000-24-65'));
+        $this->assertFalse(PlValidation::nip('769-000-24-66'));
+        $this->assertFalse(PlValidation::nip('7680002566'));
     }
 
     /**

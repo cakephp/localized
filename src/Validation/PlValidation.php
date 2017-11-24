@@ -33,13 +33,28 @@ class PlValidation extends LocalizedValidation
     }
 
     /**
-     * Checks a social security number (NIP) for Poland.
+     * Checks a VAT identification number (NIP) for Poland.
+     *
+     * Note: the method name is misleading. In order to validate Person ID (PESEL) please use `pesel()` method instead.
+     *
+     * @param string $check Value to check
+     * @return bool Success.
+     * @deprecated 3.3.2 This method does not validate Polish Person ID and will be changed in the next major version.
+     * To validate Person ID (PESEL) please use `pesel()` method instead.
+     */
+    public static function personId($check)
+    {
+        return static::nip($check);
+    }
+
+    /**
+     * Checks a VAT identification number (NIP) for Poland.
      *
      * @param string $check Value to check
      * @return bool Success.
      * @link http://pl.wikipedia.org/wiki/NIP
      */
-    public static function personId($check)
+    public static function nip($check)
     {
         $pattern = '/^([0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3})|([0-9]{10})$/';
         if (!preg_match($pattern, $check)) {
