@@ -15,8 +15,6 @@
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
-
 /**
  * ItValidation
  *
