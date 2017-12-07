@@ -145,6 +145,15 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::personId('226921xxx73813'));
         $this->assertFalse(BrValidation::personId('11111111111'));
         $this->assertFalse(BrValidation::cpf('abcdefghi'));
+
+        //testing 15 digits
+        $this->assertFalse(BrValidation::cnpj(123456789123456));
+        $this->assertFalse(BrValidation::cnpj(062476224000121));
+        $this->assertFalse(BrValidation::cnpj('062476224000121'));
+        $this->assertFalse(BrValidation::cnpj('062.476.224/0001-21'));
+        $this->assertTrue(BrValidation::cnpj('62.476.224/0001-21'));
+        $this->assertTrue(BrValidation::cnpj(62476224000121));
+        $this->assertTrue(BrValidation::cnpj('62476224000121'));
     }
 
     /**
