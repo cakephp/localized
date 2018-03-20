@@ -14,13 +14,11 @@ matrix:
   fast_finish: true
 
   include:
-    - php: 7.0
+    - php: 7.1
       env: PHPCS=1
 
 install:
-  - composer self-update
   - composer install --prefer-dist --no-interaction
-  - composer require phpunit/phpunit
 
 script:
   - sh -c "if [ '$PHPCS' != '1' ]; then vendor/bin/phpunit; fi"
