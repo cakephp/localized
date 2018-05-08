@@ -13,6 +13,7 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace Cake\Localized\Test\TestCase\Validation;
 
 use Cake\Localized\Validation\LvValidation;
@@ -41,10 +42,14 @@ class LvValidationTest extends TestCase
     }
 
     /**
-     * Test Latvian person id
+     * Test Latvian postal
+     *
+     * @dataProvider personIdProvider
+     *
+     * @param $item
+     * @param $assert
      *
      * @return void
-     * @dataProvider personIdProvider
      */
     public function testPersonId($item, $assert)
     {

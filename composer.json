@@ -19,7 +19,7 @@
     },
     "require": {
         "php": ">=5.4",
-        "cakephp/cakephp": "~3.1"
+        "cakephp/cakephp": "^3.6"
     },
     "require-dev": {
         "cakephp/cakephp-codesniffer": "^3.0",
