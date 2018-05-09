@@ -13,6 +13,7 @@
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace Cake\Localized\Test\TestCase\Validation;
 
 use Cake\Localized\Validation\FiValidation;
@@ -47,6 +48,7 @@ class FiValidationTest extends TestCase
 
     /**
      * Postal data provider
+     *
      * @return array
      */
     public function postalProvider()
@@ -63,8 +65,12 @@ class FiValidationTest extends TestCase
     /**
      * Test Finnish person id
      *
-     * @return void
      * @dataProvider personIdProvider
+     *
+     * @param $item string Person id to check
+     * @param $assert bool Asserteted validation result
+     *
+     * @return void
      */
     public function testPersonId($item, $assert)
     {
@@ -74,8 +80,12 @@ class FiValidationTest extends TestCase
     /**
      * Test Finnish postal
      *
-     * @return void
      * @dataProvider postalProvider
+     *
+     * @param $item string Postal to check
+     * @param $assert bool Asserteted validation result
+     *
+     * @return void
      */
     public function testPostal($item, $assert)
     {

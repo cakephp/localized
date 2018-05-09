@@ -58,17 +58,17 @@ class TwValidationTest extends TestCase
     }
 
     /**
-     * test the nicn method of TwValidation
+     * test the personId method of TwValidation
      *
      * @return void
      */
-    public function testNicn()
+    public function testPersonId()
     {
-        $this->assertTrue(TwValidation::nicn('Y100000001'));
-        $this->assertTrue(TwValidation::nicn('K164729166'));
-        $this->assertTrue(TwValidation::nicn('U267825932'));
-        $this->assertTrue(TwValidation::nicn('O257854301'));
-        $this->assertTrue(TwValidation::nicn('Q175232776'));
+        $this->assertTrue(TwValidation::personId('Y100000001'));
+        $this->assertTrue(TwValidation::personId('K164729166'));
+        $this->assertTrue(TwValidation::personId('U267825932'));
+        $this->assertTrue(TwValidation::personId('O257854301'));
+        $this->assertTrue(TwValidation::personId('Q175232776'));
     }
 
     /**

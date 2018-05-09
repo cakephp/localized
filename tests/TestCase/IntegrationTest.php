@@ -15,6 +15,7 @@
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
+use Cake\Localized\Validation\FrValidation;
 use Cake\TestSuite\TestCase;
 use Cake\Validation\Validator;
 
@@ -32,7 +33,7 @@ class IntegrationTest extends TestCase
     public function testLocalizedProviderIntegration()
     {
         $validator = new Validator;
-        $validator->provider('fr', 'Cake\Localized\Validation\FrValidation');
+        $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
             'provider' => 'fr',

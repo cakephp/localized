@@ -18,8 +18,8 @@
         "source": "https://github.com/cakephp/localized"
     },
     "require": {
-        "php": ">=5.4",
-        "cakephp/cakephp": "~3.1"
+        "php": ">=5.6",
+        "cakephp/cakephp": "^3.5"
     },
     "require-dev": {
         "cakephp/cakephp-codesniffer": "^3.0",
