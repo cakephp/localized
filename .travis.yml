@@ -19,9 +19,7 @@ matrix:
       env: PREFER_LOWEST=1
 
 install:
-  - composer install --prefer-dist --no-interaction
-
-before_script:
+  - if [[ $PREFER_LOWEST != 1 ]]; then composer install --prefer-dist --no-interaction ; fi
   - if [[ $PREFER_LOWEST == 1 ]]; then composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable ; fi
 
 script:
