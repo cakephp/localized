@@ -89,6 +89,18 @@ class FiValidationTest extends TestCase
     }
 
     /**
+     * @return array
+     */
+    public function referenceNumberNumericProvider()
+    {
+        return [
+            ['00001234561', true],
+            ['1234561', true],
+            ['1234562', false],
+        ];
+    }
+
+    /**
      * Test Finnish person id
      *
      * @dataProvider personIdProvider
@@ -145,9 +157,24 @@ class FiValidationTest extends TestCase
      *
      * @return void
      */
-    public function testReferenceNumber($item, $assert)
+    public function testReferenceNumberPrefixed($item, $assert)
     {
         $this->assertEquals($assert, FiValidation::referenceNumberPrefixed($item));
+    }
+
+    /**
+     * Test finnish numeric reference numbers
+     *
+     * @dataProvider referenceNumberNumericProvider
+     *
+     * @param $assert
+     * @param $item
+     *
+     * @return void
+     */
+    public function testReferenceNumberNumeric($item, $assert)
+    {
+        $this->assertEquals($assert, FiValidation::referenceNumberNumeric($item));
     }
 
 }

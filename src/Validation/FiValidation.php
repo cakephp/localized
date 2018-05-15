@@ -139,20 +139,35 @@ class FiValidation extends LocalizedValidation
      */
     public static function referenceNumberPrefixed($check)
     {
-        if (preg_match('/^RF[0-9]{6,}$/', $check) === false) {
+        if (preg_match('/^RF[0-9]{8,}$/', $check) === false) {
             return false;
         }
 
         $base     = substr($check, 4, strlen($check) - 5);
         $checksum = substr($check, -1, 1);
 
-        $pureBase = ltrim($base, '0');
-
-        if (preg_match('/^[0-9]{3,19}$$/', $pureBase) === false) {
+        if (preg_match('/^[0-9]{3,18}$$/', $base) === false) {
             return false;
         }
 
         if ((int)$checksum !== self::calculateReferenceNumberChecksum($base)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static function referenceNumberNumeric($check)
+    {
+        if (preg_match('/^[0-9]{4,19}$/', $check) === false) {
+            return false;
+        }
+
+        $base     = substr($check, 0, -1);
+        $pureBase = ltrim($base, '0');
+        $checksum = substr($check, -1, 1);
+
+        if ((int)$checksum !== self::calculateReferenceNumberChecksum($pureBase)) {
             return false;
         }
 
