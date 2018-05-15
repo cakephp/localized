@@ -129,4 +129,64 @@ class FiValidation extends LocalizedValidation
 
         return false;
     }
+
+    /**
+     * Checks country specific prefixed reference number
+     *
+     * @param $check
+     *
+     * @return bool
+     */
+    public static function referenceNumberPrefixed($check)
+    {
+        if (preg_match('/^RF[0-9]{6,}$/', $check) === false) {
+            return false;
+        }
+
+        $base     = substr($check, 4, strlen($check) - 5);
+        $checksum = substr($check, -1, 1);
+
+        $pureBase = ltrim($base, '0');
+
+        if (preg_match('/^[0-9]{3,19}$$/', $pureBase) === false) {
+            return false;
+        }
+
+        if ((int)$checksum !== self::calculateReferenceNumberChecksum($base)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param $base
+     *
+     * @return int
+     */
+    private function calculateReferenceNumberChecksum($base): int
+    {
+        $pattern = [7, 3, 1];
+        $nodes   = array_reverse(str_split($base, 1));
+
+        $i      = 0;
+        $result = 0;
+        foreach ($nodes as $node) {
+            if ($i >= 3) {
+                $i = 0;
+            }
+            $multiplier = $pattern[$i];
+            $result     += $multiplier * $node;
+            $i++;
+        }
+
+        $lastItems = str_split($result, 1);
+        $checksum  = 10 - end($lastItems);
+
+        if ($checksum >= 10) {
+            $checksum = 0;
+        }
+
+        return $checksum;
+    }
 }

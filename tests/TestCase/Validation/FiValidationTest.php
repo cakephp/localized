@@ -76,6 +76,19 @@ class FiValidationTest extends TestCase
     }
 
     /**
+     * @return array
+     */
+    public function referenceNumberPrefixedProvider()
+    {
+        return [
+            ['RF6110032', true],
+            ['RF6110031', false],
+            ['RF0810016', true],
+            ['RF0810017', false],
+        ];
+    }
+
+    /**
      * Test Finnish person id
      *
      * @dataProvider personIdProvider
@@ -120,4 +133,21 @@ class FiValidationTest extends TestCase
     {
         $this->assertEquals($assert, FiValidation::businessId($item));
     }
+
+
+    /**
+     * Test finnish prefixed reference numbers
+     *
+     * @dataProvider referenceNumberPrefixedProvider
+     *
+     * @param $assert
+     * @param $item
+     *
+     * @return void
+     */
+    public function testReferenceNumber($item, $assert)
+    {
+        $this->assertEquals($assert, FiValidation::referenceNumberPrefixed($item));
+    }
+
 }
