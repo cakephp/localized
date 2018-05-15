@@ -63,12 +63,25 @@ class FiValidationTest extends TestCase
     }
 
     /**
+     * @return array
+     */
+    public function businessIdProvider()
+    {
+        return [
+            ['16067584', true],
+            ['1606758-4', true],
+            ['1234567', false],
+            ['', false],
+        ];
+    }
+
+    /**
      * Test Finnish person id
      *
      * @dataProvider personIdProvider
      *
-     * @param $item string Person id to check
-     * @param $assert bool Asserteted validation result
+     * @param $item   string Person id to check
+     * @param $assert bool Asserted validation result
      *
      * @return void
      */
@@ -82,13 +95,29 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider postalProvider
      *
-     * @param $item string Postal to check
-     * @param $assert bool Asserteted validation result
+     * @param $item   string Postal to check
+     * @param $assert bool Asserted validation result
      *
      * @return void
      */
     public function testPostal($item, $assert)
     {
         $this->assertEquals($assert, FiValidation::postal($item));
+    }
+
+
+    /**
+     * Test finnish business ids
+     *
+     * @dataProvider businessIdProvider
+     *
+     * @param $item
+     * @param $assert
+     *
+     * @return void
+     */
+    public function testBusinessIds($item, $assert)
+    {
+        $this->assertEquals($assert, FiValidation::businessId($item));
     }
 }
