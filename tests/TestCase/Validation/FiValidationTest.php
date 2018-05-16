@@ -78,7 +78,7 @@ class FiValidationTest extends TestCase
     /**
      * @return array
      */
-    public function referenceNumberPrefixedProvider()
+    public function creditorReferenceProvider()
     {
         return [
             ['RF6110032', true],
@@ -91,7 +91,7 @@ class FiValidationTest extends TestCase
     /**
      * @return array
      */
-    public function referenceNumberNumericProvider()
+    public function referenceNumberProvider()
     {
         return [
             ['00001234561', true],
@@ -150,31 +150,31 @@ class FiValidationTest extends TestCase
     /**
      * Test finnish prefixed reference numbers
      *
-     * @dataProvider referenceNumberPrefixedProvider
+     * @dataProvider creditorReferenceProvider
      *
      * @param $assert
      * @param $item
      *
      * @return void
      */
-    public function testReferenceNumberPrefixed($item, $assert)
+    public function testCreditorReference($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::referenceNumberPrefixed($item));
+        $this->assertEquals($assert, FiValidation::creditorReference($item));
     }
 
     /**
      * Test finnish numeric reference numbers
      *
-     * @dataProvider referenceNumberNumericProvider
+     * @dataProvider referenceNumberProvider
      *
      * @param $assert
      * @param $item
      *
      * @return void
      */
-    public function testReferenceNumberNumeric($item, $assert)
+    public function testReferenceNumber($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::referenceNumberNumeric($item));
+        $this->assertEquals($assert, FiValidation::referenceNumber($item));
     }
 
 }

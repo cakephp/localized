@@ -137,7 +137,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool
      */
-    public static function referenceNumberPrefixed($check)
+    public static function creditorReference($check)
     {
         if (preg_match('/^RF[0-9]{8,}$/', $check) === false) {
             return false;
@@ -157,7 +157,7 @@ class FiValidation extends LocalizedValidation
         return true;
     }
 
-    public static function referenceNumberNumeric($check)
+    public static function referenceNumber($check)
     {
         if (preg_match('/^[0-9]{4,19}$/', $check) === false) {
             return false;
