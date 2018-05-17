@@ -88,9 +88,9 @@ class FiValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @return bool
+     * @return bool Success
      */
-    public static function businessId(string $check): bool
+    public static function businessId(string $check)
     {
         $businessId = strtoupper(trim($check));
 
@@ -131,11 +131,11 @@ class FiValidation extends LocalizedValidation
     }
 
     /**
-     * Checks country specific prefixed reference number
+     * Checks country specific creditor reference number
      *
-     * @param $check
+     * @param string $check The value to check.
      *
-     * @return bool
+     * @return bool Success
      */
     public static function creditorReference($check)
     {
@@ -157,6 +157,13 @@ class FiValidation extends LocalizedValidation
         return true;
     }
 
+    /**
+     * Checks country specific reference number
+     *
+     * @param string $check The value to check.
+     *
+     * @return bool Success
+     */
     public static function referenceNumber($check)
     {
         if (preg_match('/^[0-9]{4,19}$/', $check) === false) {
@@ -179,7 +186,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return int
      */
-    private function calculateReferenceNumberChecksum($base): int
+    private function calculateReferenceNumberChecksum($base)
     {
         $pattern = [7, 3, 1];
         $nodes   = array_reverse(str_split($base, 1));
