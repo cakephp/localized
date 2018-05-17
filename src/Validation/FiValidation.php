@@ -62,7 +62,7 @@ class FiValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/^[0-9]{6}[-+A][0-9A-Z]{4}$/';
-        if (! (bool)preg_match($pattern, $check)) {
+        if (!(bool)preg_match($pattern, $check)) {
             return false;
         }
 
@@ -107,7 +107,7 @@ class FiValidation extends LocalizedValidation
         if (strlen($businessId) != 8) {
             return false;
         }
-        if (! is_numeric($businessId)) {
+        if (!is_numeric($businessId)) {
             return false;
         }
 
@@ -123,7 +123,7 @@ class FiValidation extends LocalizedValidation
         if ($match == 10) {
             return false;
         }
-        if ($match == $checkResult) {
+        if ($match === $checkResult) {
             return true;
         }
 
@@ -150,7 +150,7 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        if ((int)$checksum !== self::calculateReferenceNumberChecksum($base)) {
+        if ((int)$checksum !== static::calculateReferenceNumberChecksum($base)) {
             return false;
         }
 
@@ -174,7 +174,7 @@ class FiValidation extends LocalizedValidation
         $pureBase = ltrim($base, '0');
         $checksum = substr($check, -1, 1);
 
-        if ((int)$checksum !== self::calculateReferenceNumberChecksum($pureBase)) {
+        if ((int)$checksum !== static::calculateReferenceNumberChecksum($pureBase)) {
             return false;
         }
 
@@ -186,7 +186,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return int
      */
-    private static function calculateReferenceNumberChecksum($base)
+    public static function calculateReferenceNumberChecksum($base)
     {
         $pattern = [7, 3, 1];
         $nodes = array_reverse(str_split($base, 1));
