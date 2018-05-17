@@ -62,7 +62,7 @@ class FiValidation extends LocalizedValidation
     public static function personId($check)
     {
         $pattern = '/^[0-9]{6}[-+A][0-9A-Z]{4}$/';
-        if ( ! (bool)preg_match($pattern, $check)) {
+        if (! (bool)preg_match($pattern, $check)) {
             return false;
         }
 
@@ -107,13 +107,13 @@ class FiValidation extends LocalizedValidation
         if (strlen($businessId) != 8) {
             return false;
         }
-        if ( ! is_numeric($businessId)) {
+        if (! is_numeric($businessId)) {
             return false;
         }
 
         $checkResult = intval($businessId[strlen($businessId) - 1]);
-        $weights     = [7, 9, 10, 5, 8, 4, 2];
-        $n           = 0;
+        $weights = [7, 9, 10, 5, 8, 4, 2];
+        $n = 0;
 
         foreach (str_split(substr($businessId, 0, 7)) as $k => $y) {
             $n += $weights[$k] * $y;
@@ -143,7 +143,7 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $base     = substr($check, 4, strlen($check) - 5);
+        $base = substr($check, 4, strlen($check) - 5);
         $checksum = substr($check, -1, 1);
 
         if (preg_match('/^[0-9]{3,18}$$/', $base) === false) {
@@ -170,7 +170,7 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $base     = substr($check, 0, -1);
+        $base = substr($check, 0, -1);
         $pureBase = ltrim($base, '0');
         $checksum = substr($check, -1, 1);
 
@@ -182,28 +182,28 @@ class FiValidation extends LocalizedValidation
     }
 
     /**
-     * @param $base
+     * @param string $base Reference number base
      *
      * @return int
      */
     private static function calculateReferenceNumberChecksum($base)
     {
         $pattern = [7, 3, 1];
-        $nodes   = array_reverse(str_split($base, 1));
+        $nodes = array_reverse(str_split($base, 1));
 
-        $i      = 0;
+        $i = 0;
         $result = 0;
         foreach ($nodes as $node) {
             if ($i >= 3) {
                 $i = 0;
             }
             $multiplier = $pattern[$i];
-            $result     += $multiplier * $node;
+            $result += $multiplier * $node;
             $i++;
         }
 
         $lastItems = str_split($result, 1);
-        $checksum  = 10 - end($lastItems);
+        $checksum = 10 - end($lastItems);
 
         if ($checksum >= 10) {
             $checksum = 0;

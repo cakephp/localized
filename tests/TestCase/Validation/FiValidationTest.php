@@ -130,7 +130,6 @@ class FiValidationTest extends TestCase
         $this->assertEquals($assert, FiValidation::postal($item));
     }
 
-
     /**
      * Test finnish business ids
      *
@@ -145,7 +144,6 @@ class FiValidationTest extends TestCase
     {
         $this->assertEquals($assert, FiValidation::businessId($item));
     }
-
 
     /**
      * Test finnish prefixed reference numbers
@@ -176,5 +174,4 @@ class FiValidationTest extends TestCase
     {
         $this->assertEquals($assert, FiValidation::referenceNumber($item));
     }
-
 }
