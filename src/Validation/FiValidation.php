@@ -90,7 +90,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success
      */
-    public static function businessId(string $check)
+    public static function businessId($check)
     {
         $businessId = strtoupper(trim($check));
 
