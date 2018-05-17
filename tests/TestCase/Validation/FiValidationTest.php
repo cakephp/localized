@@ -105,7 +105,7 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider personIdProvider
      *
-     * @param $item   string Person id to check
+     * @param $item string Person id to check
      * @param $assert bool Asserted validation result
      *
      * @return void
@@ -120,7 +120,7 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider postalProvider
      *
-     * @param $item   string Postal to check
+     * @param $item string Postal to check
      * @param $assert bool Asserted validation result
      *
      * @return void
