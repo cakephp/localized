@@ -92,10 +92,10 @@ class FiValidation extends LocalizedValidation
      */
     public static function businessId($check)
     {
-        $businessId = strtoupper(trim($check));
+        $businessId = trim($check);
 
         if (strpos($businessId, '-')) {
-            if (strpos($businessId, '-') != 7) {
+            if (strpos($businessId, '-') !== 7) {
                 return false;
             }
             if (substr_count($businessId, '-') > 1) {
@@ -104,7 +104,7 @@ class FiValidation extends LocalizedValidation
         }
         $businessId = str_replace('-', '', $businessId);
 
-        if (strlen($businessId) != 8) {
+        if (strlen($businessId) !== 8) {
             return false;
         }
         if (!is_numeric($businessId)) {
@@ -119,8 +119,8 @@ class FiValidation extends LocalizedValidation
             $n += $weights[$k] * $y;
         }
 
-        $match = $n % 11 == 0 ? 0 : 11 - $n % 11;
-        if ($match == 10) {
+        $match = $n % 11 === 0 ? 0 : 11 - $n % 11;
+        if ($match === 10) {
             return false;
         }
         if ($match === $checkResult) {
@@ -146,7 +146,7 @@ class FiValidation extends LocalizedValidation
         $base = substr($check, 4, strlen($check) - 5);
         $checksum = substr($check, -1, 1);
 
-        if (preg_match('/^[0-9]{3,18}$$/', $base) === false) {
+        if (preg_match('/^[0-9]{3,18}$/', $base) === false) {
             return false;
         }
 

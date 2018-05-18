@@ -135,14 +135,14 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider businessIdProvider
      *
-     * @param $item
-     * @param $assert
+     * @param $item string Business id to check
+     * @param $assert bool Asserted validation result
      *
      * @return void
      */
     public function testBusinessIds($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::businessId($item));
+        $this->assertSame($assert, FiValidation::businessId($item));
     }
 
     /**
@@ -150,14 +150,14 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider creditorReferenceProvider
      *
-     * @param $assert
-     * @param $item
+     * @param $assert bool Asserted validation result
+     * @param $item string Creditor reference to check
      *
      * @return void
      */
     public function testCreditorReference($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::creditorReference($item));
+        $this->assertSame($assert, FiValidation::creditorReference($item));
     }
 
     /**
@@ -165,13 +165,13 @@ class FiValidationTest extends TestCase
      *
      * @dataProvider referenceNumberProvider
      *
-     * @param $assert
-     * @param $item
+     * @param $assert bool Asserted validation result
+     * @param $item string Reference number to check
      *
      * @return void
      */
     public function testReferenceNumber($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::referenceNumber($item));
+        $this->assertSame($assert, FiValidation::referenceNumber($item));
     }
 }
