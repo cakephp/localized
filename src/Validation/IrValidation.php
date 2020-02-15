@@ -128,6 +128,6 @@ class IrValidation extends LocalizedValidation
             return (bool)($remaining == substr($check, 9, 1));
         }
 
-        return (bool)((11 - $remaining) == substr($check, 9, 1));
+        return (bool)(substr($check, 9, 1) == 11 - $remaining);
     }
 }
