@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Plugin Integration Validation class.
  *
@@ -32,7 +34,7 @@ class IntegrationTest extends TestCase
      */
     public function testLocalizedProviderIntegration()
     {
-        $validator = new Validator;
+        $validator = new Validator();
         $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
@@ -44,12 +46,12 @@ class IntegrationTest extends TestCase
             'provider' => 'fr',
         ]);
         $this->assertCount(2, $validator);
-        $this->assertEmpty($validator->errors([
+        $this->assertEmpty($validator->validate([
             'phoneField' => '05 24 22 72 27',
-            'postalField' => '93000'
+            'postalField' => '93000',
         ]));
 
-        $errors = $validator->errors(['phoneField' => '924.227.227', 'postalField' => '0000']);
+        $errors = $validator->validate(['phoneField' => '924.227.227', 'postalField' => '0000']);
         $expected = [
             'phoneField' => ['myCustomRuleNameForPhone' => 'Numéro invalide'],
             'postalField' => ['myCustomRuleNameForPostal' => 'The provided value is invalid'],

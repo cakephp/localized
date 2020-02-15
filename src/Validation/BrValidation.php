@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Brazillian Localized Validation class. Handles localized validation for Brazil.
  *
@@ -8,10 +10,10 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright    Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link         http://cakephp.org
- * @since        Localized Plugin v 0.1
- * @license      http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
@@ -27,7 +29,7 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
         return (bool)preg_match('/^(\+?\d{1,3}? ?)?(\(0?\d{2}\) ?)?9?\d{4}[-. ]?\d{4}$/', $check);
     }
@@ -38,9 +40,9 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        return (bool)preg_match('/^[0-9]{5}-?[0-9]{3}$/', $check);
+        return (bool)preg_match('/^\d{5}-?\d{3}$/', $check);
     }
 
     /**
@@ -49,7 +51,7 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         return BrValidation::cpf($check) || BrValidation::cnpj($check);
     }
@@ -60,9 +62,9 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cpf($check)
+    public static function cpf(string $check): bool
     {
-        $check = trim($check);
+        $check = trim(strval($check));
 
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d\d.\d\d\d.\d\d\d\-\d\d/', $check)) {
@@ -71,13 +73,13 @@ class BrValidation extends LocalizedValidation
             return false;
         }
 
-        if (strlen($check) != 11) {
+        if (strlen($check) !== 11) {
             return false;
         }
 
         // repeated values are invalid, but algorithms fails to check it
         for ($i = 0; $i < 10; $i++) {
-            if (str_repeat($i, 11) === $check) {
+            if (str_repeat(strval($i), 11) === $check) {
                 return false;
             }
         }
@@ -90,15 +92,11 @@ class BrValidation extends LocalizedValidation
                 $sum += $check[$i] * $position;
             }
             $div = $sum % 11;
-            if ($div < 2) {
-                $check[$pos] = 0;
-            } else {
-                $check[$pos] = 11 - $div;
-            }
+            $check[$pos] = $div < 2 ? 0 : 11 - $div;
         }
         $dvRight = $check[9] * 10 + $check[10];
 
-        return ($dvRight == $dv);
+        return $dvRight == $dv;
     }
 
     /**
@@ -107,9 +105,9 @@ class BrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cnpj($check)
+    public static function cnpj(string $check): bool
     {
-        $check = trim($check);
+        $check = trim(strval($check));
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
             $check = str_replace(['-', '.', '/'], '', $check);
@@ -117,21 +115,21 @@ class BrValidation extends LocalizedValidation
             return false;
         }
 
-        if (strlen($check) != 14) {
+        if (strlen($check) !== 14) {
             return false;
         }
         $firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
             ($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
             ($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
 
-        $firstVerificationDigit = ($firstSum % 11) < 2 ? 0 : 11 - ($firstSum % 11);
+        $firstVerificationDigit = $firstSum % 11 < 2 ? 0 : 11 - ($firstSum % 11);
 
         $secondSum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4) + ($check[3] * 3) +
             ($check[4] * 2) + ($check[5] * 9) + ($check[6] * 8) + ($check[7] * 7) +
             ($check[8] * 6) + ($check[9] * 5) + ($check[10] * 4) + ($check[11] * 3) +
             ($check[12] * 2);
 
-        $secondVerificationDigit = ($secondSum % 11) < 2 ? 0 : 11 - ($secondSum % 11);
+        $secondVerificationDigit = $secondSum % 11 < 2 ? 0 : 11 - ($secondSum % 11);
 
         return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
     }
@@ -142,7 +140,7 @@ class BrValidation extends LocalizedValidation
      * @param string $cnh License driver number
      * @return bool
      */
-    public static function cnh($cnh)
+    public static function cnh(string $cnh): bool
     {
         if (!is_numeric($cnh) && !is_string($cnh)) {
             return false;
@@ -154,7 +152,7 @@ class BrValidation extends LocalizedValidation
         }
         // Check for repeated values
         for ($i = 0; $i < 10; $i++) {
-            if (str_repeat($i, 11) === $check) {
+            if (str_repeat(strval($i), 11) === $check) {
                 return false;
             }
         }
@@ -177,9 +175,9 @@ class BrValidation extends LocalizedValidation
 
         // Calculate second digit
         $x = $v % 11;
-        $dv2 = ($x >= 10) ? 0 : $x - $dsc;
+        $dv2 = $x >= 10 ? 0 : $x - $dsc;
 
-        return ($dv1 . $dv2) === substr($check, -2);
+        return $dv1 . $dv2 === substr($check, -2);
     }
 
     /**
@@ -188,7 +186,7 @@ class BrValidation extends LocalizedValidation
      * @param string|int $cns National Heath Card Number
      * @return bool
      */
-    public static function cns($cns)
+    public static function cns($cns): bool
     {
         if (!is_numeric($cns) && !is_string($cns)) {
             return false;

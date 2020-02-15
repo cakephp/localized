@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /**
  * German Localized Validation class test case
@@ -26,7 +27,6 @@ use Cake\TestSuite\TestCase;
  */
 class DeValidationTest extends TestCase
 {
-
     /**
      * test the phone method of DeValidation
      *

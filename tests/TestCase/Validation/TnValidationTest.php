@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Tunisia Localized Validation class test case
  *
@@ -54,7 +56,6 @@ class TnValidationTest extends TestCase
         $this->assertFalse(TnValidation::phone('9899999'));
         $this->assertFalse(TnValidation::phone('989999999'));
         $this->assertFalse(TnValidation::phone('004012345678'));
-        $this->assertFalse(TnValidation::phone(false));
         $this->assertFalse(TnValidation::phone('abcdef'));
     }
 
@@ -81,7 +82,6 @@ class TnValidationTest extends TestCase
         $this->assertFalse(TnValidation::postal('abcd'));
         $this->assertFalse(TnValidation::postal('1'));
         $this->assertFalse(TnValidation::postal('10'));
-        $this->assertFalse(TnValidation::postal(true));
     }
 
     /**
@@ -99,7 +99,6 @@ class TnValidationTest extends TestCase
         $this->assertFalse(TnValidation::personId('0123456789'));
         $this->assertFalse(TnValidation::personId('1234 56798'));
         $this->assertFalse(TnValidation::personId('01234 567989'));
-        $this->assertFalse(TnValidation::personId(true));
         $this->assertFalse(TnValidation::personId('abcdefgh'));
     }
 }

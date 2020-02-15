@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 /**
+ * Localized Plugin class.
+ *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -13,13 +15,16 @@ declare(strict_types=1);
  * @since Localized Plugin v 0.1
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Cake\Localized\Validation;
+namespace Cake\Localized;
 
-/**
- * UK Localized Validation class. Handles localized validation for The United Kingdom
- *
- * @deprecated Use GbValidation instead.
- */
-class UkValidation extends GbValidation
+use Cake\Core\BasePlugin;
+
+class Plugin extends BasePlugin
 {
+    /**
+     * Plugin name.
+     *
+     * @var string
+     */
+    protected $name = 'Localized';
 }

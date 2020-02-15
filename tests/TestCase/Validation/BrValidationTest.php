@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Brazilian Localized Validation class test case
  *
@@ -147,12 +149,12 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::cpf('abcdefghi'));
 
         //testing 15 digits
-        $this->assertFalse(BrValidation::cnpj(123456789123456));
-        $this->assertFalse(BrValidation::cnpj(062476224000121));
+        $this->assertFalse(BrValidation::cnpj('123456789123456'));
+        $this->assertFalse(BrValidation::cnpj('062476224000121'));
         $this->assertFalse(BrValidation::cnpj('062476224000121'));
         $this->assertFalse(BrValidation::cnpj('062.476.224/0001-21'));
         $this->assertTrue(BrValidation::cnpj('62.476.224/0001-21'));
-        $this->assertTrue(BrValidation::cnpj(62476224000121));
+        $this->assertTrue(BrValidation::cnpj('62476224000121'));
         $this->assertTrue(BrValidation::cnpj('62476224000121'));
     }
 
@@ -170,7 +172,6 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::cnh('11111111111'));
         $this->assertFalse(BrValidation::cnh('018278545'));
         $this->assertFalse(BrValidation::cnh('abcdefghij'));
-        $this->assertFalse(BrValidation::cnh(['01827854569']));
     }
 
     /**
@@ -183,7 +184,7 @@ class BrValidationTest extends TestCase
         $this->assertTrue(BrValidation::cns('702 5053 3246 4238'));
         $this->assertTrue(BrValidation::cns('898 0058 0155 2261'));
         $this->assertTrue(BrValidation::cns('706000307269748'));
-        $this->assertTrue(BrValidation::cns(706902161943931));
+        $this->assertTrue(BrValidation::cns('706902161943931'));
 
         $this->assertFalse(BrValidation::cns('702 5053 3246 4237'));
         $this->assertFalse(BrValidation::cns('111 1111 1111 1111'));
