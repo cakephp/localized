@@ -115,8 +115,8 @@ class IrValidation extends LocalizedValidation
         $sum = 0;
         $equivalent = 0;
         for ($i = 0; $i < 9; $i++) {
-            $sum += $check{$i} * (10 - $i);
-            if ($check{1} === $check{$i}) {
+            $sum += substr($check, $i, 1) * (10 - $i);
+            if (substr($check, 1, 1) === substr($check, $i, 1)) {
                 $equivalent++;
             }
         }
@@ -125,9 +125,9 @@ class IrValidation extends LocalizedValidation
         }
         $remaining = $sum % 11;
         if ($remaining <= 1) {
-            return (bool)($remaining == $check{9});
+            return (bool)($remaining == substr($check, 9, 1));
         }
 
-        return (bool)((11 - $remaining) == $check{9});
+        return (bool)((11 - $remaining) == substr($check, 9, 1));
     }
 }
