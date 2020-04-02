@@ -41,14 +41,14 @@ class UaValidation extends LocalizedValidation
     /**
      * Checks phone number for Ukraine
      *
-     * @example +38-044-283-93-57; (068)2839357; +380442839357; +38 (063)537-28-07; 8044223-95-26; +380612839357;
+     * @example +38-044-283-93-57; (068)2839357; +380442839357; +38 (063)537-28-07; +380612839357;
      * @param string $check The value to check.
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Ukraine
      */
     public static function phone($check)
     {
-        $pattern = '/^((8|\+38)-?)?(\(?+...\)?)?-?\d{3}-?\d{2}-?\d{2}$/';
+        $pattern = '/^(\+38-?)?(\(?+...\)?)?-?\d{3}-?\d{2}-?\d{2}$/';
 
         return (bool)preg_match($pattern, $check);
     }
