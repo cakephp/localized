@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Ukrainian Localized Validation class. Handles localized validation for Ukraine
  *
@@ -8,14 +10,12 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 1.0.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 1.0.0
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
-
-use Cake\Network\Exception\NotImplementedException;
 
 /**
  * UaValidation
@@ -31,9 +31,9 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/Postal_codes_in_Ukraine
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        $pattern = '/^(0[1-9][0-9][0-9][0-9]|1[0-9][0-9][0-9][0-9]|2[0-9][0-9][0-9][0-9]|3[0-9][0-9][0-9][0-9]|4[0-9][0-9][0-9][0-9]|5[0-9][0-9][0-9][0-9]|6[0-9][0-9][0-9][0-9]|7[0-9][0-9][0-9][0-9]|8[0-9][0-9][0-9][0-9]|9[0-9][0-9][0-9][0-9]|)$/';
+        $pattern = '/^(0[1-9]\d\d\d|1\d\d\d\d|2\d\d\d\d|3\d\d\d\d|4\d\d\d\d|5\d\d\d\d|6\d\d\d\d|7\d\d\d\d|8\d\d\d\d|9\d\d\d\d|)$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -46,7 +46,7 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Ukraine
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
         $pattern = '/^(\+38-?)?(\(?+...\)?)?-?\d{3}-?\d{2}-?\d{2}$/';
 
@@ -61,7 +61,7 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/Ukrainian_identity_card#Previous_internal_passport
      */
-    public static function passport($check)
+    public static function passport(string $check): bool
     {
         $pattern = '/^[АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ]{2}\d{6}/u';
 
@@ -75,7 +75,7 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/Ukrainian_identity_card#Current_identity_card
      */
-    public static function idCard($check)
+    public static function idCard(string $check): bool
     {
         $pattern = '/^(\d{8}-\d{5})$/';
 
@@ -89,7 +89,7 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/VAT_identification_number#VAT_numbers_of_non-EU_countries
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         $pattern = '/^\d{10}$/';
 

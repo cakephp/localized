@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Iran Localized Validation class test case
  *

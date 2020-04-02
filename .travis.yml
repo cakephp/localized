@@ -1,17 +1,21 @@
 language: php
 
 php:
-  - 5.6
+  - 7.2
   - 7.4
+
+env:
+  global:
+    - DEFAULT=1
 
 matrix:
   fast_finish: true
 
   include:
     - php: 7.4
-      env: PHPCS=1
+      env: CHECKS=1 DEFAULT=0
 
-    - php: 5.6
+    - php: 7.2
       env: PREFER_LOWEST=1
 
 install:
@@ -19,8 +23,9 @@ install:
   - if [[ $PREFER_LOWEST == 1 ]]; then composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable ; fi
 
 script:
-  - sh -c "if [ '$PHPCS' != '1' ]; then vendor/bin/phpunit; fi"
-  - sh -c "if [ '$PHPCS' = '1' ]; then ./vendor/bin/phpcs -n -p --extensions=php --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/ tests/; fi"
+  - if [[ $DEFAULT == 1 ]]; then vendor/bin/phpunit; fi
+  - if [[ $CHECKS == 1 ]]; then composer stan-setup && composer stan ; fi
+  - if [[ $CHECKS == 1 ]]; then composer cs-check ; fi
 
 cache:
   directories:

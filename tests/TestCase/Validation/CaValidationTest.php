@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Canadian Localized Validation class test case
  *

@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Taiwan Localized Validation class. Handles localized validation for Taiwan.
  *
@@ -8,10 +10,10 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
@@ -27,9 +29,9 @@ class TwValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
-        $pattern = '/^\\(?(0|\\+886)[-. ]?[2-9][\\)-. ]?([0-9][\\)-. ]?){2}([0-9][-. ]?){3}[0-9]{2}[0-9]?$/';
+        $pattern = '/^\(?(0|\+886)[-. ]?[2-9][\)-. ]?(\d[\)-. ]?){2}(\d[-. ]?){3}\d{2}\d?$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -40,9 +42,9 @@ class TwValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        $pattern = '/^[1-9][0-9]{2}([0-9]{2})?$/';
+        $pattern = '/^[1-9]\d{2}(\d{2})?$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -53,10 +55,10 @@ class TwValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         $check = strtoupper($check);
-        if (!preg_match('/^[A-Z][1-2][0-9]{8}$/', $check)) {
+        if (!preg_match('/^[A-Z][1-2]\d{8}$/', $check)) {
             return false;
         }
         $keyTable = [
@@ -66,13 +68,13 @@ class TwValidation extends LocalizedValidation
             'Y' => 31, 'Z' => 33,
         ];
         $n1 = $keyTable[$check[0]];
-        $checksum = intval($n1 / 10) + ($n1 % 10) * 9;
+        $checksum = (int)($n1 / 10) + ($n1 % 10) * 9;
 
         for ($i = 1; $i < 9; $i++) {
             $checksum += $check[$i] * (9 - $i);
         }
 
-        return (substr(10 - ($checksum % 10), 0, 1) == $check[9]);
+        return substr(strval(10 - ($checksum % 10)), 0, 1) === $check[9];
     }
 
     /**
@@ -82,16 +84,16 @@ class TwValidation extends LocalizedValidation
      * @return bool Success.
      * @link http://herolin.mine.nu/entry/is-valid-TW-company-ID
      */
-    public static function ubn($check)
+    public static function ubn(string $check): bool
     {
-        if (!preg_match('/^[0-9]{8}$/', $check)) {
+        if (!preg_match('/^\d{8}$/', $check)) {
             return false;
         }
         $tbNum = [1, 2, 1, 2, 1, 2, 4, 1];
         $intSum = 0;
         for ($i = 0; $i < 8; $i++) {
             $intMultiply = $check[$i] * $tbNum[$i];
-            $intAddition = (floor($intMultiply / 10) + ($intMultiply % 10));
+            $intAddition = floor($intMultiply / 10) + ($intMultiply % 10);
             $intSum += $intAddition;
         }
 
@@ -105,7 +107,7 @@ class TwValidation extends LocalizedValidation
      * @return bool Success.
      * @deprecated Use personId() instead.
      */
-    public static function nicn($check)
+    public static function nicn(string $check): bool
     {
         return static::personId($check);
     }

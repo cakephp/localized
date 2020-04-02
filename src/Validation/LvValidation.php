@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Latvian Localized Validation class. Handles localized validation for Latvia.
  *
@@ -8,14 +10,14 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * LvValidation
@@ -23,16 +25,15 @@ use Cake\Network\Exception\NotImplementedException;
  */
 class LvValidation extends LocalizedValidation
 {
-
     /**
      * Checks a postal code for Latvia.
      *
      * @param string $check The value to check.
      *
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
@@ -42,10 +43,10 @@ class LvValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
@@ -57,11 +58,11 @@ class LvValidation extends LocalizedValidation
      *
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         $check = trim(str_replace('-', '', $check));
 
-        $pattern = '/^[0-9]{6}[0-9A-Z]{5}$/';
+        $pattern = '/^\d{6}[0-9A-Z]{5}$/';
         if (!(bool)preg_match($pattern, $check)) {
             return false;
         }

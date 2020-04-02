@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Danish Localized Validation class. Handles localized validation for Denmark.
  *
@@ -8,14 +10,12 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
-
-use Cake\Network\Exception\NotImplementedException;
 
 /**
  * DkValidation
@@ -29,9 +29,9 @@ class DkValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
-        $pattern = '/\\A\\b[0-9]{6}-[0-9]{4}\\b\\z/i';
+        $pattern = '/\A\b\d{6}-\d{4}\b\z/i';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -40,12 +40,12 @@ class DkValidation extends LocalizedValidation
      * Checks a postal code for Denmark.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        $pattern = '/\\A\\b[0-9]{4}\\b\\z/i';
+        $pattern = '/\A\b\d{4}\b\z/i';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -54,12 +54,12 @@ class DkValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
-        $pattern = '/\\A\\b[0-9]{8}\\b\\z/i';
+        $pattern = '/\A\b\d{8}\b\z/i';
 
         return (bool)preg_match($pattern, $check);
     }

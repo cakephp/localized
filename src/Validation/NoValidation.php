@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Norwegian Localized Validation class. Handles localized validation for Norway.
  *
@@ -8,10 +10,10 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
@@ -28,7 +30,7 @@ class NoValidation extends LocalizedValidation
      * @param string $check the date of birth.
      * @return bool Success.
      */
-    public static function dob($check)
+    public static function dob(string $check): bool
     {
         $pattern = '/^\d{1,2}\.\d{1,2}\.(\d{2}|\d{4})$/';
         $return = preg_match($pattern, $check);
@@ -47,7 +49,7 @@ class NoValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
         return (bool)preg_match('/^((\d{8})|(\d{3} \d{2} \d{3})|(\d{2} \d{2} \d{2} \d{2}))$/', $check);
     }
@@ -58,7 +60,7 @@ class NoValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
         $pattern = '/^\d{4}$/';
 
@@ -71,7 +73,7 @@ class NoValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         $pattern = '/^(\d{11})|(\d{6} \d{5})$/';
 

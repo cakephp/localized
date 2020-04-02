@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Italian Localized Validation class. Handles localized validation for Italy.
  *
@@ -8,14 +10,14 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * ItValidation
@@ -29,9 +31,9 @@ class ItValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
-        $pattern = '/^([0-9]*\-?\ ?\/?[0-9]*)$/';
+        $pattern = '/^(\d*\-?\ ?\/?\d*)$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -42,9 +44,9 @@ class ItValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        $pattern = '/^[0-9]{5}$/i';
+        $pattern = '/^\d{5}$/i';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -55,14 +57,14 @@ class ItValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function cf($check)
+    public static function cf(string $check): bool
     {
-        if ((strlen($check) === 11) && preg_match('/[0-9]{11}/', $check)) {
+        if ((strlen($check) === 11) && preg_match('/\d{11}/', $check)) {
             return true;
         }
 
         $check = strtoupper($check);
-        if (strlen($check) != 16 || !preg_match('/[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/', $check)) {
+        if (strlen($check) !== 16 || !preg_match('/[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]/', $check)) {
             return false;
         }
 
@@ -78,24 +80,24 @@ class ItValidation extends LocalizedValidation
         $sum = 0;
 
         for ($i = 1; $i <= 13; $i += 2) {
-            $sum += (is_numeric($check[$i])) ? (int)$check[$i] : ord($check[$i]) - ord('A');
+            $sum += is_numeric($check[$i]) ? (int)$check[$i] : ord($check[$i]) - ord('A');
         }
 
         for ($i = 0; $i <= 14; $i += 2) {
             $sum += $checkOdd[$check[$i]];
         }
 
-        return (chr($sum % 26 + ord('A')) == $check[15]);
+        return chr($sum % 26 + ord('A')) === $check[15];
     }
 
     /**
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }

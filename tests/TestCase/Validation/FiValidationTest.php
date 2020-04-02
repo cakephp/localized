@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Finnish Localized Validation class test case
  *
@@ -25,7 +27,6 @@ use Cake\TestSuite\TestCase;
  */
 class FiValidationTest extends TestCase
 {
-
     /**
      * Person id data provider
      *
@@ -41,7 +42,6 @@ class FiValidationTest extends TestCase
             ['010100+991B', false],
             ['010100-9856', false],
             ['010100A929B', false],
-            [null, false],
             ['', false],
         ];
     }

@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Indonesian Localized Validation class test case
  *

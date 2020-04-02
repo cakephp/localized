@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Finnish Localized Validation class. Handles localized validation for Finland.
  *
@@ -8,15 +10,14 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link http://cakephp.org
+ * @since Localized Plugin v 0.1
+ * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * FiValidation
@@ -24,7 +25,6 @@ use Cake\Network\Exception\NotImplementedException;
  */
 class FiValidation extends LocalizedValidation
 {
-
     /**
      * Checks a postal code for Finland.
      *
@@ -32,9 +32,9 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success.
      */
-    public static function postal($check)
+    public static function postal(string $check): bool
     {
-        $pattern = '/^[0-9]{5}$/';
+        $pattern = '/^\d{5}$/';
 
         return (bool)preg_match($pattern, $check);
     }
@@ -44,10 +44,10 @@ class FiValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function phone($check)
+    public static function phone(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
@@ -59,10 +59,10 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success.
      */
-    public static function personId($check)
+    public static function personId(string $check): bool
     {
-        $pattern = '/^[0-9]{6}[-+A][0-9A-Z]{4}$/';
-        if (!(bool)preg_match($pattern, $check)) {
+        $pattern = '/^\d{6}[-+A][0-9A-Z]{4}$/';
+        if (!(bool)preg_match($pattern, strval($check))) {
             return false;
         }
 
@@ -80,7 +80,7 @@ class FiValidation extends LocalizedValidation
         }
         $list = array_values($list);
 
-        return $check[strlen($check) - 1] === $list[intval(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
+        return $check[strlen($check) - 1] === $list[(int)(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
     }
 
     /**
@@ -90,7 +90,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success
      */
-    public static function businessId($check)
+    public static function businessId(string $check): bool
     {
         $businessId = trim($check);
 
@@ -111,7 +111,7 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $checkResult = intval($businessId[strlen($businessId) - 1]);
+        $checkResult = (int)$businessId[strlen($businessId) - 1];
         $weights = [7, 9, 10, 5, 8, 4, 2];
         $n = 0;
 
@@ -123,11 +123,8 @@ class FiValidation extends LocalizedValidation
         if ($match === 10) {
             return false;
         }
-        if ($match === $checkResult) {
-            return true;
-        }
 
-        return false;
+        return $match === $checkResult;
     }
 
     /**
@@ -137,16 +134,16 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success
      */
-    public static function creditorReference($check)
+    public static function creditorReference(string $check): bool
     {
-        if (preg_match('/^RF[0-9]{8,}$/', $check) === false) {
+        if (preg_match('/^RF\d{8,}$/', $check) === false) {
             return false;
         }
 
         $base = substr($check, 4, strlen($check) - 5);
         $checksum = substr($check, -1, 1);
 
-        if (preg_match('/^[0-9]{3,18}$/', $base) === false) {
+        if (preg_match('/^\d{3,18}$/', $base) === false) {
             return false;
         }
 
@@ -164,9 +161,9 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success
      */
-    public static function referenceNumber($check)
+    public static function referenceNumber(string $check): bool
     {
-        if (preg_match('/^[0-9]{4,19}$/', $check) === false) {
+        if (preg_match('/^\d{4,19}$/', $check) === false) {
             return false;
         }
 
@@ -186,7 +183,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return int
      */
-    public static function calculateReferenceNumberChecksum($base)
+    public static function calculateReferenceNumberChecksum(string $base): int
     {
         $pattern = [7, 3, 1];
         $nodes = array_reverse(str_split($base, 1));
@@ -202,7 +199,7 @@ class FiValidation extends LocalizedValidation
             $i++;
         }
 
-        $lastItems = str_split($result, 1);
+        $lastItems = str_split(strval($result), 1);
         $checksum = 10 - end($lastItems);
 
         if ($checksum >= 10) {
