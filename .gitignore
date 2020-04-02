@@ -1,4 +1,4 @@
 /composer.lock
 /phpunit.phar
 /vendor/
-.idea
+/.idea/

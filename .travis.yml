@@ -2,17 +2,13 @@ language: php
 
 php:
   - 5.6
-  - 7.0
-  - 7.1
-  - 7.2
-
-sudo: false
+  - 7.4
 
 matrix:
   fast_finish: true
 
   include:
-    - php: 7.1
+    - php: 7.4
       env: PHPCS=1
 
     - php: 5.6
@@ -24,7 +20,11 @@ install:
 
 script:
   - sh -c "if [ '$PHPCS' != '1' ]; then vendor/bin/phpunit; fi"
-  - sh -c "if [ '$PHPCS' = '1' ]; then ./vendor/bin/phpcs -n -p --extensions=php --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests; fi"
+  - sh -c "if [ '$PHPCS' = '1' ]; then ./vendor/bin/phpcs -n -p --extensions=php --standard=vendor/cakephp/cakephp-codesniffer/CakePHP src/ tests/; fi"
+
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 notifications:
   email: false

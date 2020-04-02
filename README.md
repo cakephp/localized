@@ -1,5 +1,5 @@
 # CakePHP Localized plugin
-[![Build Status](https://secure.travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
+[![Build Status](https://travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
 [![License](https://poser.pugx.org/cakephp/localized/license.svg)](https://packagist.org/packages/cakephp/localized)
 [![Total Downloads](https://poser.pugx.org/cakephp/localized/d/total.svg)](https://packagist.org/packages/cakephp/localized)
 
@@ -9,12 +9,12 @@ This plugin contains various localized validation classes for specific countries
 
 The master branch has the following requirements:
 
-* CakePHP 3.1.0 or greater.
-* PHP 5.4.16 or greater.
+* CakePHP 3.5+.
+* PHP 5.6+.
 
 ## Installation
 
-You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
+You can install this plugin into your CakePHP application using [composer](https://getcomposer.org).
 
 The recommended way to install composer packages is:
 
@@ -43,7 +43,7 @@ class PostsTable extends Table
 {
     public function validationDefault(Validator $validator)
     {
-        $validator->provider('fr', FrValidation::class);
+        $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
             'provider' => 'fr'

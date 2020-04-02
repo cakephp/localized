@@ -75,6 +75,7 @@ class RuValidationTest extends TestCase
         $this->assertFalse(RuValidation::passport('1234123456'));
         $this->assertFalse(RuValidation::passport('1234 1x3456'));
     }
+
     /**
      * test vatin method of RuValidation
      *
