@@ -9,8 +9,8 @@ This plugin contains various localized validation classes for specific countries
 
 The master branch has the following requirements:
 
-* CakePHP 3.5+.
-* PHP 5.6+.
+* CakePHP 4.0+.
+* PHP 7.2+.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Load your plugin using
 ```
 bin/cake plugin load Cake/Localized
 ```
-or by manually putting `Plugin::load('Cake/Localized')` in your `boostrap.php`.
+or by manually adding `$this->addPlugin('Cake/Localized')` in your `src/Application.php`.
 
 ## Model validation
 
