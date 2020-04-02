@@ -73,7 +73,7 @@ class NoValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/^(\d{11})|(\d{6} \d{5})$/';
 

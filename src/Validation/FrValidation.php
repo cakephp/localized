@@ -60,7 +60,7 @@ class FrValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/^[12]\d{2}(0\d|1[012])(\d{2}|2[AB])\d{8}$/';
         if (!preg_match($pattern, $check)) {

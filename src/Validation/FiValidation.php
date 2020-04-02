@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * FiValidation
@@ -44,7 +44,7 @@ class FiValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone(string $check): bool
@@ -59,7 +59,7 @@ class FiValidation extends LocalizedValidation
      *
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/^\d{6}[-+A][0-9A-Z]{4}$/';
         if (!(bool)preg_match($pattern, strval($check))) {

@@ -89,7 +89,7 @@ class UaValidation extends LocalizedValidation
      * @return bool Success.
      * @link https://en.wikipedia.org/wiki/VAT_identification_number#VAT_numbers_of_non-EU_countries
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/^\d{10}$/';
 

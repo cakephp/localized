@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * LvValidation
@@ -30,7 +30,7 @@ class LvValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function postal(string $check): bool
@@ -43,7 +43,7 @@ class LvValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      *
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone(string $check): bool
@@ -58,7 +58,7 @@ class LvValidation extends LocalizedValidation
      *
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $check = trim(str_replace('-', '', $check));
 

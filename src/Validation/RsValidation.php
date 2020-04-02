@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * RsValidation
@@ -45,7 +45,7 @@ class RsValidation extends LocalizedValidation
      * @return bool Success.
      * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         if (!preg_match('/^\d{13}$/', $check)) {
             return false;
@@ -115,7 +115,7 @@ class RsValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone(string $check): bool

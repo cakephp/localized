@@ -53,7 +53,7 @@ class NlValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/\A\b\d{9}\b\z/i';
 

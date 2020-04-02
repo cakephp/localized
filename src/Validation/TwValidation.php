@@ -55,7 +55,7 @@ class TwValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $check = strtoupper($check);
         if (!preg_match('/^[A-Z][1-2]\d{8}$/', $check)) {

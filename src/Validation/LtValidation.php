@@ -53,7 +53,7 @@ class LtValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/^([a-z]{2})[\s-]?[\d]{7}$/i';
 

@@ -15,7 +15,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * GB Localized Validation class. Handles localized validation for The United Kingdom
@@ -40,7 +40,7 @@ class GbValidation extends LocalizedValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone(string $check): bool
@@ -52,10 +52,10 @@ class GbValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }

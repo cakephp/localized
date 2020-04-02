@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * RoValidation
@@ -42,7 +42,7 @@ class RoValidation
      * Checks a phone number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function phone(string $check)
@@ -54,7 +54,7 @@ class RoValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function personId(string $check)

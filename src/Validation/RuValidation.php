@@ -130,7 +130,7 @@ class RuValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success.
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         return static::snils($check);
     }

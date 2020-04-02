@@ -42,7 +42,6 @@ class FiValidationTest extends TestCase
             ['010100+991B', false],
             ['010100-9856', false],
             ['010100A929B', false],
-            [null, false],
             ['', false],
         ];
     }

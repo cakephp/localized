@@ -17,7 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\Network\Exception\NotImplementedException;
+use Cake\Http\Exception\NotImplementedException;
 
 /**
  * AuValidation
@@ -56,7 +56,7 @@ class AuValidation extends LocalizedValidation
      * Checks an identification number.
      *
      * @param string $check The value to check.
-     * @throws \Cake\Network\Exception\NotImplementedException Exception
+     * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
     public static function personId(string $check): bool

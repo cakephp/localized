@@ -59,7 +59,7 @@ class UsValidation extends LocalizedValidation
      * @param string $check The value to check.
      * @return bool Success
      */
-    public static function personId($check): bool
+    public static function personId(string $check): bool
     {
         $pattern = '/\A\b\d{3}-\d{2}-\d{4}\b\z/i';
 

@@ -27,4 +27,23 @@ class Plugin extends BasePlugin
      * @var string
      */
     protected $name = 'Localized';
+
+    /**
+     * @var bool
+     */
+    protected $routesEnabled = false;
+
+    /**
+     * @var bool
+     */
+    protected $bootstrapEnabled = false;
+    /**
+     * @var bool
+     */
+    protected $consoleEnabled = false;
+
+    /**
+     * @var bool
+     */
+    protected $middlewareEnabled = false;
 }

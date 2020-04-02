@@ -89,12 +89,12 @@ class BrValidation extends LocalizedValidation
             $sum = 0;
             $position = $pos + 1;
             for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-                $sum += $check[$i] * $position;
+                $sum += (int)$check[$i] * $position;
             }
             $div = $sum % 11;
             $check[$pos] = $div < 2 ? 0 : 11 - $div;
         }
-        $dvRight = $check[9] * 10 + $check[10];
+        $dvRight = (int)$check[9] * 10 + (int)$check[10];
 
         return $dvRight == $dv;
     }
