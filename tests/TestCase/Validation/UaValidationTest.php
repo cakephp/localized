@@ -52,9 +52,10 @@ class UaValidationTest extends TestCase
         $this->assertTrue(UaValidation::phone('+38-044-283-93-57'));
         $this->assertTrue(UaValidation::phone('(068)2839357'));
         $this->assertTrue(UaValidation::phone('+380442839357'));
-        $this->assertFalse(UaValidation::phone('+38 (063)537-28-07'));
-        $this->assertTrue(UaValidation::phone('8044223-95-26'));
         $this->assertTrue(UaValidation::phone('+380612839357'));
+
+        $this->assertFalse(UaValidation::phone('+38 (063)537-28-07'));
+        $this->assertFalse(UaValidation::phone('8044223-95-26'));
     }
 
     /**
