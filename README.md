@@ -52,12 +52,12 @@ class PostsTable extends Table
 }
 ```
 
-For further information on validation rules see the [CakePHP documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
+For further information on validation rules see the [CakePHP documentation on validation](https://book.cakephp.org/4/en/core-libraries/validation.html)
 
 ## PO files
 
 This plugin also houses translations for the client-facing translated strings in the core (the `cake` domain). to use these files link or copy them
-into their expected location: `src/Locale/<locale>/cake.po`
+into their expected location: `resources/locales/<locale>/cake.po`
 
 ## Contributing to Localized
 
