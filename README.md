@@ -1,7 +1,9 @@
 # CakePHP Localized plugin
-[![Build Status](https://travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
-[![License](https://poser.pugx.org/cakephp/localized/license.svg)](https://packagist.org/packages/cakephp/localized)
-[![Total Downloads](https://poser.pugx.org/cakephp/localized/d/total.svg)](https://packagist.org/packages/cakephp/localized)
+
+[![Build Status](https://img.shields.io/travis/com/cakephp/localized/master?style=flat-square)](https://travis-ci.com/cakephp/localized)
+[![Latest Stable Version](https://img.shields.io/github/v/release/cakephp/localized?sort=semver&style=flat-square)](https://packagist.org/packages/cakephp/localized)
+[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/localized?style=flat-square)](https://packagist.org/packages/cakephp/localized/stats)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 This plugin contains various localized validation classes for specific countries.
 
