@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * BdValidation
- *
  */
 class BdValidation extends LocalizedValidation
 {

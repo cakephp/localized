@@ -16,7 +16,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * Localized Validation base class.
- *
  */
 abstract class LocalizedValidation implements ValidationInterface
 {

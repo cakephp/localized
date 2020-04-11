@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * BrValidation
- *
  */
 class BrValidation extends LocalizedValidation
 {

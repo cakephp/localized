@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * AuValidationTest
- *
  */
 class AuValidationTest extends TestCase
 {

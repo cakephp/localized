@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * ChValidation
- *
  */
 class ChValidation extends LocalizedValidation
 {
@@ -30,7 +29,6 @@ class ChValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      * @return bool Success.
-     *
      * @link http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein
      */
     public static function postal(string $check): bool

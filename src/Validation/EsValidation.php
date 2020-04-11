@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * EsValidation
- *
  */
 class EsValidation extends LocalizedValidation
 {

@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * PlValidationTest
- *
  */
 class PlValidationTest extends TestCase
 {

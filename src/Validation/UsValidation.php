@@ -17,7 +17,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * US Localized Validation class. Handles localized validation for The United States
- *
  */
 class UsValidation extends LocalizedValidation
 {

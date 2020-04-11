@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * NlValidationTest
- *
  */
 class NlValidationTest extends TestCase
 {

@@ -23,7 +23,6 @@ use Cake\Validation\Validator;
 
 /**
  * IntegrationTest
- *
  */
 class IntegrationTest extends TestCase
 {

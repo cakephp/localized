@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * CaValidationTest
- *
  */
 class CaValidationTest extends TestCase
 {

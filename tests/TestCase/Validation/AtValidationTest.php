@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * AtValidationTest
- *
  */
 class AtValidationTest extends TestCase
 {

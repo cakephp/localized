@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * RuValidation
- *
  */
 class RuValidation extends LocalizedValidation
 {

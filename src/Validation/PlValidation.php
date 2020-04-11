@@ -17,7 +17,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * Polish Localized Validation class. Handles localized validation for Poland.
- *
  */
 class PlValidation extends \Cake\Localized\Validation\LocalizedValidation
 {

@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * TwValidation
- *
  */
 class TwValidation extends LocalizedValidation
 {

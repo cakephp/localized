@@ -17,7 +17,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * LT Localized Validation class. Handles localized validation for the Lithuanian language
- *
  */
 class LtValidation extends LocalizedValidation
 {

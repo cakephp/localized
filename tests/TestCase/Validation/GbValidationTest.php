@@ -20,7 +20,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * Gb Localized Validation class test case
- *
  */
 class GbValidationTest extends TestCase
 {

@@ -21,7 +21,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * HrValidationTest
- *
  */
 class HrValidationTest extends TestCase
 {

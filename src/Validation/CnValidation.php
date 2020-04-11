@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * CnValidation
- *
  */
 class CnValidation extends LocalizedValidation
 {

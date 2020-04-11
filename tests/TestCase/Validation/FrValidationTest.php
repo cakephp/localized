@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * FrValidationTest
- *
  */
 class FrValidationTest extends TestCase
 {

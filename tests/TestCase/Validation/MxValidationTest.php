@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * Mexican Validation Test Case
- *
  */
 class MxValidationTest extends TestCase
 {

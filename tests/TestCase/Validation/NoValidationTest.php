@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * NoValidationTest
- *
  */
 class NoValidationTest extends TestCase
 {

@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * LtValidationTest
- *
  */
 class LtValidationTest extends TestCase
 {

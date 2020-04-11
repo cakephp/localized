@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * NoValidation
- *
  */
 class NoValidation extends LocalizedValidation
 {

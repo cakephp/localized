@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * ChValidationTest
- *
  */
 class ChValidationTest extends TestCase
 {

@@ -16,7 +16,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * ValidationInterface defining some common base validation methods.
- *
  */
 interface ValidationInterface
 {

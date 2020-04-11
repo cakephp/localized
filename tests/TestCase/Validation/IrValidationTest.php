@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * IrValidationTest
- *
  */
 class IrValidationTest extends TestCase
 {

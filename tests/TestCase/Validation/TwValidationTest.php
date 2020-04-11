@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * TwValidationTest
- *
  */
 class TwValidationTest extends TestCase
 {

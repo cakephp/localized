@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * EsValidationTest
- *
  */
 class EsValidationTest extends TestCase
 {
