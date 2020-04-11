@@ -20,7 +20,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * HrValidation
- *
  */
 class HrValidation extends LocalizedValidation
 {

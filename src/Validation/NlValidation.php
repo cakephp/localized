@@ -17,7 +17,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * Dutch Localized Validation class. Handles localized validation for The Netherlands
- *
  */
 class NlValidation extends LocalizedValidation
 {

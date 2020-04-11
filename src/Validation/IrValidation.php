@@ -17,7 +17,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * Iranian Localized Validation class. Handles localized validation for Iran.
- *
  */
 class IrValidation extends LocalizedValidation
 {

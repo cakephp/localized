@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * TrValidationTest
- *
  */
 class TrValidationTest extends TestCase
 {

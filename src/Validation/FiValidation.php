@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * FiValidation
- *
  */
 class FiValidation extends LocalizedValidation
 {
@@ -29,7 +28,6 @@ class FiValidation extends LocalizedValidation
      * Checks a postal code for Finland.
      *
      * @param string $check The value to check.
-     *
      * @return bool Success.
      */
     public static function postal(string $check): bool
@@ -43,7 +41,6 @@ class FiValidation extends LocalizedValidation
      * Checks a phone number for Finland.
      *
      * @param string $check The value to check.
-     *
      * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
@@ -56,7 +53,6 @@ class FiValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     *
      * @return bool Success.
      */
     public static function personId(string $check): bool
@@ -87,7 +83,6 @@ class FiValidation extends LocalizedValidation
      * Checks a country specific business identification number.
      *
      * @param string $check The value to check.
-     *
      * @return bool Success
      */
     public static function businessId(string $check): bool
@@ -131,7 +126,6 @@ class FiValidation extends LocalizedValidation
      * Checks country specific creditor reference number
      *
      * @param string $check The value to check.
-     *
      * @return bool Success
      */
     public static function creditorReference(string $check): bool
@@ -158,7 +152,6 @@ class FiValidation extends LocalizedValidation
      * Checks country specific reference number
      *
      * @param string $check The value to check.
-     *
      * @return bool Success
      */
     public static function referenceNumber(string $check): bool
@@ -180,7 +173,6 @@ class FiValidation extends LocalizedValidation
 
     /**
      * @param string $base Reference number base
-     *
      * @return int
      */
     public static function calculateReferenceNumberChecksum(string $base): int

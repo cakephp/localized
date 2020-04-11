@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * MxValidation
- *
  */
 class MxValidation extends LocalizedValidation
 {

@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * LvValidation
- *
  */
 class LvValidation extends LocalizedValidation
 {
@@ -29,7 +28,6 @@ class LvValidation extends LocalizedValidation
      * Checks a postal code for Latvia.
      *
      * @param string $check The value to check.
-     *
      * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
@@ -42,7 +40,6 @@ class LvValidation extends LocalizedValidation
      * Checks a phone number for Latvia.
      *
      * @param string $check The value to check.
-     *
      * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
@@ -55,7 +52,6 @@ class LvValidation extends LocalizedValidation
      * Checks a country specific identification number.
      *
      * @param string $check The value to check.
-     *
      * @return bool Success.
      */
     public static function personId(string $check): bool

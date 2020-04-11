@@ -23,7 +23,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * DeValidationTest
- *
  */
 class DeValidationTest extends TestCase
 {
@@ -42,6 +41,7 @@ class DeValidationTest extends TestCase
      * test the postal method of DeValidation
      * according to wikipedia, some combinations are reserved and therefore not valid
      * https://de.wikipedia.org/wiki/Liste_der_Postleitregionen_in_Deutschland#F.C3.BCnfstelliges_System_seit_1993
+     *
      * @return void
      */
     public function testPostal()

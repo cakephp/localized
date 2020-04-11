@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * JpValidationTest
- *
  */
 class JpValidationTest extends TestCase
 {

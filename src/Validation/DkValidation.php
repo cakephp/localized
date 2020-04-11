@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * DkValidation
- *
  */
 class DkValidation extends LocalizedValidation
 {

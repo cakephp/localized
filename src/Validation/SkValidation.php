@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * SkValidation
- *
  */
 class SkValidation extends LocalizedValidation
 {

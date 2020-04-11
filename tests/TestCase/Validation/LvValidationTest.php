@@ -23,7 +23,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * LvValidationTest
- *
  */
 class LvValidationTest extends TestCase
 {
@@ -46,10 +45,8 @@ class LvValidationTest extends TestCase
      * Test Latvian postal
      *
      * @dataProvider personIdProvider
-     *
      * @param $item
      * @param $assert
-     *
      * @return void
      */
     public function testPersonId($item, $assert)

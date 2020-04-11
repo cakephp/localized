@@ -19,7 +19,6 @@ namespace Cake\Localized\Validation;
 
 /**
  * UaValidation
- *
  */
 class UaValidation extends LocalizedValidation
 {

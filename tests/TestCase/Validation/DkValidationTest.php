@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * DkValidationTest
- *
  */
 class DkValidationTest extends TestCase
 {

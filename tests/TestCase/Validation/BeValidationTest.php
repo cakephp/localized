@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * BeValidationTest
- *
  */
 class BeValidationTest extends TestCase
 {

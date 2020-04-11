@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * RsValidation
- *
  */
 class RsValidation extends LocalizedValidation
 {

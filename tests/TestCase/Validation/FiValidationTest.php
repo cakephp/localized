@@ -23,7 +23,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * FiValidationTest
- *
  */
 class FiValidationTest extends TestCase
 {
@@ -104,10 +103,8 @@ class FiValidationTest extends TestCase
      * Test Finnish person id
      *
      * @dataProvider personIdProvider
-     *
      * @param $item string Person id to check
      * @param $assert bool Asserted validation result
-     *
      * @return void
      */
     public function testPersonId($item, $assert)
@@ -119,10 +116,8 @@ class FiValidationTest extends TestCase
      * Test Finnish postal
      *
      * @dataProvider postalProvider
-     *
      * @param $item string Postal to check
      * @param $assert bool Asserted validation result
-     *
      * @return void
      */
     public function testPostal($item, $assert)
@@ -134,10 +129,8 @@ class FiValidationTest extends TestCase
      * Test finnish business ids
      *
      * @dataProvider businessIdProvider
-     *
      * @param $item string Business id to check
      * @param $assert bool Asserted validation result
-     *
      * @return void
      */
     public function testBusinessIds($item, $assert)
@@ -149,10 +142,8 @@ class FiValidationTest extends TestCase
      * Test finnish prefixed reference numbers
      *
      * @dataProvider creditorReferenceProvider
-     *
      * @param $assert bool Asserted validation result
      * @param $item string Creditor reference to check
-     *
      * @return void
      */
     public function testCreditorReference($item, $assert)
@@ -164,10 +155,8 @@ class FiValidationTest extends TestCase
      * Test finnish numeric reference numbers
      *
      * @dataProvider referenceNumberProvider
-     *
      * @param $assert bool Asserted validation result
      * @param $item string Reference number to check
-     *
      * @return void
      */
     public function testReferenceNumber($item, $assert)

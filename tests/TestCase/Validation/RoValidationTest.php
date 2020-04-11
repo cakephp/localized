@@ -22,7 +22,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * RoValidationTest
- *
  */
 class RoValidationTest extends TestCase
 {

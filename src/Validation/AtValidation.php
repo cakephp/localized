@@ -21,7 +21,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * AtValidation
- *
  */
 class AtValidation extends LocalizedValidation
 {

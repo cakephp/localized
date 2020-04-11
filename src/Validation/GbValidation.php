@@ -19,7 +19,6 @@ use Cake\Http\Exception\NotImplementedException;
 
 /**
  * GB Localized Validation class. Handles localized validation for The United Kingdom
- *
  */
 class GbValidation extends LocalizedValidation
 {
