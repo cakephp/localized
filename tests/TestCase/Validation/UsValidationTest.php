@@ -115,4 +115,23 @@ class UsValidationTest extends TestCase
         $this->assertFalse(UsValidation::personId('111-33-333'));
         $this->assertTrue(UsValidation::personId('111-33-4333'));
     }
+
+    /**
+     * test the date method of UsValidation
+     *
+     * @return void
+     */
+    public function testDate()
+    {
+        $this->assertTrue(UsValidation::date('01/01/2020'));
+        $this->assertTrue(UsValidation::date('12/11/2019'));
+        $this->assertTrue(UsValidation::date('04/21/1980'));
+        $this->assertTrue(UsValidation::date('1/3/20'));
+
+        $this->assertFalse(UsValidation::date('25-12-2000'));
+        $this->assertFalse(UsValidation::date('21/04/1940'));
+        $this->assertFalse(UsValidation::date('2000-12-25'));
+        $this->assertFalse(UsValidation::date('2019/11/12'));
+        $this->assertFalse(UsValidation::date('2040/25/12'));
+    }
 }

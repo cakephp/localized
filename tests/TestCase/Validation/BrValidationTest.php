@@ -190,4 +190,23 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::cns('9021 6194 0000'));
         $this->assertFalse(BrValidation::cns(['12345678909']));
     }
+
+    /**
+     * test the date method of BrValidation
+     *
+     * @return void
+     */
+    public function testDate()
+    {
+        $this->assertTrue(BrValidation::date('01/01/2020'));
+        $this->assertTrue(BrValidation::date('12/11/2019'));
+        $this->assertTrue(BrValidation::date('21/04/1940'));
+        $this->assertTrue(BrValidation::date('1/3/20'));
+        $this->assertTrue(BrValidation::date('25-12-2000'));
+
+        $this->assertFalse(BrValidation::date('04/21/1980'));
+        $this->assertFalse(BrValidation::date('2000-12-25'));
+        $this->assertFalse(BrValidation::date('2019/11/12'));
+        $this->assertFalse(BrValidation::date('2040/25/12'));
+    }
 }

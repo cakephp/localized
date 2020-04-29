@@ -42,4 +42,28 @@ interface ValidationInterface
      * @return bool Success.
      */
     public static function personId(string $string): bool;
+
+    /**
+     * Checks a date string, from language specific format.
+     *
+     * @param string $string The value to check.
+     * @return bool Success.
+     */
+    public static function date(string $string): bool;
+
+    /**
+     * Checks a date and time string, from language specific format.
+     *
+     * @param string $string The value to check.
+     * @return bool Success.
+     */
+    public static function dateTime(string $string): bool;
+
+    /**
+     * Checks a decimal number, from language specific format.
+     *
+     * @param string $string The value to check.
+     * @return bool Success.
+     */
+    public static function decimal(string $string): bool;
 }
