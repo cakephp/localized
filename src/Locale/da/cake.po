@@ -2,354 +2,299 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2012-10-22 10:52+0200\n"
-"PO-Revision-Date: 2012-10-22 11:24+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2020-04-09 17:00+0100\n"
+"Last-Translator: Andrii Pukhalevych\n"
 "Language-Team: \n"
+"Language: dk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"Language: Danish\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: Controller/Scaffold.php:128
-msgid "Scaffold :: "
-msgstr ""
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Fejl"
 
-#: Controller/Scaffold.php:167;234;305
-msgid "Invalid %s"
-msgstr "Ugyldigt %s"
+#: Template/Error/error400.ctp:38
+msgid "The requested address {0} was not found on this server."
+msgstr "Den anmodede adresse {0} blev ikke fundet på denne server."
 
-#: Controller/Scaffold.php:222
-msgid "updated"
-msgstr "opdateret"
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Der er opstået en intern fejl"
 
-#: Controller/Scaffold.php:225
-msgid "saved"
-msgstr "gemt"
-
-#: Controller/Scaffold.php:245
-msgid "The %1$s has been %2$s"
-msgstr "%1$s er blevet %2$s"
-
-#: Controller/Scaffold.php:256
-msgid "Please correct errors below."
-msgstr "Venligst ret fejlene forneden."
-
-#: Controller/Scaffold.php:308
-msgid "The %1$s with id: %2$s has been deleted."
-msgstr "%1$s med id: %2$s er blevet slettet."
-
-#: Controller/Scaffold.php:311
-msgid "There was an error deleting the %1$s with id: %2$s"
-msgstr "Der opstod en fejl i forbindelse med sletning af %1$s med id: %2$s"
-
-#: Controller/Component/AuthComponent.php:366
+#: Controller/Component/AuthComponent.php:496
 msgid "You are not authorized to access that location."
 msgstr "Du har ikke tilladelse til at se den side."
 
-#: Error/ExceptionRenderer.php:205
+#: Controller/Component/CsrfComponent.php:157
+#: Http/Middleware/CsrfProtectionMiddleware.php:190
+msgid "Missing CSRF token cookie"
+msgstr "Manglende CSRF-token-cookie"
+
+#: Controller/Component/CsrfComponent.php:161
+#: Http/Middleware/CsrfProtectionMiddleware.php:194
+msgid "CSRF token mismatch."
+msgstr "CSRF-token misforhold."
+
+#: Error/ExceptionRenderer.php:258
 msgid "Not Found"
 msgstr "Ikke fundet"
 
-#: Error/ExceptionRenderer.php:227
+#: Error/ExceptionRenderer.php:260
 msgid "An Internal Error Has Occurred."
 msgstr "Der er sket en intern fejl."
 
-#: Model/Validator/CakeValidationSet.php:283
-msgid "This field cannot be left blank"
-msgstr "Dette felt må ikke være tomt."
+#: Http/Response.php:2389
+msgid "The requested file contains `..` and will not be read."
+msgstr "Den ønskede fil indeholder `..` og læses ikke."
 
-#: Network/CakeResponse.php:1217
+#: Http/Response.php:2400
 msgid "The requested file was not found"
 msgstr "Den efterspurgte fil findes ikke"
 
-#: Utility/CakeNumber.php:94
-msgid "%d KB"
-msgstr "%d KB"
+#: I18n/Number.php:90
+msgid "{0,number,#,###.##} KB"
+msgstr "{0,number,#,###.##} KB"
 
-#: Utility/CakeNumber.php:96
-msgid "%.2f MB"
-msgstr "%.2f MB"
+#: I18n/Number.php:92
+msgid "{0,number,#,###.##} MB"
+msgstr "{0,number,#,###.##} MB"
 
-#: Utility/CakeNumber.php:98
-msgid "%.2f GB"
-msgstr "%.2f GB"
+#: I18n/Number.php:94
+msgid "{0,number,#,###.##} GB"
+msgstr "{0,number,#,###.##} GB"
 
-#: Utility/CakeNumber.php:100
-msgid "%.2f TB"
-msgstr "%.2f TB"
+#: I18n/Number.php:96
+msgid "{0,number,#,###.##} TB"
+msgstr "{0,number,#,###.##} TB"
 
-#: Utility/CakeNumber.php:92
-msgid "%d Byte"
-msgid_plural "%d Bytes"
-msgstr[0] "%d byte"
-msgstr[1] "%d bytes"
+#: I18n/Number.php:88
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] "{0,number,integer} byte"
+msgstr[1] "{0,number,integer} bytes"
 
-#: Utility/CakeTime.php:383
-msgid "Today, %s"
-msgstr "I dag, %s"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr "{0} fra nu"
 
-#: Utility/CakeTime.php:386
-msgid "Yesterday, %s"
-msgstr "I går, %s"
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr "{0} siden"
 
-#: Utility/CakeTime.php:389
-msgid "Tomorrow, %s"
-msgstr "I morgen, %s"
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr "{0} efter"
 
-#: Utility/CakeTime.php:394
-msgid "Sunday"
-msgstr "Søndag"
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr "{0} før"
 
-#: Utility/CakeTime.php:395
-msgid "Monday"
-msgstr "Mandag"
-
-#: Utility/CakeTime.php:396
-msgid "Tuesday"
-msgstr "Tirsdag"
-
-#: Utility/CakeTime.php:397
-msgid "Wednesday"
-msgstr "Onsdag"
-
-#: Utility/CakeTime.php:398
-msgid "Thursday"
-msgstr "Torsdag"
-
-#: Utility/CakeTime.php:399
-msgid "Friday"
-msgstr "Fredag"
-
-#: Utility/CakeTime.php:400
-msgid "Saturday"
-msgstr "Lørdag"
-
-#: Utility/CakeTime.php:406
-msgid "On %s %s"
-msgstr "Den %s %s"
-
-#: Utility/CakeTime.php:799
+#: I18n/RelativeTimeFormatter.php:114
 msgid "just now"
 msgstr "lige nu"
 
-#: Utility/CakeTime.php:803
-msgid "on %s"
-msgstr "på %s"
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr "for cirka et sekund siden"
 
-#: Utility/CakeTime.php:847
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr "for cirka et minut siden"
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr "for cirka en time siden"
+
+#: I18n/RelativeTimeFormatter.php:154;332
+msgid "about a day ago"
+msgstr "for omkring en dag siden"
+
+#: I18n/RelativeTimeFormatter.php:155;333
+msgid "about a week ago"
+msgstr "for omkring en uge siden"
+
+#: I18n/RelativeTimeFormatter.php:156;334
+msgid "about a month ago"
+msgstr "for omkring en måned siden"
+
+#: I18n/RelativeTimeFormatter.php:157;335
+msgid "about a year ago"
+msgstr "for omkring et år siden"
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr "på cirka om et sekund"
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr "på cirka om et minut"
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr "på cirka om et time"
+
+#: I18n/RelativeTimeFormatter.php:171;346
+msgid "in about a day"
+msgstr "på cirka om et dag"
+
+#: I18n/RelativeTimeFormatter.php:172;347
+msgid "in about a week"
+msgstr "på cirka om et uge"
+
+#: I18n/RelativeTimeFormatter.php:173;348
+msgid "in about a month"
+msgstr "på cirka om et måned"
+
+#: I18n/RelativeTimeFormatter.php:174;349
+msgid "in about a year"
+msgstr "på cirka om et år"
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr "i dag"
+
+#: I18n/RelativeTimeFormatter.php:370
 msgid "%s ago"
 msgstr "%s siden"
 
-#: Utility/CakeTime.php:866;888
-msgid "days"
-msgstr "dage"
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr "på %s"
 
-#: Utility/CakeTime.php:148
-msgid "abday"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:47;126;316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} år"
+msgstr[1] "{0} år"
 
-#: Utility/CakeTime.php:154
-msgid "day"
-msgstr "dag"
+#: I18n/RelativeTimeFormatter.php:51;129;319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} måned"
+msgstr[1] "{0} måneder"
 
-#: Utility/CakeTime.php:160
-msgid "d_t_fmt"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:57;132;322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} uge"
+msgstr[1] "{0} uger"
 
-#: Utility/CakeTime.php:182
-msgid "abmon"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:59;135;325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} dag"
+msgstr[1] "{0} dage"
 
-#: Utility/CakeTime.php:188
-msgid "mon"
-msgstr "man"
+#: I18n/RelativeTimeFormatter.php:64;138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} time"
+msgstr[1] "{0} timer"
 
-#: Utility/CakeTime.php:199
-msgid "am_pm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:68;141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minut"
+msgstr[1] "{0} minutter"
 
-#: Utility/CakeTime.php:206
-msgid "t_fmt_ampm"
-msgstr ""
+#: I18n/RelativeTimeFormatter.php:72;144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} sekund"
+msgstr[1] "{0} sekunder"
 
-#: Utility/CakeTime.php:220
-msgid "d_fmt"
-msgstr ""
+#: ORM/RulesChecker.php:57
+msgid "This value is already in use"
+msgstr "Denne værdi er allerede i brug"
 
-#: Utility/CakeTime.php:226
-msgid "t_fmt"
-msgstr ""
+#: ORM/RulesChecker.php:104
+msgid "This value does not exist"
+msgstr "Denne værdi findes ikke"
 
-#: Utility/CakeTime.php:825
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] "%d år"
-msgstr[1] "%d år"
+#: ORM/RulesChecker.php:128
+msgid "The count does not match {0}{1}"
+msgstr "Optællingen matcher ikke"
 
-#: Utility/CakeTime.php:828
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] "%d måned"
-msgstr[1] "%d måneder"
+#: Utility/Text.php:897
+msgid "and"
+msgstr "og"
 
-#: Utility/CakeTime.php:831
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] "%d uge"
-msgstr[1] "%d uger"
+#: Validation/Validator.php:111
+msgid "This field is required"
+msgstr "Dette felt er påkrævet"
 
-#: Utility/CakeTime.php:834
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] "%d dag"
-msgstr[1] "%d dage"
+#: Validation/Validator.php:112
+msgid "This field cannot be left empty"
+msgstr "Dette felt må ikke være tomt"
 
-#: Utility/CakeTime.php:837
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] "%d time"
-msgstr[1] "%d timer"
+#: Validation/Validator.php:1885
+msgid "The provided value is invalid"
+msgstr "Dette felt skal udfyldes"
 
-#: Utility/CakeTime.php:840
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "%d minut"
-msgstr[1] "%d minutter"
+#: View/Helper/FormHelper.php:1110
+msgid "New {0}"
+msgstr "Nyt {0}"
 
-#: Utility/CakeTime.php:843
-msgid "%d second"
-msgid_plural "%d seconds"
-msgstr[0] "%d sekund"
-msgstr[1] "%d sekunder"
+#: View/Helper/FormHelper.php:1008
+msgid "Edit {0}"
+msgstr "Rediger {0}"
 
-#: View/Helper/FormHelper.php:677
-msgid "Error in field %s"
-msgstr "Fejl i felt %s"
-
-#: View/Helper/FormHelper.php:856 View/Scaffolds/form.ctp:44
-#: View/Scaffolds/index.ctp:80;87 View/Scaffolds/view.ctp:51;58;142
-msgid "New %s"
-msgstr "Ny %s"
-
-#: View/Helper/FormHelper.php:862 View/Scaffolds/view.ctp:48;85
-msgid "Edit %s"
-msgstr "Rediger %s"
-
-#: View/Helper/FormHelper.php:1683 View/Scaffolds/form.ctp:23
+#: View/Helper/FormHelper.php:1889
 msgid "Submit"
-msgstr "Udfør"
+msgstr "Indsend"
 
-#: View/Helper/FormHelper.php:2573
+#: View/Helper/HtmlHelper.php:794
+msgid "Home"
+msgstr "Hjem"
+
+#: View/Widget/DateTimeWidget.php:540
 msgid "January"
 msgstr "Januar"
 
-#: View/Helper/FormHelper.php:2574
+#: View/Widget/DateTimeWidget.php:541
 msgid "February"
 msgstr "Februar"
 
-#: View/Helper/FormHelper.php:2575
+#: View/Widget/DateTimeWidget.php:542
 msgid "March"
 msgstr "Marts"
 
-#: View/Helper/FormHelper.php:2576
+#: View/Widget/DateTimeWidget.php:543
 msgid "April"
 msgstr "April"
 
-#: View/Helper/FormHelper.php:2577
+#: View/Widget/DateTimeWidget.php:544
 msgid "May"
 msgstr "Maj"
 
-#: View/Helper/FormHelper.php:2578
+#: View/Widget/DateTimeWidget.php:545
 msgid "June"
 msgstr "Juni"
 
-#: View/Helper/FormHelper.php:2579
+#: View/Widget/DateTimeWidget.php:546
 msgid "July"
 msgstr "Juli"
 
-#: View/Helper/FormHelper.php:2580
+#: View/Widget/DateTimeWidget.php:547
 msgid "August"
 msgstr "August"
 
-#: View/Helper/FormHelper.php:2581
+#: View/Widget/DateTimeWidget.php:548
 msgid "September"
 msgstr "September"
 
-#: View/Helper/FormHelper.php:2582
+#: View/Widget/DateTimeWidget.php:549
 msgid "October"
 msgstr "Oktober"
 
-#: View/Helper/FormHelper.php:2583
+#: View/Widget/DateTimeWidget.php:550
 msgid "November"
 msgstr "November"
 
-#: View/Helper/FormHelper.php:2584
+#: View/Widget/DateTimeWidget.php:551
 msgid "December"
 msgstr "December"
-
-#: View/Helper/PaginatorHelper.php:581
-msgid " of "
-msgstr " af "
-
-#: View/Scaffolds/form.ctp:27 View/Scaffolds/index.ctp:26;78
-#: View/Scaffolds/view.ctp:45
-msgid "Actions"
-msgstr "Handlinger"
-
-#: View/Scaffolds/form.ctp:31 View/Scaffolds/index.ctp:52
-#: View/Scaffolds/view.ctp:133
-msgid "Delete"
-msgstr "Slet"
-
-#: View/Scaffolds/form.ctp:34
-msgid "Are you sure you want to delete # %s?"
-msgstr "Er du sikker på du vil slette # %s?"
-
-#: View/Scaffolds/form.ctp:37
-msgid "List"
-msgstr "Liste"
-
-#: View/Scaffolds/form.ctp:43 View/Scaffolds/index.ctp:86
-#: View/Scaffolds/view.ctp:50;57
-msgid "List %s"
-msgstr "Liste %s"
-
-#: View/Scaffolds/index.ctp:49 View/Scaffolds/view.ctp:131
-msgid "View"
-msgstr "Se"
-
-#: View/Scaffolds/index.ctp:50 View/Scaffolds/view.ctp:132
-msgid "Edit"
-msgstr "Rediger"
-
-#: View/Scaffolds/index.ctp:55 View/Scaffolds/view.ctp:49;133
-msgid "Are you sure you want to delete"
-msgstr "Er du sikker på du vil slette"
-
-#: View/Scaffolds/index.ctp:66
-msgid ""
-"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
-"starting on record {:start}, ending on {:end}"
-msgstr ""
-
-#: View/Scaffolds/index.ctp:71
-msgid "previous"
-msgstr "forrige"
-
-#: View/Scaffolds/index.ctp:73
-msgid "next"
-msgstr "næste"
-
-#: View/Scaffolds/view.ctp:20
-msgid "View %s"
-msgstr "Se %s"
-
-#: View/Scaffolds/view.ctp:49
-msgid "Delete %s"
-msgstr "Slet %s"
-
-#: View/Scaffolds/view.ctp:70;105
-msgid "Related %s"
-msgstr "Relaterede %s"
