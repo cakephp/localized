@@ -2,3 +2,4 @@
 /phpunit.phar
 /vendor/
 /.idea/
+/.phpunit.result.cache
