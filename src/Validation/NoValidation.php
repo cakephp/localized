@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class NoValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'nb_NO';
+
+    /**
      * Checks date of birth formal format for Norway (dd.mm.yyyy),
      * afterwards checks if is a valid gregorian calendar date.
      *

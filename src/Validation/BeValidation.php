@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class BeValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'nl_BE';
+
+    /**
      * Checks a postal code for Belgium.
      *
      * @param string $check The value to check.

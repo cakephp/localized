@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class ChValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'de_CH';
+
+    /**
      * Checks a postal code for Switzerland & Liechtenstein
      *
      * @param string $check The value to check.

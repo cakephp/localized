@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class RoValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'ro_RO';
+
+    /**
      * Checks postal codes for Romania
      *
      * @param string $check The value to check.

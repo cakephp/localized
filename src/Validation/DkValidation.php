@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class DkValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'da_DK';
+
+    /**
      * Checks a social security number for Denmark.
      *
      * @param string $check The value to check.

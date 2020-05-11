@@ -28,7 +28,7 @@ class BrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $_validationLocale = 'pt_BR';
+    protected static $validationLocale = 'pt_BR';
 
     /**
      * Checks a phone number for Brazil.

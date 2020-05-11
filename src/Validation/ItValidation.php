@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class ItValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'it_IT';
+
+    /**
      * Checks a phone number for Italy.
      *
      * @param string $check The value to check.

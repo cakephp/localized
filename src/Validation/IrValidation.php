@@ -21,6 +21,14 @@ namespace Cake\Localized\Validation;
 class IrValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'fa_IR';
+
+    /**
      * Checks for Persian/Farsi characters and number an zero width non-joiner space.
      * Also accepts latin numbers preventing potential problem until PHP becomes fully unicode compatible.
      *

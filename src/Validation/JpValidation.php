@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class JpValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'ja_JP';
+
+    /**
      * Checks a phone number for Japan.
      * Accepts the following format.
      * - 0311112222

@@ -29,7 +29,7 @@ abstract class LocalizedValidation implements ValidationInterface
      *
      * @var string
      */
-    protected static $_validationLocale = 'en_US';
+    protected static $validationLocale = 'en_US';
 
     /**
      * Checks a date string, from language specific format.
@@ -40,15 +40,24 @@ abstract class LocalizedValidation implements ValidationInterface
     public static function date(string $string): bool
     {
         $currentLocale = I18n::getLocale();
-        $needChange = ($currentLocale !== static::$_validationLocale);
+        $needChange = ($currentLocale !== static::$validationLocale);
         if ($needChange) {
-            I18n::setLocale(static::$_validationLocale);
+            I18n::setLocale(static::$validationLocale);
+        }
+
+        $currentLenient = Date::lenientParsingEnabled();
+        if ($currentLenient) {
+            Date::disableLenientParsing();
         }
 
         $isValid = Date::parseDate($string) !== null;
 
         if ($needChange) {
             I18n::setLocale($currentLocale);
+        }
+
+        if ($currentLenient) {
+            Date::enableLenientParsing();
         }
 
         return $isValid;
@@ -62,7 +71,28 @@ abstract class LocalizedValidation implements ValidationInterface
      */
     public static function dateTime(string $string): bool
     {
-        return Date::parseDateTime($string) !== null;
+        $currentLocale = I18n::getLocale();
+        $needChange = ($currentLocale !== static::$validationLocale);
+        if ($needChange) {
+            I18n::setLocale(static::$validationLocale);
+        }
+
+        $currentLenient = Date::lenientParsingEnabled();
+        if ($currentLenient) {
+            Date::disableLenientParsing();
+        }
+
+        $isValid = Date::parseDateTime($string) !== null;
+
+        if ($needChange) {
+            I18n::setLocale($currentLocale);
+        }
+
+        if ($currentLenient) {
+            Date::enableLenientParsing();
+        }
+
+        return $isValid;
     }
 
     /**

@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class UaValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'uk_UA';
+
+    /**
      * Checks a postal (zip) code for Ukraine
      *
      * @example 85111; 01996; 65000;

@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class IdValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'id_ID';
+
+    /**
      * Checks a postal code for Indonesia.
      *
      * @param string $check The value to check.

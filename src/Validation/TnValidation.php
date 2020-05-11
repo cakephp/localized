@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class TnValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'ar_TN';
+
+    /**
      * Checks a phone number for Tunisia.
      *
      * @param string $check The value to check.

@@ -23,6 +23,14 @@ use Cake\Http\Exception\NotImplementedException;
 class GbValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'en_GB';
+
+    /**
      * Checks a postal code for The United Kingdom
      *
      * @param string $check The value to check.

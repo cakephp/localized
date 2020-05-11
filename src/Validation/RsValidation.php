@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class RsValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'cs_RS';
+
+    /**
      * Checks a postal code (Poštanski broj) for Serbia.
      *
      * @param string $check The value to check.
