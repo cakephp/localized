@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 3.5.1\n"
 "POT-Creation-Date: 2017-08-31 20:06+0200\n"
-"PO-Revision-Date: 2017-08-31 20:36+0200\n"
-"Last-Translator: Oliver Nowak <info@nowak-media.de>\n"
+"PO-Revision-Date: 2020-05-16 20:36+0200\n"
+"Last-Translator: Andrii Pukhalevych\n"
 "Language-Team: The CakePHP Community <https://github.com/cakephp/localized/graphs/contributors>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgid "Error"
 msgstr "Fehler"
 
 #: Template/Error/error400.ctp:38
-msgid "The requested address %s was not found on this server."
-msgstr "Die angeforderte Adresse %s wurde auf diesem Server nicht gefunden."
+msgid "The requested address {0} was not found on this server."
+msgstr "Die angeforderte Adresse {0} wurde auf diesem Server nicht gefunden."
 
 #: Template/Error/error500.ctp:39
 msgid "An Internal Error Has Occurred"
@@ -236,12 +236,12 @@ msgid "The provided value is invalid"
 msgstr "Der angegebene Wert ist ungültig"
 
 #: View/Helper/FormHelper.php:1009
-msgid "New %s"
-msgstr "%s hinzufügen"
+msgid "New {0}"
+msgstr "{0} hinzufügen"
 
 #: View/Helper/FormHelper.php:1012
-msgid "Edit %s"
-msgstr "%s bearbeiten"
+msgid "Edit {0}"
+msgstr "{0} bearbeiten"
 
 #: View/Helper/FormHelper.php:1889
 msgid "Submit"
