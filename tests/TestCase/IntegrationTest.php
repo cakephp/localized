@@ -15,7 +15,7 @@ declare(strict_types=1);
  * @since         Localized Plugin v 0.1
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Cake\Localized\Test\TestCase\Validation;
+namespace Cake\Localized\Test\TestCase;
 
 use Cake\Localized\Validation\FrValidation;
 use Cake\TestSuite\TestCase;
