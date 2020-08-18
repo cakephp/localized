@@ -109,7 +109,7 @@ class FiValidationTest extends TestCase
      */
     public function testPersonId($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::personId($item));
+        $this->assertSame($assert, FiValidation::personId($item));
     }
 
     /**
@@ -122,7 +122,7 @@ class FiValidationTest extends TestCase
      */
     public function testPostal($item, $assert)
     {
-        $this->assertEquals($assert, FiValidation::postal($item));
+        $this->assertSame($assert, FiValidation::postal($item));
     }
 
     /**

@@ -193,7 +193,7 @@ class BrValidation extends LocalizedValidation
 
         $cns = preg_replace('/[^0-9]/', '', $cns);
 
-        if (preg_match("/[1-2]\\d{10}00[0-1]\\d/", $cns) || preg_match("/[7-9]\\d{14}/", $cns)) {
+        if (preg_match('/[1-2]\\d{10}00[0-1]\\d/', $cns) || preg_match('/[7-9]\\d{14}/', $cns)) {
             $len = strlen($cns);
             $soma = 0;
             for ($i = 0; $i < $len; $i++) {

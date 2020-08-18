@@ -28,7 +28,7 @@ class LtValidation extends LocalizedValidation
      */
     public static function phone(string $check): bool
     {
-        $pattern = "/^(([\\+]?370)|(8))[\\s-]?\\(?\\d{2,3}\\)?[\\s-]?(\\d{2}[\\s-]?){2}?\\d{1,2}\$/";
+        $pattern = '/^(([\+]?370)|(8))[\s-]?\(?\d{2,3}\)?[\s-]?(\d{2}[\s-]?){2}?\d{1,2}$/';
 
         return (bool)preg_match($pattern, $check);
     }
