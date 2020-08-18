@@ -51,6 +51,6 @@ class LvValidationTest extends TestCase
      */
     public function testPersonId($item, $assert)
     {
-        $this->assertEquals($assert, LvValidation::personId($item));
+        $this->assertSame($assert, LvValidation::personId($item));
     }
 }
