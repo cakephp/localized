@@ -119,9 +119,11 @@ class PlValidation extends \Cake\Localized\Validation\LocalizedValidation
         if (!preg_match('/^([\d]{9}|[\d]{14})$/', $check)) {
             return false;
         }
+
+        $chars = str_split(strval($check));
+
         if (strlen($check) === 9) {
             // Validate short version (9 digits)
-            $chars = str_split(strval($check));
             $sum = array_sum(array_map(function ($weight, $digit) {
                 return $weight * $digit;
             }, [8, 9, 2, 3, 4, 5, 6, 7], array_slice($chars, 0, 8)));
@@ -130,7 +132,6 @@ class PlValidation extends \Cake\Localized\Validation\LocalizedValidation
             return $checksum % 10 == $chars[8];
         } else {
             // Validate long version (14 digits)
-            $chars = str_split($check);
             $sum = array_sum(array_map(function ($weight, $digit) {
                 return $weight * $digit;
             }, [2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8], array_slice($chars, 0, 13)));
