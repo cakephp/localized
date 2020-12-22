@@ -14,3 +14,13 @@
 *.gif binary
 *.ico binary
 *.mo binary
+
+# Ignore files for distribution archives, generated using `git archive`
+.editorconfig export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+phpcs.xml export-ignore
+phpstan.neon export-ignore
+phpunit.xml.dist export-ignore
+/.github export-ignore
+/tests export-ignore
