@@ -21,9 +21,7 @@ jobs:
             prefer-lowest: 'prefer-lowest'
 
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
+    - uses: actions/checkout@v2
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -51,7 +49,7 @@ jobs:
         if ${{ matrix.prefer-lowest == 'prefer-lowest' }}; then
           composer update --prefer-lowest --prefer-stable
         else
-          composer update
+          composer install
         fi
 
     - name: Configure PHPUnit matcher
@@ -75,9 +73,7 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
+    - uses: actions/checkout@v2
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -100,11 +96,11 @@ jobs:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ steps.key-date.outputs.date }}-${{ hashFiles('composer.json') }}-${{ matrix.prefer-lowest }}
 
-    - name: composer install
+    - name: Composer install
       run: composer stan-setup
 
     - name: Run PHP CodeSniffer
-      run: vendor/bin/phpcs --report=checkstyle src/ tests/
+      run: vendor/bin/phpcs --report=checkstyle src/ tests/ | cs2pr
 
     - name: Run phpstan
       if: success() || failure()
