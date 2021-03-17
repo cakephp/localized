@@ -80,6 +80,7 @@ jobs:
       with:
         php-version: '7.4'
         extensions: mbstring, intl
+        tools: cs2pr
         coverage: none
 
     - name: Get composer cache directory
