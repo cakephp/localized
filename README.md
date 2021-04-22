@@ -1,6 +1,6 @@
 # CakePHP Localized plugin
 
-[![Build Status](https://img.shields.io/travis/com/cakephp/localized/master?style=flat-square)](https://travis-ci.com/cakephp/localized)
+![Build Status](https://github.com/cakephp/localized/actions/workflows/ci.yml/badge.svg?branch=master)
 [![Latest Stable Version](https://img.shields.io/github/v/release/cakephp/localized?sort=semver&style=flat-square)](https://packagist.org/packages/cakephp/localized)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/localized?style=flat-square)](https://packagist.org/packages/cakephp/localized/stats)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
