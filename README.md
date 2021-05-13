@@ -9,7 +9,7 @@ This plugin contains various localized validation classes for specific countries
 
 ## Requirements
 
-This branch is for use with CakePHP **4.x**. See [version map](https://github.com/cakephp/migrations/wiki#version-map) for details.
+This branch is for use with CakePHP **4.x**. See [version map](https://github.com/cakephp/localized/wiki#version-map) for details.
 
 ## Installation
 
