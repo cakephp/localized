@@ -13,8 +13,7 @@
     ],
     "support": {
         "issues": "https://github.com/cakephp/localized/issues",
-        "forum": "http://stackoverflow.com/tags/cakephp",
-        "irc": "irc://irc.freenode.org/cakephp",
+        "forum": "https://stackoverflow.com/tags/cakephp",
         "source": "https://github.com/cakephp/localized"
     },
     "require": {
@@ -27,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Cake\\Localized\\": "src"
+            "Cake\\Localized\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cake\\Test\\": "vendor/cakephp/cakephp/tests",
-            "Cake\\Localized\\Test\\": "tests"
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/",
+            "Cake\\Localized\\Test\\": "tests/"
         }
     },
     "scripts": {
