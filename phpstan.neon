@@ -1,7 +1,7 @@
 parameters:
 	level: 1
 	treatPhpDocTypesAsCertain: false
-	autoload_files:
+	bootstrapFiles:
 		- tests/bootstrap.php
 	paths:
 		- src/
