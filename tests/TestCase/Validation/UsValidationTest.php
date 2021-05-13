@@ -128,6 +128,7 @@ class UsValidationTest extends TestCase
         $this->assertTrue(UsValidation::date('04/21/1980'));
         $this->assertTrue(UsValidation::date('1/3/20'));
 
+        $this->assertFalse(UsValidation::date('1-3-2020'), 'US date only accept slash as separator');
         $this->assertFalse(UsValidation::date('25-12-2000'));
         $this->assertFalse(UsValidation::date('21/04/1940'));
         $this->assertFalse(UsValidation::date('2000-12-25'));
