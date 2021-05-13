@@ -9,10 +9,7 @@ This plugin contains various localized validation classes for specific countries
 
 ## Requirements
 
-The master branch has the following requirements:
-
-* CakePHP 4.0+.
-* PHP 7.2+.
+This branch is for use with CakePHP **4.x**. See [version map](https://github.com/cakephp/migrations/wiki#version-map) for details.
 
 ## Installation
 
