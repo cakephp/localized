@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class CnValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'zh_CN';
+
+    /**
      * Checks phone numbers for The Peoples Republic of China (mainland)
      *
      * It is not a strict rule and should cover almost all legal phone numbers.

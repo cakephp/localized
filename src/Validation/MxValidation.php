@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class MxValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'es_MX';
+
+    /**
      * Checks a phone number for Mexico.
      *
      * @param string $check The value to check.

@@ -23,6 +23,14 @@ namespace Cake\Localized\Validation;
 class EsValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'es_ES';
+
+    /**
      * The list of allowed personId codes. Sorted as wee need them.
      *
      * @var string

@@ -21,6 +21,14 @@ namespace Cake\Localized\Validation;
 class PlValidation extends \Cake\Localized\Validation\LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'pl_PL';
+
+    /**
      * Checks a postal code for Poland.
      *
      * @param string $check Value to check

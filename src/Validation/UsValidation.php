@@ -21,6 +21,14 @@ namespace Cake\Localized\Validation;
 class UsValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'en_US';
+
+    /**
      * Checks a phone number for The United States
      *
      * @param string $check The value to check.

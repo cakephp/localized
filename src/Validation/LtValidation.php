@@ -21,6 +21,14 @@ namespace Cake\Localized\Validation;
 class LtValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'lt_LT';
+
+    /**
      * Checks a phone number for the Lithuania.
      *
      * @param string $check The value to check.

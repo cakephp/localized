@@ -25,6 +25,14 @@ use Cake\Http\Exception\NotImplementedException;
 class TrValidation extends LocalizedValidation
 {
     /**
+     * Define locale to be used by that localized
+     * validation set
+     *
+     * @var string
+     */
+    protected static $validationLocale = 'tr_TR';
+
+    /**
      * Checks a postal code for Turkey.
      *
      * @param string $check The value to check.
