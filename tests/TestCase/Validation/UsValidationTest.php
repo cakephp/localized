@@ -54,8 +54,8 @@ class UsValidationTest extends TestCase
         $this->assertFalse(UsValidation::phone('1-(123)-999-9999'));
         $this->assertFalse(UsValidation::phone('1-(555)-999-9999'));
 
-        // invalid exchange
-        $this->assertFalse(UsValidation::phone('1-(222)-511-9999'));
+        // invalid exchange (can't start with 1)
+        $this->assertFalse(UsValidation::phone('1-(222)-125-9999'));
 
         // invalid phone number
         $this->assertFalse(UsValidation::phone('1-(222)-555-0199'));
@@ -83,6 +83,9 @@ class UsValidationTest extends TestCase
         $this->assertTrue(UsValidation::phone('805 773 0789'));
         $this->assertTrue(UsValidation::phone('1-(570)-773-0789'));
         $this->assertTrue(UsValidation::phone('1-(573)-773-0789'));
+
+        $this->assertTrue(UsValidation::phone('1-(573)-811-0789'));
+        $this->assertTrue(UsValidation::phone('1-(222)-511-9999'));
     }
 
     /**
