@@ -49,14 +49,14 @@ jobs:
         if ${{ matrix.prefer-lowest == 'prefer-lowest' }}; then
           composer update --prefer-lowest --prefer-stable
         elif ${{ matrix.php-version == '8.1' }}; then
-          composer update --ignore-platform-reqs          
+          composer update --ignore-platform-reqs
         else
           composer update
         fi
 
     - name: Configure PHPUnit matcher
       if: matrix.php-version == '7.4'
-      uses: mheap/phpunit-matcher-action@master
+      uses: mheap/phpunit-matcher-action@main
 
     - name: Run PHPUnit
       run: |
