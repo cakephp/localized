@@ -14,7 +14,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\I18n\Date;
+use Cake\I18n\FrozenDate;
 use Cake\I18n\I18n;
 use Cake\I18n\Number;
 
@@ -45,19 +45,19 @@ abstract class LocalizedValidation implements ValidationInterface
             I18n::setLocale(static::$validationLocale);
         }
 
-        $currentLenient = Date::lenientParsingEnabled();
+        $currentLenient = FrozenDate::lenientParsingEnabled();
         if ($currentLenient) {
-            Date::disableLenientParsing();
+            FrozenDate::disableLenientParsing();
         }
 
-        $isValid = Date::parseDate($string) !== null;
+        $isValid = FrozenDate::parseDate($string) !== null;
 
         if ($needChange) {
             I18n::setLocale($currentLocale);
         }
 
         if ($currentLenient) {
-            Date::enableLenientParsing();
+            FrozenDate::enableLenientParsing();
         }
 
         return $isValid;
@@ -77,19 +77,19 @@ abstract class LocalizedValidation implements ValidationInterface
             I18n::setLocale(static::$validationLocale);
         }
 
-        $currentLenient = Date::lenientParsingEnabled();
+        $currentLenient = FrozenDate::lenientParsingEnabled();
         if ($currentLenient) {
-            Date::disableLenientParsing();
+            FrozenDate::disableLenientParsing();
         }
 
-        $isValid = Date::parseDateTime($string) !== null;
+        $isValid = FrozenDate::parseDateTime($string) !== null;
 
         if ($needChange) {
             I18n::setLocale($currentLocale);
         }
 
         if ($currentLenient) {
-            Date::enableLenientParsing();
+            FrozenDate::enableLenientParsing();
         }
 
         return $isValid;
