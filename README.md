@@ -40,7 +40,7 @@ use Cake\Validation\Validator;
 
 class PostsTable extends Table
 {
-    public function validationDefault(Validator $validator)
+    public function validationDefault(Validator $validator): Validator
     {
         $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
