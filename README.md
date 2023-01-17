@@ -60,9 +60,9 @@ into their expected location: `resources/locales/<locale>/cake.po`
 
 ## Contributing to Localized
 
-If you find that your country is not part of the Localized plugin, please fork the project on Github.
+If you find that your country is not part of the Localized plugin, please fork the project on GitHub.
 Once you have forked the project you can commit your validator class (and any test cases).
-As soon as you have pushed your changes back to Github you can send a pull request and your changes will be reviewed and merged in, or feedback will be given.
+As soon as you have pushed your changes back to GitHub you can send a pull request and your changes will be reviewed and merged in, or feedback will be given.
 
 ### Validation methods
 

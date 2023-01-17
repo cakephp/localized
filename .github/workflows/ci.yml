@@ -10,14 +10,14 @@ on:
 
 jobs:
   testsuite:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['7.2', '7.4', '8.1']
+        php-version: ['7.3', '8.2']
         prefer-lowest: ['']
         include:
-          - php-version: '7.2'
+          - php-version: '7.3'
             prefer-lowest: 'prefer-lowest'
 
     steps:
@@ -48,31 +48,31 @@ jobs:
       run: |
         if ${{ matrix.prefer-lowest == 'prefer-lowest' }}; then
           composer update --prefer-lowest --prefer-stable
-        elif ${{ matrix.php-version == '8.1' }}; then
+        elif ${{ matrix.php-version == '8.2' }}; then
           composer update --ignore-platform-reqs
         else
           composer update
         fi
 
     - name: Configure PHPUnit matcher
-      if: matrix.php-version == '7.4'
+      if: matrix.php-version == '7.3'
       uses: mheap/phpunit-matcher-action@main
 
     - name: Run PHPUnit
       run: |
-        if [[ ${{ matrix.php-version }} == '7.4' ]]; then
+        if [[ ${{ matrix.php-version }} == '7.3' ]]; then
           export CODECOVERAGE=1 && vendor/bin/phpunit --verbose --coverage-clover=coverage.xml
         else
           vendor/bin/phpunit
         fi
 
     - name: Submit code coverage
-      if: success() && matrix.php-version == '7.4'
+      if: success() && matrix.php-version == '7.3'
       uses: codecov/codecov-action@v3
 
   cs-stan:
     name: Coding Standard & Static Analysis
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v3
@@ -80,7 +80,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '7.3'
         extensions: mbstring, intl
         tools: cs2pr
         coverage: none
