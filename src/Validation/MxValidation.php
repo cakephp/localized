@@ -30,7 +30,7 @@ class MxValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'es_MX';
+    protected static string $validationLocale = 'es_MX';
 
     /**
      * Checks a phone number for Mexico.

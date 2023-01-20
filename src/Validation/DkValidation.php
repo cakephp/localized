@@ -28,7 +28,7 @@ class DkValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'da_DK';
+    protected static string $validationLocale = 'da_DK';
 
     /**
      * Checks a social security number for Denmark.

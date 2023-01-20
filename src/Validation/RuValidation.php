@@ -28,7 +28,7 @@ class RuValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'ru_RU';
+    protected static string $validationLocale = 'ru_RU';
 
     /**
      * Checks a postal code for Russia

@@ -28,7 +28,7 @@ class GbValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'en_GB';
+    protected static string $validationLocale = 'en_GB';
 
     /**
      * Checks a postal code for The United Kingdom

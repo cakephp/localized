@@ -30,7 +30,7 @@ class BeValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'nl_BE';
+    protected static string $validationLocale = 'nl_BE';
 
     /**
      * Checks a postal code for Belgium.

@@ -14,7 +14,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Validation;
 
-use Cake\I18n\FrozenDate;
+use Cake\I18n\DateTime;
 use Cake\I18n\I18n;
 use Cake\I18n\Number;
 
@@ -29,7 +29,7 @@ abstract class LocalizedValidation implements ValidationInterface
      *
      * @var string
      */
-    protected static $validationLocale = 'en_US';
+    protected static string $validationLocale = 'en_US';
 
     /**
      * Checks a date string, from language specific format.
@@ -45,19 +45,19 @@ abstract class LocalizedValidation implements ValidationInterface
             I18n::setLocale(static::$validationLocale);
         }
 
-        $currentLenient = FrozenDate::lenientParsingEnabled();
+        $currentLenient = DateTime::lenientParsingEnabled();
         if ($currentLenient) {
-            FrozenDate::disableLenientParsing();
+            DateTime::disableLenientParsing();
         }
 
-        $isValid = FrozenDate::parseDate($string) !== null;
+        $isValid = DateTime::parseDate($string) !== null;
 
         if ($needChange) {
             I18n::setLocale($currentLocale);
         }
 
         if ($currentLenient) {
-            FrozenDate::enableLenientParsing();
+            DateTime::enableLenientParsing();
         }
 
         return $isValid;
@@ -77,19 +77,19 @@ abstract class LocalizedValidation implements ValidationInterface
             I18n::setLocale(static::$validationLocale);
         }
 
-        $currentLenient = FrozenDate::lenientParsingEnabled();
+        $currentLenient = DateTime::lenientParsingEnabled();
         if ($currentLenient) {
-            FrozenDate::disableLenientParsing();
+            DateTime::disableLenientParsing();
         }
 
-        $isValid = FrozenDate::parseDateTime($string) !== null;
+        $isValid = DateTime::parseDateTime($string) !== null;
 
         if ($needChange) {
             I18n::setLocale($currentLocale);
         }
 
         if ($currentLenient) {
-            FrozenDate::enableLenientParsing();
+            DateTime::enableLenientParsing();
         }
 
         return $isValid;

@@ -28,7 +28,7 @@ class UaValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'uk_UA';
+    protected static string $validationLocale = 'uk_UA';
 
     /**
      * Checks a postal (zip) code for Ukraine

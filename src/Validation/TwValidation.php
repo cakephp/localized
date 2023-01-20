@@ -28,7 +28,7 @@ class TwValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'zh_TW';
+    protected static string $validationLocale = 'zh_TW';
 
     /**
      * Checks a phone number for Taiwan.

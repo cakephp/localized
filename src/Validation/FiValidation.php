@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace Cake\Localized\Validation;
 
 use Cake\Http\Exception\NotImplementedException;
+use DateTime;
 
 /**
  * FiValidation
@@ -30,7 +31,7 @@ class FiValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'fi_FI';
+    protected static string $validationLocale = 'fi_FI';
 
     /**
      * Checks a postal code for Finland.
@@ -70,7 +71,7 @@ class FiValidation extends LocalizedValidation
             return false;
         }
 
-        $date = \DateTime::createFromFormat('dmy', substr($check, 0, 6));
+        $date = DateTime::createFromFormat('dmy', substr($check, 0, 6));
         if ($date === false) {
             return false;
         }

@@ -30,7 +30,7 @@ class InValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'en_IN';
+    protected static string $validationLocale = 'en_IN';
 
     /**
      * Validate postal code

@@ -30,7 +30,7 @@ class CaValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'en_CA';
+    protected static string $validationLocale = 'en_CA';
 
     /**
      * Checks a postal code for Canada.

@@ -30,7 +30,7 @@ class PtValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'pt_PT';
+    protected static string $validationLocale = 'pt_PT';
 
     /**
      * Checks a postal code for Portugal.

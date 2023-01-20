@@ -26,7 +26,7 @@ class LtValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'lt_LT';
+    protected static string $validationLocale = 'lt_LT';
 
     /**
      * Checks a phone number for the Lithuania.

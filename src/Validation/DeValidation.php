@@ -30,7 +30,7 @@ class DeValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'de_DE';
+    protected static string $validationLocale = 'de_DE';
 
     /**
      * Checks a postal code for Germany.

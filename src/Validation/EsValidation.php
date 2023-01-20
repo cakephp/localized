@@ -28,14 +28,14 @@ class EsValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'es_ES';
+    protected static string $validationLocale = 'es_ES';
 
     /**
      * The list of allowed personId codes. Sorted as wee need them.
      *
      * @var string
      */
-    protected static $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
+    protected static string $CODES = 'TRWAGMYFPDXBNJZSQVHLCKE';
 
     /**
      * Checks a postal code for Spain.

@@ -28,7 +28,7 @@ class BrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'pt_BR';
+    protected static string $validationLocale = 'pt_BR';
 
     /**
      * Checks a phone number for Brazil.
@@ -114,7 +114,7 @@ class BrValidation extends LocalizedValidation
      */
     public static function cnpj(string $check): bool
     {
-        $check = trim(strval($check));
+        $check = trim($check);
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
             $check = str_replace(['-', '.', '/'], '', $check);
@@ -149,14 +149,11 @@ class BrValidation extends LocalizedValidation
      */
     public static function cnh(string $cnh): bool
     {
-        if (!is_numeric($cnh) && !is_string($cnh)) {
-            return false;
-        }
         $check = preg_replace('/[^\d]/', '', $cnh);
-
-        if (strlen($check) !== 11) {
+        if (!$check || strlen($check) !== 11) {
             return false;
         }
+
         // Check for repeated values
         for ($i = 0; $i < 10; $i++) {
             if (str_repeat(strval($i), 11) === $check) {
@@ -190,15 +187,11 @@ class BrValidation extends LocalizedValidation
     /**
      * Checks for National Health Card emitted from S.U.S in Brazil
      *
-     * @param string|int $cns National Heath Card Number
+     * @param string $cns National Heath Card Number
      * @return bool
      */
-    public static function cns($cns): bool
+    public static function cns(string $cns): bool
     {
-        if (!is_numeric($cns) && !is_string($cns)) {
-            return false;
-        }
-
         $cns = preg_replace('/[^0-9]/', '', $cns);
 
         if (preg_match('/[1-2]\\d{10}00[0-1]\\d/', $cns) || preg_match('/[7-9]\\d{14}/', $cns)) {

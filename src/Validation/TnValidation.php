@@ -28,7 +28,7 @@ class TnValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'ar_TN';
+    protected static string $validationLocale = 'ar_TN';
 
     /**
      * Checks a phone number for Tunisia.

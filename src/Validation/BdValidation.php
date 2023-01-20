@@ -30,7 +30,7 @@ class BdValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'bn_BD';
+    protected static string $validationLocale = 'bn_BD';
 
     /**
      * Checks a postal code.

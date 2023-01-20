@@ -28,7 +28,7 @@ class NoValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'nb_NO';
+    protected static string $validationLocale = 'nb_NO';
 
     /**
      * Checks date of birth formal format for Norway (dd.mm.yyyy),

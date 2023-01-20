@@ -30,7 +30,7 @@ class SkValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'sk_SK';
+    protected static string $validationLocale = 'sk_SK';
 
     /**
      * Checks a postal code for Slovakia.

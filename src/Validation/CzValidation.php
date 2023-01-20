@@ -30,7 +30,7 @@ class CzValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'cs_CZ';
+    protected static string $validationLocale = 'cs_CZ';
 
     /**
      * Checks a postal code for Czech Republic

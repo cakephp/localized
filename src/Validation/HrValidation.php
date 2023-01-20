@@ -29,7 +29,7 @@ class HrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'hr_HR';
+    protected static string $validationLocale = 'hr_HR';
 
     /**
      * Checks a postal code for Croatia.

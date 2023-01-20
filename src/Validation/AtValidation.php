@@ -30,7 +30,7 @@ class AtValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'de_AT';
+    protected static string $validationLocale = 'de_AT';
 
     /**
      * Checks a postal code.

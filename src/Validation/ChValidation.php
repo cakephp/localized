@@ -30,7 +30,7 @@ class ChValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'de_CH';
+    protected static string $validationLocale = 'de_CH';
 
     /**
      * Checks a postal code for Switzerland & Liechtenstein

@@ -30,7 +30,7 @@ class RsValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'cs_RS';
+    protected static string $validationLocale = 'cs_RS';
 
     /**
      * Checks a postal code (Poštanski broj) for Serbia.

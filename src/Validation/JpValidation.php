@@ -30,7 +30,7 @@ class JpValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'ja_JP';
+    protected static string $validationLocale = 'ja_JP';
 
     /**
      * Checks a phone number for Japan.

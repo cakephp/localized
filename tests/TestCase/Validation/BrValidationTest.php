@@ -188,7 +188,6 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::cns('702 5053 3246 4237'));
         $this->assertFalse(BrValidation::cns('111 1111 1111 1111'));
         $this->assertFalse(BrValidation::cns('9021 6194 0000'));
-        $this->assertFalse(BrValidation::cns(['12345678909']));
     }
 
     /**

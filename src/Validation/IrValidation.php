@@ -26,7 +26,7 @@ class IrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'fa_IR';
+    protected static string $validationLocale = 'fa_IR';
 
     /**
      * Checks for Persian/Farsi characters and number an zero width non-joiner space.

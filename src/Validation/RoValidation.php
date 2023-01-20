@@ -30,7 +30,7 @@ class RoValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'ro_RO';
+    protected static string $validationLocale = 'ro_RO';
 
     /**
      * Checks postal codes for Romania
@@ -52,7 +52,7 @@ class RoValidation
      * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function phone(string $check)
+    public static function phone(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }
@@ -64,7 +64,7 @@ class RoValidation
      * @throws \Cake\Http\Exception\NotImplementedException Exception
      * @return bool Success.
      */
-    public static function personId(string $check)
+    public static function personId(string $check): bool
     {
         throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
     }

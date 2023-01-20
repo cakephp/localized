@@ -30,7 +30,7 @@ class TrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'tr_TR';
+    protected static string $validationLocale = 'tr_TR';
 
     /**
      * Checks a postal code for Turkey.

@@ -26,7 +26,7 @@ class NlValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'nl_NL';
+    protected static string $validationLocale = 'nl_NL';
 
     /**
      * Checks a phone number for The Netherlands

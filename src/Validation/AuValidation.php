@@ -30,7 +30,7 @@ class AuValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'en_AU';
+    protected static string $validationLocale = 'en_AU';
 
     /**
      * Checks a postal code for Australia.

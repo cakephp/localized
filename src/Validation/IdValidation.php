@@ -30,7 +30,7 @@ class IdValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'id_ID';
+    protected static string $validationLocale = 'id_ID';
 
     /**
      * Checks a postal code for Indonesia.

@@ -32,7 +32,7 @@ Cake\Core\Configure::write('debug', true);
 
 require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
 
-Plugin::getCollection()->add(new \Cake\Localized\Plugin([
+Plugin::getCollection()->add(new Cake\Localized\Plugin([
     'path' => dirname(dirname(__FILE__)) . DS,
     'routes' => false,
 ]));

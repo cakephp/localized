@@ -2,7 +2,12 @@
     "name": "cakephp/localized",
     "description": "CakePHP Localized Plugin",
     "type": "cakephp-plugin",
-    "keywords": ["cakephp", "localized", "i18n", "l10n"],
+    "keywords": [
+        "cakephp",
+        "localized",
+        "i18n",
+        "l10n"
+    ],
     "homepage": "https://github.com/cakephp/localized",
     "license": "MIT",
     "authors": [
@@ -17,12 +22,12 @@
         "source": "https://github.com/cakephp/localized"
     },
     "require": {
-        "php": ">=7.3",
-        "cakephp/cakephp": "^4.2.0"
+        "php": ">=8.1",
+        "cakephp/cakephp": "5.x-dev"
     },
     "require-dev": {
-        "cakephp/cakephp-codesniffer": "^4.0",
-        "phpunit/phpunit": "^9.5"
+        "cakephp/cakephp-codesniffer": "^5.0",
+        "phpunit/phpunit": "^9.5.16"
     },
     "autoload": {
         "psr-4": {
@@ -44,7 +49,7 @@
         "analyse": [
             "@stan",
             "@psalm"
-         ],
+        ],
         "cs-check": "phpcs --colors --parallel=16 -p src/ tests/",
         "cs-fix": "phpcbf --colors --parallel=16  -p src/ tests/",
         "test": "phpunit --stderr",
@@ -61,5 +66,6 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

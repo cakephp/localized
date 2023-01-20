@@ -28,7 +28,7 @@ class FrValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'fr_FR';
+    protected static string $validationLocale = 'fr_FR';
 
     /**
      * Checks a phone number for France.

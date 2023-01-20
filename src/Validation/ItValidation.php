@@ -30,7 +30,7 @@ class ItValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'it_IT';
+    protected static string $validationLocale = 'it_IT';
 
     /**
      * Checks a phone number for Italy.

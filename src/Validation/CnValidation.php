@@ -28,7 +28,7 @@ class CnValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'zh_CN';
+    protected static string $validationLocale = 'zh_CN';
 
     /**
      * Checks phone numbers for The Peoples Republic of China (mainland)

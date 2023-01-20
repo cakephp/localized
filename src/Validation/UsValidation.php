@@ -26,7 +26,7 @@ class UsValidation extends LocalizedValidation
      *
      * @var string
      */
-    protected static $validationLocale = 'en_US';
+    protected static string $validationLocale = 'en_US';
 
     /**
      * Checks a phone number for The United States
