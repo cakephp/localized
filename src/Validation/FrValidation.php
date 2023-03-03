@@ -78,8 +78,8 @@ class FrValidation extends LocalizedValidation
         $key = substr($check, -2);
 
         // Corse special cases
-        // source : http://xml.insee.fr/schema/nir.html
-        // check : http://www.parodie.com/monetique/nir.htm
+        // source : https://xml.insee.fr/schema/nir.html
+        // check : https://www.parodie.com/monetique/nir.htm
         if ($numberWithoutKey[6] === 'A') {
             $numberWithoutKey = str_replace('A', '0', $numberWithoutKey);
             $numberWithoutKey -= 1000000;

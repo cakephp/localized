@@ -4,16 +4,16 @@ declare(strict_types=1);
 /**
  * Serbian Localized Validation class. Handles localized validation for Serbia.
  *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link http://cakephp.org
+ * @copyright Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link https://cakephp.org
  * @since Localized Plugin v 0.1
- * @license http://www.opensource.org/licenses/mit-license.php MIT License
+ * @license https://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
@@ -50,7 +50,7 @@ class RsValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      * @return bool Success.
-     * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
+     * @link https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
      */
     public static function personId(string $check): bool
     {
@@ -110,7 +110,7 @@ class RsValidation extends LocalizedValidation
      *
      * @param string $check The value to check.
      * @return bool Success.
-     * @link http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
+     * @link https://en.wikipedia.org/wiki/Unique_Master_Citizen_Number
      * @deprecated Use personId() instead.
      */
     public static function jmbg(string $check): bool
