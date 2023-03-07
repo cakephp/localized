@@ -354,7 +354,7 @@ msgstr ""
 
 #: Console/Command/TestShell.php:175
 msgid ""
-"Please install PHPUnit framework v3.7 <info>(http://www.phpunit.de)</info>"
+"Please install PHPUnit framework v3.7 <info>(https://www.phpunit.de)</info>"
 msgstr ""
 
 #: Console/Command/TestShell.php:371
@@ -948,7 +948,7 @@ msgstr ""
 
 #: Utility/Security.php:286
 msgid ""
-"Invalid salt: %s for %s Please visit http://www.php.net/crypt and read the "
+"Invalid salt: %s for %s Please visit https://www.php.net/crypt and read the "
 "appropriate section for building %s salts."
 msgstr ""
 
