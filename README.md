@@ -1,5 +1,5 @@
 # CakePHP Localized plugin
-[![Build Status](https://secure.travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
+[![Build Status](https://secure.travis-ci.org/cakephp/localized.svg?branch=master)](https://travis-ci.org/cakephp/localized)
 [![License](https://poser.pugx.org/cakephp/localized/license.svg)](https://packagist.org/packages/cakephp/localized)
 
 This plugin contains various localized validation classes for specific countries.
@@ -49,7 +49,7 @@ class Post extends AppModel {
 }
 ```
 
-For further information on validation rules see the [cakephp documentation on validation](http://book.cakephp.org/2.0/en/models/data-validation.html)
+For further information on validation rules see the [cakephp documentation on validation](https://book.cakephp.org/2.0/en/models/data-validation.html)
 
 ## Using localized validations with Validation
 
