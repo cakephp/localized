@@ -2,16 +2,16 @@
 /**
  * French Localized Validation class. Handles localized validation for France.
  *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org
  * @since         Localized Plugin v 0.1
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ * @license       https://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace Cake\Localized\Validation;
 
@@ -69,8 +69,8 @@ class FrValidation extends LocalizedValidation
         $key = substr($check, -2);
 
         // Corse special cases
-        // source : http://xml.insee.fr/schema/nir.html
-        // check : http://www.parodie.com/monetique/nir.htm
+        // source : https://xml.insee.fr/schema/nir.html
+        // check : https://www.parodie.com/monetique/nir.htm
         if ($numberWithoutKey[6] == 'A') {
             $numberWithoutKey = str_replace('A', '0', $numberWithoutKey);
             $numberWithoutKey -= 1000000;
