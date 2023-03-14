@@ -1,5 +1,5 @@
 # CakePHP Localized plugin
-[![Build Status](https://travis-ci.org/cakephp/localized.svg?branch=master)](http://travis-ci.org/cakephp/localized)
+[![Build Status](https://travis-ci.org/cakephp/localized.svg?branch=master)](https://travis-ci.org/cakephp/localized)
 [![License](https://poser.pugx.org/cakephp/localized/license.svg)](https://packagist.org/packages/cakephp/localized)
 [![Total Downloads](https://poser.pugx.org/cakephp/localized/d/total.svg)](https://packagist.org/packages/cakephp/localized)
 
@@ -52,7 +52,7 @@ class PostsTable extends Table
 }
 ```
 
-For further information on validation rules see the [CakePHP documentation on validation](http://book.cakephp.org/3.0/en/core-libraries/validation.html)
+For further information on validation rules see the [CakePHP documentation on validation](https://book.cakephp.org/3.0/en/core-libraries/validation.html)
 
 ## PO files
 
