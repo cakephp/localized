@@ -46,7 +46,7 @@ class PostsTable extends Table
         $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
-            'provider' => 'fr'
+            'provider' => 'fr',
         ]);
     }
 }
