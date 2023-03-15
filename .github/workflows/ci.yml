@@ -59,7 +59,7 @@ jobs:
     - name: Run PHPUnit
       run: |
         if [[ ${{ matrix.php-version }} == '7.3' ]]; then
-          export CODECOVERAGE=1 && vendor/bin/phpunit --verbose --coverage-clover=coverage.xml
+          export CODECOVERAGE=1 && vendor/bin/phpunit --coverage-clover=coverage.xml
         else
           vendor/bin/phpunit
         fi
