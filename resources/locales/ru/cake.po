@@ -22,8 +22,8 @@ msgstr "Ошибка"
 msgid "The requested address %s was not found on this server."
 msgstr "Запрошенный адрес %s не был найден на этом сервере"
 
-#: View/Errors/error500.ctp:23
-#: Error/ExceptionRenderer.php:234
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Произошла внутренняя ошибка"
 
@@ -63,7 +63,7 @@ msgstr "При удалении %1$s с идентификатором %2$s пр
 msgid "You are not authorized to access that location."
 msgstr "У вас нет доступа к этой странице."
 
-#: Error/ExceptionRenderer.php:212
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Не найдено"
 

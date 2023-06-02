@@ -21,10 +21,6 @@ msgstr "Error"
 msgid "The requested address %s was not found on this server."
 msgstr "L'adreça sol·licitada %s no s'ha pogut trobar en aquest servidor."
 
-#: Template/Error/error500.ctp:39
-msgid "An Internal Error Has Occurred"
-msgstr "Hi Ha Hagut Un Error Intern"
-
 #: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
 msgstr "No tens permisos per accedir aquesta ubicació."
@@ -37,11 +33,12 @@ msgstr "Manca la cookie del token CSRF"
 msgid "CSRF token mismatch."
 msgstr "Els tokens CSRF no coincideixen."
 
-#: Error/ExceptionRenderer.php:247
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "No Trobat"
 
-#: Error/ExceptionRenderer.php:249
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Hi Ha Hagut Un Error Intern."
 

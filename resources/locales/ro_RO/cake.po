@@ -48,11 +48,12 @@ msgstr "Nu s-a putut sterge %1$s cu codul %2$s"
 msgid "You are not authorized to access that location."
 msgstr "Nu sunteți autorizat să accesați această locație"
 
-#: Error/ExceptionRenderer.php:209
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Nu a fost găsit"
 
-#: Error/ExceptionRenderer.php:231
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "A apărut o eroare internă."
 

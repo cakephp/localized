@@ -23,19 +23,16 @@ msgstr "Chyba"
 msgid "The requested address {0} was not found on this server."
 msgstr "Soubor neexistuje."
 
-#: Error/error500.php:38
-msgid "An Internal Error Has Occurred"
-msgstr "Chyba systému, prosím kontaktujte administrátora"
-
 #: Controller/Component/AuthComponent.php:462
 msgid "You are not authorized to access that location."
 msgstr "Přihlašte se prosím."
 
-#: Error/ExceptionRenderer.php:304
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Nenalezeno"
 
-#: Error/ExceptionRenderer.php:306
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Chyba systému, prosím kontaktujte administrátora."
 
