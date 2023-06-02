@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2015-11-05 12:39+0000\n"
-"PO-Revision-Date: 2016-06-13 14:34+0700\n"
-"Last-Translator: ANH TUAN NGUYEN <ANHTUANK7C@HOTMAIL.COM>\n"
+"PO-Revision-Date: 2023-06-02 10:00-0700\n"
+"Last-Translator: TOMMY DO <DHHUY0704@GMAIL.COM>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -83,7 +83,7 @@ msgstr "vừa xong"
 
 #: I18n/Time.php:428
 msgid "about a second ago"
-msgstr "khoảng một giấy trước"
+msgstr "khoảng một giây trước"
 
 #: I18n/Time.php:429
 msgid "about a minute ago"
@@ -173,11 +173,11 @@ msgstr[1] "{0} giây"
 
 #: Network/Response.php:1438
 msgid "The requested file was not found"
-msgstr "Tệp tin yêu cầu không tồn tại"
+msgstr "Tập tin yêu cầu không tồn tại"
 
 #: ORM/RulesChecker.php:49
 msgid "This value is already in use"
-msgstr "Giá trị đã được sử dụng"
+msgstr "Giá trị này đã được sử dụng"
 
 #: ORM/RulesChecker.php:83
 msgid "This value does not exist"
@@ -189,7 +189,7 @@ msgstr "và"
 
 #: Validation/Validator.php:102
 msgid "This field is required"
-msgstr "Trường này cần nhập liệu"
+msgstr "Trường này cần được điền vào"
 
 #: Validation/Validator.php:103
 msgid "This field cannot be left empty"
@@ -197,7 +197,7 @@ msgstr "Trường này không được để trống"
 
 #: Validation/Validator.php:663
 msgid "The provided value is invalid"
-msgstr "Giá trị nhập vào không đúng"
+msgstr "Giá trị nhập vào không hợp lệ"
 
 #: View/Helper/FormHelper.php:925
 msgid "New %s"
@@ -262,4 +262,28 @@ msgstr "Tháng Mười Một"
 #: View/Widget/DateTimeWidget.php:541
 msgid "December"
 msgstr "Tháng Mười Hai"
+
+#: Http/Middleware/CsrfProtectionMiddleware.php:286
+msgid "Missing or incorrect CSRF cookie type."
+msgstr "Thiếu hoặc không đúng định dạng CSRF cookie."
+
+#: Http/Middleware/CsrfProtectionMiddleware.php:290
+msgid "Missing or invalid CSRF cookie."
+msgstr "Thiếu hoặc CSRF cookie không hợp lệ."
+
+#: Http/Middleware/CsrfProtectionMiddleware.php:311
+msgid "CSRF token from either the request body or request headers did not match or is missing."
+msgstr "Mã CSRF từ nội dung yêu cầu hoặc tiêu đề yêu cầu không khớp hoặc bị thiếu."
+
+#: Http/Response.php:1490
+msgid "The requested file contains `..` and will not be read."
+msgstr "Trong tập tin yêu cầu có chứa `..` và nó không thể đọc được"
+
+#: ORM/RulesChecker.php:224
+msgid "Cannot modify row: a constraint for the `{0}` association fails."
+msgstr "Không thể chỉnh sửa dòng: ràng buộc cho liên kết `{0}` không đúng."
+
+#: ORM/RulesChecker.php:262
+msgid "The count does not match {0}{1}"
+msgstr "Số lượng không khớp với {0}{1}"
 
