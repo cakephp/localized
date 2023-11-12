@@ -23,11 +23,11 @@
     },
     "require": {
         "php": ">=8.1",
-        "cakephp/cakephp": "5.x-dev"
+        "cakephp/cakephp": "^5.0.1"
     },
     "require-dev": {
         "cakephp/cakephp-codesniffer": "^5.0",
-        "phpunit/phpunit": "^9.5.16"
+        "phpunit/phpunit": "^10.2"
     },
     "autoload": {
         "psr-4": {
@@ -66,6 +66,5 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
