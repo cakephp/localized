@@ -31,7 +31,7 @@ class FiValidationTest extends TestCase
      *
      * @return array
      */
-    public function personIdProvider()
+    public static function personIdProvider()
     {
         return [
             ['120553-128K', true],
@@ -50,7 +50,7 @@ class FiValidationTest extends TestCase
      *
      * @return array
      */
-    public function postalProvider()
+    public static function postalProvider()
     {
         return [
             ['00000', true],
@@ -64,7 +64,7 @@ class FiValidationTest extends TestCase
     /**
      * @return array
      */
-    public function businessIdProvider()
+    public static function businessIdProvider()
     {
         return [
             ['16067584', true],
@@ -77,7 +77,7 @@ class FiValidationTest extends TestCase
     /**
      * @return array
      */
-    public function creditorReferenceProvider()
+    public static function creditorReferenceProvider()
     {
         return [
             ['RF6110032', true],
@@ -90,7 +90,7 @@ class FiValidationTest extends TestCase
     /**
      * @return array
      */
-    public function referenceNumberProvider()
+    public static function referenceNumberProvider()
     {
         return [
             ['00001234561', true],

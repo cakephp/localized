@@ -19,7 +19,7 @@ namespace Cake\Localized;
 
 use Cake\Core\BasePlugin;
 
-class Plugin extends BasePlugin
+class LocalizedPlugin extends BasePlugin
 {
     /**
      * Plugin name.

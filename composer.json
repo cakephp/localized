@@ -50,8 +50,8 @@
             "@stan",
             "@psalm"
         ],
-        "cs-check": "phpcs --colors --parallel=16 -p src/ tests/",
-        "cs-fix": "phpcbf --colors --parallel=16  -p src/ tests/",
+        "cs-check": "phpcs --colors --parallel=16 -p",
+        "cs-fix": "phpcbf --colors --parallel=16  -p",
         "test": "phpunit --stderr",
         "stan": "phpstan analyse src/",
         "psalm": "php vendor/psalm/phar/psalm.phar --show-info=false src/",

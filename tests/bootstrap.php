@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
+use Cake\Core\Configure;
 use Cake\Core\Plugin;
+use Cake\Localized\LocalizedPlugin;
 
 $findRoot = function ($root) {
     do {
@@ -28,11 +30,12 @@ if (!defined('DS')) {
     define('DS', DIRECTORY_SEPARATOR);
 }
 
-Cake\Core\Configure::write('debug', true);
+Configure::write('debug', true);
 
 require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
+require $root . '/vendor/cakephp/cakephp/src/functions.php';
 
-Plugin::getCollection()->add(new Cake\Localized\Plugin([
+Plugin::getCollection()->add(new LocalizedPlugin([
     'path' => dirname(dirname(__FILE__)) . DS,
     'routes' => false,
 ]));

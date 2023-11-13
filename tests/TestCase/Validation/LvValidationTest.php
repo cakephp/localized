@@ -31,7 +31,7 @@ class LvValidationTest extends TestCase
      *
      * @return array
      */
-    public function personIdProvider()
+    public static function personIdProvider()
     {
         return [
             ['030972-10200', true],

@@ -1,6 +1,7 @@
 # CakePHP Localized plugin
 
 ![Build Status](https://github.com/cakephp/localized/actions/workflows/ci.yml/badge.svg)
+[![Coverage Status](https://img.shields.io/codecov/c/github/cakephp/localized/4.x.svg?style=flat-square)](https://app.codecov.io/gh/cakephp/localized/tree/4.x)
 [![Latest Stable Version](https://img.shields.io/github/v/release/cakephp/localized?sort=semver&style=flat-square)](https://packagist.org/packages/cakephp/localized)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/localized?style=flat-square)](https://packagist.org/packages/cakephp/localized/stats)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -45,7 +46,7 @@ class PostsTable extends Table
         $validator->setProvider('fr', FrValidation::class);
         $validator->add('phoneField', 'myCustomRuleNameForPhone', [
             'rule' => 'phone',
-            'provider' => 'fr'
+            'provider' => 'fr',
         ]);
     }
 }

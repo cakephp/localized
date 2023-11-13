@@ -3,3 +3,5 @@
 /vendor/
 /.idea/
 /.phpunit.result.cache
+./phpunit.xml.dist
+/phpstan.neon
