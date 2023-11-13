@@ -98,8 +98,6 @@ class RuValidationTest extends TestCase
      * test snils method of RuValidation
      *
      * @return void
-     * @covers RuValidation::personId
-     * @covers RuValidation::snils
      */
     public function testSnils()
     {

@@ -76,7 +76,6 @@ class UaValidationTest extends TestCase
      * test personId method of UaValidation
      *
      * @return void
-     * @covers UaValidation::personId
      */
     public function testPersonId()
     {
@@ -90,7 +89,6 @@ class UaValidationTest extends TestCase
      * test IdCard method of UaValidation
      *
      * @return void
-     * @covers UaValidation::personId
      */
     public function testIdCard()
     {
