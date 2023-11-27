@@ -74,7 +74,7 @@ class PlValidation extends LocalizedValidation
         $weights = [6, 5, 7, 2, 3, 4, 5, 6, 7];
         $check = str_replace('-', '', $check);
         for ($i = 0; $i < 9; $i++) {
-            $sum += $check[$i] * $weights[$i];
+            $sum += (int)$check[$i] * $weights[$i];
         }
         $control = $sum % 11;
         if ($control === 10) {
@@ -99,7 +99,7 @@ class PlValidation extends LocalizedValidation
             $sum = 0;
             $weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
             for ($i = 0; $i < 10; $i++) {
-                $sum += $check[$i] * $weights[$i];
+                $sum += (int)$check[$i] * $weights[$i];
             }
             $control = 10 - $sum % 10;
             if ($control === 10) {
@@ -133,7 +133,7 @@ class PlValidation extends LocalizedValidation
         if (strlen($check) === 9) {
             // Validate short version (9 digits)
             $sum = array_sum(array_map(function ($weight, $digit) {
-                return $weight * $digit;
+                return $weight * (int)$digit;
             }, [8, 9, 2, 3, 4, 5, 6, 7], array_slice($chars, 0, 8)));
             $checksum = $sum % 11;
 
@@ -141,7 +141,7 @@ class PlValidation extends LocalizedValidation
         } else {
             // Validate long version (14 digits)
             $sum = array_sum(array_map(function ($weight, $digit) {
-                return $weight * $digit;
+                return $weight * (int)$digit;
             }, [2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8], array_slice($chars, 0, 13)));
             $checksum = $sum % 11;
 

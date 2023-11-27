@@ -106,7 +106,7 @@ class RuValidation extends LocalizedValidation
             $checksum = array_pop($digits);
             $tbNum = [2, 4, 10, 3, 5, 9, 4, 6, 8];
             $calculatedChecksum = array_sum(array_map(function ($value, $multiplier) {
-                return $value * $multiplier;
+                return $value * (int)$multiplier;
             }, $tbNum, $digits)) % 11 % 10;
         } else {
             // human person
@@ -121,7 +121,7 @@ class RuValidation extends LocalizedValidation
             $sum = [0, 0];
             foreach ($tbNum as $key => $multipliers) {
                 $sum[$key] = array_sum(array_map(function ($value, $multiplier) {
-                    return $value * $multiplier;
+                    return $value * (int)$multiplier;
                 }, $multipliers, $digits)) % 11 % 10;
             }
 
@@ -164,7 +164,7 @@ class RuValidation extends LocalizedValidation
 
         $sum = 0;
         foreach ($digits as $position => $value) {
-            $sum += ($position + 1) * $value;
+            $sum += ($position + 1) * (int)$value;
         }
 
         $calculatedChecksum = $sum % 101;

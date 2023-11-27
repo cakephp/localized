@@ -131,14 +131,14 @@ class EsValidation extends LocalizedValidation
             return false;
         }
 
-        $sum = $check[2] + $check[4] + $check[6];
+        $sum = (int)$check[2] + (int)$check[4] + (int)$check[6];
 
         for ($i = 1; $i < 8; $i += 2) {
-            $tmp = (string)(2 * $check[$i]);
-            $sum += $tmp[0] + (strlen($tmp) === 2 ? $tmp[1] : 0);
+            $tmp = (string)(2 * (int)$check[$i]);
+            $sum += (int)$tmp[0] + (strlen($tmp) === 2 ? (int)$tmp[1] : 0);
         }
 
-        $num = 10 - substr(strval($sum), -1);
+        $num = 10 - (int)substr(strval($sum), -1);
 
         return $check[strlen($check) - 1] === chr($num + 64);
     }

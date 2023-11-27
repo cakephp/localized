@@ -67,7 +67,7 @@ class FiValidation extends LocalizedValidation
     public static function personId(string $check): bool
     {
         $pattern = '/^\d{6}[-+A][0-9A-Z]{4}$/';
-        if (!(bool)preg_match($pattern, strval($check))) {
+        if (!preg_match($pattern, $check)) {
             return false;
         }
 
@@ -120,7 +120,7 @@ class FiValidation extends LocalizedValidation
         $n = 0;
 
         foreach (str_split(substr($businessId, 0, 7)) as $k => $y) {
-            $n += $weights[$k] * $y;
+            $n += $weights[$k] * (int)$y;
         }
 
         $match = $n % 11 === 0 ? 0 : 11 - $n % 11;
@@ -196,12 +196,12 @@ class FiValidation extends LocalizedValidation
                 $i = 0;
             }
             $multiplier = $pattern[$i];
-            $result += $multiplier * $node;
+            $result += $multiplier * (int)$node;
             $i++;
         }
 
         $lastItems = str_split(strval($result), 1);
-        $checksum = 10 - end($lastItems);
+        $checksum = 10 - (int)end($lastItems);
 
         if ($checksum >= 10) {
             $checksum = 0;

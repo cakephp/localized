@@ -81,13 +81,13 @@ class FrValidation extends LocalizedValidation
         // source : https://xml.insee.fr/schema/nir.html
         // check : https://www.parodie.com/monetique/nir.htm
         if ($numberWithoutKey[6] === 'A') {
-            $numberWithoutKey = str_replace('A', '0', $numberWithoutKey);
+            $numberWithoutKey = (int)str_replace('A', '0', $numberWithoutKey);
             $numberWithoutKey -= 1000000;
         } elseif ($numberWithoutKey[6] === 'B') {
-            $numberWithoutKey = str_replace('B', '0', $numberWithoutKey);
+            $numberWithoutKey = (int)str_replace('B', '0', $numberWithoutKey);
             $numberWithoutKey -= 2000000;
         }
 
-        return $key == 97 - ($numberWithoutKey - (floor($numberWithoutKey / 97) * 97));
+        return $key === (string)(97 - ((int)$numberWithoutKey - (int)(floor((int)$numberWithoutKey / 97) * 97)));
     }
 }

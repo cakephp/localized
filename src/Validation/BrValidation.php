@@ -96,12 +96,12 @@ class BrValidation extends LocalizedValidation
             $sum = 0;
             $position = $pos + 1;
             for ($i = 0; $i <= $pos - 1; $i++, $position--) {
-                $sum += (int)$check[$i] * $position;
+                $sum += (int)(int)$check[$i] * $position;
             }
             $div = $sum % 11;
-            $check[$pos] = $div < 2 ? 0 : 11 - $div;
+            (int)$check[$pos] = $div < 2 ? 0 : 11 - $div;
         }
-        $dvRight = (int)$check[9] * 10 + (int)$check[10];
+        $dvRight = (int)(int)$check[9] * 10 + (int)(int)$check[10];
 
         return $dvRight == $dv;
     }
@@ -125,20 +125,20 @@ class BrValidation extends LocalizedValidation
         if (strlen($check) !== 14) {
             return false;
         }
-        $firstSum = ($check[0] * 5) + ($check[1] * 4) + ($check[2] * 3) + ($check[3] * 2) +
-            ($check[4] * 9) + ($check[5] * 8) + ($check[6] * 7) + ($check[7] * 6) +
-            ($check[8] * 5) + ($check[9] * 4) + ($check[10] * 3) + ($check[11] * 2);
+        $firstSum = ((int)$check[0] * 5) + ((int)$check[1] * 4) + ((int)$check[2] * 3) + ((int)$check[3] * 2) +
+            ((int)$check[4] * 9) + ((int)$check[5] * 8) + ((int)$check[6] * 7) + ((int)$check[7] * 6) +
+            ((int)$check[8] * 5) + ((int)$check[9] * 4) + ((int)$check[10] * 3) + ((int)$check[11] * 2);
 
         $firstVerificationDigit = $firstSum % 11 < 2 ? 0 : 11 - ($firstSum % 11);
 
-        $secondSum = ($check[0] * 6) + ($check[1] * 5) + ($check[2] * 4) + ($check[3] * 3) +
-            ($check[4] * 2) + ($check[5] * 9) + ($check[6] * 8) + ($check[7] * 7) +
-            ($check[8] * 6) + ($check[9] * 5) + ($check[10] * 4) + ($check[11] * 3) +
-            ($check[12] * 2);
+        $secondSum = ((int)$check[0] * 6) + ((int)$check[1] * 5) + ((int)$check[2] * 4) + ((int)$check[3] * 3) +
+            ((int)$check[4] * 2) + ((int)$check[5] * 9) + ((int)$check[6] * 8) + ((int)$check[7] * 7) +
+            ((int)$check[8] * 6) + ((int)$check[9] * 5) + ((int)$check[10] * 4) + ((int)$check[11] * 3) +
+            ((int)$check[12] * 2);
 
         $secondVerificationDigit = $secondSum % 11 < 2 ? 0 : 11 - ($secondSum % 11);
 
-        return ($check[12] == $firstVerificationDigit) && ($check[13] == $secondVerificationDigit);
+        return ((int)$check[12] == $firstVerificationDigit) && ((int)$check[13] == $secondVerificationDigit);
     }
 
     /**
@@ -162,7 +162,7 @@ class BrValidation extends LocalizedValidation
         }
         // Calculate the number
         for ($i = 0, $j = 9, $v = 0; $i < 9; ++$i, --$j) {
-            $v += $check[$i] * $j;
+            $v += (int)$check[$i] * $j;
         }
 
         $dsc = 0;
@@ -174,7 +174,7 @@ class BrValidation extends LocalizedValidation
         }
 
         for ($i = 0, $j = 1, $v = 0; $i < 9; ++$i, ++$j) {
-            $v += $check[$i] * $j;
+            $v += (int)$check[$i] * $j;
         }
 
         // Calculate second digit
@@ -198,7 +198,7 @@ class BrValidation extends LocalizedValidation
             $len = strlen($cns);
             $soma = 0;
             for ($i = 0; $i < $len; $i++) {
-                $soma += $cns[$i] * (15 - $i);
+                $soma += (int)$cns[$i] * (15 - $i);
             }
 
             return $soma % 11 === 0;

@@ -57,18 +57,19 @@ class TrValidation extends LocalizedValidation
             return false;
         }
 
-        if ($tckn[0] === 0) {
+
+        if ((int)$tckn[0] === 0) {
             return false;
         }
 
-        $even = $tckn[0] + $tckn[2] + $tckn[4] + $tckn[6] + $tckn[8];
-        $odd = $tckn[1] + $tckn[3] + $tckn[5] + $tckn[7];
+        $even = (int)$tckn[0] + (int)$tckn[2] + (int)$tckn[4] + (int)$tckn[6] + (int)$tckn[8];
+        $odd = (int)$tckn[1] + (int)$tckn[3] + (int)$tckn[5] + (int)$tckn[7];
         $check = ($even * 7) - $odd;
         if ($check % 10 !== (int)$tckn[9]) {
             return false;
         }
 
-        $check = $even + $odd + $tckn[9];
+        $check = $even + $odd + (int)$tckn[9];
         if ($check % 10 !== (int)$tckn[10]) {
             return false;
         }

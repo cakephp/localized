@@ -59,7 +59,8 @@ class RsValidation extends LocalizedValidation
         }
 
         [$a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m] = str_split(strval($check));
-        $checksum = 11 - ( 7 * ($a + $g) + 6 * ($b + $h) + 5 * ($c + $i) + 4 * ($d + $j) + 3 * ($e + $k) + 2 * ($f + $l) ) % 11;
+        $checksum = 11 - ( 7 * ((int)$a + (int)$g) + 6 * ((int)$b + (int)$h)
+                + 5 * ((int)$c + (int)$i) + 4 * ((int)$d + (int)$j) + 3 * ((int)$e + (int)$k) + 2 * ((int)$f + (int)$l) ) % 11;
 
         return $checksum == $m;
     }

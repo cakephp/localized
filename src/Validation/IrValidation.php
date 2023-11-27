@@ -122,7 +122,7 @@ class IrValidation extends LocalizedValidation
         $sum = 0;
         $equivalent = 0;
         for ($i = 0; $i < 9; $i++) {
-            $sum += substr($check, $i, 1) * (10 - $i);
+            $sum += (int)substr($check, $i, 1) * (10 - $i);
             if (substr($check, 1, 1) === substr($check, $i, 1)) {
                 $equivalent++;
             }
