@@ -23,10 +23,6 @@ msgstr "خطا"
 msgid "The requested address %s was not found on this server."
 msgstr "آدرس درخواستی %s در این سرور یافت نشد."
 
-#: Template/Error/error500.ctp:33
-msgid "An Internal Error Has Occurred"
-msgstr "یک خطای داخلی رخ داده است."
-
 #: Controller/Component/AuthComponent.php:461
 msgid "You are not authorized to access that location."
 msgstr "شما مجاز به دسترسی به آن مکان نمیباشید."
@@ -39,11 +35,12 @@ msgstr "کوکی رمز CSRF از دست رفته"
 msgid "CSRF token mismatch."
 msgstr "عدم تطابق رمز CSRF."
 
-#: Error/ExceptionRenderer.php:251
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "پیدا نشد"
 
-#: Error/ExceptionRenderer.php:253
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "یک خطای داخلی رخ داده است."
 

@@ -24,10 +24,6 @@ msgstr "Помилка"
 msgid "The requested address %s was not found on this server."
 msgstr "Запитувана адреса %s не була знайдена на цьому сервері."
 
-#: Template/Error/error500.ctp:35
-msgid "An Internal Error Has Occurred"
-msgstr "Сталася внутрішня помилка"
-
 #: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
 msgstr "Ви не маєте права доступу до цієї сторінки."
@@ -40,11 +36,12 @@ msgstr "Відсутня кука з CSRF  токеном"
 msgid "CSRF token mismatch."
 msgstr "Невідповідність CSRF токену."
 
-#: Error/ExceptionRenderer.php:247
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Не знайдено"
 
-#: Error/ExceptionRenderer.php:249
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Сталася внутрішня помилка"
 

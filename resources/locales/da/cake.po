@@ -48,11 +48,12 @@ msgstr "Der opstod en fejl i forbindelse med sletning af %1$s med id: %2$s"
 msgid "You are not authorized to access that location."
 msgstr "Du har ikke tilladelse til at se den side."
 
-#: Error/ExceptionRenderer.php:205
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Ikke fundet"
 
-#: Error/ExceptionRenderer.php:227
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Der er sket en intern fejl."
 

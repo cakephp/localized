@@ -23,10 +23,6 @@ msgstr "エラー"
 msgid "The requested address %s was not found on this server."
 msgstr "要求されたアドレス %s はこのサーバー上に見つかりませんでした。"
 
-#: Template/Error/error500.ctp:33
-msgid "An Internal Error Has Occurred"
-msgstr "内部エラーが発生しました"
-
 #: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
 msgstr "アクセスするための権限がありません。"
@@ -39,11 +35,12 @@ msgstr "CSRFトークンのクッキーが見つかりません"
 msgid "CSRF token mismatch."
 msgstr "CSRFトークンが一致しません。"
 
-#: Error/ExceptionRenderer.php:248
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "見つかりません"
 
-#: Error/ExceptionRenderer.php:250
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "内部エラーが発生しました。"
 

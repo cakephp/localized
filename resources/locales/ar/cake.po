@@ -22,10 +22,6 @@ msgstr "خطأ"
 msgid "The requested address %s was not found on this server."
 msgstr "العنوان المطلوب %s غير موجود"
 
-#: View/Errors/error500.ctp:20 Error/ExceptionRenderer.php:245
-msgid "An Internal Error Has Occurred."
-msgstr "حدث خطأ داخلي."
-
 #: Controller/Scaffold.php:127
 msgid "Scaffold :: "
 msgstr ""
@@ -62,9 +58,14 @@ msgstr ""
 msgid "You are not authorized to access that location."
 msgstr "لا تملك صلاحية الدخول إلى هذه الصفحة"
 
-#: Error/ExceptionRenderer.php:222
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "غير موجود"
+
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
+msgid "An Internal Error Has Occurred."
+msgstr "حدث خطأ داخلي."
 
 #: Model/Validator/CakeValidationSet.php:286
 msgid "This field cannot be left blank"

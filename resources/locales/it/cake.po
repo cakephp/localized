@@ -47,11 +47,12 @@ msgstr "Si è verificato un errore eliminando l'elemento %1$s con id: %2$s"
 msgid "You are not authorized to access that location."
 msgstr "Accesso negato."
 
-#: Error/ExceptionRenderer.php:209
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Pagina non trovata"
 
-#: Error/ExceptionRenderer.php:231
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Errore interno del server"
 
