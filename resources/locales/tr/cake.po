@@ -23,10 +23,6 @@ msgstr "﻿Hata"
 msgid "The requested address %s was not found on this server."
 msgstr "Aradığınız adres %s bu sunucuda bulunamadı."
 
-#: Template/Error/error500.ctp:33
-msgid "An Internal Error Has Occurred"
-msgstr "İçsel Bir Hata Oluştu"
-
 #: Controller/Component/AuthComponent.php:461
 msgid "You are not authorized to access that location."
 msgstr "Bu alana erişim yetkiniz bulunmamaktadır."
@@ -39,11 +35,12 @@ msgstr "﻿Eksik CSRF belirteci tanımlama bilgisi"
 msgid "CSRF token mismatch."
 msgstr "﻿CSRF belirteci uyuşmazlığı."
 
-#: Error/ExceptionRenderer.php:251
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "﻿Bulunamadı"
 
-#: Error/ExceptionRenderer.php:253
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "﻿Dahili bir hata oluştu."
 

@@ -23,10 +23,6 @@ msgstr "Lỗi"
 msgid "The requested address %s was not found on this server."
 msgstr "Địa chỉ yêu cầu %s không tồn tại"
 
-#: Template/Error/error500.ctp:33
-msgid "An Internal Error Has Occurred"
-msgstr "Đã xảy ra lỗi cục bộ"
-
 #: Controller/Component/AuthComponent.php:454
 msgid "You are not authorized to access that location."
 msgstr "Bạn không đủ quyền truy cập khu vực đó."
@@ -39,11 +35,12 @@ msgstr "Thiếu mã token CSRF"
 msgid "CSRF token mismatch."
 msgstr "Mã token CSRF không phù hợp"
 
-#: Error/ExceptionRenderer.php:233
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Không tìm thấy"
 
-#: Error/ExceptionRenderer.php:235
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Đã xảy ra lỗi cục bộ"
 

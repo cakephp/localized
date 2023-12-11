@@ -20,10 +20,6 @@ msgstr ""
 msgid "The requested address %s was not found on this server."
 msgstr "La dirección solicitada %s no se encontró en el servidor."
 
-#: Template/Error/error500.ctp:33
-msgid "An Internal Error Has Occurred"
-msgstr "Ha ocurrido un error interno"
-
 #: Controller/Component/AuthComponent.php:461
 msgid "You are not authorized to access that location."
 msgstr "No tienes permisos para acceder a dicha ubicación."
@@ -36,11 +32,12 @@ msgstr "Falta la cookie del CSRF token"
 msgid "CSRF token mismatch."
 msgstr "Los token CSRF no concuerdan."
 
-#: Error/ExceptionRenderer.php:251
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "No encontrado"
 
-#: Error/ExceptionRenderer.php:253
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
 msgid "An Internal Error Has Occurred."
 msgstr "Ha ocurrido un error interno."
 

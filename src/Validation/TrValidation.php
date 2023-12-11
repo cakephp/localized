@@ -57,7 +57,6 @@ class TrValidation extends LocalizedValidation
             return false;
         }
 
-
         if ((int)$tckn[0] === 0) {
             return false;
         }

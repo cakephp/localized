@@ -23,10 +23,6 @@ msgstr "Hiba"
 msgid "The requested address %s was not found on this server."
 msgstr "A kért cím (%s) nem található a kiszolgálón."
 
-#: View/Errors/error500.ctp:20 Error/ExceptionRenderer.php:245
-msgid "An Internal Error Has Occurred."
-msgstr "Belső hiba történt!"
-
 #: Controller/Scaffold.php:127
 msgid "Scaffold :: "
 msgstr "Scaffold ::"
@@ -64,9 +60,14 @@ msgstr "Hiba történt a %2$s azonosítójú %1$s  törlése közben."
 msgid "You are not authorized to access that location."
 msgstr "Ön nem jogosult hozzáférni ahhoz a helyhez."
 
-#: Error/ExceptionRenderer.php:222
+#: Error/Renderer/WebExceptionRenderer.php:367
 msgid "Not Found"
 msgstr "Nem található"
+
+#: Error/error500.php:41
+#: Error/Renderer/WebExceptionRenderer.php:369
+msgid "An Internal Error Has Occurred."
+msgstr "Belső hiba történt!"
 
 #: Model/Validator/CakeValidationSet.php:286
 msgid "This field cannot be left blank"
