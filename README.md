@@ -1,7 +1,7 @@
 # CakePHP Localized plugin
 
 ![Build Status](https://github.com/cakephp/localized/actions/workflows/ci.yml/badge.svg)
-[![Coverage Status](https://img.shields.io/codecov/c/github/cakephp/localized/4.x.svg?style=flat-square)](https://app.codecov.io/gh/cakephp/localized/tree/4.x)
+[![Coverage Status](https://img.shields.io/codecov/c/github/cakephp/localized/5.x.svg?style=flat-square)](https://app.codecov.io/gh/cakephp/localized/tree/5.x)
 [![Latest Stable Version](https://img.shields.io/github/v/release/cakephp/localized?sort=semver&style=flat-square)](https://packagist.org/packages/cakephp/localized)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/localized?style=flat-square)](https://packagist.org/packages/cakephp/localized/stats)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
@@ -10,7 +10,7 @@ This plugin contains various localized validation classes for specific countries
 
 ## Requirements
 
-This branch is for use with CakePHP **4.x**. See [version map](https://github.com/cakephp/localized/wiki#version-map) for details.
+This branch is for use with CakePHP **5.x**. See [version map](https://github.com/cakephp/localized/wiki#version-map) for details.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Load your plugin using
 ```
 bin/cake plugin load Cake/Localized
 ```
-or by manually adding `$this->addPlugin('Cake/Localized')` in your `src/Application.php`.
+or by manually adding `'Cake/Localized'` to the array in your app's `config/plugins.php`.
 
 ## Model validation
 
@@ -52,7 +52,7 @@ class PostsTable extends Table
 }
 ```
 
-For further information on validation rules see the [CakePHP documentation on validation](https://book.cakephp.org/4/en/core-libraries/validation.html)
+For further information on validation rules see the [CakePHP documentation on validation](https://book.cakephp.org/5/en/core-libraries/validation.html)
 
 ## PO files
 
