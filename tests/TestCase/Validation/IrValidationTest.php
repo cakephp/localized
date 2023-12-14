@@ -152,9 +152,10 @@ class IrValidationTest extends TestCase
         $this->assertTrue(IrValidation::personId('9876543210'));
         $this->assertTrue(IrValidation::personId('1234567891'));
         $this->assertTrue(IrValidation::personId('0324354657'));
+        $this->assertTrue(IrValidation::personId('1111111121'));
 
         $this->assertFalse(IrValidation::personId('1234567890'));
-        //$this->assertFalse(IrValidation::personId('3333333333'));
+        $this->assertFalse(IrValidation::personId('3333333333'));
         $this->assertFalse(IrValidation::personId('0324354654'));
         $this->assertFalse(IrValidation::personId('12345'));
     }
