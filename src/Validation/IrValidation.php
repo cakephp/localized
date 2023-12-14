@@ -121,20 +121,24 @@ class IrValidation extends LocalizedValidation
         }
         $sum = 0;
         $equivalent = 0;
+        $controlDigit = (int)substr($check, 9, 1);
+
         for ($i = 0; $i < 9; $i++) {
-            $sum += (int)substr($check, $i, 1) * (10 - $i);
-            if (substr($check, 1, 1) === substr($check, $i, 1)) {
+            $currentDigit = (int)substr($check, $i, 1);
+            $sum += $currentDigit * (10 - $i);
+
+            if ($currentDigit === $controlDigit) {
                 $equivalent++;
             }
         }
-        if ($equivalent === 10) {
+        if ($equivalent === 9) {
             return false;
         }
         $remaining = $sum % 11;
         if ($remaining <= 1) {
-            return (bool)($remaining == substr($check, 9, 1));
+            return $controlDigit === $remaining;
         }
 
-        return (bool)(substr($check, 9, 1) == 11 - $remaining);
+        return $controlDigit === 11 - $remaining;
     }
 }
