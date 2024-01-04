@@ -17,6 +17,7 @@ declare(strict_types=1);
  */
 namespace Cake\Localized\Test\TestCase\Validation;
 
+use Cake\Http\Exception\NotImplementedException;
 use Cake\Localized\Validation\TrValidation;
 use Cake\TestSuite\TestCase;
 
@@ -55,5 +56,16 @@ class TrValidationTest extends TestCase
         $this->assertFalse(TrValidation::personId('31216166930'));
         $this->assertFalse(TrValidation::personId('01216166930'));
         $this->assertFalse(TrValidation::personId('31216166931'));
+    }
+
+    /**
+     * @return void
+     */
+    public function testPhone(): void
+    {
+        $this->expectException(NotImplementedException::class);
+        $this->expectExceptionMessage('`Cake\Localized\Validation\TrValidation::phone()` Not implemented yet.');
+
+        TrValidation::phone('');
     }
 }
