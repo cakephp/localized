@@ -184,7 +184,7 @@ class FiValidation extends LocalizedValidation
      * @param string $base Reference number base
      * @return int
      */
-    public static function calculateReferenceNumberChecksum(string $base): int
+    protected static function calculateReferenceNumberChecksum(string $base): int
     {
         $pattern = [7, 3, 1];
         $nodes = array_reverse(str_split($base, 1));
