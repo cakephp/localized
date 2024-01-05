@@ -67,6 +67,6 @@ class MxValidation extends LocalizedValidation
      */
     public static function personId(string $check): bool
     {
-        throw new NotImplementedException(__d('localized', '%s Not implemented yet.'));
+        throw new NotImplementedException(__d('localized', '`{0}()` Not implemented yet.', __METHOD__));
     }
 }
