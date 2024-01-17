@@ -12,6 +12,9 @@ This plugin contains various localized validation classes for specific countries
 
 This branch is for use with CakePHP **5.x**. See [version map](https://github.com/cakephp/localized/wiki#version-map) for details.
 
+## Demo
+See [sandbox.dereuromark.de/sandbox/localized](https://sandbox.dereuromark.de/sandbox/localized) for live sandbox demo on localized validation.
+
 ## Installation
 
 You can install this plugin into your CakePHP application using [composer](https://getcomposer.org).
