@@ -114,7 +114,7 @@ class EsValidation extends LocalizedValidation
 
         array_shift($matches);
         [$first, $num, $letter] = $matches;
-        $num = strtr($first, 'XYZ', '012') . $num;
+        $num = (int)(strtr($first, 'XYZ', '012') . $num);
 
         return $letter === static::$CODES[$num % 23];
     }
