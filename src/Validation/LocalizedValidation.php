@@ -103,6 +103,7 @@ abstract class LocalizedValidation implements ValidationInterface
      */
     public static function decimal(string $string): bool
     {
+        /** @phpstan-ignore-next-line No-OP */
         return Number::parseFloat($string) !== false;
     }
 }

@@ -72,7 +72,7 @@ class JpValidation extends LocalizedValidation
      */
     public static function phoneDigits(string $check): bool
     {
-        $check = preg_replace(['/[\s\-]/', '/\+81/'], ['', '0'], $check);
+        $check = (string)preg_replace(['/[\s\-]/', '/\+81/'], ['', '0'], $check);
 
         $pattern = '/^0(?:[1-9]0\d{8}|[1-9]{2}\d{7})$/';
 

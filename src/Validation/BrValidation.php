@@ -192,7 +192,7 @@ class BrValidation extends LocalizedValidation
      */
     public static function cns(string $cns): bool
     {
-        $cns = preg_replace('/[^0-9]/', '', $cns);
+        $cns = (string)preg_replace('/[^0-9]/', '', $cns);
 
         if (preg_match('/[1-2]\\d{10}00[0-1]\\d/', $cns) || preg_match('/[7-9]\\d{14}/', $cns)) {
             $len = strlen($cns);
