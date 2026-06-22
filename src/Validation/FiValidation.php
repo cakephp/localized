@@ -85,7 +85,6 @@ class FiValidation extends LocalizedValidation
         }
         $list = array_values($list);
 
-        /** @phpstan-ignore-next-line */
         return $check[strlen($check) - 1] === $list[(int)(substr($check, 0, 6) . substr($check, 7, 3)) % 31];
     }
 

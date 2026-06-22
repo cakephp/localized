@@ -50,7 +50,7 @@ class IrValidation extends LocalizedValidation
      */
     public static function numeric(string $check): bool
     {
-        $pattern = '/[^\x{06F0}-\x{06F9}\x]+/u';
+        $pattern = '/[^\x{06F0}-\x{06F9}]+/u';
 
         return !preg_match($pattern, $check);
     }
