@@ -78,7 +78,7 @@ class RsValidation extends LocalizedValidation
         return (bool)preg_match($pattern, $check);
     }
 
-    // @codingStandardsIgnoreStart
+    // phpcs:disable PSR1.Methods.CamelCapsMethodName
 
     /**
      * Checks an address code (Adresni kod) for Serbia.
@@ -104,7 +104,7 @@ class RsValidation extends LocalizedValidation
         return static::postal($check);
     }
 
-    // @codingStandardsIgnoreEnd
+    // phpcs:enable PSR1.Methods.CamelCapsMethodName
 
     /**
      * Checks Unique Master Citizen Numbers (JMBG) for Serbia.
