@@ -114,7 +114,7 @@ class BrValidation extends LocalizedValidation
      */
     public static function cnpj(string $check): bool
     {
-        $check = trim($check);
+        $check = strtoupper(trim($check));
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
             $check = str_replace(['-', '.', '/'], '', $check);
