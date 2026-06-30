@@ -127,6 +127,7 @@ class BrValidationTest extends TestCase
 
         //Testing alphanumeric CNPJ
         $this->assertFalse(BrValidation::cnpj('ABC123Z4000110'));
+        $this->assertFalse(BrValidation::cnpj('9AB5B5FF0001AB'));
         $this->assertFalse(BrValidation::cnpj('9AB5B5FF0001AB'));//Last two chars must be numeric
         $this->assertFalse(BrValidation::cnpj('12.@BC.345/01#E-35'));//bad chars @#
         $this->assertFalse(BrValidation::cnpj('XOX&@!B0K000156'));//Bad chars &@!
@@ -146,10 +147,13 @@ class BrValidationTest extends TestCase
         $this->assertFalse(BrValidation::personId('33.530.485/0001-29'));
         $this->assertFalse(BrValidation::personId('04.295.166/0001-01'));
         $this->assertFalse(BrValidation::personId('33.530.486/0001-30'));
+        $this->assertFalse(BrValidation::personId('ABC123Z4000110'));
         $this->assertTrue(BrValidation::personId('04295166000133'));
         $this->assertTrue(BrValidation::personId('33530486000129'));
         $this->assertTrue(BrValidation::personId('04.295.166/0001-33'));
         $this->assertTrue(BrValidation::personId('33.530.486/0001-29'));
+        $this->assertTrue(BrValidation::personId('NGZ9C1T4000145'));
+        $this->assertTrue(BrValidation::personId('12.ABC.345/01DE-35'));
 
         // Testing invalid input
         $this->assertFalse(BrValidation::personId('3712093712890371289073901287390812'));
