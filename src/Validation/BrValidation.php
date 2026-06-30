@@ -118,22 +118,22 @@ class BrValidation extends LocalizedValidation
         // sometimes the user submits a masked CNPJ
         if (preg_match('/^\d\d.\d\d\d.\d\d\d\/\d\d\d\d\-\d\d/', $check)) {
             $check = str_replace(['-', '.', '/'], '', $check);
-        } elseif (!ctype_digit($check)) {
+        } elseif (!ctype_alnum($check)) {
             return false;
         }
-
+        $charVal = fn(int $key) => ord($check[$key]) - 48;
         if (strlen($check) !== 14) {
             return false;
         }
-        $firstSum = ((int)$check[0] * 5) + ((int)$check[1] * 4) + ((int)$check[2] * 3) + ((int)$check[3] * 2) +
-            ((int)$check[4] * 9) + ((int)$check[5] * 8) + ((int)$check[6] * 7) + ((int)$check[7] * 6) +
-            ((int)$check[8] * 5) + ((int)$check[9] * 4) + ((int)$check[10] * 3) + ((int)$check[11] * 2);
+        $firstSum = ($charVal(0) * 5) + ($charVal(1) * 4) + ($charVal(2) * 3) + ($charVal(3) * 2) +
+            ($charVal(4) * 9) + ($charVal(5) * 8) + ($charVal(6) * 7) + ($charVal(7) * 6) +
+            ($charVal(8) * 5) + ($charVal(9) * 4) + ($charVal(10) * 3) + ($charVal(11) * 2);
 
         $firstVerificationDigit = $firstSum % 11 < 2 ? 0 : 11 - ($firstSum % 11);
 
-        $secondSum = ((int)$check[0] * 6) + ((int)$check[1] * 5) + ((int)$check[2] * 4) + ((int)$check[3] * 3) +
-            ((int)$check[4] * 2) + ((int)$check[5] * 9) + ((int)$check[6] * 8) + ((int)$check[7] * 7) +
-            ((int)$check[8] * 6) + ((int)$check[9] * 5) + ((int)$check[10] * 4) + ((int)$check[11] * 3) +
+        $secondSum = ($charVal(0) * 6) + ($charVal(1) * 5) + ($charVal(2) * 4) + ($charVal(3) * 3) +
+            ($charVal(4) * 2) + ($charVal(5) * 9) + ($charVal(6) * 8) + ($charVal(7) * 7) +
+            ($charVal(8) * 6) + ($charVal(9) * 5) + ($charVal(10) * 4) + ($charVal(11) * 3) +
             ((int)$check[12] * 2);
 
         $secondVerificationDigit = $secondSum % 11 < 2 ? 0 : 11 - ($secondSum % 11);
