@@ -128,6 +128,8 @@ class BrValidationTest extends TestCase
         //Testing alphanumeric CNPJ
         $this->assertFalse(BrValidation::cnpj('ABC123Z4000110'));
         $this->assertFalse(BrValidation::cnpj('9AB5B5FF0001AB'));//Last two chars must be numeric
+        $this->assertFalse(BrValidation::cnpj('12.@BC.345/01#E-35'));//bad chars @#
+        $this->assertFalse(BrValidation::cnpj('XOX&@!B0K000156'));//Bad chars &@!
 
         $this->assertTrue(BrValidation::cnpj('XOXDNB0K000156'));
         $this->assertTrue(BrValidation::cnpj('F9Z3AJUJ000108'));
