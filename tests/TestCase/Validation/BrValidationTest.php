@@ -125,6 +125,9 @@ class BrValidationTest extends TestCase
         $this->assertTrue(BrValidation::personId('04.295.166/0001-33'));
         $this->assertTrue(BrValidation::personId('33.530.486/0001-29'));
 
+        //Testing alphanumeric CNPJ
+        $this->assertTrue(BrValidation::cnpj('XOXDNB0K000156'));
+
         // Testing ssn
         $this->assertFalse(BrValidation::personId('04295165000133'));
         $this->assertFalse(BrValidation::personId('33530485000129'));
