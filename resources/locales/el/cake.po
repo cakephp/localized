@@ -1,0 +1,512 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP 5.0.5\n"
+"POT-Creation-Date: 2024-02-13 12:05+0100\n"
+"PO-Revision-Date: 2026-10-21 12:00+0300\n"
+"Last-Translator: Nicos Panayides <nicosp@gmail.com>\n"
+"Language-Team: The CakePHP Community <https://github.com/cakephp/localized/graphs/contributors>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ./templates/Error/error400.php:41
+#: ./templates/Error/error500.php:46
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: ./templates/Error/error400.php:42
+msgid "The requested address {0} was not found on this server."
+msgstr "Η διεύθυνση {0} που ζητήθηκε δεν βρέθηκε σε αυτόν τον διακομιστή."
+
+#: ./templates/Error/error500.php:44
+#: ./vendor/cakephp/cakephp/src/Error/Renderer/WebExceptionRenderer.php:359
+msgid "An Internal Error Has Occurred."
+msgstr "Παρουσιάστηκε εσωτερικό σφάλμα."
+
+#: ./vendor/cakephp/cakephp/src/Error/Renderer/WebExceptionRenderer.php:357
+msgid "Not Found"
+msgstr "Δεν βρέθηκε"
+
+#: ./vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:354
+msgid "Missing or incorrect CSRF cookie type."
+msgstr "Ο τύπος του cookie CSRF λείπει ή είναι λανθασμένος."
+
+#: ./vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:358
+msgid "Missing or invalid CSRF cookie."
+msgstr "Το cookie CSRF λείπει ή δεν είναι έγκυρο."
+
+#: ./vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:381
+#: ./vendor/cakephp/cakephp/src/Http/Middleware/SessionCsrfProtectionMiddleware.php:267
+msgid "CSRF token from either the request body or request headers did not match or is missing."
+msgstr "Το διακριτικό CSRF στο σώμα ή στις κεφαλίδες του αιτήματος δεν ταιριάζει ή λείπει."
+
+#: ./vendor/cakephp/cakephp/src/Http/Middleware/SessionCsrfProtectionMiddleware.php:249
+msgid "Missing or incorrect CSRF session key"
+msgstr "Το κλειδί συνεδρίας CSRF λείπει ή είναι λανθασμένο"
+
+#: ./vendor/cakephp/cakephp/src/Http/Response.php:1429
+msgid "The requested file contains `..` and will not be read."
+msgstr "Το αρχείο που ζητήθηκε περιέχει `..` και δεν θα διαβαστεί."
+
+#: ./vendor/cakephp/cakephp/src/Http/Response.php:1437
+msgid "The requested file was not found"
+msgstr "Το αρχείο που ζητήθηκε δεν βρέθηκε"
+
+#: ./vendor/cakephp/cakephp/src/I18n/Number.php:105
+msgid "{0,number,#,###.##} KB"
+msgstr "{0,number,#,###.##} KB"
+
+#: ./vendor/cakephp/cakephp/src/I18n/Number.php:106
+msgid "{0,number,#,###.##} MB"
+msgstr "{0,number,#,###.##} MB"
+
+#: ./vendor/cakephp/cakephp/src/I18n/Number.php:108
+msgid "{0,number,#,###.##} GB"
+msgstr "{0,number,#,###.##} GB"
+
+#: ./vendor/cakephp/cakephp/src/I18n/Number.php:109
+msgid "{0,number,#,###.##} TB"
+msgstr "{0,number,#,###.##} TB"
+
+#: ./vendor/cakephp/cakephp/src/I18n/Number.php:104
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] "{0,number,integer} byte"
+msgstr[1] "{0,number,integer} bytes"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:95
+msgid "{0} from now"
+msgstr "σε {0}"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:95
+msgid "{0} ago"
+msgstr "πριν από {0}"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:98
+msgid "{0} after"
+msgstr "{0} μετά"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:98
+msgid "{0} before"
+msgstr "{0} πριν"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:131
+msgid "just now"
+msgstr "μόλις τώρα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:168
+msgid "about a second ago"
+msgstr "πριν από περίπου ένα δευτερόλεπτο"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:169
+msgid "about a minute ago"
+msgstr "πριν από περίπου ένα λεπτό"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:170
+msgid "about an hour ago"
+msgstr "πριν από περίπου μία ώρα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:171
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:383
+msgid "about a day ago"
+msgstr "πριν από περίπου μία ημέρα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:172
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:384
+msgid "about a week ago"
+msgstr "πριν από περίπου μία εβδομάδα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:173
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:385
+msgid "about a month ago"
+msgstr "πριν από περίπου έναν μήνα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:174
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:386
+msgid "about a year ago"
+msgstr "πριν από περίπου έναν χρόνο"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:185
+msgid "in about a second"
+msgstr "σε περίπου ένα δευτερόλεπτο"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:186
+msgid "in about a minute"
+msgstr "σε περίπου ένα λεπτό"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:187
+msgid "in about an hour"
+msgstr "σε περίπου μία ώρα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:188
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:397
+msgid "in about a day"
+msgstr "σε περίπου μία ημέρα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:189
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:398
+msgid "in about a week"
+msgstr "σε περίπου μία εβδομάδα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:190
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:399
+msgid "in about a month"
+msgstr "σε περίπου έναν μήνα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:191
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:400
+msgid "in about a year"
+msgstr "σε περίπου έναν χρόνο"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:355
+msgid "today"
+msgstr "σήμερα"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:422
+msgid "%s ago"
+msgstr "πριν από %s"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:423
+msgid "on %s"
+msgstr "στις %s"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:62
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:143
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:367
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} χρόνο"
+msgstr[1] "{0} χρόνια"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:66
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:146
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:370
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} μήνα"
+msgstr[1] "{0} μήνες"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:72
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:149
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:373
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} εβδομάδα"
+msgstr[1] "{0} εβδομάδες"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:74
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:152
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:376
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} ημέρα"
+msgstr[1] "{0} ημέρες"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:79
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:155
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} ώρα"
+msgstr[1] "{0} ώρες"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:83
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:158
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} λεπτό"
+msgstr[1] "{0} λεπτά"
+
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:87
+#: ./vendor/cakephp/cakephp/src/I18n/RelativeTimeFormatter.php:161
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} δευτερόλεπτο"
+msgstr[1] "{0} δευτερόλεπτα"
+
+#: ./vendor/cakephp/cakephp/src/ORM/RulesChecker.php:64
+msgid "This value is already in use"
+msgstr "Αυτή η τιμή χρησιμοποιείται ήδη"
+
+#: ./vendor/cakephp/cakephp/src/ORM/RulesChecker.php:114
+msgid "This value does not exist"
+msgstr "Αυτή η τιμή δεν υπάρχει"
+
+#: ./vendor/cakephp/cakephp/src/ORM/RulesChecker.php:234
+msgid "Cannot modify row: a constraint for the `{0}` association fails."
+msgstr "Δεν είναι δυνατή η τροποποίηση της εγγραφής: ένας περιορισμός για τη συσχέτιση `{0}` αποτυγχάνει."
+
+#: ./vendor/cakephp/cakephp/src/ORM/RulesChecker.php:272
+msgid "The count does not match {0}{1}"
+msgstr "Το πλήθος δεν αντιστοιχεί σε {0}{1}"
+
+#: ./vendor/cakephp/cakephp/src/Utility/Text.php:900
+msgid "and"
+msgstr "και"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1079
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:3036
+#: ./vendor/cakephp/cakephp/src/View/Form/ArrayContext.php:232
+msgid "This field cannot be left empty"
+msgstr "Αυτό το πεδίο δεν μπορεί να μείνει κενό"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1106
+msgid "The provided value must be alphanumeric"
+msgstr "Η τιμή πρέπει να είναι αλφαριθμητική"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1133
+msgid "The provided value must not be alphanumeric"
+msgstr "Η τιμή δεν πρέπει να είναι αλφαριθμητική"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1160
+msgid "The provided value must be ASCII-alphanumeric"
+msgstr "Η τιμή πρέπει να είναι αλφαριθμητική ASCII"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1187
+msgid "The provided value must not be ASCII-alphanumeric"
+msgstr "Η τιμή δεν πρέπει να είναι αλφαριθμητική ASCII"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1230
+msgid "The length of the provided value must be between `{0}` and `{1}`, inclusively"
+msgstr "Το μήκος της τιμής πρέπει να είναι από `{0}` έως και `{1}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1282
+msgid "The provided value must be a valid credit card number of any type"
+msgstr "Η τιμή πρέπει να είναι έγκυρος αριθμός πιστωτικής κάρτας οποιουδήποτε τύπου"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1287
+msgid "The provided value must be a valid credit card number of these types: `{0}`"
+msgstr "Η τιμή πρέπει να είναι έγκυρος αριθμός πιστωτικής κάρτας ενός από αυτούς τους τύπους: `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1324
+msgid "The provided value must be greater than `{0}`"
+msgstr "Η τιμή πρέπει να είναι μεγαλύτερη από `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1356
+msgid "The provided value must be greater than or equal to `{0}`"
+msgstr "Η τιμή πρέπει να είναι μεγαλύτερη ή ίση με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1388
+msgid "The provided value must be less than `{0}`"
+msgstr "Η τιμή πρέπει να είναι μικρότερη από `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1420
+msgid "The provided value must be less than or equal to `{0}`"
+msgstr "Η τιμή πρέπει να είναι μικρότερη ή ίση με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1452
+msgid "The provided value must be equal to `{0}`"
+msgstr "Η τιμή πρέπει να είναι ίση με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1484
+msgid "The provided value must not be equal to `{0}`"
+msgstr "Η τιμή δεν πρέπει να είναι ίση με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1518
+msgid "The provided value must be same as `{0}`"
+msgstr "Η τιμή πρέπει να είναι ίδια με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1551
+msgid "The provided value must not be same as `{0}`"
+msgstr "Η τιμή δεν πρέπει να είναι ίδια με `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1584
+msgid "The provided value must be equal to the one of field `{0}`"
+msgstr "Η τιμή πρέπει να είναι ίση με την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1621
+msgid "The provided value must not be equal to the one of field `{0}`"
+msgstr "Η τιμή δεν πρέπει να είναι ίση με την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1658
+msgid "The provided value must be greater than the one of field `{0}`"
+msgstr "Η τιμή πρέπει να είναι μεγαλύτερη από την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1698
+msgid "The provided value must be greater than or equal to the one of field `{0}`"
+msgstr "Η τιμή πρέπει να είναι μεγαλύτερη ή ίση με την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1735
+msgid "The provided value must be less than the one of field `{0}`"
+msgstr "Η τιμή πρέπει να είναι μικρότερη από την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1775
+msgid "The provided value must be less than or equal to the one of field `{0}`"
+msgstr "Η τιμή πρέπει να είναι μικρότερη ή ίση με την τιμή του πεδίου `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1816
+msgid "The provided value must be a date of one of these formats: `{0}`"
+msgstr "Η τιμή πρέπει να είναι ημερομηνία σε μία από αυτές τις μορφές: `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1857
+msgid "The provided value must be a date and time of one of these formats: `{0}`"
+msgstr "Η τιμή πρέπει να είναι ημερομηνία και ώρα σε μία από αυτές τις μορφές: `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1888
+msgid "The provided value must be a time"
+msgstr "Η τιμή πρέπει να είναι ώρα"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1920
+msgid "The provided value must be a localized time, date or date and time"
+msgstr "Η τιμή πρέπει να είναι ώρα, ημερομηνία ή ημερομηνία και ώρα σε τοπική μορφή"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1947
+msgid "The provided value must be a boolean"
+msgstr "Η τιμή πρέπει να είναι λογική (boolean)"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1984
+msgid "The provided value must be decimal with any number of decimal places, including none"
+msgstr "Η τιμή πρέπει να είναι δεκαδικός αριθμός με οποιοδήποτε πλήθος δεκαδικών ψηφίων, ακόμη και κανένα"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:1989
+msgid "The provided value must be decimal with `{0}` decimal places"
+msgstr "Η τιμή πρέπει να είναι δεκαδικός αριθμός με `{0}` δεκαδικά ψηφία"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2026
+msgid "The provided value must be an e-mail address"
+msgstr "Η τιμή πρέπει να είναι διεύθυνση email"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2067
+msgid "The provided value must be one of `{0}`"
+msgstr "Η τιμή πρέπει να είναι μία από `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2096
+msgid "The provided value must be an IP address"
+msgstr "Η τιμή πρέπει να είναι διεύθυνση IP"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2123
+msgid "The provided value must be an IPv4 address"
+msgstr "Η τιμή πρέπει να είναι διεύθυνση IPv4"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2150
+msgid "The provided value must be an IPv6 address"
+msgstr "Η τιμή πρέπει να είναι διεύθυνση IPv6"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2178
+msgid "The provided value must be at least `{0}` characters long"
+msgstr "Η τιμή πρέπει να έχει τουλάχιστον `{0}` χαρακτήρες"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2206
+msgid "The provided value must be at least `{0}` bytes long"
+msgstr "Η τιμή πρέπει να έχει μέγεθος τουλάχιστον `{0}` bytes"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2234
+msgid "The provided value must be at most `{0}` characters long"
+msgstr "Η τιμή πρέπει να έχει το πολύ `{0}` χαρακτήρες"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2262
+msgid "The provided value must be at most `{0}` bytes long"
+msgstr "Η τιμή πρέπει να έχει μέγεθος το πολύ `{0}` bytes"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2289
+msgid "The provided value must be numeric"
+msgstr "Η τιμή πρέπει να είναι αριθμητική"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2316
+msgid "The provided value must be a natural number"
+msgstr "Η τιμή πρέπει να είναι φυσικός αριθμός"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2343
+msgid "The provided value must be a non-negative integer"
+msgstr "Η τιμή πρέπει να είναι μη αρνητικός ακέραιος"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2382
+msgid "The provided value must be between `{0}` and `{1}`, inclusively"
+msgstr "Η τιμή πρέπει να είναι από `{0}` έως και `{1}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2416
+msgid "The provided value must be a URL"
+msgstr "Η τιμή πρέπει να είναι URL"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2445
+msgid "The provided value must be a URL with protocol"
+msgstr "Η τιμή πρέπει να είναι URL με πρωτόκολλο"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2475
+msgid "The provided value must be one of: `{0}`"
+msgstr "Η τιμή πρέπει να είναι μία από: `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2506
+msgid "The provided value must be a UUID"
+msgstr "Η τιμή πρέπει να είναι UUID"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2538
+msgid "The provided value must be an uploaded file"
+msgstr "Η τιμή πρέπει να είναι αρχείο που έχει μεταφορτωθεί"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2567
+msgid "The provided value must be a latitude/longitude coordinate"
+msgstr "Η τιμή πρέπει να είναι συντεταγμένη γεωγραφικού πλάτους/μήκους"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2594
+msgid "The provided value must be a latitude"
+msgstr "Η τιμή πρέπει να είναι γεωγραφικό πλάτος"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2621
+msgid "The provided value must be a longitude"
+msgstr "Η τιμή πρέπει να είναι γεωγραφικό μήκος"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2648
+msgid "The provided value must be ASCII bytes only"
+msgstr "Η τιμή πρέπει να περιέχει μόνο bytes ASCII"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2675
+msgid "The provided value must be UTF-8 bytes only"
+msgstr "Η τιμή πρέπει να περιέχει μόνο bytes UTF-8"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2704
+msgid "The provided value must be 3 and 4 byte UTF-8 sequences only"
+msgstr "Η τιμή πρέπει να περιέχει μόνο ακολουθίες UTF-8 των 3 και 4 bytes"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2731
+msgid "The provided value must be an integer"
+msgstr "Η τιμή πρέπει να είναι ακέραιος"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2758
+msgid "The provided value must be an array"
+msgstr "Η τιμή πρέπει να είναι πίνακας"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2784
+msgid "The provided value must be scalar"
+msgstr "Η τιμή πρέπει να είναι βαθμωτή"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2810
+msgid "The provided value must be a hex color"
+msgstr "Η τιμή πρέπει να είναι δεκαεξαδικό χρώμα"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2842
+msgid "The provided value must be a set of multiple options"
+msgstr "Η τιμή πρέπει να είναι σύνολο πολλαπλών επιλογών"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2873
+msgid "The provided value must have at least `{0}` elements"
+msgstr "Η τιμή πρέπει να έχει τουλάχιστον `{0}` στοιχεία"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2908
+msgid "The provided value must have at most `{0}` elements"
+msgstr "Η τιμή πρέπει να έχει το πολύ `{0}` στοιχεία"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:2975
+msgid "The provided value must match against the pattern `{0}`"
+msgstr "Η τιμή πρέπει να ταιριάζει με το μοτίβο `{0}`"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:3005
+msgid "This field is required"
+msgstr "Αυτό το πεδίο είναι υποχρεωτικό"
+
+#: ./vendor/cakephp/cakephp/src/Validation/Validator.php:3163
+msgid "The provided value is invalid"
+msgstr "Η τιμή δεν είναι έγκυρη"
+
+#: ./vendor/cakephp/cakephp/src/View/Helper/FormHelper.php:997
+msgid "Edit {0}"
+msgstr "Επεξεργασία {0}"
+
+#: ./vendor/cakephp/cakephp/src/View/Helper/FormHelper.php:999
+msgid "New {0}"
+msgstr "Νέο {0}"
+
+#: ./vendor/cakephp/cakephp/src/View/Helper/FormHelper.php:1964
+msgid "Submit"
+msgstr "Υποβολή"
